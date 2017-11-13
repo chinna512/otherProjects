@@ -83,6 +83,11 @@ open class ZJMImageDetailVC: UIViewController,UIScrollViewDelegate, GalleryViewD
         setupView()
     }
     
+    override open func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        updateView(view.bounds.size)
+    }
+    
     func back(sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
@@ -121,15 +126,6 @@ open class ZJMImageDetailVC: UIViewController,UIScrollViewDelegate, GalleryViewD
     override open var prefersStatusBarHidden : Bool {
         return true
     }
-    
-    open override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        
-        coordinator.animate(alongsideTransition: { [weak self] _ in
-            self?.updateView(size)
-            }, completion: nil)
-    }
-    
     // MARK: - Private functions
     fileprivate func setupView() {
         view.backgroundColor = .blue
@@ -221,7 +217,7 @@ open class ZJMImageDetailVC: UIViewController,UIScrollViewDelegate, GalleryViewD
     }
     
     fileprivate func getInitialAvaiableSize() -> CGSize {
-          return view.bounds.size
+        return view.bounds.size
     }
     
     fileprivate func getScrollViewFrame(_ avaiableSize: CGSize) -> CGRect {

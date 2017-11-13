@@ -24,7 +24,6 @@ internal class GalleryView: UIView, UIScrollViewDelegate {
         }
     }
     
-    
     // MARK: - Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -87,7 +86,6 @@ internal class GalleryView: UIView, UIScrollViewDelegate {
         doubleTapRecognizer.numberOfTapsRequired = 2
         doubleTapRecognizer.numberOfTouchesRequired = 1
         addGestureRecognizer(doubleTapRecognizer)
-        
         tapRecognizer.require(toFail: doubleTapRecognizer)
     }
     
@@ -136,15 +134,12 @@ internal class GalleryView: UIView, UIScrollViewDelegate {
         }
     }
     
-    
     // MARK: - Internal functions
     func zoomToPoint(_ pointInView: CGPoint) {
         var newZoomScale = scrollView.minimumZoomScale
-        
         if scrollView.zoomScale < (scrollView.maximumZoomScale / 2) {
             newZoomScale = options.maximumZoomScale
         }
-        
         zoomToScale(newZoomScale, pointInView: pointInView)
     }
     
@@ -161,7 +156,6 @@ internal class GalleryView: UIView, UIScrollViewDelegate {
             if let image = picture.image {
                 imageView.image =  image.scaleImageToSize(newSize: self.scrollView.frame.size)
                 updateImageViewSize()
-                
             }
         }
     }
@@ -169,6 +163,7 @@ internal class GalleryView: UIView, UIScrollViewDelegate {
     func clearImage() {
         imageView.image = nil
     }
+    
     // MARK: - UIView methods
     override func layoutSubviews() {
         scrollView.frame = scrollFrame
@@ -187,7 +182,6 @@ internal class GalleryView: UIView, UIScrollViewDelegate {
         let pointInView = recognizer.location(in: imageView)
         zoomToPoint(pointInView)
     }
-    
     
     //  MARK: - UIScrollView delegate
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
