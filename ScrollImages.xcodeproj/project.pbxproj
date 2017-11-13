@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0959D221FB95ACA00818655 /* ZJMGalleryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0959D1D1FB95ACA00818655 /* ZJMGalleryDelegate.swift */; };
+		E0959D231FB95ACA00818655 /* ZJMGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0959D1E1FB95ACA00818655 /* ZJMGalleryView.swift */; };
+		E0959D241FB95ACA00818655 /* ZJMGalleryZoomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0959D1F1FB95ACA00818655 /* ZJMGalleryZoomTransition.swift */; };
+		E0959D251FB95ACA00818655 /* UIIMageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0959D201FB95ACA00818655 /* UIIMageExtension.swift */; };
+		E0959D361FB9680900818655 /* ZJMImageDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0959D341FB9680900818655 /* ZJMImageDetailVC.swift */; };
+		E0959D371FB9680900818655 /* ZJMImageDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0959D351FB9680900818655 /* ZJMImageDetailVC.xib */; };
 		E0E3C1101FB5740C0011A19B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E3C10F1FB5740C0011A19B /* AppDelegate.swift */; };
 		E0E3C1121FB5740C0011A19B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E3C1111FB5740C0011A19B /* ViewController.swift */; };
 		E0E3C1151FB5740C0011A19B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0E3C1131FB5740C0011A19B /* Main.storyboard */; };
@@ -15,6 +21,9 @@
 		E0E3C11D1FB5740C0011A19B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0E3C11B1FB5740C0011A19B /* LaunchScreen.storyboard */; };
 		E0E3C1281FB5740C0011A19B /* ScrollImagesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E3C1271FB5740C0011A19B /* ScrollImagesTests.swift */; };
 		E0E3C1331FB5740C0011A19B /* ScrollImagesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E3C1321FB5740C0011A19B /* ScrollImagesUITests.swift */; };
+		E0E3C1411FB574210011A19B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0E3C1401FB574210011A19B /* Images.xcassets */; };
+		E0E3C1481FB574990011A19B /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E3C1461FB574990011A19B /* ImageDetailViewController.swift */; };
+		E0E3C1491FB574990011A19B /* ImageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0E3C1471FB574990011A19B /* ImageDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E0959D1D1FB95ACA00818655 /* ZJMGalleryDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJMGalleryDelegate.swift; sourceTree = "<group>"; };
+		E0959D1E1FB95ACA00818655 /* ZJMGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJMGalleryView.swift; sourceTree = "<group>"; };
+		E0959D1F1FB95ACA00818655 /* ZJMGalleryZoomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJMGalleryZoomTransition.swift; sourceTree = "<group>"; };
+		E0959D201FB95ACA00818655 /* UIIMageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIIMageExtension.swift; sourceTree = "<group>"; };
+		E0959D341FB9680900818655 /* ZJMImageDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJMImageDetailVC.swift; sourceTree = "<group>"; };
+		E0959D351FB9680900818655 /* ZJMImageDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJMImageDetailVC.xib; sourceTree = "<group>"; };
 		E0E3C10C1FB5740C0011A19B /* ScrollImages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollImages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0E3C10F1FB5740C0011A19B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0E3C1111FB5740C0011A19B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +64,9 @@
 		E0E3C12E1FB5740C0011A19B /* ScrollImagesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollImagesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0E3C1321FB5740C0011A19B /* ScrollImagesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollImagesUITests.swift; sourceTree = "<group>"; };
 		E0E3C1341FB5740C0011A19B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0E3C1401FB574210011A19B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E0E3C1461FB574990011A19B /* ImageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
+		E0E3C1471FB574990011A19B /* ImageDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +117,19 @@
 		E0E3C10E1FB5740C0011A19B /* ScrollImages */ = {
 			isa = PBXGroup;
 			children = (
+				E0959D341FB9680900818655 /* ZJMImageDetailVC.swift */,
+				E0959D351FB9680900818655 /* ZJMImageDetailVC.xib */,
+				E0959D1D1FB95ACA00818655 /* ZJMGalleryDelegate.swift */,
+				E0959D1E1FB95ACA00818655 /* ZJMGalleryView.swift */,
+				E0959D1F1FB95ACA00818655 /* ZJMGalleryZoomTransition.swift */,
+				E0959D201FB95ACA00818655 /* UIIMageExtension.swift */,
 				E0E3C10F1FB5740C0011A19B /* AppDelegate.swift */,
 				E0E3C1111FB5740C0011A19B /* ViewController.swift */,
+				E0E3C1461FB574990011A19B /* ImageDetailViewController.swift */,
+				E0E3C1471FB574990011A19B /* ImageDetailViewController.xib */,
 				E0E3C1131FB5740C0011A19B /* Main.storyboard */,
 				E0E3C1191FB5740C0011A19B /* Assets.xcassets */,
+				E0E3C1401FB574210011A19B /* Images.xcassets */,
 				E0E3C11B1FB5740C0011A19B /* LaunchScreen.storyboard */,
 				E0E3C11E1FB5740C0011A19B /* Info.plist */,
 				E0E3C1161FB5740C0011A19B /* ScrollImages.xcdatamodeld */,
@@ -235,7 +262,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0959D371FB9680900818655 /* ZJMImageDetailVC.xib in Resources */,
+				E0E3C1491FB574990011A19B /* ImageDetailViewController.xib in Resources */,
 				E0E3C11D1FB5740C0011A19B /* LaunchScreen.storyboard in Resources */,
+				E0E3C1411FB574210011A19B /* Images.xcassets in Resources */,
 				E0E3C11A1FB5740C0011A19B /* Assets.xcassets in Resources */,
 				E0E3C1151FB5740C0011A19B /* Main.storyboard in Resources */,
 			);
@@ -262,9 +292,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0959D231FB95ACA00818655 /* ZJMGalleryView.swift in Sources */,
 				E0E3C1121FB5740C0011A19B /* ViewController.swift in Sources */,
 				E0E3C1181FB5740C0011A19B /* ScrollImages.xcdatamodeld in Sources */,
 				E0E3C1101FB5740C0011A19B /* AppDelegate.swift in Sources */,
+				E0959D361FB9680900818655 /* ZJMImageDetailVC.swift in Sources */,
+				E0959D241FB95ACA00818655 /* ZJMGalleryZoomTransition.swift in Sources */,
+				E0959D221FB95ACA00818655 /* ZJMGalleryDelegate.swift in Sources */,
+				E0E3C1481FB574990011A19B /* ImageDetailViewController.swift in Sources */,
+				E0959D251FB95ACA00818655 /* UIIMageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +547,7 @@
 				E0E3C1391FB5740C0011A19B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E0E3C13A1FB5740C0011A19B /* Build configuration list for PBXNativeTarget "ScrollImagesTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +556,7 @@
 				E0E3C13C1FB5740C0011A19B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E0E3C13D1FB5740C0011A19B /* Build configuration list for PBXNativeTarget "ScrollImagesUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +565,7 @@
 				E0E3C13F1FB5740C0011A19B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
