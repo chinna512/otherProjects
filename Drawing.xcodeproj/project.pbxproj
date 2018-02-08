@@ -14,6 +14,24 @@
 		E0AABA2C202C072300946DC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0AABA2A202C072300946DC9 /* LaunchScreen.storyboard */; };
 		E0AABA37202C072300946DC9 /* DrawingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AABA36202C072300946DC9 /* DrawingTests.swift */; };
 		E0AABA42202C072300946DC9 /* DrawingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AABA41202C072300946DC9 /* DrawingUITests.swift */; };
+		E0AABA52202C07BB00946DC9 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AABA50202C07BB00946DC9 /* CollectionViewCell.swift */; };
+		E0AABA53202C07BB00946DC9 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0AABA51202C07BB00946DC9 /* CollectionViewCell.xib */; };
+		E0AABA57202C082300946DC9 /* AADraggableView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AABA55202C082300946DC9 /* AADraggableView+Helper.swift */; };
+		E0AABA58202C082300946DC9 /* AADraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AABA56202C082300946DC9 /* AADraggableView.swift */; };
+		E0AABA68202C084D00946DC9 /* Lattice Degeneration with vitereous condensation.png in Resources */ = {isa = PBXBuildFile; fileRef = E0AABA5A202C084D00946DC9 /* Lattice Degeneration with vitereous condensation.png */; };
+		E0AABA69202C084D00946DC9 /* Dislocated IOL.png in Resources */ = {isa = PBXBuildFile; fileRef = E0AABA5B202C084D00946DC9 /* Dislocated IOL.png */; };
+		E0AABA6A202C084D00946DC9 /* Horse shoe tear with flap.png in Resources */ = {isa = PBXBuildFile; fileRef = E0AABA5C202C084D00946DC9 /* Horse shoe tear with flap.png */; };
+		E0AABA6B202C084D00946DC9 /* Weiss Ring.png in Resources */ = {isa = PBXBuildFile; fileRef = E0AABA5D202C084D00946DC9 /* Weiss Ring.png */; };
+		E0AABA6C202C084D00946DC9 /* Hore Shoe Tear.png in Resources */ = {isa = PBXBuildFile; fileRef = E0AABA5E202C084D00946DC9 /* Hore Shoe Tear.png */; };
+		E0AABA6D202C084D00946DC9 /* Horse Shoe tear with rolled edges.png in Resources */ = {isa = PBXBuildFile; fileRef = E0AABA5F202C084D00946DC9 /* Horse Shoe tear with rolled edges.png */; };
+		E0AABA6E202C084D00946DC9 /* Preretinal Haemorrhage.png in Resources */ = {isa = PBXBuildFile; fileRef = E0AABA60202C084D00946DC9 /* Preretinal Haemorrhage.png */; };
+		E0AABA6F202C084D00946DC9 /* Flame Shaped Haemorrhage.png in Resources */ = {isa = PBXBuildFile; fileRef = E0AABA61202C084D00946DC9 /* Flame Shaped Haemorrhage.png */; };
+		E0AABA70202C084D00946DC9 /* Hole.png in Resources */ = {isa = PBXBuildFile; fileRef = E0AABA62202C084D00946DC9 /* Hole.png */; };
+		E0AABA71202C084D00946DC9 /* Subhyaloid Haemorrhage.png in Resources */ = {isa = PBXBuildFile; fileRef = E0AABA63202C084D00946DC9 /* Subhyaloid Haemorrhage.png */; };
+		E0AABA72202C084D00946DC9 /* Cotton Wool Spot.png in Resources */ = {isa = PBXBuildFile; fileRef = E0AABA64202C084D00946DC9 /* Cotton Wool Spot.png */; };
+		E0AABA73202C084D00946DC9 /* Choroldal Detachment.png in Resources */ = {isa = PBXBuildFile; fileRef = E0AABA65202C084D00946DC9 /* Choroldal Detachment.png */; };
+		E0AABA74202C084D00946DC9 /* Dot Haemorrhage.png in Resources */ = {isa = PBXBuildFile; fileRef = E0AABA66202C084D00946DC9 /* Dot Haemorrhage.png */; };
+		E0AABA75202C084D00946DC9 /* Hard Exudate.png in Resources */ = {isa = PBXBuildFile; fileRef = E0AABA67202C084D00946DC9 /* Hard Exudate.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +65,24 @@
 		E0AABA3D202C072300946DC9 /* DrawingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0AABA41202C072300946DC9 /* DrawingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingUITests.swift; sourceTree = "<group>"; };
 		E0AABA43202C072300946DC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0AABA50202C07BB00946DC9 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		E0AABA51202C07BB00946DC9 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		E0AABA55202C082300946DC9 /* AADraggableView+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AADraggableView+Helper.swift"; sourceTree = "<group>"; };
+		E0AABA56202C082300946DC9 /* AADraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AADraggableView.swift; sourceTree = "<group>"; };
+		E0AABA5A202C084D00946DC9 /* Lattice Degeneration with vitereous condensation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lattice Degeneration with vitereous condensation.png"; sourceTree = "<group>"; };
+		E0AABA5B202C084D00946DC9 /* Dislocated IOL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dislocated IOL.png"; sourceTree = "<group>"; };
+		E0AABA5C202C084D00946DC9 /* Horse shoe tear with flap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Horse shoe tear with flap.png"; sourceTree = "<group>"; };
+		E0AABA5D202C084D00946DC9 /* Weiss Ring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Weiss Ring.png"; sourceTree = "<group>"; };
+		E0AABA5E202C084D00946DC9 /* Hore Shoe Tear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hore Shoe Tear.png"; sourceTree = "<group>"; };
+		E0AABA5F202C084D00946DC9 /* Horse Shoe tear with rolled edges.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Horse Shoe tear with rolled edges.png"; sourceTree = "<group>"; };
+		E0AABA60202C084D00946DC9 /* Preretinal Haemorrhage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Preretinal Haemorrhage.png"; sourceTree = "<group>"; };
+		E0AABA61202C084D00946DC9 /* Flame Shaped Haemorrhage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Flame Shaped Haemorrhage.png"; sourceTree = "<group>"; };
+		E0AABA62202C084D00946DC9 /* Hole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hole.png; sourceTree = "<group>"; };
+		E0AABA63202C084D00946DC9 /* Subhyaloid Haemorrhage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Subhyaloid Haemorrhage.png"; sourceTree = "<group>"; };
+		E0AABA64202C084D00946DC9 /* Cotton Wool Spot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cotton Wool Spot.png"; sourceTree = "<group>"; };
+		E0AABA65202C084D00946DC9 /* Choroldal Detachment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Choroldal Detachment.png"; sourceTree = "<group>"; };
+		E0AABA66202C084D00946DC9 /* Dot Haemorrhage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dot Haemorrhage.png"; sourceTree = "<group>"; };
+		E0AABA67202C084D00946DC9 /* Hard Exudate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hard Exudate.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +133,11 @@
 		E0AABA20202C072300946DC9 /* Drawing */ = {
 			isa = PBXGroup;
 			children = (
+				E0AABA59202C084D00946DC9 /* imgDrawingTemplates */,
+				E0AABA54202C081000946DC9 /* CustomModels */,
 				E0AABA21202C072300946DC9 /* AppDelegate.swift */,
 				E0AABA23202C072300946DC9 /* ViewController.swift */,
+				E0AABA4F202C079F00946DC9 /* CollectionViewCell */,
 				E0AABA25202C072300946DC9 /* Main.storyboard */,
 				E0AABA28202C072300946DC9 /* Assets.xcassets */,
 				E0AABA2A202C072300946DC9 /* LaunchScreen.storyboard */,
@@ -123,6 +162,45 @@
 				E0AABA43202C072300946DC9 /* Info.plist */,
 			);
 			path = DrawingUITests;
+			sourceTree = "<group>";
+		};
+		E0AABA4F202C079F00946DC9 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E0AABA50202C07BB00946DC9 /* CollectionViewCell.swift */,
+				E0AABA51202C07BB00946DC9 /* CollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		E0AABA54202C081000946DC9 /* CustomModels */ = {
+			isa = PBXGroup;
+			children = (
+				E0AABA56202C082300946DC9 /* AADraggableView.swift */,
+				E0AABA55202C082300946DC9 /* AADraggableView+Helper.swift */,
+			);
+			path = CustomModels;
+			sourceTree = "<group>";
+		};
+		E0AABA59202C084D00946DC9 /* imgDrawingTemplates */ = {
+			isa = PBXGroup;
+			children = (
+				E0AABA5A202C084D00946DC9 /* Lattice Degeneration with vitereous condensation.png */,
+				E0AABA5B202C084D00946DC9 /* Dislocated IOL.png */,
+				E0AABA5C202C084D00946DC9 /* Horse shoe tear with flap.png */,
+				E0AABA5D202C084D00946DC9 /* Weiss Ring.png */,
+				E0AABA5E202C084D00946DC9 /* Hore Shoe Tear.png */,
+				E0AABA5F202C084D00946DC9 /* Horse Shoe tear with rolled edges.png */,
+				E0AABA60202C084D00946DC9 /* Preretinal Haemorrhage.png */,
+				E0AABA61202C084D00946DC9 /* Flame Shaped Haemorrhage.png */,
+				E0AABA62202C084D00946DC9 /* Hole.png */,
+				E0AABA63202C084D00946DC9 /* Subhyaloid Haemorrhage.png */,
+				E0AABA64202C084D00946DC9 /* Cotton Wool Spot.png */,
+				E0AABA65202C084D00946DC9 /* Choroldal Detachment.png */,
+				E0AABA66202C084D00946DC9 /* Dot Haemorrhage.png */,
+				E0AABA67202C084D00946DC9 /* Hard Exudate.png */,
+			);
+			path = imgDrawingTemplates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +310,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0AABA73202C084D00946DC9 /* Choroldal Detachment.png in Resources */,
+				E0AABA6E202C084D00946DC9 /* Preretinal Haemorrhage.png in Resources */,
 				E0AABA2C202C072300946DC9 /* LaunchScreen.storyboard in Resources */,
+				E0AABA6C202C084D00946DC9 /* Hore Shoe Tear.png in Resources */,
+				E0AABA69202C084D00946DC9 /* Dislocated IOL.png in Resources */,
+				E0AABA6F202C084D00946DC9 /* Flame Shaped Haemorrhage.png in Resources */,
+				E0AABA68202C084D00946DC9 /* Lattice Degeneration with vitereous condensation.png in Resources */,
+				E0AABA70202C084D00946DC9 /* Hole.png in Resources */,
 				E0AABA29202C072300946DC9 /* Assets.xcassets in Resources */,
+				E0AABA6B202C084D00946DC9 /* Weiss Ring.png in Resources */,
+				E0AABA75202C084D00946DC9 /* Hard Exudate.png in Resources */,
+				E0AABA6D202C084D00946DC9 /* Horse Shoe tear with rolled edges.png in Resources */,
+				E0AABA74202C084D00946DC9 /* Dot Haemorrhage.png in Resources */,
+				E0AABA71202C084D00946DC9 /* Subhyaloid Haemorrhage.png in Resources */,
+				E0AABA53202C07BB00946DC9 /* CollectionViewCell.xib in Resources */,
 				E0AABA27202C072300946DC9 /* Main.storyboard in Resources */,
+				E0AABA72202C084D00946DC9 /* Cotton Wool Spot.png in Resources */,
+				E0AABA6A202C084D00946DC9 /* Horse shoe tear with flap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +352,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0AABA57202C082300946DC9 /* AADraggableView+Helper.swift in Sources */,
 				E0AABA24202C072300946DC9 /* ViewController.swift in Sources */,
 				E0AABA22202C072300946DC9 /* AppDelegate.swift in Sources */,
+				E0AABA52202C07BB00946DC9 /* CollectionViewCell.swift in Sources */,
+				E0AABA58202C082300946DC9 /* AADraggableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,7 +528,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = hbw.Drawing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -446,7 +542,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = hbw.Drawing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
