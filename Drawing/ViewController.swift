@@ -72,11 +72,31 @@ extension ViewController:UIDropInteractionDelegate{
             let images = imageItems as! [UIImage]
             let dropLocation = session.location(in: self.leftEyeView)
             let image = images.first
-            let imageview = UIImageView(image: image)
+            let imageview = AADraggableView(image: image)
+            imageview.isUserInteractionEnabled = true
             imageview.frame.origin.x = dropLocation.x
             imageview.frame.origin.y = dropLocation.y
+            imageview.delegate = self
+            imageview.respectedView = self.leftEyeView
+            imageview.reposition = .sticky
             self.leftEyeView.addSubview(imageview)
         }
+    }
+}
+
+extension ViewController: AADraggableViewDelegate {
+    internal func draggingDidBegan(_ sender: UIImageView) {
+        sender.layer.zPosition = 1
+        sender.layer.shadowOffset = CGSize(width: 0, height: 20)
+        sender.layer.shadowOpacity = 0.3
+        sender.layer.shadowRadius = 6
+    }
+    
+    internal func draggingDidEnd(_ sender: UIImageView) {
+        sender.layer.zPosition = 0
+        sender.layer.shadowOffset = CGSize.zero
+        sender.layer.shadowOpacity = 0.0
+        sender.layer.shadowRadius = 0
     }
 }
 
