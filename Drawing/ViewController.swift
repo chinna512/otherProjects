@@ -79,6 +79,7 @@ extension ViewController:UIDropInteractionDelegate{
             imageview.delegate = self
             imageview.respectedView = self.leftEyeView
             imageview.reposition = .sticky
+            imageview.setupTapGesture()
             self.leftEyeView.addSubview(imageview)
         }
     }
