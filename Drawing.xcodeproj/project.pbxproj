@@ -32,6 +32,11 @@
 		E0AABA73202C084D00946DC9 /* Choroldal Detachment.png in Resources */ = {isa = PBXBuildFile; fileRef = E0AABA65202C084D00946DC9 /* Choroldal Detachment.png */; };
 		E0AABA74202C084D00946DC9 /* Dot Haemorrhage.png in Resources */ = {isa = PBXBuildFile; fileRef = E0AABA66202C084D00946DC9 /* Dot Haemorrhage.png */; };
 		E0AABA75202C084D00946DC9 /* Hard Exudate.png in Resources */ = {isa = PBXBuildFile; fileRef = E0AABA67202C084D00946DC9 /* Hard Exudate.png */; };
+		E0D826CA202C17C800B6EFA6 /* ImageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D826C9202C17C800B6EFA6 /* ImageSlider.swift */; };
+		E0D826CC202C17DF00B6EFA6 /* ImageSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0D826CB202C17DF00B6EFA6 /* ImageSlider.xib */; };
+		E0D826D0202C18F200B6EFA6 /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D826CD202C18F200B6EFA6 /* Stroke.swift */; };
+		E0D826D1202C18F200B6EFA6 /* StrokeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D826CE202C18F200B6EFA6 /* StrokeSettings.swift */; };
+		E0D826D2202C18F200B6EFA6 /* TouchDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D826CF202C18F200B6EFA6 /* TouchDrawView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +88,11 @@
 		E0AABA65202C084D00946DC9 /* Choroldal Detachment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Choroldal Detachment.png"; sourceTree = "<group>"; };
 		E0AABA66202C084D00946DC9 /* Dot Haemorrhage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dot Haemorrhage.png"; sourceTree = "<group>"; };
 		E0AABA67202C084D00946DC9 /* Hard Exudate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hard Exudate.png"; sourceTree = "<group>"; };
+		E0D826C9202C17C800B6EFA6 /* ImageSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSlider.swift; sourceTree = "<group>"; };
+		E0D826CB202C17DF00B6EFA6 /* ImageSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageSlider.xib; sourceTree = "<group>"; };
+		E0D826CD202C18F200B6EFA6 /* Stroke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stroke.swift; sourceTree = "<group>"; };
+		E0D826CE202C18F200B6EFA6 /* StrokeSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeSettings.swift; sourceTree = "<group>"; };
+		E0D826CF202C18F200B6EFA6 /* TouchDrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchDrawView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +188,11 @@
 			children = (
 				E0AABA56202C082300946DC9 /* AADraggableView.swift */,
 				E0AABA55202C082300946DC9 /* AADraggableView+Helper.swift */,
+				E0D826C9202C17C800B6EFA6 /* ImageSlider.swift */,
+				E0D826CB202C17DF00B6EFA6 /* ImageSlider.xib */,
+				E0D826CD202C18F200B6EFA6 /* Stroke.swift */,
+				E0D826CE202C18F200B6EFA6 /* StrokeSettings.swift */,
+				E0D826CF202C18F200B6EFA6 /* TouchDrawView.swift */,
 			);
 			path = CustomModels;
 			sourceTree = "<group>";
@@ -327,6 +342,7 @@
 				E0AABA53202C07BB00946DC9 /* CollectionViewCell.xib in Resources */,
 				E0AABA27202C072300946DC9 /* Main.storyboard in Resources */,
 				E0AABA72202C084D00946DC9 /* Cotton Wool Spot.png in Resources */,
+				E0D826CC202C17DF00B6EFA6 /* ImageSlider.xib in Resources */,
 				E0AABA6A202C084D00946DC9 /* Horse shoe tear with flap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,11 +368,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0D826D1202C18F200B6EFA6 /* StrokeSettings.swift in Sources */,
 				E0AABA57202C082300946DC9 /* AADraggableView+Helper.swift in Sources */,
 				E0AABA24202C072300946DC9 /* ViewController.swift in Sources */,
+				E0D826CA202C17C800B6EFA6 /* ImageSlider.swift in Sources */,
 				E0AABA22202C072300946DC9 /* AppDelegate.swift in Sources */,
 				E0AABA52202C07BB00946DC9 /* CollectionViewCell.swift in Sources */,
 				E0AABA58202C082300946DC9 /* AADraggableView.swift in Sources */,
+				E0D826D2202C18F200B6EFA6 /* TouchDrawView.swift in Sources */,
+				E0D826D0202C18F200B6EFA6 /* Stroke.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

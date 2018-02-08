@@ -55,7 +55,6 @@ open class AADraggableView: UIImageView {
             return
         }
         addGestureRecognizer(panGesture)
-    //tetgheh
     }
     
     

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="s7c-8X-aiS">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="128"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ezp-VA-WqF">
@@ -39,17 +40,48 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l2l-sX-dHX">
+                                <rect key="frame" x="0.0" y="89" width="512" height="679"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NTW-Mz-BeZ" customClass="TouchDrawView" customModule="Drawing" customModuleProvider="target">
+                                        <rect key="frame" x="83" y="0.0" width="430" height="679"/>
+                                        <color key="backgroundColor" red="0.095404730899999998" green="0.81191563659999999" blue="0.6556091959" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="NTW-Mz-BeZ" firstAttribute="top" secondItem="l2l-sX-dHX" secondAttribute="top" id="AIw-Sc-8Ol"/>
+                                    <constraint firstItem="NTW-Mz-BeZ" firstAttribute="leading" secondItem="l2l-sX-dHX" secondAttribute="leading" constant="83" id="QpL-Jd-SXU"/>
+                                    <constraint firstAttribute="trailing" secondItem="NTW-Mz-BeZ" secondAttribute="trailing" constant="-1" id="SUV-de-hje"/>
+                                    <constraint firstAttribute="bottom" secondItem="NTW-Mz-BeZ" secondAttribute="bottom" id="U6T-WY-fi2"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qgl-lp-hJc">
+                                <rect key="frame" x="512" y="89" width="512" height="679"/>
+                                <color key="backgroundColor" red="0.81191563659999999" green="0.25485764910000003" blue="0.38165282490000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qgl-lp-hJc" firstAttribute="leading" secondItem="l2l-sX-dHX" secondAttribute="trailing" id="AUc-16-7it"/>
+                            <constraint firstItem="l2l-sX-dHX" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="O2S-oO-pnw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="l2l-sX-dHX" secondAttribute="bottom" id="UXT-6s-Fru"/>
+                            <constraint firstItem="Qgl-lp-hJc" firstAttribute="width" secondItem="l2l-sX-dHX" secondAttribute="width" id="ZMt-0O-2AK"/>
+                            <constraint firstItem="l2l-sX-dHX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cl2-KV-fmC"/>
+                            <constraint firstItem="Qgl-lp-hJc" firstAttribute="height" secondItem="l2l-sX-dHX" secondAttribute="height" id="fFo-12-hX7"/>
+                            <constraint firstItem="l2l-sX-dHX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="69" id="j0t-Cj-REU"/>
+                            <constraint firstItem="Qgl-lp-hJc" firstAttribute="top" secondItem="l2l-sX-dHX" secondAttribute="top" id="udI-Ud-n0d"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="s7c-8X-aiS" id="OgY-xW-NmO"/>
+                        <outlet property="leftEyeView" destination="NTW-Mz-BeZ" id="FLf-1G-fDe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.6953125" y="133.59375"/>
+            <point key="canvasLocation" x="-307" y="54"/>
         </scene>
     </scenes>
 </document>
