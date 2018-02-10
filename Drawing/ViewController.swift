@@ -27,13 +27,17 @@ class ViewController: UIViewController{
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
 }
 
 extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         return 10
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
         return cell
@@ -50,6 +54,7 @@ extension ViewController:UICollectionViewDragDelegate{
         return [dragItem]
     }
 }
+
 extension ViewController:UIDropInteractionDelegate{
 
     func dropInteraction(_ interaction: UIDropInteraction, canHandle session: UIDropSession) -> Bool {
@@ -81,6 +86,7 @@ extension ViewController:UIDropInteractionDelegate{
             imageview.reposition = .sticky
             imageview.setupTapGesture()
             self.leftEyeView.addSubview(imageview)
+            self.leftEyeView.sendSubview(toBack: imageview)
         }
     }
 }

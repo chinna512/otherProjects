@@ -34,6 +34,8 @@ open class AADraggableView: UIImageView {
         }
     }
     
+    
+    
     /// AADraggableView touch pan gesture
     var panGesture: UIPanGestureRecognizer  {
         return UIPanGestureRecognizer(target: self,

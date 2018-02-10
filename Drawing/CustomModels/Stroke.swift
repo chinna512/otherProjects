@@ -1,11 +1,4 @@
-//
-//  Stroke.swift
-//  TouchDraw
-//
-//  Created by Christian Paul Dehli on 9/4/16.
-//
 
-/// A drawing stroke
 import UIKit
 open class Stroke: NSObject {
 

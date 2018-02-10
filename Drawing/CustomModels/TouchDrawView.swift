@@ -1,11 +1,4 @@
-//
-//  TouchDrawView.swift
-//  TouchDraw
-//
-//  Created by Christian Paul Dehli
-//
 
-/// The protocol which the container of TouchDrawView can conform to
 import UIKit
 @objc public protocol TouchDrawViewDelegate {
     /// triggered when undo is enabled (only if it was previously disabled)
@@ -222,11 +215,11 @@ extension TouchDrawView {
 
     /// Triggered when touches begin
     override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let touch = touches.first {
-            let stroke = Stroke(points: [touch.location(in: self)],
-                                settings: settings)
-            stack.append(stroke)
-        }
+            if let touch = touches.first {
+                let stroke = Stroke(points: [touch.location(in: self)],
+                                    settings: settings)
+                stack.append(stroke)
+            }
     }
 
     /// Triggered when touches move
