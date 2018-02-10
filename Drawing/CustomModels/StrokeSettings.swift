@@ -1,11 +1,4 @@
-//
-//  StrokeSettings.swift
-//  TouchDraw
-//
-//  Created by Christian Paul Dehli on 9/4/16.
-//
 
-/// Properties to describe a stroke (color, width)
 import UIKit
 open class StrokeSettings: NSObject {
 
