@@ -25,6 +25,8 @@ open class AADraggableView: UIImageView {
     
     /// Auto position after releasing the view
     open var reposition: Reposition = .sticky
+    
+    open var lastZoomedValue = 10
 
     /// AADraggableView dragging Enabled
     @IBInspectable open var isEnabled: Bool = true {

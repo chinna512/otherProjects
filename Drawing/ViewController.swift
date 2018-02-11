@@ -13,9 +13,13 @@ class ViewController: UIViewController{
     @IBOutlet weak var leftEyeView: TouchDrawView!
     @IBOutlet weak var collectionView: UICollectionView!
     var dragImagesArray :[UIImage] = []
+    var selectedImageView:AADraggableView?
+    var isSliderShown = false
+    var imageSlider:ImageSlider?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        dragImagesArray.append(UIImage(named: "Hore Shoe Tear")!)
+        dragImagesArray.append(UIImage(named: "Dot Haemorrhage")!)
         let nib = UINib(nibName: "CollectionViewCell", bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: "Cell")
         self.collectionView.dragDelegate = self
@@ -84,10 +88,39 @@ extension ViewController:UIDropInteractionDelegate{
             imageview.delegate = self
             imageview.respectedView = self.leftEyeView
             imageview.reposition = .sticky
+            imageview.padding = 0
             imageview.setupTapGesture()
+            let tapGesture =   UITapGestureRecognizer(target: self,
+                                                      action: #selector(self.tapGestureHandler(_:)))
             self.leftEyeView.addSubview(imageview)
+            imageview.addGestureRecognizer(tapGesture)
             self.leftEyeView.sendSubview(toBack: imageview)
         }
+    }
+    
+    @objc func tapGestureHandler(_ sender: UITapGestureRecognizer) {
+        if !isSliderShown{
+            imageSlider = ImageSlider.instanceFromNib() as? ImageSlider
+            imageSlider?.frame = self.collectionView.frame
+            imageSlider?.autoresizingMask = [.flexibleWidth]
+            imageSlider?.valueChangeHandler = valueChangeHandler()
+            self.view.addSubview(imageSlider!)
+            selectedImageView = sender.view as? AADraggableView
+            imageSlider?.slider.value = Float((selectedImageView?.lastZoomedValue)!)
+        }else{
+            imageSlider?.removeFromSuperview()
+        }
+        isSliderShown = !isSliderShown
+        self.collectionView.isHidden = !self.collectionView.isHidden
+    }
+    
+    func valueChangeHandler() -> (_ value:Int) -> Void {
+        let valueChangeHandler:((_  value:Int) -> Void) = {
+            value in
+            self.selectedImageView?.transform = CGAffineTransform(scaleX: CGFloat(value/10), y: CGFloat(value/10))
+            self.selectedImageView?.lastZoomedValue = value
+        }
+        return valueChangeHandler
     }
 }
 
