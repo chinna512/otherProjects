@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController{
     
+    @IBOutlet weak var leftImageView: UIImageView!
     @IBOutlet weak var leftEyeView: TouchDrawView!
     @IBOutlet weak var collectionView: UICollectionView!
     var dragImagesArray :[UIImage] = []
@@ -34,6 +35,9 @@ class ViewController: UIViewController{
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        let image = UIImageView(image: UIImage(named: "Cotton Wool Spot"))
+        self.leftImageView.addSubview(image)
+       // self.leftImageView.sendSubview(toBack: image)
     }
 }
 
@@ -86,15 +90,14 @@ extension ViewController:UIDropInteractionDelegate{
             imageview.frame.origin.x = dropLocation.x
             imageview.frame.origin.y = dropLocation.y
             imageview.delegate = self
-            imageview.respectedView = self.leftEyeView
+            imageview.respectedView = self.leftImageView
             imageview.reposition = .sticky
             imageview.padding = 0
             imageview.setupTapGesture()
             let tapGesture =   UITapGestureRecognizer(target: self,
                                                       action: #selector(self.tapGestureHandler(_:)))
-            self.leftEyeView.addSubview(imageview)
+            self.leftImageView.addSubview(imageview)
             imageview.addGestureRecognizer(tapGesture)
-            self.leftEyeView.sendSubview(toBack: imageview)
         }
     }
     
@@ -117,8 +120,11 @@ extension ViewController:UIDropInteractionDelegate{
     func valueChangeHandler() -> (_ value:Int) -> Void {
         let valueChangeHandler:((_  value:Int) -> Void) = {
             value in
-            self.selectedImageView?.transform = CGAffineTransform(scaleX: CGFloat(value/10), y: CGFloat(value/10))
-            self.selectedImageView?.lastZoomedValue = value
+            DispatchQueue.main.async {
+                self.selectedImageView?.transform = CGAffineTransform(scaleX: CGFloat(value/10), y: CGFloat(value/10))
+                print("chinna",self.selectedImageView?.frame)
+                self.selectedImageView?.lastZoomedValue = value
+            }
         }
         return valueChangeHandler
     }
