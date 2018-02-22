@@ -17,6 +17,7 @@ class ViewController: UIViewController{
     var selectedimageView:AADraggableView?
     var isSliderShown = false
     var imageSlider:ImageSlider?
+    var isDrawEnabled = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +38,7 @@ class ViewController: UIViewController{
         super.viewDidAppear(animated)
         let image = UIImageView(image: UIImage(named: "Cotton Wool Spot"))
         self.leftImageView.addSubview(image)
-       // self.leftimageView.sendSubview(toBack: image)
+        self.leftEyeView.isDrawEnabled = true
     }
 }
 
@@ -106,6 +107,7 @@ extension ViewController:UIDropInteractionDelegate{
                                                           action: #selector(self.tapGestureHandler(_:)))
                 self.leftImageView.addSubview(imageView)
                 imageView.addGestureRecognizer(tapGesture)
+                self.leftEyeView.isDrawEnabled = false
             }
         }
     }

@@ -36,6 +36,8 @@ open class TouchDrawView: UIView {
     fileprivate var settings: StrokeSettings!
 
     fileprivate let imageView = UIImageView()
+    
+    open var isDrawEnabled  = false
 
     /// Initializes a TouchDrawView instance
     override public init(frame: CGRect) {
@@ -215,45 +217,51 @@ extension TouchDrawView {
 
     /// Triggered when touches begin
     override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if self.isDrawEnabled{
             if let touch = touches.first {
                 let stroke = Stroke(points: [touch.location(in: self)],
                                     settings: settings)
                 stack.append(stroke)
             }
+        }
     }
 
     /// Triggered when touches move
     override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let touch = touches.first {
-            let stroke = stack.last!
-            let lastPoint = stroke.points.last
-            let currentPoint = touch.location(in: self)
-            drawLineWithContext(fromPoint: lastPoint!, toPoint: currentPoint, properties: stroke.settings)
-            stroke.points.append(currentPoint)
+        if isDrawEnabled{
+            if let touch = touches.first {
+                let stroke = stack.last!
+                let lastPoint = stroke.points.last
+                let currentPoint = touch.location(in: self)
+                drawLineWithContext(fromPoint: lastPoint!, toPoint: currentPoint, properties: stroke.settings)
+                stroke.points.append(currentPoint)
+            }
         }
     }
 
     /// Triggered whenever touches end, resulting in a newly created Stroke
     override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let stroke = stack.last!
-        if stroke.points.count == 1 {
-            let lastPoint = stroke.points.last!
-            drawLineWithContext(fromPoint: lastPoint, toPoint: lastPoint, properties: stroke.settings)
+        if isDrawEnabled{
+            let stroke = stack.last!
+            if stroke.points.count == 1 {
+                let lastPoint = stroke.points.last!
+                drawLineWithContext(fromPoint: lastPoint, toPoint: lastPoint, properties: stroke.settings)
+            }
+            
+            if !touchDrawUndoManager.canUndo {
+                delegate?.undoEnabled?()
+            }
+            
+            if touchDrawUndoManager.canRedo {
+                delegate?.redoDisabled?()
+            }
+            
+            if stack.count == 1 {
+                delegate?.clearEnabled?()
+            }
+            
+            touchDrawUndoManager.registerUndo(withTarget: self, selector: #selector(popDrawing), object: nil)
         }
-
-        if !touchDrawUndoManager.canUndo {
-            delegate?.undoEnabled?()
-        }
-
-        if touchDrawUndoManager.canRedo {
-            delegate?.redoDisabled?()
-        }
-
-        if stack.count == 1 {
-            delegate?.clearEnabled?()
-        }
-
-        touchDrawUndoManager.registerUndo(withTarget: self, selector: #selector(popDrawing), object: nil)
     }
 }
 
