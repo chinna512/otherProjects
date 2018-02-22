@@ -134,7 +134,7 @@ extension ViewController:UIDropInteractionDelegate{
             self.selectedimageView?.transform =  CGAffineTransform.identity
             print("frame",(self.selectedimageView as AnyObject).frame)
             let transform = CGAffineTransform(scaleX: CGFloat(value/10), y: CGFloat(value/10))
-             self.selectedimageView?.transform = transform
+            self.selectedimageView?.transform = transform
             print("frame1",(self.selectedimageView as AnyObject).frame)
             if(self.validateSliderImageFrame(image:self.selectedimageView!)){
                 self.selectedimageView?.transform = transform
