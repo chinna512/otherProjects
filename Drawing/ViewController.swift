@@ -14,13 +14,13 @@ class ViewController: UIViewController{
     @IBOutlet weak var leftEyeView: TouchDrawView!
     @IBOutlet weak var collectionView: UICollectionView!
     var dragImagesArray :[UIImage] = []
-    var selectedImageView:AADraggableView?
+    var selectedimageView:AADraggableView?
     var isSliderShown = false
     var imageSlider:ImageSlider?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dragImagesArray.append(UIImage(named: "Dot Haemorrhage")!)
+        dragImagesArray.append(UIImage(named: "Screen Shot 2018-02-19 at 5.00.04 PM")!)
         let nib = UINib(nibName: "CollectionViewCell", bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: "Cell")
         self.collectionView.dragDelegate = self
@@ -37,7 +37,7 @@ class ViewController: UIViewController{
         super.viewDidAppear(animated)
         let image = UIImageView(image: UIImage(named: "Cotton Wool Spot"))
         self.leftImageView.addSubview(image)
-       // self.leftImageView.sendSubview(toBack: image)
+       // self.leftimageView.sendSubview(toBack: image)
     }
 }
 
@@ -82,22 +82,31 @@ extension ViewController:UIDropInteractionDelegate{
     
     func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDropSession) {
         session.loadObjects(ofClass: UIImage.self) { imageItems in
-            let images = imageItems as! [UIImage]
-            let dropLocation = session.location(in: self.leftEyeView)
-            let image = images.first
-            let imageview = AADraggableView(image: image)
-            imageview.isUserInteractionEnabled = true
-            imageview.frame.origin.x = dropLocation.x
-            imageview.frame.origin.y = dropLocation.y
-            imageview.delegate = self
-            imageview.respectedView = self.leftImageView
-            imageview.reposition = .sticky
-            imageview.padding = 0
-            imageview.setupTapGesture()
-            let tapGesture =   UITapGestureRecognizer(target: self,
-                                                      action: #selector(self.tapGestureHandler(_:)))
-            self.leftImageView.addSubview(imageview)
-            imageview.addGestureRecognizer(tapGesture)
+            DispatchQueue.main.async {
+                let images = imageItems as! [UIImage]
+                let dropLocation = session.location(in: self.leftEyeView)
+                let image = images.first
+                let imageView = AADraggableView(image: image)
+                var frame = imageView.frame
+                frame.size = (image?.size)!
+                imageView.frame = frame
+                imageView.contentMode = .scaleAspectFit
+                imageView.isUserInteractionEnabled = true
+                print(dropLocation)
+                imageView.frame.origin.x = dropLocation.x
+                imageView.frame.origin.y = dropLocation.y
+                imageView.delegate = self
+                imageView.respectedView = self.leftImageView
+                imageView.reposition = .sticky
+                imageView.padding = 0
+                imageView.backgroundColor = UIColor.blue
+                imageView.setupTapGesture()
+                imageView.clipsToBounds = true
+                let tapGesture =   UITapGestureRecognizer(target: self,
+                                                          action: #selector(self.tapGestureHandler(_:)))
+                self.leftImageView.addSubview(imageView)
+                imageView.addGestureRecognizer(tapGesture)
+            }
         }
     }
     
@@ -108,8 +117,8 @@ extension ViewController:UIDropInteractionDelegate{
             imageSlider?.autoresizingMask = [.flexibleWidth]
             imageSlider?.valueChangeHandler = valueChangeHandler()
             self.view.addSubview(imageSlider!)
-            selectedImageView = sender.view as? AADraggableView
-            imageSlider?.slider.value = Float((selectedImageView?.lastZoomedValue)!)
+            selectedimageView = sender.view as? AADraggableView
+            imageSlider?.slider.value = Float((selectedimageView?.lastZoomedValue)!)
         }else{
             imageSlider?.removeFromSuperview()
         }
@@ -120,13 +129,40 @@ extension ViewController:UIDropInteractionDelegate{
     func valueChangeHandler() -> (_ value:Int) -> Void {
         let valueChangeHandler:((_  value:Int) -> Void) = {
             value in
-            DispatchQueue.main.async {
-                self.selectedImageView?.transform = CGAffineTransform(scaleX: CGFloat(value/10), y: CGFloat(value/10))
-                print("chinna",self.selectedImageView?.frame)
-                self.selectedImageView?.lastZoomedValue = value
+            self.selectedimageView?.transform =  CGAffineTransform.identity
+            print("frame",(self.selectedimageView as AnyObject).frame)
+            let transform = CGAffineTransform(scaleX: CGFloat(value/10), y: CGFloat(value/10))
+             self.selectedimageView?.transform = transform
+            print("frame1",(self.selectedimageView as AnyObject).frame)
+            if(self.validateSliderImageFrame(image:self.selectedimageView!)){
+                self.selectedimageView?.transform = transform
+                self.selectedimageView?.lastZoomedValue = value
+                self.selectedimageView?.lastTransformedValue = transform
+            }else{
+                self.imageSlider?.slider.value = Float((self.selectedimageView?.lastZoomedValue)!)
+                self.selectedimageView?.transform =  (self.selectedimageView?.lastTransformedValue)!
+                self.selectedimageView?.transform = CGAffineTransform(scaleX: CGFloat((self.selectedimageView?.lastZoomedValue)!/10), y: CGFloat((self.selectedimageView?.lastZoomedValue)!/10))
             }
+            
+            //  })
         }
         return valueChangeHandler
+    }
+    
+    func validateSliderImageFrame(image:AADraggableView) -> Bool{
+        if image.frame.origin.x <= 0{
+            return false
+        }
+        if image.frame.origin.x + image.frame.size.width >= self.leftEyeView.frame.size.width {
+            return false
+        }
+        if image.frame.origin.y <= 0 {
+            return false
+        }
+        if image.frame.size.height + image.frame.origin.y >= self.leftEyeView.frame.size.height{
+            return false
+        }
+        return true
     }
 }
 
@@ -144,5 +180,21 @@ extension ViewController: AADraggableViewDelegate {
         sender.layer.shadowOpacity = 0.0
         sender.layer.shadowRadius = 0
     }
+}
+    extension UIImage{
+        func resizeImage(targetSize: CGSize) -> UIImage {
+            let size = self.size
+            let widthRatio  = targetSize.width  / size.width
+            let heightRatio = targetSize.height / size.height
+            let newSize = widthRatio > heightRatio ?  CGSize(width: size.width * heightRatio, height: size.height * heightRatio) : CGSize(width: size.width * widthRatio,  height: size.height * widthRatio)
+            let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+            
+            UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+            self.draw(in: rect)
+            let newImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            
+            return newImage!
+        }
 }
 

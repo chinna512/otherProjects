@@ -41,21 +41,21 @@
                                 </cells>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l2l-sX-dHX">
-                                <rect key="frame" x="0.0" y="89" width="512" height="679"/>
+                                <rect key="frame" x="0.0" y="93" width="512" height="679"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NTW-Mz-BeZ" customClass="TouchDrawView" customModule="Drawing" customModuleProvider="target">
                                         <rect key="frame" x="83" y="0.0" width="430" height="679"/>
                                         <subviews>
                                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nyf-3p-5XS">
-                                                <rect key="frame" x="-12" y="0.0" width="434" height="679"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="434" height="679"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.095404730899999998" green="0.81191563659999999" blue="0.6556091959" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstItem="Nyf-3p-5XS" firstAttribute="top" secondItem="NTW-Mz-BeZ" secondAttribute="top" id="8qp-Hb-8du"/>
-                                            <constraint firstItem="Nyf-3p-5XS" firstAttribute="leading" secondItem="NTW-Mz-BeZ" secondAttribute="leading" constant="-12" id="ELt-5C-NRT"/>
+                                            <constraint firstItem="Nyf-3p-5XS" firstAttribute="leading" secondItem="NTW-Mz-BeZ" secondAttribute="leading" id="ELt-5C-NRT"/>
                                             <constraint firstAttribute="bottom" secondItem="Nyf-3p-5XS" secondAttribute="bottom" id="hf2-a7-hli"/>
-                                            <constraint firstAttribute="trailing" secondItem="Nyf-3p-5XS" secondAttribute="trailing" constant="8" id="szg-ki-EMt"/>
+                                            <constraint firstAttribute="trailing" secondItem="Nyf-3p-5XS" secondAttribute="trailing" constant="-4" id="szg-ki-EMt"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -76,12 +76,12 @@
                         <constraints>
                             <constraint firstItem="Qgl-lp-hJc" firstAttribute="leading" secondItem="l2l-sX-dHX" secondAttribute="trailing" id="AUc-16-7it"/>
                             <constraint firstItem="l2l-sX-dHX" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="O2S-oO-pnw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="l2l-sX-dHX" secondAttribute="bottom" id="UXT-6s-Fru"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="l2l-sX-dHX" secondAttribute="bottom" constant="-4" id="UXT-6s-Fru"/>
                             <constraint firstItem="Qgl-lp-hJc" firstAttribute="width" secondItem="l2l-sX-dHX" secondAttribute="width" id="ZMt-0O-2AK"/>
                             <constraint firstItem="l2l-sX-dHX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cl2-KV-fmC"/>
                             <constraint firstItem="Qgl-lp-hJc" firstAttribute="height" secondItem="l2l-sX-dHX" secondAttribute="height" id="fFo-12-hX7"/>
-                            <constraint firstItem="l2l-sX-dHX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="69" id="j0t-Cj-REU"/>
-                            <constraint firstItem="Qgl-lp-hJc" firstAttribute="top" secondItem="l2l-sX-dHX" secondAttribute="top" id="udI-Ud-n0d"/>
+                            <constraint firstItem="l2l-sX-dHX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="73" id="j0t-Cj-REU"/>
+                            <constraint firstItem="Qgl-lp-hJc" firstAttribute="top" secondItem="l2l-sX-dHX" secondAttribute="top" constant="-4" id="udI-Ud-n0d"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

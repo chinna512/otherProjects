@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E09DDBFA203558A60001786D /* Horse Shoe tear with rolled edges1.png in Resources */ = {isa = PBXBuildFile; fileRef = E09DDBF9203558A60001786D /* Horse Shoe tear with rolled edges1.png */; };
 		E0AABA22202C072300946DC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AABA21202C072300946DC9 /* AppDelegate.swift */; };
 		E0AABA24202C072300946DC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AABA23202C072300946DC9 /* ViewController.swift */; };
 		E0AABA27202C072300946DC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0AABA25202C072300946DC9 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		E0AABA73202C084D00946DC9 /* Choroldal Detachment.png in Resources */ = {isa = PBXBuildFile; fileRef = E0AABA65202C084D00946DC9 /* Choroldal Detachment.png */; };
 		E0AABA74202C084D00946DC9 /* Dot Haemorrhage.png in Resources */ = {isa = PBXBuildFile; fileRef = E0AABA66202C084D00946DC9 /* Dot Haemorrhage.png */; };
 		E0AABA75202C084D00946DC9 /* Hard Exudate.png in Resources */ = {isa = PBXBuildFile; fileRef = E0AABA67202C084D00946DC9 /* Hard Exudate.png */; };
+		E0CF3D80203AECE00072D28F /* Screen Shot 2018-02-19 at 5.00.04 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = E0CF3D7F203AECE00072D28F /* Screen Shot 2018-02-19 at 5.00.04 PM.png */; };
 		E0D826CA202C17C800B6EFA6 /* ImageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D826C9202C17C800B6EFA6 /* ImageSlider.swift */; };
 		E0D826CC202C17DF00B6EFA6 /* ImageSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0D826CB202C17DF00B6EFA6 /* ImageSlider.xib */; };
 		E0D826D0202C18F200B6EFA6 /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D826CD202C18F200B6EFA6 /* Stroke.swift */; };
@@ -57,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E09DDBF9203558A60001786D /* Horse Shoe tear with rolled edges1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Horse Shoe tear with rolled edges1.png"; sourceTree = "<group>"; };
 		E0AABA1E202C072300946DC9 /* Drawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0AABA21202C072300946DC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0AABA23202C072300946DC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +91,7 @@
 		E0AABA65202C084D00946DC9 /* Choroldal Detachment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Choroldal Detachment.png"; sourceTree = "<group>"; };
 		E0AABA66202C084D00946DC9 /* Dot Haemorrhage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dot Haemorrhage.png"; sourceTree = "<group>"; };
 		E0AABA67202C084D00946DC9 /* Hard Exudate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hard Exudate.png"; sourceTree = "<group>"; };
+		E0CF3D7F203AECE00072D28F /* Screen Shot 2018-02-19 at 5.00.04 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2018-02-19 at 5.00.04 PM.png"; sourceTree = "<group>"; };
 		E0D826C9202C17C800B6EFA6 /* ImageSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSlider.swift; sourceTree = "<group>"; };
 		E0D826CB202C17DF00B6EFA6 /* ImageSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageSlider.xib; sourceTree = "<group>"; };
 		E0D826CD202C18F200B6EFA6 /* Stroke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stroke.swift; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 		E0AABA59202C084D00946DC9 /* imgDrawingTemplates */ = {
 			isa = PBXGroup;
 			children = (
+				E0CF3D7F203AECE00072D28F /* Screen Shot 2018-02-19 at 5.00.04 PM.png */,
+				E09DDBF9203558A60001786D /* Horse Shoe tear with rolled edges1.png */,
 				E0AABA5A202C084D00946DC9 /* Lattice Degeneration with vitereous condensation.png */,
 				E0AABA5B202C084D00946DC9 /* Dislocated IOL.png */,
 				E0AABA5C202C084D00946DC9 /* Horse shoe tear with flap.png */,
@@ -329,6 +335,8 @@
 				E0AABA6E202C084D00946DC9 /* Preretinal Haemorrhage.png in Resources */,
 				E0AABA2C202C072300946DC9 /* LaunchScreen.storyboard in Resources */,
 				E0AABA6C202C084D00946DC9 /* Hore Shoe Tear.png in Resources */,
+				E0CF3D80203AECE00072D28F /* Screen Shot 2018-02-19 at 5.00.04 PM.png in Resources */,
+				E09DDBFA203558A60001786D /* Horse Shoe tear with rolled edges1.png in Resources */,
 				E0AABA69202C084D00946DC9 /* Dislocated IOL.png in Resources */,
 				E0AABA6F202C084D00946DC9 /* Flame Shaped Haemorrhage.png in Resources */,
 				E0AABA68202C084D00946DC9 /* Lattice Degeneration with vitereous condensation.png in Resources */,

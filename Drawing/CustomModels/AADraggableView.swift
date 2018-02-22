@@ -27,6 +27,9 @@ open class AADraggableView: UIImageView {
     open var reposition: Reposition = .sticky
     
     open var lastZoomedValue = 10
+    
+    open var lastTransformedValue:CGAffineTransform?
+    
 
     /// AADraggableView dragging Enabled
     @IBInspectable open var isEnabled: Bool = true {
@@ -123,9 +126,20 @@ open class AADraggableView: UIImageView {
         default:
             break
         }
-        
+        let superViewFrame = self.superview?.frame
+        if self.frame.origin.x < (superViewFrame?.origin.x)! {
+            newCenter.x = 0 + self.frame.size.width/2 + 2
+        }
+        if self.frame.origin.y < (superViewFrame?.origin.y)! {
+            newCenter.y = 0 +  self.frame.size.height/2 + 2
+        }
+        if self.frame.origin.x  + self.frame.size.width > (superViewFrame?.size.width)!{
+            newCenter.x = (superViewFrame?.size.width)! - self.frame.size.width/2 - 5
+        }
+        if self.frame.origin.y + self.frame.size.height > (superViewFrame?.size.height)!{
+            newCenter.y = (superViewFrame?.size.height)! - self.frame.size.height/2 - 5
+        }
         animateToReposition(newCenter)
-        
     }
     
     
