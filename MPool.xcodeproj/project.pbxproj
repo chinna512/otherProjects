@@ -7,20 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E00482FC20F8518A0052DEB5 /* ScatterChart.xib in Resources */ = {isa = PBXBuildFile; fileRef = E00482ED20F8518A0052DEB5 /* ScatterChart.xib */; };
+		E00482FD20F8518A0052DEB5 /* PNScatterChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = E00482EF20F8518A0052DEB5 /* PNScatterChartData.m */; };
+		E00482FE20F8518A0052DEB5 /* PNGenericChart.m in Sources */ = {isa = PBXBuildFile; fileRef = E00482F020F8518A0052DEB5 /* PNGenericChart.m */; };
+		E00482FF20F8518A0052DEB5 /* PNScatterChart.m in Sources */ = {isa = PBXBuildFile; fileRef = E00482F520F8518A0052DEB5 /* PNScatterChart.m */; };
+		E004830020F8518A0052DEB5 /* PNScatterChartDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E00482F620F8518A0052DEB5 /* PNScatterChartDataItem.m */; };
+		E004830120F8518A0052DEB5 /* PNColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E00482F720F8518A0052DEB5 /* PNColor.m */; };
+		E004830220F8518A0052DEB5 /* ScatterChart.m in Sources */ = {isa = PBXBuildFile; fileRef = E00482F920F8518A0052DEB5 /* ScatterChart.m */; };
 		E00E6E9C20F5FB5E00898C4F /* DLPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = E00E6E9B20F5FB5E00898C4F /* DLPieChart.m */; };
 		E021D89920F3081F003AE972 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E021D89820F3081F003AE972 /* AppDelegate.swift */; };
 		E021D89B20F3081F003AE972 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E021D89A20F3081F003AE972 /* ViewController.swift */; };
 		E021D89E20F3081F003AE972 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E021D89C20F3081F003AE972 /* Main.storyboard */; };
 		E021D8A020F30822003AE972 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E021D89F20F30822003AE972 /* Assets.xcassets */; };
 		E021D8A320F30822003AE972 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E021D8A120F30822003AE972 /* LaunchScreen.storyboard */; };
-		E0CF32E820F5FA7C006C7868 /* PopOverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0CF32D720F5FA7C006C7868 /* PopOverViewController.xib */; };
+		E029AB1820F8E8D400C52CBB /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = E029AB1720F8E8D400C52CBB /* Data.json */; };
+		E077DC4620FCF6B2006609A7 /* ScatterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E077DC4520FCF6B2006609A7 /* ScatterModel.swift */; };
+		E0C743D521009CFA00AEEE67 /* Share2.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C743D421009CFA00AEEE67 /* Share2.png */; };
 		E0CF32E920F5FA7C006C7868 /* PieChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0CF32D820F5FA7C006C7868 /* PieChartView.xib */; };
 		E0CF32EA20F5FA7C006C7868 /* RestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CF32D920F5FA7C006C7868 /* RestAPI.swift */; };
 		E0CF32EB20F5FA7C006C7868 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CF32DA20F5FA7C006C7868 /* CollectionViewCell.swift */; };
 		E0CF32ED20F5FA7C006C7868 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CF32DC20F5FA7C006C7868 /* Reachability.swift */; };
 		E0CF32EE20F5FA7C006C7868 /* CustomActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CF32DD20F5FA7C006C7868 /* CustomActivity.swift */; };
 		E0CF32F120F5FA7C006C7868 /* PieChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CF32E020F5FA7C006C7868 /* PieChartModel.swift */; };
-		E0CF32F220F5FA7C006C7868 /* PopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CF32E120F5FA7C006C7868 /* PopOverViewController.swift */; };
 		E0CF32F320F5FA7C006C7868 /* CustomScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CF32E220F5FA7C006C7868 /* CustomScrollView.swift */; };
 		E0CF32F420F5FA7C006C7868 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0CF32E320F5FA7C006C7868 /* CollectionViewCell.xib */; };
 		E0CF32F520F5FA7C006C7868 /* JHProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CF32E520F5FA7C006C7868 /* JHProgressHUD.swift */; };
@@ -28,6 +36,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E00482ED20F8518A0052DEB5 /* ScatterChart.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScatterChart.xib; sourceTree = "<group>"; };
+		E00482EE20F8518A0052DEB5 /* PNScatterChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNScatterChart.h; sourceTree = "<group>"; };
+		E00482EF20F8518A0052DEB5 /* PNScatterChartData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNScatterChartData.m; sourceTree = "<group>"; };
+		E00482F020F8518A0052DEB5 /* PNGenericChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNGenericChart.m; sourceTree = "<group>"; };
+		E00482F120F8518A0052DEB5 /* ScatterChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScatterChart.h; sourceTree = "<group>"; };
+		E00482F220F8518A0052DEB5 /* PNGenericChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNGenericChart.h; sourceTree = "<group>"; };
+		E00482F320F8518A0052DEB5 /* PNScatterChartData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNScatterChartData.h; sourceTree = "<group>"; };
+		E00482F420F8518A0052DEB5 /* PNChartDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNChartDelegate.h; sourceTree = "<group>"; };
+		E00482F520F8518A0052DEB5 /* PNScatterChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNScatterChart.m; sourceTree = "<group>"; };
+		E00482F620F8518A0052DEB5 /* PNScatterChartDataItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNScatterChartDataItem.m; sourceTree = "<group>"; };
+		E00482F720F8518A0052DEB5 /* PNColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNColor.m; sourceTree = "<group>"; };
+		E00482F820F8518A0052DEB5 /* PNScatterChartDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNScatterChartDataItem.h; sourceTree = "<group>"; };
+		E00482F920F8518A0052DEB5 /* ScatterChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScatterChart.m; sourceTree = "<group>"; };
+		E00482FA20F8518A0052DEB5 /* PNColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNColor.h; sourceTree = "<group>"; };
+		E00482FB20F8518A0052DEB5 /* PNChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNChart.h; sourceTree = "<group>"; };
 		E00E6E9920F5FB5D00898C4F /* MPool-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MPool-Bridging-Header.h"; sourceTree = "<group>"; };
 		E00E6E9A20F5FB5E00898C4F /* DLPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLPieChart.h; sourceTree = "<group>"; };
 		E00E6E9B20F5FB5E00898C4F /* DLPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLPieChart.m; sourceTree = "<group>"; };
@@ -38,14 +61,15 @@
 		E021D89F20F30822003AE972 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E021D8A220F30822003AE972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E021D8A420F30822003AE972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E0CF32D720F5FA7C006C7868 /* PopOverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopOverViewController.xib; sourceTree = "<group>"; };
+		E029AB1720F8E8D400C52CBB /* Data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
+		E077DC4520FCF6B2006609A7 /* ScatterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatterModel.swift; sourceTree = "<group>"; };
+		E0C743D421009CFA00AEEE67 /* Share2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Share2.png; path = ../Share2.png; sourceTree = "<group>"; };
 		E0CF32D820F5FA7C006C7868 /* PieChartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PieChartView.xib; sourceTree = "<group>"; };
 		E0CF32D920F5FA7C006C7868 /* RestAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestAPI.swift; sourceTree = "<group>"; };
 		E0CF32DA20F5FA7C006C7868 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		E0CF32DC20F5FA7C006C7868 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		E0CF32DD20F5FA7C006C7868 /* CustomActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivity.swift; sourceTree = "<group>"; };
 		E0CF32E020F5FA7C006C7868 /* PieChartModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartModel.swift; sourceTree = "<group>"; };
-		E0CF32E120F5FA7C006C7868 /* PopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopOverViewController.swift; sourceTree = "<group>"; };
 		E0CF32E220F5FA7C006C7868 /* CustomScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomScrollView.swift; sourceTree = "<group>"; };
 		E0CF32E320F5FA7C006C7868 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		E0CF32E520F5FA7C006C7868 /* JHProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHProgressHUD.swift; sourceTree = "<group>"; };
@@ -63,6 +87,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E00482EC20F851760052DEB5 /* ScatterChart */ = {
+			isa = PBXGroup;
+			children = (
+				E0C743D421009CFA00AEEE67 /* Share2.png */,
+				E00482FB20F8518A0052DEB5 /* PNChart.h */,
+				E00482F420F8518A0052DEB5 /* PNChartDelegate.h */,
+				E00482FA20F8518A0052DEB5 /* PNColor.h */,
+				E00482F720F8518A0052DEB5 /* PNColor.m */,
+				E00482F220F8518A0052DEB5 /* PNGenericChart.h */,
+				E00482F020F8518A0052DEB5 /* PNGenericChart.m */,
+				E00482EE20F8518A0052DEB5 /* PNScatterChart.h */,
+				E00482F520F8518A0052DEB5 /* PNScatterChart.m */,
+				E00482F320F8518A0052DEB5 /* PNScatterChartData.h */,
+				E00482EF20F8518A0052DEB5 /* PNScatterChartData.m */,
+				E00482F820F8518A0052DEB5 /* PNScatterChartDataItem.h */,
+				E00482F620F8518A0052DEB5 /* PNScatterChartDataItem.m */,
+				E00482F120F8518A0052DEB5 /* ScatterChart.h */,
+				E00482F920F8518A0052DEB5 /* ScatterChart.m */,
+				E00482ED20F8518A0052DEB5 /* ScatterChart.xib */,
+			);
+			path = ScatterChart;
+			sourceTree = "<group>";
+		};
 		E021D88C20F3081F003AE972 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +132,7 @@
 				E0CF32D520F5FA7C006C7868 /* CustomFiles */,
 				E021D89820F3081F003AE972 /* AppDelegate.swift */,
 				E021D89A20F3081F003AE972 /* ViewController.swift */,
+				E029AB1720F8E8D400C52CBB /* Data.json */,
 				E021D89C20F3081F003AE972 /* Main.storyboard */,
 				E021D89F20F30822003AE972 /* Assets.xcassets */,
 				E021D8A120F30822003AE972 /* LaunchScreen.storyboard */,
@@ -96,15 +144,15 @@
 		E0CF32D520F5FA7C006C7868 /* CustomFiles */ = {
 			isa = PBXGroup;
 			children = (
+				E00482EC20F851760052DEB5 /* ScatterChart */,
 				E00E6E9A20F5FB5E00898C4F /* DLPieChart.h */,
 				E00E6E9B20F5FB5E00898C4F /* DLPieChart.m */,
-				E0CF32D720F5FA7C006C7868 /* PopOverViewController.xib */,
 				E0CF32D920F5FA7C006C7868 /* RestAPI.swift */,
 				E0CF32DA20F5FA7C006C7868 /* CollectionViewCell.swift */,
 				E0CF32DC20F5FA7C006C7868 /* Reachability.swift */,
 				E0CF32DD20F5FA7C006C7868 /* CustomActivity.swift */,
 				E0CF32E020F5FA7C006C7868 /* PieChartModel.swift */,
-				E0CF32E120F5FA7C006C7868 /* PopOverViewController.swift */,
+				E077DC4520FCF6B2006609A7 /* ScatterModel.swift */,
 				E0CF32E220F5FA7C006C7868 /* CustomScrollView.swift */,
 				E0CF32E320F5FA7C006C7868 /* CollectionViewCell.xib */,
 				E0CF32E520F5FA7C006C7868 /* JHProgressHUD.swift */,
@@ -175,9 +223,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E021D8A320F30822003AE972 /* LaunchScreen.storyboard in Resources */,
+				E00482FC20F8518A0052DEB5 /* ScatterChart.xib in Resources */,
 				E0CF32E920F5FA7C006C7868 /* PieChartView.xib in Resources */,
 				E021D8A020F30822003AE972 /* Assets.xcassets in Resources */,
-				E0CF32E820F5FA7C006C7868 /* PopOverViewController.xib in Resources */,
+				E029AB1820F8E8D400C52CBB /* Data.json in Resources */,
+				E0C743D521009CFA00AEEE67 /* Share2.png in Resources */,
 				E021D89E20F3081F003AE972 /* Main.storyboard in Resources */,
 				E0CF32F420F5FA7C006C7868 /* CollectionViewCell.xib in Resources */,
 			);
@@ -190,15 +240,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E077DC4620FCF6B2006609A7 /* ScatterModel.swift in Sources */,
 				E0CF32F620F5FA7C006C7868 /* PieChartView.swift in Sources */,
+				E004830220F8518A0052DEB5 /* ScatterChart.m in Sources */,
 				E0CF32EA20F5FA7C006C7868 /* RestAPI.swift in Sources */,
+				E004830020F8518A0052DEB5 /* PNScatterChartDataItem.m in Sources */,
 				E021D89B20F3081F003AE972 /* ViewController.swift in Sources */,
 				E00E6E9C20F5FB5E00898C4F /* DLPieChart.m in Sources */,
-				E0CF32F220F5FA7C006C7868 /* PopOverViewController.swift in Sources */,
 				E0CF32ED20F5FA7C006C7868 /* Reachability.swift in Sources */,
 				E0CF32F520F5FA7C006C7868 /* JHProgressHUD.swift in Sources */,
+				E004830120F8518A0052DEB5 /* PNColor.m in Sources */,
+				E00482FD20F8518A0052DEB5 /* PNScatterChartData.m in Sources */,
 				E0CF32F320F5FA7C006C7868 /* CustomScrollView.swift in Sources */,
 				E0CF32EB20F5FA7C006C7868 /* CollectionViewCell.swift in Sources */,
+				E00482FE20F8518A0052DEB5 /* PNGenericChart.m in Sources */,
+				E00482FF20F8518A0052DEB5 /* PNScatterChart.m in Sources */,
 				E021D89920F3081F003AE972 /* AppDelegate.swift in Sources */,
 				E0CF32EE20F5FA7C006C7868 /* CustomActivity.swift in Sources */,
 				E0CF32F120F5FA7C006C7868 /* PieChartModel.swift in Sources */,
@@ -347,13 +403,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U556RR44KJ;
+				DEVELOPMENT_TEAM = 4XT9ZE7FHM;
 				INFOPLIST_FILE = MPool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zeomega.JMNPQA61;
+				PRODUCT_BUNDLE_IDENTIFIER = "chinnababu.2k14-gmail.com";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MPool/CustomFiles/MPool-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -368,13 +424,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U556RR44KJ;
+				DEVELOPMENT_TEAM = 4XT9ZE7FHM;
 				INFOPLIST_FILE = MPool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zeomega.JMNPQA61;
+				PRODUCT_BUNDLE_IDENTIFIER = "chinnababu.2k14-gmail.com";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MPool/CustomFiles/MPool-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;

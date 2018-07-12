@@ -16,4 +16,6 @@ class PieChartModel: NSObject {
     var colorsArray:NSMutableArray = []
     var searchResultsString:String = ""
     var displaySearchBar:Bool = false
+    var showPercentage: Bool = false
+    var searchBarTitile = ""
 }

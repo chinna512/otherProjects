@@ -1,0 +1,852 @@
+{
+    "similarskills": "liferay, liferay portal, liferay 6.1, liferay 5, liferay 6, liferay mvc, liferay 6.0, liferay portal server, liferay ide, liferay developer studio, liferay 6.2, alloy ui, service builder, liferay 5.2.3, liferay portlets, aui, liferay 6.0.6, liferay portal 6.1, liferay framework, liferay 6.0.5, liferay portals, liferay portlet, liferay portal 6, liferay hook, jsp",
+    "organizationMovementName": "TCS",
+    "locationMovement": [
+                         [
+                          "Organization",
+                          "Movement Percentage"
+                          ],
+                         [
+                          "HYDERABAD",
+                          32.14
+                          ],
+                         [
+                          "CHENNAI",
+                          17.86
+                          ],
+                         [
+                          "PUNE",
+                          16.07
+                          ],
+                         [
+                          "MUMBAI",
+                          9.82
+                          ],
+                         [
+                          "NOIDA",
+                          6.7
+                          ],
+                         [
+                          "KOLKATA",
+                          2.68
+                          ],
+                         [
+                          "GURGAON",
+                          2.23
+                          ],
+                         [
+                          "MALAYSIA",
+                          1.79
+                          ],
+                         [
+                          "SINGAPORE",
+                          1.34
+                          ],
+                         [
+                          "MYSORE",
+                          1.34
+                          ],
+                         [
+                          "THIRUVANANTHAPURAM",
+                          1.34
+                          ],
+                         [
+                          "INDORE",
+                          1.34
+                          ],
+                         [
+                          "LONDON",
+                          1.34
+                          ],
+                         [
+                          "DELHI",
+                          1.34
+                          ],
+                         [
+                          "QATAR",
+                          0.89
+                          ],
+                         [
+                          "BARODA",
+                          0.45
+                          ],
+                         [
+                          "CHANDIGARH",
+                          0.45
+                          ],
+                         [
+                          "NAGPUR",
+                          0.45
+                          ],
+                         [
+                          "LUCKNOW",
+                          0.45
+                          ]
+                         ],
+    "organizationMovement": [
+                             [
+                              "Organization",
+                              "Movement Percentage"
+                              ],
+                             [
+                              "IBM",
+                              4.55
+                              ],
+                             [
+                              "PERSISTENT",
+                              3.98
+                              ],
+                             [
+                              "CIGNEX DATAMATIC",
+                              3.98
+                              ],
+                             [
+                              "INFOSYS",
+                              3.41
+                              ],
+                             [
+                              "LISTER TECHNOLOGIES",
+                              2.84
+                              ],
+                             [
+                              "MINDTREE",
+                              2.84
+                              ],
+                             [
+                              "ATOS",
+                              2.84
+                              ],
+                             [
+                              "IGATE",
+                              2.84
+                              ],
+                             [
+                              "TATA COMMUNICATIONS",
+                              2.84
+                              ],
+                             [
+                              "DELOITTE",
+                              2.27
+                              ],
+                             [
+                              "ELLUCIAN",
+                              2.27
+                              ],
+                             [
+                              "1SYNC INC",
+                              2.27
+                              ],
+                             [
+                              "WIPRO",
+                              2.27
+                              ],
+                             [
+                              "ORACLE",
+                              2.27
+                              ],
+                             [
+                              "NOVO NORDISK A",
+                              2.27
+                              ],
+                             [
+                              "INAUTIX",
+                              1.7
+                              ],
+                             [
+                              "INTERRA INFORMATION TECHNOLOGIES",
+                              1.7
+                              ],
+                             [
+                              "CIGNEX DATAMATICS PRIVATE LIMITED",
+                              1.7
+                              ],
+                             [
+                              "COGNIZANT",
+                              1.7
+                              ],
+                             [
+                              "TECHASPECT SOLUTIONS",
+                              1.7
+                              ],
+                             [
+                              "EDELWEISS TOKIO LIFE INSURANCE CO. LTD.",
+                              1.7
+                              ],
+                             [
+                              "HCL",
+                              1.7
+                              ],
+                             [
+                              "LOGICIEL SOLUTIONS",
+                              1.7
+                              ],
+                             [
+                              "WORLD BANK",
+                              1.7
+                              ],
+                             [
+                              "FIS",
+                              1.14
+                              ],
+                             [
+                              "AON",
+                              1.14
+                              ],
+                             [
+                              "SANCTUM INFO SOLUTIONS",
+                              1.14
+                              ],
+                             [
+                              "XCHANGING",
+                              1.14
+                              ],
+                             [
+                              "GREAT WEST LIFE",
+                              1.14
+                              ],
+                             [
+                              "CAPGEMINI",
+                              1.14
+                              ],
+                             [
+                              "CBT INFOTECH",
+                              1.14
+                              ],
+                             [
+                              "AMPLIFI COMMERCE SOLUTIONS",
+                              1.14
+                              ],
+                             [
+                              "ELITECORE TECHNOLOGIES",
+                              1.14
+                              ],
+                             [
+                              "NIIT",
+                              1.14
+                              ],
+                             [
+                              "FIDELITY HEALTH SERVICES",
+                              1.14
+                              ],
+                             [
+                              "EXCEL BUSINESS SOLUTIONS",
+                              1.14
+                              ],
+                             [
+                              "NOVO NORDISK A / S",
+                              1.14
+                              ],
+                             [
+                              "ENDROIT TECHNOLOGIES",
+                              0.57
+                              ],
+                             [
+                              "ASCENDUM SOLUTIONS",
+                              0.57
+                              ],
+                             [
+                              "CSC",
+                              0.57
+                              ],
+                             [
+                              "COMPUTER SCIENCE AND ENGINEERING LNMIIT",
+                              0.57
+                              ],
+                             [
+                              "AG TECHNOLOGIES",
+                              0.57
+                              ],
+                             [
+                              "AT INDIA PVT LTD",
+                              0.57
+                              ],
+                             [
+                              "CONTINENTAL AG",
+                              0.57
+                              ],
+                             [
+                              "BEUMER TECHNOLOGY INDIA PVT LIMITED",
+                              0.57
+                              ],
+                             [
+                              "CNO INDIA",
+                              0.57
+                              ],
+                             [
+                              "ARRK SOLUTION PVT . LTD.",
+                              0.57
+                              ],
+                             [
+                              "EXETER GROUP INC.",
+                              0.57
+                              ],
+                             [
+                              "CHRYSLER LLC",
+                              0.57
+                              ],
+                             [
+                              "BYTE CONSULTING PVT . LTD",
+                              0.57
+                              ],
+                             [
+                              "OTHER",
+                              18.75
+                              ]
+                             ],
+    "locationMovementName": "BANGALORE",
+    "locations": [
+                  [
+                   "Bangalore",
+                   1365
+                   ],
+                  [
+                   "Pune",
+                   1110
+                   ],
+                  [
+                   "Hyderabad",
+                   384
+                   ],
+                  [
+                   "Chennai",
+                   207
+                   ],
+                  [
+                   "Mumbai",
+                   161
+                   ],
+                  [
+                   "Noida",
+                   110
+                   ],
+                  [
+                   "Gurgaon",
+                   82
+                   ],
+                  [
+                   "Kolkata",
+                   55
+                   ],
+                  [
+                   "Delhi",
+                   47
+                   ],
+                  [
+                   "Ahmedabad",
+                   30
+                   ],
+                  [
+                   "Ghaziabad",
+                   16
+                   ],
+                  [
+                   "Gujarat",
+                   11
+                   ],
+                  [
+                   "New Delhi",
+                   11
+                   ],
+                  [
+                   "Thiruvananthapuram",
+                   10
+                   ],
+                  [
+                   "Jaipur",
+                   10
+                   ]
+                  ],
+    "totalCount": 5301,
+    "organizations": [
+                      [
+                       "Organizations",
+                       "count"
+                       ],
+                      [
+                       "TCS",
+                       166
+                       ],
+                      [
+                       "INFOSYS",
+                       141
+                       ],
+                      [
+                       "IBM",
+                       131
+                       ],
+                      [
+                       "WIPRO",
+                       130
+                       ],
+                      [
+                       "HCL",
+                       119
+                       ],
+                      [
+                       "COGNIZANT",
+                       109
+                       ],
+                      [
+                       "TECH MAHINDRA",
+                       83
+                       ],
+                      [
+                       "INFINITE",
+                       78
+                       ],
+                      [
+                       "CAPGEMINI",
+                       75
+                       ],
+                      [
+                       "ACCENTURE",
+                       63
+                       ],
+                      [
+                       "CIGNEX DATAMATIC",
+                       53
+                       ],
+                      [
+                       "ZENSAR",
+                       51
+                       ],
+                      [
+                       "MPHASIS",
+                       48
+                       ],
+                      [
+                       "IGATE",
+                       46
+                       ],
+                      [
+                       "ATOS",
+                       38
+                       ],
+                      [
+                       "MAHINDRA SATYAM",
+                       38
+                       ],
+                      [
+                       "VIRTUSA",
+                       38
+                       ],
+                      [
+                       "AON",
+                       37
+                       ],
+                      [
+                       "SAPIENT",
+                       34
+                       ],
+                      [
+                       "UNISYS",
+                       34
+                       ],
+                      [
+                       "TECNOTREE CONVERGENCE",
+                       33
+                       ],
+                      [
+                       "MINDTREE",
+                       32
+                       ],
+                      [
+                       "NIIT",
+                       32
+                       ],
+                      [
+                       "SOURCE ONE MANAGEMENT SERVICES",
+                       28
+                       ],
+                      [
+                       "NESS",
+                       27
+                       ],
+                      [
+                       "ORACLE",
+                       26
+                       ],
+                      [
+                       "POLARIS",
+                       25
+                       ],
+                      [
+                       "CSC",
+                       22
+                       ],
+                      [
+                       "PERSISTENT",
+                       21
+                       ],
+                      [
+                       "UST GLOBAL",
+                       21
+                       ],
+                      [
+                       "CYBAGE",
+                       19
+                       ],
+                      [
+                       "HEXAWARE",
+                       18
+                       ],
+                      [
+                       "HP",
+                       17
+                       ],
+                      [
+                       "BIRLASOFT",
+                       16
+                       ],
+                      [
+                       "KPIT",
+                       16
+                       ],
+                      [
+                       "SYNTEL",
+                       16
+                       ],
+                      [
+                       "TRANSIT MPOWER LABS",
+                       16
+                       ],
+                      [
+                       "MPOWER SOFTCOMM PVT LTD",
+                       15
+                       ],
+                      [
+                       "BLUE STAR INFOTECH",
+                       14
+                       ],
+                      [
+                       "CGI",
+                       14
+                       ],
+                      [
+                       "CMC",
+                       14
+                       ],
+                      [
+                       "DELL",
+                       13
+                       ],
+                      [
+                       "GENPACT",
+                       13
+                       ],
+                      [
+                       "MASTEK",
+                       13
+                       ],
+                      [
+                       "PATNI",
+                       13
+                       ],
+                      [
+                       "TECNOTREE",
+                       13
+                       ],
+                      [
+                       "YASH TECHNOLOGIES",
+                       13
+                       ],
+                      [
+                       "CISCO",
+                       12
+                       ],
+                      [
+                       "Other",
+                       3803
+                       ]
+                      ],
+    "skillCompensation": {
+        "skillCompensationLevelName": "",
+        "skillCompensationAverage": "8,00,000",
+        "skillCompensationList": [
+                                  [
+                                   1,
+                                   800000,
+                                   "Expected salary 8,00,000 INR",
+                                   800000,
+                                   "Average expected salary 8,00,000 INR"
+                                   ]
+                                  ],
+        "skillCompensationLevelNames": [
+                                        [
+                                         "12",
+                                         "1.0 yrs - 2.0 yrs"
+                                         ],
+                                        [
+                                         "11",
+                                         "2.0 yrs - 3.5 yrs"
+                                         ],
+                                        [
+                                         "10",
+                                         "3.5 yrs - 5.5 yrs"
+                                         ]
+                                        ]
+    },
+    "experienceRanges": [
+                         [
+                          "3.5-5.5",
+                          1392
+                          ],
+                         [
+                          "2.0-3.5",
+                          881
+                          ],
+                         [
+                          "5.5-7.5",
+                          577
+                          ],
+                         [
+                          "8.0-12.0",
+                          372
+                          ],
+                         [
+                          "1.0-2.0",
+                          154
+                          ],
+                         [
+                          "9.0-11.0",
+                          31
+                          ],
+                         [
+                          "15.0-25.0",
+                          16
+                          ],
+                         [
+                          "10.0-13.0",
+                          8
+                          ],
+                         [
+                          "12.0-15.0",
+                          7
+                          ]
+                         ],
+    "gender": [
+               [
+                "Diversity",
+                "count"
+                ],
+               [
+                "FEMALE",
+                143
+                ],
+               [
+                "MALE",
+                533
+                ]
+               ],
+    "sId": 56083,
+    "organizationByLocation": [
+                               [
+                                "Organization",
+                                "Movement Percentage"
+                                ],
+                               [
+                                "INFINITE COMPUTER SOLUTIONS",
+                                5.76
+                                ],
+                               [
+                                "INFOSYS",
+                                5.3
+                                ],
+                               [
+                                "WIPRO",
+                                4.61
+                                ],
+                               [
+                                "HCL",
+                                4.38
+                                ],
+                               [
+                                "UNISYS",
+                                3.92
+                                ],
+                               [
+                                "TECNOTREE CONVERGENCE",
+                                3.69
+                                ],
+                               [
+                                "CIGNEX DATAMATIC",
+                                3.46
+                                ],
+                               [
+                                "MINDTREE",
+                                3.46
+                                ],
+                               [
+                                "COGNIZANT",
+                                3.23
+                                ],
+                               [
+                                "SOURCE ONE MANAGEMENT SERVICES",
+                                3
+                                ],
+                               [
+                                "TECH MAHINDRA",
+                                2.3
+                                ],
+                               [
+                                "ACCENTURE",
+                                2.3
+                                ],
+                               [
+                                "TCS",
+                                2.07
+                                ],
+                               [
+                                "IBM",
+                                2.07
+                                ],
+                               [
+                                "CAPGEMINI",
+                                1.84
+                                ],
+                               [
+                                "SAPIENT",
+                                1.84
+                                ],
+                               [
+                                "MPHASIS",
+                                1.84
+                                ],
+                               [
+                                "IGATE",
+                                1.61
+                                ],
+                               [
+                                "TECNOTREE",
+                                1.61
+                                ],
+                               [
+                                "HP",
+                                1.38
+                                ],
+                               [
+                                "NOKIA",
+                                1.38
+                                ],
+                               [
+                                "DELL",
+                                1.15
+                                ],
+                               [
+                                "CGI",
+                                0.92
+                                ],
+                               [
+                                "MPOWER SOFTCOMM PVT LTD",
+                                0.92
+                                ],
+                               [
+                                "BLUE STAR INFOTECH",
+                                0.92
+                                ],
+                               [
+                                "ROBERT BOSCH",
+                                0.92
+                                ],
+                               [
+                                "ENHANCESYS INNOVATION",
+                                0.92
+                                ],
+                               [
+                                "TRANSIT MPOWER LABS",
+                                0.92
+                                ],
+                               [
+                                "ATOS",
+                                0.69
+                                ],
+                               [
+                                "CHANNEL MENTOR",
+                                0.69
+                                ],
+                               [
+                                "SOURCE ONE",
+                                0.69
+                                ],
+                               [
+                                "TORRY HARRIS BUSINESS SOLUTIONS",
+                                0.69
+                                ],
+                               [
+                                "CENTURYLINK",
+                                0.69
+                                ],
+                               [
+                                "ITC",
+                                0.69
+                                ],
+                               [
+                                "ABOVE SOLUTIONS",
+                                0.69
+                                ],
+                               [
+                                "GALAXE SOLUTIONS",
+                                0.69
+                                ],
+                               [
+                                "UST GLOBAL",
+                                0.69
+                                ],
+                               [
+                                "SPAN INFOTECH",
+                                0.69
+                                ],
+                               [
+                                "HAPPIEST MINDS",
+                                0.46
+                                ],
+                               [
+                                "ZYME",
+                                0.46
+                                ],
+                               [
+                                "PROFESSIONAL ACCESS",
+                                0.46
+                                ],
+                               [
+                                "ENTLOGICS TECHNOLOGIES",
+                                0.46
+                                ],
+                               [
+                                "CADLAND INFOTECH",
+                                0.46
+                                ],
+                               [
+                                "TESCO",
+                                0.46
+                                ],
+                               [
+                                "TRIGENT",
+                                0.46
+                                ],
+                               [
+                                "RAMYAM INTELLIGENCE LAB",
+                                0.46
+                                ],
+                               [
+                                "COMPASSITES SOFTWARE SOLUTIONS",
+                                0.46
+                                ],
+                               [
+                                "INTELLECT DESIGN ARENA",
+                                0.46
+                                ],
+                               [
+                                "SLK",
+                                0.46
+                                ],
+                               [
+                                "ATS",
+                                0.46
+                                ],
+                               [
+                                "OTHER",
+                                19.82
+                                ]
+                               ]
+}

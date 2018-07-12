@@ -28,7 +28,7 @@
 
 @protocol CustomDelegate <NSObject>
 @optional
-- (void)pieChart:(DLPieChart *)pieChart willSelectSliceAtIndex:(NSUInteger)index andWithTheLayer:(CGPoint)point;
+- (void)pieChart:(DLPieChart *)pieChart willSelectSliceAtIndex:(NSUInteger)index andWithTheLayer:(CGPoint)point andDisplayVlaue:(NSString*)displayValue andPercentage:(NSString*)percentage;
 - (void)pieChart:(DLPieChart *)pieChart willDeselectSliceAtIndex:(NSUInteger)index;
 - (void)showPopOverForTheSliceClicked:(CAShapeLayer*)layer;
 - (void)removeView;

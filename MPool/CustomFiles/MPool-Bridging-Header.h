@@ -3,3 +3,5 @@
 //
 
 #import "DLPieChart.h"
+#import "ScatterChart.h"
+

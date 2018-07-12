@@ -12,10 +12,10 @@ import UIKit
 protocol CustomviewDelegate {
     func  selectedViewIndex(index:Int, forThePieChart pieChart:DLPieChart)
     func  deSlectedViewIndex(index:Int, forThePieChart pieChart:DLPieChart)
-    func pieChart(_ pieChart: DLPieChart!, willSelectSliceAt index: UInt, andWithTheLayer point: CGPoint,customView:PieChartView)
+    func pieChart(_ pieChart: DLPieChart!, willSelectSliceAt index: UInt, andWithTheLayer point: CGPoint,customView:PieChartView, andDisplayValue displayValue:String, andPercentage percentage:String)
     func removeView()
-    
     func share(image:UIImage)
+    func searchBarSelectedWithText(searchText:String, andTag index:Int)
 
 }
 class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,CustomDelegate,UIPopoverPresentationControllerDelegate,UISearchBarDelegate {
@@ -49,19 +49,23 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.lightGray.cgColor
         textField.layer.cornerRadius = 6
+        textField.textAlignment = .center
     }
     
     func loadCustomPieChart(model:PieChartModel, withSearchBarDisplay isDisplay:Bool){
+        if !isDisplay{
+            self.titileTopConstarint.constant = 37
+            self.searchBar.isHidden = true
+        }
+        else{
+            customizeSearchBar()
+            searchBar.text = model.searchBarTitile
+        }
         var frame = self.pieChartView.frame
         frame.size.height = self.frame.size.width - 60
         frame.size.width =  frame.size.height
         viewHeight = self.frame.size.height
         frame.origin.y = 0
-        if isDisplay{
-            customizeSearchBar()
-        }else{
-            self.titileTopConstarint.constant = 24
-        }
         let piechart = DLPieChart.init(frame: frame)
         piechart.customDelegate = self
         piechart.tag = self.tag + 1
@@ -71,7 +75,6 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
             colorsArray.add(generateRandomColor())
             valuesArray.add(model.keysArray.object(at: index))
         }
-        self.searchBar.isHidden = !isDisplay
         self.titile.text = model.title
         self.searchString.text = model.searchResultsString
         if model.valuesArray.count > 12{
@@ -85,6 +88,7 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
             }
             self.heightConstarint.constant = CGFloat(value * 18)
         }
+        piechart.showPercentage = model.showPercentage
         piechart.render(inLayer: piechart, dataArray: array, withColors: colorsArray, andWithDisplayValues: valuesArray)
         self.pieChartView.addSubview(piechart)
         if valuesArray.count == 2{
@@ -173,24 +177,25 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
         }
     }
     
-    func pieChart(_ pieChart: DLPieChart!, willSelectSliceAt index: UInt, andWithTheLayer point: CGPoint) {
+    func pieChart(_ pieChart: DLPieChart!, willSelectSliceAt index: UInt, andWithTheLayer point: CGPoint, andDisplayVlaue displayValue:String ,andPercentage percentage:String) {
         let point1 = pieChart.convert(point, to: self)
-        self.delegate?.pieChart(pieChart, willSelectSliceAt: index, andWithTheLayer: point1,customView: self)
+        self.delegate?.pieChart(pieChart, willSelectSliceAt: index, andWithTheLayer: point1,customView: self, andDisplayValue:displayValue, andPercentage:percentage)
     }
     
     func removeView(){
         self.delegate?.removeView()
     }
     @IBAction func share(_ sender: Any) {
-        self.delegate?.share(image: snapshot!)
+        self.delegate?.share(image: asImage())
     }
     
-    func asImage() -> UIImage {
 
-        let renderer = UIGraphicsImageRenderer(bounds: bounds)
-        return renderer.image { rendererContext in
-            layer.render(in: rendererContext.cgContext)
-        }
+    func asImage() -> UIImage {
+        UIGraphicsBeginImageContext(CGSize(width: self.frame.size.width, height: viewHeight! + 20) )
+        self.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image =  UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return image
     }
     
     var snapshot: UIImage? {
@@ -203,6 +208,17 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
             return screenshot
         }
         return nil
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.delegate?.removeView()
+        self.searchBar.endEditing(true)
+        self.delegate?.searchBarSelectedWithText(searchText:searchBar.text!, andTag: self.tag)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.delegate?.removeView()
+        self.searchBar.endEditing(true)
     }
     
 }

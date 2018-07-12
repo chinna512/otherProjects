@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xHh-2Q-o0t" customClass="CustomScrollView" customModule="MPool" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="572"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X6c-Sz-FU9">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="639"/>
@@ -43,7 +43,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="x9r-Qf-y9e" firstAttribute="top" secondItem="X6c-Sz-FU9" secondAttribute="top" id="62g-vK-lZt"/>
                                             <constraint firstAttribute="trailing" secondItem="U84-VU-C3s" secondAttribute="trailing" constant="20" id="7fQ-MP-U4c"/>
@@ -57,23 +57,54 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="X6c-Sz-FU9" firstAttribute="height" secondItem="xHh-2Q-o0t" secondAttribute="height" id="OzD-ta-kjJ"/>
+                                    <constraint firstItem="X6c-Sz-FU9" firstAttribute="height" secondItem="xHh-2Q-o0t" secondAttribute="height" constant="67" id="OzD-ta-kjJ"/>
                                     <constraint firstItem="X6c-Sz-FU9" firstAttribute="width" secondItem="xHh-2Q-o0t" secondAttribute="width" id="PLG-7M-6yT"/>
                                     <constraint firstItem="X6c-Sz-FU9" firstAttribute="top" secondItem="xHh-2Q-o0t" secondAttribute="top" id="Snm-zV-C0S"/>
                                     <constraint firstAttribute="trailing" secondItem="X6c-Sz-FU9" secondAttribute="trailing" id="hb8-ao-ayt"/>
-                                    <constraint firstAttribute="bottom" secondItem="X6c-Sz-FU9" secondAttribute="bottom" constant="6" id="ovL-Cs-fJC"/>
+                                    <constraint firstAttribute="bottom" secondItem="X6c-Sz-FU9" secondAttribute="bottom" constant="-67" id="ovL-Cs-fJC"/>
                                     <constraint firstItem="X6c-Sz-FU9" firstAttribute="leading" secondItem="xHh-2Q-o0t" secondAttribute="leading" id="xSv-6u-T6r"/>
                                 </constraints>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ejh-NQ-VAT">
+                                <rect key="frame" x="0.0" y="600" width="375" height="67"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="info@mpool.com " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qf0-gA-rpx">
+                                        <rect key="frame" x="0.0" y="12" width="375" height="21"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© Copyright 2017 mpool.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAy-3F-Prx">
+                                        <rect key="frame" x="0.0" y="37" width="367" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="qf0-gA-rpx" firstAttribute="leading" secondItem="Ejh-NQ-VAT" secondAttribute="leading" id="3LY-kS-9Hs"/>
+                                    <constraint firstItem="kAy-3F-Prx" firstAttribute="leading" secondItem="qf0-gA-rpx" secondAttribute="leading" id="3YN-FP-L8D"/>
+                                    <constraint firstItem="qf0-gA-rpx" firstAttribute="top" secondItem="Ejh-NQ-VAT" secondAttribute="top" constant="12" id="G9Y-Zu-MHw"/>
+                                    <constraint firstItem="kAy-3F-Prx" firstAttribute="trailing" secondItem="qf0-gA-rpx" secondAttribute="trailing" constant="-8" id="OHF-ug-O51"/>
+                                    <constraint firstAttribute="trailing" secondItem="qf0-gA-rpx" secondAttribute="trailing" id="ow7-nR-Yfu"/>
+                                    <constraint firstItem="kAy-3F-Prx" firstAttribute="top" secondItem="qf0-gA-rpx" secondAttribute="top" constant="25" id="tRa-48-cV0"/>
+                                    <constraint firstAttribute="height" constant="67" id="tkp-Um-q6h"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Ejh-NQ-VAT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-67" id="2mg-XD-b2B"/>
                             <constraint firstItem="xHh-2Q-o0t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BFg-rv-TA6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ejh-NQ-VAT" secondAttribute="trailing" id="SNk-yp-jMp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xHh-2Q-o0t" secondAttribute="trailing" id="m3o-GZ-bMa"/>
                             <constraint firstItem="xHh-2Q-o0t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="oPX-qp-OOJ"/>
                             <constraint firstItem="xHh-2Q-o0t" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="oRw-O2-CQ9"/>
+                            <constraint firstItem="Ejh-NQ-VAT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ugx-jL-anD"/>
                             <constraint firstItem="xHh-2Q-o0t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-639" id="vcN-hg-cIY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xHh-2Q-o0t" secondAttribute="bottom" id="y3D-hb-88I"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xHh-2Q-o0t" secondAttribute="bottom" constant="67" id="y3D-hb-88I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

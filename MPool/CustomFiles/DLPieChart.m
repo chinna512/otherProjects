@@ -225,7 +225,7 @@ static CGPathRef CGPathCreateArc(CGPoint center, CGFloat radius, CGFloat startAn
 
 - (void)setPieBackgroundColor:(UIColor *)color
 {
-    [_pieView setBackgroundColor:UIColor.blueColor];
+    [_pieView setBackgroundColor:UIColor.clearColor];
 }
 
 #pragma mark - manage settings
@@ -610,7 +610,7 @@ static CGPathRef CGPathCreateArc(CGPoint center, CGFloat radius, CGFloat startAn
             }
         }
     }else{
-        
+        [self.customDelegate removeView];
     }
 }
 
@@ -710,6 +710,7 @@ static CGPathRef CGPathCreateArc(CGPoint center, CGFloat radius, CGFloat startAn
     self.DLDataArray = dataArray;
     self.DLPieChartView = layerHostingView;
     self.DLColorsArray = colorsArray;
+    self.DLDisplayValuesArray = displayValues;
     [layerHostingView setDataSource:self];
     [layerHostingView setDelegate:self];
     
@@ -719,7 +720,7 @@ static CGPathRef CGPathCreateArc(CGPoint center, CGFloat radius, CGFloat startAn
     [layerHostingView setLabelFont:[UIFont fontWithName:@"Helvetica-Light" size:16.0f]];
     UIFont *font = [UIFont fontWithName:@"EdwardianScriptITCStd"
                                    size:16.0f];
-    [layerHostingView setShowPercentage:YES];
+    [layerHostingView setShowPercentage:_showPercentage];
     [layerHostingView setPieBackgroundColor:[UIColor colorWithWhite:0.95 alpha:1]];
     [layerHostingView setPieCenter:CGPointMake(layerHostingView.pieRadius+OFFSET, layerHostingView.pieRadius+OFFSET)];
     [layerHostingView setLabelRadius:(layerHostingView.pieRadius*0.65)];
@@ -760,13 +761,15 @@ static CGPathRef CGPathCreateArc(CGPoint center, CGFloat radius, CGFloat startAn
 
 #pragma mark - DLPieChart Delegate
 - (void)pieChart:(DLPieChart *)pieChart didSelectSliceAtIndex:(NSUInteger)index{
-    
     CALayer *parentLayer = [_pieView layer];
     NSArray *pieLayers = [parentLayer sublayers];
     SliceLayer *layer1 = [pieLayers objectAtIndex:index];
+    NSString *percentage = [NSString stringWithFormat:@"%0.0f%s", layer1.percentage*100,"%"];
+    [self.customDelegate pieChart:self willSelectSliceAtIndex:index andWithTheLayer:self.selectedPoint andDisplayVlaue:layer1.displayValue andPercentage:percentage];
+}
 
-    [self.customDelegate pieChart:self willSelectSliceAtIndex:index andWithTheLayer:self.selectedPoint];
-        // [self.delegate1 pieChart:self willSelectSliceAtIndex:index];
+- (void)pieChart:(DLPieChart *)pieChart didDeselectSliceAtIndex:(NSUInteger)index{
+    [self.customDelegate removeView];
 }
 
 @end
