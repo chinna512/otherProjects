@@ -15,6 +15,7 @@
 -(void)getDataFortheValuesForTheIndex:(NSInteger)index;
 - (void)scatterChart:(PNScatterChart*)scatterChart didSelectAtIndex:(NSUInteger)index andWithTheLayer:(CGPoint)point;
 - (void)removeScatterPopOver;
+- (void)shareView:(id)scatter;
 
 @end
 
@@ -29,6 +30,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *experiencedLable;
 @property (weak, nonatomic) IBOutlet UILabel *titile;
 @property (weak, nonatomic) IBOutlet UILabel *subTitile;
+- (IBAction)share:(id)sender;
 
 +(UIView *)loadInstance;
 - (void)loadScatterData;

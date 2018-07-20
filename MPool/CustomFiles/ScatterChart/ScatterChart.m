@@ -12,6 +12,10 @@
 
 
 @implementation ScatterChart
+- (IBAction)share:(id)sender {
+    [self.delegate shareView:self];
+}
+
 +(UIView *)loadInstance{
     
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];

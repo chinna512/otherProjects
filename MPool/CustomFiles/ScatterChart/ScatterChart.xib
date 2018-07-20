@@ -17,47 +17,60 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dW2-vT-sJZ">
-                    <rect key="frame" x="32" y="93" width="319" height="30"/>
+                    <rect key="frame" x="32" y="95" width="319" height="30"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74C-Nu-Xi6">
-                    <rect key="frame" x="0.0" y="14.5" width="375" height="19.5"/>
+                    <rect key="frame" x="23" y="35" width="303" height="16"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frP-ip-WHW">
-                    <rect key="frame" x="0.0" y="42" width="375" height="21"/>
+                    <rect key="frame" x="23" y="59" width="302" height="16"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35K-vh-F10">
-                    <rect key="frame" x="0.0" y="420" width="375" height="21"/>
+                    <rect key="frame" x="0.0" y="422" width="375" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDX-Jy-DM3">
+                    <rect key="frame" x="331" y="20" width="20" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="P2e-KE-Pxg"/>
+                        <constraint firstAttribute="width" constant="20" id="sLC-hP-WxY"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="Share2.png"/>
+                    <connections>
+                        <action selector="share:" destination="iN0-l3-epB" eventType="touchUpInside" id="DL9-DW-8NP"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="74C-Nu-Xi6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2pk-66-1TA"/>
-                <constraint firstItem="frP-ip-WHW" firstAttribute="trailing" secondItem="74C-Nu-Xi6" secondAttribute="trailing" id="3qa-c6-v86"/>
+                <constraint firstItem="74C-Nu-Xi6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="23" id="2pk-66-1TA"/>
+                <constraint firstItem="frP-ip-WHW" firstAttribute="trailing" secondItem="74C-Nu-Xi6" secondAttribute="trailing" constant="-1" id="3qa-c6-v86"/>
                 <constraint firstItem="dW2-vT-sJZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="5sc-cf-h3H"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="vDX-Jy-DM3" secondAttribute="top" id="RKK-do-9eM"/>
                 <constraint firstItem="frP-ip-WHW" firstAttribute="top" secondItem="74C-Nu-Xi6" secondAttribute="bottom" constant="8" id="Ydi-qy-O9o"/>
                 <constraint firstItem="35K-vh-F10" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="aBF-cY-gOw"/>
                 <constraint firstItem="frP-ip-WHW" firstAttribute="leading" secondItem="74C-Nu-Xi6" secondAttribute="leading" id="jf3-gQ-lXX"/>
                 <constraint firstItem="35K-vh-F10" firstAttribute="top" secondItem="dW2-vT-sJZ" secondAttribute="bottom" constant="297" id="n82-ey-bkj"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="74C-Nu-Xi6" secondAttribute="trailing" id="nVy-oj-1jP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="74C-Nu-Xi6" secondAttribute="trailing" constant="49" id="nVy-oj-1jP"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="35K-vh-F10" secondAttribute="trailing" id="pWv-wR-Zvt"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="74C-Nu-Xi6" secondAttribute="bottom" constant="-14" id="vAj-mj-cdd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="74C-Nu-Xi6" secondAttribute="bottom" constant="-31" id="vAj-mj-cdd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vDX-Jy-DM3" secondAttribute="trailing" constant="24" id="vKh-pk-U1D"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dW2-vT-sJZ" secondAttribute="trailing" constant="24" id="vMJ-mD-eIG"/>
-                <constraint firstItem="dW2-vT-sJZ" firstAttribute="top" secondItem="frP-ip-WHW" secondAttribute="bottom" constant="30" id="vpo-6e-BeW"/>
+                <constraint firstItem="dW2-vT-sJZ" firstAttribute="top" secondItem="frP-ip-WHW" secondAttribute="bottom" constant="20" id="vpo-6e-BeW"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
@@ -69,4 +82,7 @@
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="Share2.png" width="125" height="166"/>
+    </resources>
 </document>

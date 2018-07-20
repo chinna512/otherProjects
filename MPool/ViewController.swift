@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,PassTouchesScrollViewDelegate,UIScrollViewDelegate,UIPopoverPresentationControllerDelegate,ScatterDelegate {
     
+
+    @IBOutlet weak var copyRightLabel: UILabel!
     @IBOutlet weak var scrollView: CustomScrollView!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     @IBOutlet weak var suggestedKeywordsLabel: UILabel!
@@ -39,6 +41,13 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         super.viewWillAppear(animated)
         configureSearchBar()
         self.keywordsLabel.isHidden = true
+        addTextToCopyRightLabel()
+    }
+    
+    func addTextToCopyRightLabel(){
+        let dateformatter = DateFormatter()
+        dateformatter.dateFormat = "yyyy"
+        self.copyRightLabel.text = String(format: "© Copyright %@ mpool.com", dateformatter.string(from: Date()))
     }
     
     func configureSearchBar(){
@@ -93,12 +102,14 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
             (error:NSError?,data:NSDictionary?)  -> Void in
             DispatchQueue.main.async {
                 if data != nil{
-                    self.keywordsLabel.isHidden = false
                     if let titileString = data?["similarskills"]{
                         let partOne = NSMutableAttributedString(string: "Suggested Keywords :" , attributes: [NSAttributedStringKey.foregroundColor: UIColor.black, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 20)])
                         let partTwo = NSMutableAttributedString(string: titileString as! String, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15)])
-                        partOne.append(partTwo)
-                        self.suggestedKeywordsLabel.attributedText = partOne
+                        if partTwo.length>1{
+                            partOne.append(partTwo)
+                            self.suggestedKeywordsLabel.attributedText = partOne
+                            self.keywordsLabel.isHidden = false
+                        }
                         self.suggestedKeywordsLabel.layoutIfNeeded()
                         self.scrollView.layoutIfNeeded()
                     }
@@ -209,6 +220,9 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                     self.scrollView.isScrollEnabled = true
                     self.yFrame = y
                     self.view.layoutSubviews()
+                    if self.modelArray.count == 0{
+                        self.showToast(message: "Sorry no data found")
+                    }
                 }else{
                     self.showAlertForNoInternet(message: "Some thing went wrong")
                     
@@ -505,5 +519,15 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     func removeScatterPopOver(){
         removePopover()
     }
+    
+    func shareView(_ scatter: Any!) {
+        let tempScatter = scatter as! ScatterChart
+        UIGraphicsBeginImageContext(CGSize(width: tempScatter.frame.size.width, height: 300) )
+        tempScatter.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image =  UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        share(image: image)
+    }
+
 }
 
