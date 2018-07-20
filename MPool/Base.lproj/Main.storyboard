@@ -49,7 +49,7 @@
                                                     <constraint firstAttribute="height" constant="35" id="BFt-BP-J2R"/>
                                                     <constraint firstAttribute="width" constant="11" id="y8B-Ux-1ed"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="Screen Shot 2018-07-20 at 4.10.18 PM.png"/>
+                                                <state key="normal" backgroundImage="Promote.png"/>
                                                 <connections>
                                                     <action selector="promteAppAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jHo-fJ-HUf"/>
                                                 </connections>
@@ -139,7 +139,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Screen Shot 2018-07-20 at 4.10.18 PM.png" width="54" height="160"/>
+        <image name="Promote.png" width="54" height="160"/>
         <image name="mpool-png - iOS.png" width="1920" height="1080"/>
     </resources>
 </document>
