@@ -215,14 +215,16 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                     }
                     
                     self.heightConstraint.constant = y
+
+                    self.view.layoutSubviews()
+                    if self.modelArray.count == 0{
+                        self.showToast(message: "Sorry no data found")
+                        y = 70
+                    }
                     self.scrollView.isUserInteractionEnabled = true
                     self.scrollView.delegate = self
                     self.scrollView.isScrollEnabled = true
                     self.yFrame = y
-                    self.view.layoutSubviews()
-                    if self.modelArray.count == 0{
-                        self.showToast(message: "Sorry no data found")
-                    }
                 }else{
                     self.showAlertForNoInternet(message: "Some thing went wrong")
                     
