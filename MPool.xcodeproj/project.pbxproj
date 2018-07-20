@@ -22,6 +22,7 @@
 		E021D8A320F30822003AE972 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E021D8A120F30822003AE972 /* LaunchScreen.storyboard */; };
 		E02799192101C53B00FB0DC6 /* mpool-png - iOS.png in Resources */ = {isa = PBXBuildFile; fileRef = E02799182101C53B00FB0DC6 /* mpool-png - iOS.png */; };
 		E029AB1820F8E8D400C52CBB /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = E029AB1720F8E8D400C52CBB /* Data.json */; };
+		E043AFA72101F41F00E33315 /* Screen Shot 2018-07-20 at 4.10.18 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = E043AFA62101F41F00E33315 /* Screen Shot 2018-07-20 at 4.10.18 PM.png */; };
 		E077DC4620FCF6B2006609A7 /* ScatterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E077DC4520FCF6B2006609A7 /* ScatterModel.swift */; };
 		E0C743D521009CFA00AEEE67 /* Share2.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C743D421009CFA00AEEE67 /* Share2.png */; };
 		E0CF32E920F5FA7C006C7868 /* PieChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0CF32D820F5FA7C006C7868 /* PieChartView.xib */; };
@@ -64,6 +65,7 @@
 		E021D8A420F30822003AE972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E02799182101C53B00FB0DC6 /* mpool-png - iOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mpool-png - iOS.png"; sourceTree = "<group>"; };
 		E029AB1720F8E8D400C52CBB /* Data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
+		E043AFA62101F41F00E33315 /* Screen Shot 2018-07-20 at 4.10.18 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2018-07-20 at 4.10.18 PM.png"; sourceTree = "<group>"; };
 		E077DC4520FCF6B2006609A7 /* ScatterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatterModel.swift; sourceTree = "<group>"; };
 		E0C743D421009CFA00AEEE67 /* Share2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Share2.png; path = ../Share2.png; sourceTree = "<group>"; };
 		E0CF32D820F5FA7C006C7868 /* PieChartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PieChartView.xib; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		E0CF32D520F5FA7C006C7868 /* CustomFiles */ = {
 			isa = PBXGroup;
 			children = (
+				E043AFA62101F41F00E33315 /* Screen Shot 2018-07-20 at 4.10.18 PM.png */,
 				E02799182101C53B00FB0DC6 /* mpool-png - iOS.png */,
 				E00482EC20F851760052DEB5 /* ScatterChart */,
 				E00E6E9A20F5FB5E00898C4F /* DLPieChart.h */,
@@ -232,6 +235,7 @@
 				E029AB1820F8E8D400C52CBB /* Data.json in Resources */,
 				E02799192101C53B00FB0DC6 /* mpool-png - iOS.png in Resources */,
 				E0C743D521009CFA00AEEE67 /* Share2.png in Resources */,
+				E043AFA72101F41F00E33315 /* Screen Shot 2018-07-20 at 4.10.18 PM.png in Resources */,
 				E021D89E20F3081F003AE972 /* Main.storyboard in Resources */,
 				E0CF32F420F5FA7C006C7868 /* CollectionViewCell.xib in Resources */,
 			);
@@ -338,7 +342,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -392,7 +396,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -406,22 +410,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y7VXXPLFZ6;
+				DEVELOPMENT_TEAM = 4XT9ZE7FHM;
 				INFOPLIST_FILE = MPool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mpool.App;
+				PRODUCT_BUNDLE_IDENTIFIER = "chinnababu.2k14-gmail.com";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MPool/CustomFiles/MPool-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -430,21 +435,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y7VXXPLFZ6;
+				DEVELOPMENT_TEAM = 4XT9ZE7FHM;
 				INFOPLIST_FILE = MPool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mpool.App;
+				PRODUCT_BUNDLE_IDENTIFIER = "chinnababu.2k14-gmail.com";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MPool/CustomFiles/MPool-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

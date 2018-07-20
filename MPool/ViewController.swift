@@ -529,5 +529,16 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         share(image: image)
     }
 
+    @IBAction func promteAppAction(_ sender: Any) {
+        let myWebsite = NSURL(string:"https://itunes.apple.com/us/app/mpool/id1414796786?ls=1&mt=8")
+        
+        guard let url = myWebsite else {
+            print("nothing found")
+            return
+        }
+        let shareItems:Array = [url]
+        let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
+        self.present(activityViewController, animated: true, completion: nil)
+    }
 }
 
