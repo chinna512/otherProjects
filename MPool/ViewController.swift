@@ -28,6 +28,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     var popoverView:UIViewController?
     var scatterModel:ScatterModel?
     var scatterChart:ScatterChart?
+    var isLoaded = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +40,12 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        configureSearchBar()
-        self.keywordsLabel.isHidden = true
-        addTextToCopyRightLabel()
+        if !isLoaded{
+            configureSearchBar()
+            self.keywordsLabel.isHidden = true
+            addTextToCopyRightLabel()
+            isLoaded = true
+        }
     }
     
     func addTextToCopyRightLabel(){
