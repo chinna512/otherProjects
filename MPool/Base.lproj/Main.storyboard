@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xHh-2Q-o0t" customClass="CustomScrollView" customModule="MPool" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="572"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="564"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X6c-Sz-FU9">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="639"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mpool-png - iOS.png" translatesAutoresizingMaskIntoConstraints="NO" id="x9r-Qf-y9e">
                                                 <rect key="frame" x="144" y="0.0" width="95" height="52"/>
@@ -71,11 +71,11 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="X6c-Sz-FU9" firstAttribute="height" secondItem="xHh-2Q-o0t" secondAttribute="height" constant="67" id="OzD-ta-kjJ"/>
+                                    <constraint firstItem="X6c-Sz-FU9" firstAttribute="height" secondItem="xHh-2Q-o0t" secondAttribute="height" constant="-10" id="OzD-ta-kjJ"/>
                                     <constraint firstItem="X6c-Sz-FU9" firstAttribute="width" secondItem="xHh-2Q-o0t" secondAttribute="width" id="PLG-7M-6yT"/>
                                     <constraint firstItem="X6c-Sz-FU9" firstAttribute="top" secondItem="xHh-2Q-o0t" secondAttribute="top" id="Snm-zV-C0S"/>
                                     <constraint firstAttribute="trailing" secondItem="X6c-Sz-FU9" secondAttribute="trailing" id="hb8-ao-ayt"/>
-                                    <constraint firstAttribute="bottom" secondItem="X6c-Sz-FU9" secondAttribute="bottom" constant="-67" id="ovL-Cs-fJC"/>
+                                    <constraint firstItem="X6c-Sz-FU9" firstAttribute="bottom" secondItem="xHh-2Q-o0t" secondAttribute="bottom" constant="-20" id="ovL-Cs-fJC"/>
                                     <constraint firstItem="X6c-Sz-FU9" firstAttribute="leading" secondItem="xHh-2Q-o0t" secondAttribute="leading" id="xSv-6u-T6r"/>
                                 </constraints>
                             </scrollView>
@@ -118,7 +118,7 @@
                             <constraint firstItem="xHh-2Q-o0t" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="oRw-O2-CQ9"/>
                             <constraint firstItem="Ejh-NQ-VAT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ugx-jL-anD"/>
                             <constraint firstItem="xHh-2Q-o0t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-639" id="vcN-hg-cIY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xHh-2Q-o0t" secondAttribute="bottom" constant="67" id="y3D-hb-88I"/>
+                            <constraint firstItem="xHh-2Q-o0t" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-75" id="y3D-hb-88I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
