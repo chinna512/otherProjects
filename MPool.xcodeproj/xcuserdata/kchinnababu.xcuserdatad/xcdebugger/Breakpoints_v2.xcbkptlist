@@ -121,7 +121,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "239"
             endingLineNumber = "239"
-            landmarkName = "createModelFromTheArray(title:array:showPercenatge:displaySearchBar:searchBarTitile:)"
+            landmarkName = "loadDataForTheKeyword(keyWord:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -153,7 +153,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "526"
             endingLineNumber = "526"
-            landmarkName = "shareView(_:)"
+            landmarkName = "removeScatterPopOver()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
