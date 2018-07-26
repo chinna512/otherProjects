@@ -21,7 +21,6 @@
 		E021D8A020F30822003AE972 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E021D89F20F30822003AE972 /* Assets.xcassets */; };
 		E021D8A320F30822003AE972 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E021D8A120F30822003AE972 /* LaunchScreen.storyboard */; };
 		E02799192101C53B00FB0DC6 /* mpool-png - iOS.png in Resources */ = {isa = PBXBuildFile; fileRef = E02799182101C53B00FB0DC6 /* mpool-png - iOS.png */; };
-		E029AB1820F8E8D400C52CBB /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = E029AB1720F8E8D400C52CBB /* Data.json */; };
 		E043AFA72101F41F00E33315 /* Promote.png in Resources */ = {isa = PBXBuildFile; fileRef = E043AFA62101F41F00E33315 /* Promote.png */; };
 		E077DC4620FCF6B2006609A7 /* ScatterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E077DC4520FCF6B2006609A7 /* ScatterModel.swift */; };
 		E0C743D521009CFA00AEEE67 /* Share2.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C743D421009CFA00AEEE67 /* Share2.png */; };
@@ -64,7 +63,6 @@
 		E021D8A220F30822003AE972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E021D8A420F30822003AE972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E02799182101C53B00FB0DC6 /* mpool-png - iOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mpool-png - iOS.png"; sourceTree = "<group>"; };
-		E029AB1720F8E8D400C52CBB /* Data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
 		E043AFA62101F41F00E33315 /* Promote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Promote.png; sourceTree = "<group>"; };
 		E077DC4520FCF6B2006609A7 /* ScatterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatterModel.swift; sourceTree = "<group>"; };
 		E0C743D421009CFA00AEEE67 /* Share2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Share2.png; path = ../Share2.png; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 				E0CF32D520F5FA7C006C7868 /* CustomFiles */,
 				E021D89820F3081F003AE972 /* AppDelegate.swift */,
 				E021D89A20F3081F003AE972 /* ViewController.swift */,
-				E029AB1720F8E8D400C52CBB /* Data.json */,
 				E021D89C20F3081F003AE972 /* Main.storyboard */,
 				E021D89F20F30822003AE972 /* Assets.xcassets */,
 				E021D8A120F30822003AE972 /* LaunchScreen.storyboard */,
@@ -232,7 +229,6 @@
 				E00482FC20F8518A0052DEB5 /* ScatterChart.xib in Resources */,
 				E0CF32E920F5FA7C006C7868 /* PieChartView.xib in Resources */,
 				E021D8A020F30822003AE972 /* Assets.xcassets in Resources */,
-				E029AB1820F8E8D400C52CBB /* Data.json in Resources */,
 				E02799192101C53B00FB0DC6 /* mpool-png - iOS.png in Resources */,
 				E0C743D521009CFA00AEEE67 /* Share2.png in Resources */,
 				E043AFA72101F41F00E33315 /* Promote.png in Resources */,
