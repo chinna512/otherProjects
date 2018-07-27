@@ -240,7 +240,7 @@ static CGPathRef CGPathCreateArc(CGPoint center, CGFloat radius, CGFloat startAn
         if(!_showLabel) return;
         NSString *label;
         if(_showPercentage)
-            label = [NSString stringWithFormat:@"%0.0f%s", layer.percentage*100,"%"];
+            label = [NSString stringWithFormat:@"%0.01f%s", layer.percentage*100,"%"];
         else
             label = (layer.text)?layer.text:[NSString stringWithFormat:@"%0.0f", layer.value];
         CGSize size = [label sizeWithFont:self.labelFont];
@@ -680,7 +680,7 @@ static CGPathRef CGPathCreateArc(CGPoint center, CGFloat radius, CGFloat startAn
     if(!_showLabel) return;
     NSString *label;
     if(_showPercentage)
-        label = [NSString stringWithFormat:@"%0.0f%s", pieLayer.percentage*100,"%"];
+        label = [NSString stringWithFormat:@"%0.01f%s", pieLayer.percentage*100,"%"];
     else
         label = (pieLayer.text)?pieLayer.text:[NSString stringWithFormat:@"%0.0f", value];
     
@@ -764,7 +764,7 @@ static CGPathRef CGPathCreateArc(CGPoint center, CGFloat radius, CGFloat startAn
     CALayer *parentLayer = [_pieView layer];
     NSArray *pieLayers = [parentLayer sublayers];
     SliceLayer *layer1 = [pieLayers objectAtIndex:index];
-    NSString *percentage = [NSString stringWithFormat:@"%0.0f%s", layer1.percentage*100,"%"];
+    NSString *percentage = [NSString stringWithFormat:@"%0.01f%s", layer1.percentage*100,"%"];
     [self.customDelegate pieChart:self willSelectSliceAtIndex:index andWithTheLayer:self.selectedPoint andDisplayVlaue:layer1.displayValue andPercentage:percentage];
 }
 

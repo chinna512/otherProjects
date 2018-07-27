@@ -49,7 +49,6 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.lightGray.cgColor
         textField.layer.cornerRadius = 6
-        textField.textAlignment = .center
     }
     
     func loadCustomPieChart(model:PieChartModel, withSearchBarDisplay isDisplay:Bool){

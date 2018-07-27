@@ -58,7 +58,6 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         self.searchBar.backgroundImage = UIImage()
         self.searchBar.delegate = self
         let textField = self.searchBar.value(forKey: "searchField") as! UITextField;
-        textField.textAlignment = .center
         textField.frame.size.height = 10
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.lightGray.cgColor
@@ -321,6 +320,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         label.text = error
         label.font = UIFont.systemFont(ofSize: 10)
         label.textAlignment = .center
+        label.textColor = .white
         
         
         let percentageLabel = UILabel(frame: CGRect(x: 0, y: 20, width:  width + 10, height: 17))
@@ -328,6 +328,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         percentageLabel.text = percentage
         percentageLabel.font = UIFont.systemFont(ofSize: 10)
         percentageLabel.textAlignment = .center
+        percentageLabel.textColor = .white
         
         popoverView = UIViewController()
         popoverView?.view.frame = CGRect(x: location.x, y: location.y, width:  width + 10, height: 40)
