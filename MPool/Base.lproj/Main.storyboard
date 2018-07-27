@@ -32,7 +32,7 @@
                                                     <constraint firstAttribute="width" constant="95" id="OLp-Ik-utP"/>
                                                 </constraints>
                                             </imageView>
-                                            <searchBar contentMode="redraw" placeholder="Type any skills name and find analytics" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U84-VU-C3s">
+                                            <searchBar contentMode="redraw" placeholder="Type any skills name and find analytics" translatesAutoresizingMaskIntoConstraints="NO" id="U84-VU-C3s">
                                                 <rect key="frame" x="20" y="67" width="335" height="56"/>
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                             </searchBar>
@@ -42,30 +42,25 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2u-Iy-PhW">
-                                                <rect key="frame" x="341" y="8" width="11" height="35"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="BFt-BP-J2R"/>
-                                                    <constraint firstAttribute="width" constant="11" id="y8B-Ux-1ed"/>
-                                                </constraints>
-                                                <state key="normal" backgroundImage="Promote.png"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWh-fT-16B">
+                                                <rect key="frame" x="142.5" y="524" width="90" height="30"/>
+                                                <state key="normal" title="Promote App"/>
                                                 <connections>
-                                                    <action selector="promteAppAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jHo-fJ-HUf"/>
+                                                    <action selector="promoteApp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jFm-qe-RTB"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="tWh-fT-16B" firstAttribute="top" secondItem="X6c-Sz-FU9" secondAttribute="top" constant="524" id="4xt-w5-7om"/>
                                             <constraint firstItem="x9r-Qf-y9e" firstAttribute="top" secondItem="X6c-Sz-FU9" secondAttribute="top" id="62g-vK-lZt"/>
                                             <constraint firstAttribute="trailing" secondItem="U84-VU-C3s" secondAttribute="trailing" constant="20" id="7fQ-MP-U4c"/>
                                             <constraint firstAttribute="trailing" secondItem="yqG-Ig-E1v" secondAttribute="trailing" constant="20" id="BUq-ga-Z5K"/>
-                                            <constraint firstItem="F2u-Iy-PhW" firstAttribute="top" secondItem="X6c-Sz-FU9" secondAttribute="top" constant="8" id="DOw-j9-Tb8"/>
                                             <constraint firstItem="x9r-Qf-y9e" firstAttribute="centerX" secondItem="X6c-Sz-FU9" secondAttribute="centerX" constant="4" id="G9E-Sq-wog"/>
                                             <constraint firstItem="yqG-Ig-E1v" firstAttribute="top" secondItem="U84-VU-C3s" secondAttribute="bottom" constant="7" id="V4F-LP-E6N"/>
                                             <constraint firstItem="yqG-Ig-E1v" firstAttribute="leading" secondItem="X6c-Sz-FU9" secondAttribute="leading" constant="20" id="W4a-fi-00G"/>
                                             <constraint firstItem="U84-VU-C3s" firstAttribute="top" secondItem="x9r-Qf-y9e" secondAttribute="bottom" constant="15" id="p9m-4E-Z9G"/>
-                                            <constraint firstAttribute="trailing" secondItem="F2u-Iy-PhW" secondAttribute="trailing" constant="23" id="yBq-fh-ATo"/>
+                                            <constraint firstItem="tWh-fT-16B" firstAttribute="centerX" secondItem="X6c-Sz-FU9" secondAttribute="centerX" id="vJJ-s6-3wP"/>
                                             <constraint firstItem="U84-VU-C3s" firstAttribute="leading" secondItem="X6c-Sz-FU9" secondAttribute="leading" constant="20" id="yhW-7n-uxQ"/>
                                         </constraints>
                                     </view>
@@ -128,6 +123,7 @@
                         <outlet property="heightConstraint" destination="OzD-ta-kjJ" id="Izy-FN-OUS"/>
                         <outlet property="imageView" destination="x9r-Qf-y9e" id="1pl-nk-HvQ"/>
                         <outlet property="keywordsLabel" destination="yqG-Ig-E1v" id="4s4-nz-Dnt"/>
+                        <outlet property="promoteButtonTopConstraint" destination="4xt-w5-7om" id="CwF-tA-Kdc"/>
                         <outlet property="scrollView" destination="xHh-2Q-o0t" id="Vrh-V6-DJf"/>
                         <outlet property="searchBar" destination="U84-VU-C3s" id="ho6-gg-CbN"/>
                         <outlet property="suggestedKeywordsLabel" destination="yqG-Ig-E1v" id="qFB-sA-mMD"/>
@@ -139,7 +135,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Promote.png" width="54" height="160"/>
         <image name="mpool-png - iOS.png" width="1920" height="1080"/>
     </resources>
 </document>

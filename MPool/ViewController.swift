@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,PassTouchesScrollViewDelegate,UIScrollViewDelegate,UIPopoverPresentationControllerDelegate,ScatterDelegate {
     
 
+    @IBOutlet weak var promoteButtonTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var copyRightLabel: UILabel!
     @IBOutlet weak var scrollView: CustomScrollView!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
@@ -227,6 +228,8 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                     self.scrollView.isUserInteractionEnabled = true
                     self.scrollView.delegate = self
                     self.scrollView.isScrollEnabled = true
+                    self.promoteButtonTopConstraint.constant = y
+                    y = y + 30
                     self.yFrame = y
                 }else{
                     self.showAlertForNoInternet(message: "Some thing went wrong")
@@ -536,9 +539,8 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         share(image: image)
     }
 
-    @IBAction func promteAppAction(_ sender: Any) {
+    @IBAction func promoteApp(_ sender: Any) {
         let myWebsite = NSURL(string:"https://itunes.apple.com/us/app/mpool/id1414796786?ls=1&mt=8")
-        
         guard let url = myWebsite else {
             print("nothing found")
             return
