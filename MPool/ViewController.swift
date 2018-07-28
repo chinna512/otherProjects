@@ -65,7 +65,8 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.lightGray.cgColor
         textField.layer.cornerRadius = 6
-        let placeholderLabel       = textField.value(forKey: "placeholderLabel") as? UILabel
+        textField.clearButtonMode = .never
+        let placeholderLabel = textField.value(forKey: "placeholderLabel") as? UILabel
         placeholderLabel?.font     = UIFont.systemFont(ofSize: 10.0)
     }
     
@@ -74,7 +75,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
        // self.heightConstraint.constant = yFrame
     }
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    func startSearchingResults(){
         removePopover()
         if  Reachability()!.isReachable{
             self.modelArray.removeAllObjects()
@@ -97,6 +98,26 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         removePopover()
+        self.searchBar.endEditing(true)
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        removePopover()
+        if  Reachability()!.isReachable{
+            self.modelArray.removeAllObjects()
+            for subview in contentView.subviews {
+                if subview.isKind(of: PieChartView.self){
+                    subview.removeFromSuperview()
+                    if self.scatterChart != nil{
+                        self.scatterChart?.removeFromSuperview()
+                    }
+                    self.yFrame = self.view.frame.size.height
+                }
+            }
+            self.keywordsLabel.isHidden = true
+            self.loadDataForTheKeyword(keyWord: searchBar.text!)
+        }else{
+            showAlertForNoInternet(message: "No Internet Connection")
+        }
         self.searchBar.endEditing(true)
     }
     
@@ -588,6 +609,9 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         let shareItems:Array = [url]
         let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
         self.present(activityViewController, animated: true, completion: nil)
+    }
+    @IBAction func startSearching(_ sender: Any) {
+        startSearchingResults()
     }
 }
 

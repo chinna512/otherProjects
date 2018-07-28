@@ -24,6 +24,7 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
     @IBOutlet weak var collectionViewTrailing: NSLayoutConstraint!
     @IBOutlet weak var collectionViewLeadingConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var CutsomSearchButton: UIButton!
     @IBOutlet weak var searchString: UILabel!
     @IBOutlet weak var titile: UILabel!
     @IBOutlet weak var heightConstarint: NSLayoutConstraint!
@@ -52,12 +53,14 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor.lightGray.cgColor
         textField.layer.cornerRadius = 6
+        textField.clearButtonMode = .never
     }
     
     func loadCustomPieChart(model:PieChartModel, withSearchBarDisplay isDisplay:Bool){
         if !isDisplay{
             self.titileTopConstarint.constant = 37
             self.searchBar.isHidden = true
+            self.CutsomSearchButton.isHidden = true
         }
         else{
             customizeSearchBar()
@@ -229,6 +232,11 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
     }
     @IBAction func promotAppAction(_ sender: Any) {
         self.delegate?.promoteApp()
+    }
+    @IBAction func customearchButtonAction(_ sender: Any) {
+        self.delegate?.removeView()
+        self.searchBar.endEditing(true)
+        self.delegate?.searchBarSelectedWithText(searchText:searchBar.text!, andTag: self.tag)
     }
     
 }

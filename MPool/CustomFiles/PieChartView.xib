@@ -41,10 +41,21 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RRi-Oz-Kj2">
-                    <rect key="frame" x="20" y="37" width="393" height="56"/>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="RRi-Oz-Kj2">
+                    <rect key="frame" x="20" y="37" width="375" height="56"/>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iG7-Zo-qDq">
+                    <rect key="frame" x="376" y="47" width="45" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="45" id="XwI-d4-noi"/>
+                        <constraint firstAttribute="height" constant="36" id="lNV-Ve-KaL"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="Search.png"/>
+                    <connections>
+                        <action selector="customearchButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="WIw-Am-SRi"/>
+                    </connections>
+                </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ygh-hU-4lg">
                     <rect key="frame" x="0.0" y="150" width="433" height="433"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -84,21 +95,24 @@
                 <constraint firstItem="f1p-ns-9qW" firstAttribute="leading" secondItem="UHP-Y6-Jiy" secondAttribute="leading" id="L6Y-06-EaN"/>
                 <constraint firstItem="UHP-Y6-Jiy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Nvo-L6-S6R"/>
                 <constraint firstAttribute="trailing" secondItem="Wbk-GA-JxC" secondAttribute="trailing" constant="20" id="OgD-6R-Gke"/>
+                <constraint firstItem="iG7-Zo-qDq" firstAttribute="top" secondItem="RRi-Oz-Kj2" secondAttribute="top" constant="10" id="S75-lA-ehz"/>
                 <constraint firstItem="f1p-ns-9qW" firstAttribute="trailing" secondItem="UHP-Y6-Jiy" secondAttribute="trailing" id="ShV-df-dZP"/>
                 <constraint firstItem="hdo-v5-uzL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="T7x-GT-9pW"/>
                 <constraint firstItem="RRi-Oz-Kj2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="37" id="UHo-b8-W3G"/>
                 <constraint firstItem="Wbk-GA-JxC" firstAttribute="top" secondItem="Ygh-hU-4lg" secondAttribute="bottom" constant="-20" id="Uds-Tw-M7c"/>
                 <constraint firstItem="Wbk-GA-JxC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Uxh-MJ-gh0"/>
+                <constraint firstItem="iG7-Zo-qDq" firstAttribute="leading" secondItem="RRi-Oz-Kj2" secondAttribute="trailing" constant="-19" id="aTv-1K-ZMw"/>
                 <constraint firstItem="UZ8-zt-yeo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="em2-g0-80f"/>
                 <constraint firstAttribute="trailing" secondItem="Ygh-hU-4lg" secondAttribute="trailing" id="h9c-Lh-fhH"/>
                 <constraint firstItem="f1p-ns-9qW" firstAttribute="top" secondItem="UHP-Y6-Jiy" secondAttribute="bottom" constant="2" id="iR2-wE-qd4"/>
                 <constraint firstItem="Ygh-hU-4lg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="q2c-mS-EcR"/>
                 <constraint firstItem="UHP-Y6-Jiy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="109" id="rNb-Bu-tMv"/>
-                <constraint firstAttribute="trailing" secondItem="RRi-Oz-Kj2" secondAttribute="trailing" constant="20" id="vbx-b2-GHk"/>
+                <constraint firstAttribute="trailing" secondItem="iG7-Zo-qDq" secondAttribute="trailing" constant="12" id="sv3-wH-zRy"/>
                 <constraint firstItem="Ygh-hU-4lg" firstAttribute="top" secondItem="f1p-ns-9qW" secondAttribute="bottom" constant="10" id="xCo-nm-X2k"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="CutsomSearchButton" destination="iG7-Zo-qDq" id="1aJ-is-eB5"/>
                 <outlet property="collectionView" destination="Wbk-GA-JxC" id="HzB-Z1-dTl"/>
                 <outlet property="collectionViewLeadingConstraint" destination="Uxh-MJ-gh0" id="46Q-Tn-cpc"/>
                 <outlet property="collectionViewTrailing" destination="OgD-6R-Gke" id="2vV-iE-uRs"/>
@@ -114,6 +128,7 @@
         </view>
     </objects>
     <resources>
+        <image name="Search.png" width="60" height="48"/>
         <image name="Share2.png" width="125" height="166"/>
     </resources>
 </document>
