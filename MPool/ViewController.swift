@@ -71,7 +71,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-      //  self.heightConstraint.constant = yFrame
+       // self.heightConstraint.constant = yFrame
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -220,7 +220,6 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                         self.scatterChart?.delegate = self
                         self.scatterChart?.tag = 100
                     }
-                    self.view.layoutSubviews()
                     if self.modelArray.count == 0{
                         self.showToast(message: "Sorry no data found")
                         y = 70
@@ -230,9 +229,13 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                     self.scrollView.isScrollEnabled = true
                     self.promoteButtonTopConstraint.constant = y
                     y = y + 30
+                   // self.heightConstraint.constant = y - self.view.frame.size.height + 100
+
                     self.yFrame = y
                     self.scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: y)
-                    self.heightConstraint.constant = y
+                    self.scrollView.layoutSubviews()
+                    self.view.layoutSubviews()
+
                 }else{
                     self.showAlertForNoInternet(message: "Some thing went wrong")
                     
