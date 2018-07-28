@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="564"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X6c-Sz-FU9">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="564"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mpool-png - iOS.png" translatesAutoresizingMaskIntoConstraints="NO" id="x9r-Qf-y9e">
                                                 <rect key="frame" x="144" y="0.0" width="95" height="52"/>
@@ -66,11 +66,11 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="X6c-Sz-FU9" firstAttribute="height" secondItem="xHh-2Q-o0t" secondAttribute="height" constant="-10" id="OzD-ta-kjJ"/>
+                                    <constraint firstItem="X6c-Sz-FU9" firstAttribute="height" secondItem="xHh-2Q-o0t" secondAttribute="height" id="OzD-ta-kjJ"/>
                                     <constraint firstItem="X6c-Sz-FU9" firstAttribute="width" secondItem="xHh-2Q-o0t" secondAttribute="width" id="PLG-7M-6yT"/>
                                     <constraint firstItem="X6c-Sz-FU9" firstAttribute="top" secondItem="xHh-2Q-o0t" secondAttribute="top" id="Snm-zV-C0S"/>
                                     <constraint firstAttribute="trailing" secondItem="X6c-Sz-FU9" secondAttribute="trailing" id="hb8-ao-ayt"/>
-                                    <constraint firstItem="X6c-Sz-FU9" firstAttribute="bottom" secondItem="xHh-2Q-o0t" secondAttribute="bottom" constant="-20" id="ovL-Cs-fJC"/>
+                                    <constraint firstItem="X6c-Sz-FU9" firstAttribute="bottom" secondItem="xHh-2Q-o0t" secondAttribute="bottom" id="ovL-Cs-fJC"/>
                                     <constraint firstItem="X6c-Sz-FU9" firstAttribute="leading" secondItem="xHh-2Q-o0t" secondAttribute="leading" id="xSv-6u-T6r"/>
                                 </constraints>
                             </scrollView>

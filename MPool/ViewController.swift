@@ -46,6 +46,8 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
             self.keywordsLabel.isHidden = true
             addTextToCopyRightLabel()
             isLoaded = true
+            self.scrollView.delegatePass = self
+
         }
     }
     
@@ -69,9 +71,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        self.scrollView.layoutSubviews()
-        self.scrollView.delegatePass = self
-        self.heightConstraint.constant = yFrame
+      //  self.heightConstraint.constant = yFrame
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -196,30 +196,30 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                         customView.frame.origin.y = y
                         (customView).loadCustomPieChart(model: model, withSearchBarDisplay: model.displaySearchBar)
                         self.contentView.addSubview(customView )
-                        if index != self.modelArray.count - 1{
-                            y = y + customView.frame.height + 5
-                        }else{
-                            if (self.scatterModel?.skillCompensationListValues.count)!  > 0{
-                                y = y + customView.frame.height + 20
-                            }else{
-                                y = y + 20
-                            }
-                        }
+                        y = y + customView.frame.size.height + 5
+
+//                        if index != self.modelArray.count - 1{
+//                            y = y + customView.frame.size.height + 5
+//                        }else{
+//                            if (self.scatterModel?.skillCompensationListValues.count)!  > 0{
+//                                y = y + customView.frame.size.height + 20
+//                            }else{
+//                                y = y + 20
+//                            }
+//                        }
                         customView.delegate = self
                     }
                     
-                    if (self.scatterModel?.skillCompensationListValues.count)!  > 0{
+                    if (self.scatterModel?.skillCompensationListValues.count)!  < 0{
                         let scatter = ScatterChart.loadInstance()
                         self.scatterChart =   scatter as? ScatterChart
                         self.scatterChart?.loadData(forThePickerValue: self.scatterModel?.skillCompensationAverage, lineIndex: self.scatterModel?.skillCompensationListValues, pointIndex: self.scatterModel?.skillCompensationLevelNamesValues, andSearchText: self.searchBar.text);
                         self.self.scatterChart?.frame.origin.y = y
+                        y = y + 473
                         self.contentView.addSubview(self.scatterChart!)
                         self.scatterChart?.delegate = self
                         self.scatterChart?.tag = 100
                     }
-                    
-                    self.heightConstraint.constant = y
-
                     self.view.layoutSubviews()
                     if self.modelArray.count == 0{
                         self.showToast(message: "Sorry no data found")
@@ -231,6 +231,8 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                     self.promoteButtonTopConstraint.constant = y
                     y = y + 30
                     self.yFrame = y
+                    self.scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: y)
+                    self.heightConstraint.constant = y
                 }else{
                     self.showAlertForNoInternet(message: "Some thing went wrong")
                     
