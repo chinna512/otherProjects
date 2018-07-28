@@ -66,7 +66,7 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="X6c-Sz-FU9" firstAttribute="height" secondItem="xHh-2Q-o0t" secondAttribute="height" id="OzD-ta-kjJ"/>
+                                    <constraint firstItem="X6c-Sz-FU9" firstAttribute="height" secondItem="xHh-2Q-o0t" secondAttribute="height" priority="250" id="OzD-ta-kjJ"/>
                                     <constraint firstItem="X6c-Sz-FU9" firstAttribute="width" secondItem="xHh-2Q-o0t" secondAttribute="width" id="PLG-7M-6yT"/>
                                     <constraint firstItem="X6c-Sz-FU9" firstAttribute="top" secondItem="xHh-2Q-o0t" secondAttribute="top" id="Snm-zV-C0S"/>
                                     <constraint firstAttribute="trailing" secondItem="X6c-Sz-FU9" secondAttribute="trailing" id="hb8-ao-ayt"/>

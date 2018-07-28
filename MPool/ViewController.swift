@@ -229,8 +229,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                     self.scrollView.isScrollEnabled = true
                     self.promoteButtonTopConstraint.constant = y
                     y = y + 30
-                   // self.heightConstraint.constant = y - self.view.frame.size.height + 100
-
+                    self.heightConstraint.constant = y - self.scrollView.frame.size.height
                     self.yFrame = y
                     self.scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: y)
                     self.scrollView.layoutSubviews()
