@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,PassTouchesScrollViewDelegate,UIScrollViewDelegate,UIPopoverPresentationControllerDelegate,ScatterDelegate {
     
 
-    @IBOutlet weak var promoteButtonTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var copyRightLabel: UILabel!
     @IBOutlet weak var scrollView: CustomScrollView!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
@@ -31,7 +30,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     var scatterChart:ScatterChart?
     var isLoaded = false
     
-    @IBOutlet weak var promtoAppButton: UIButton!
+    @IBOutlet weak var promotAppButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -199,7 +198,10 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                            if !((self.scatterModel?.skillCompensationListValues.count)!  > 0) {
                             model.showPromotButton = true
                             customView.frame.size.height = customView.frame.size.height + 30
-                            customView.backgroundColor = UIColor.orange
+                          //  customView.backgroundColor = UIColor.orange
+                           }else{
+                            customView.frame.size.height = customView.frame.size.height + 30
+                           // customView.backgroundColor = UIColor.orange
                             }
                         }
                         (customView).loadCustomPieChart(model: model, withSearchBarDisplay: model.displaySearchBar)
@@ -233,11 +235,10 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                     if self.modelArray.count == 0{
                         self.showToast(message: "Sorry no data found")
                         y = self.scrollView.frame.size.height
-                               self.promoteButtonTopConstraint.constant = y - 30
-                        self.promtoAppButton.isHidden = false
+                        self.promotAppButton.isHidden = false
                     }
                     else{
-                        self.promtoAppButton.isHidden = true
+                        self.promotAppButton.isHidden = true
                     }
                     self.scrollView.isUserInteractionEnabled = true
                     self.scrollView.delegate = self

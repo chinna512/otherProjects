@@ -65,7 +65,10 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZ8-zt-yeo">
                     <rect key="frame" x="171.5" y="718" width="90" height="30"/>
-                    <state key="normal" title="Promote App"/>
+                    <color key="backgroundColor" red="0.15686274509803921" green="0.68627450980392157" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal" title="Promote App">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
                     <connections>
                         <action selector="promotAppAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ath-eQ-y8I"/>
                     </connections>
