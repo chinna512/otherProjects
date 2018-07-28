@@ -61,7 +61,7 @@
 }
 
 - (void)loadScatterChartForThePickerValues:(NSMutableArray*)values{
-    self.scatterChart = [[PNScatterChart alloc] initWithFrame:CGRectMake(10, 155, 280, 250)];
+    self.scatterChart = [[PNScatterChart alloc] initWithFrame:CGRectMake(0, 155, 280, 250)];
     
     NSArray *numbers = [values sortedArrayUsingSelector:@selector(compare:)];
     int min = [numbers[0] floatValue];
@@ -206,6 +206,9 @@
 }
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
     return true;
+}
+- (IBAction)promteAppAction:(id)sender {
+    [self.delegate PromoteAPPScatterChart];
 }
 
 @end

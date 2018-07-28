@@ -16,6 +16,7 @@ protocol CustomviewDelegate {
     func removeView()
     func share(image:UIImage)
     func searchBarSelectedWithText(searchText:String, andTag index:Int)
+    func promoteApp()
 
 }
 class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,CustomDelegate,UIPopoverPresentationControllerDelegate,UISearchBarDelegate {
@@ -37,7 +38,9 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
     var isTwoRows:Bool = false
     var piechart:UIView?
     var viewHeight:CGFloat?
-
+    
+    @IBOutlet weak var promoteApp: UIButton!
+    
     class func instanceFromNib() -> PieChartView {
         return UINib(nibName: "PieChartView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! PieChartView
     }
@@ -59,6 +62,11 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
         else{
             customizeSearchBar()
             searchBar.text = model.searchBarTitile
+        }
+        if model.showPromotButton{
+            self.promoteApp.isHidden = false
+        }else{
+            self.promoteApp.isHidden = true
         }
         var frame = self.pieChartView.frame
         frame.size.height = self.frame.size.width - 60
@@ -218,6 +226,9 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         self.delegate?.removeView()
         self.searchBar.endEditing(true)
+    }
+    @IBAction func promotAppAction(_ sender: Any) {
+        self.delegate?.promoteApp()
     }
     
 }

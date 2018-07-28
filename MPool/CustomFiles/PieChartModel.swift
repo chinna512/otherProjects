@@ -18,4 +18,6 @@ class PieChartModel: NSObject {
     var displaySearchBar:Bool = false
     var showPercentage: Bool = false
     var searchBarTitile = ""
+    var showPromotButton: Bool = false
+    var isGenderView:Bool = false
 }

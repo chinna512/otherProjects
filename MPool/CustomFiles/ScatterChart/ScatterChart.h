@@ -16,6 +16,7 @@
 - (void)scatterChart:(PNScatterChart*)scatterChart didSelectAtIndex:(NSUInteger)index andWithTheLayer:(CGPoint)point;
 - (void)removeScatterPopOver;
 - (void)shareView:(id)scatter;
+- (void)PromoteAPPScatterChart;
 
 @end
 

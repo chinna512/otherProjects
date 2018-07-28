@@ -31,6 +31,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     var scatterChart:ScatterChart?
     var isLoaded = false
     
+    @IBOutlet weak var promtoAppButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -194,6 +195,13 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                         }
                         customView.backgroundColor = UIColor.clear
                         customView.frame.origin.y = y
+                        if index == self.modelArray.count - 1 {
+                           if !((self.scatterModel?.skillCompensationListValues.count)!  > 0) {
+                            model.showPromotButton = true
+                            customView.frame.size.height = customView.frame.size.height + 30
+                            customView.backgroundColor = UIColor.orange
+                            }
+                        }
                         (customView).loadCustomPieChart(model: model, withSearchBarDisplay: model.displaySearchBar)
                         self.contentView.addSubview(customView )
                         y = y + customView.frame.size.height + 5
@@ -210,25 +218,30 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                         customView.delegate = self
                     }
                     
-                    if (self.scatterModel?.skillCompensationListValues.count)!  < 0{
+                    if (self.scatterModel?.skillCompensationListValues.count)!  > 0{
                         let scatter = ScatterChart.loadInstance()
                         self.scatterChart =   scatter as? ScatterChart
                         self.scatterChart?.loadData(forThePickerValue: self.scatterModel?.skillCompensationAverage, lineIndex: self.scatterModel?.skillCompensationListValues, pointIndex: self.scatterModel?.skillCompensationLevelNamesValues, andSearchText: self.searchBar.text);
                         self.self.scatterChart?.frame.origin.y = y
-                        y = y + 473
+                        y = y + 462
                         self.contentView.addSubview(self.scatterChart!)
                         self.scatterChart?.delegate = self
                         self.scatterChart?.tag = 100
+                    }else{
+                        y = y + 30
                     }
                     if self.modelArray.count == 0{
                         self.showToast(message: "Sorry no data found")
-                        y = 70
+                        y = self.scrollView.frame.size.height
+                               self.promoteButtonTopConstraint.constant = y - 30
+                        self.promtoAppButton.isHidden = false
+                    }
+                    else{
+                        self.promtoAppButton.isHidden = true
                     }
                     self.scrollView.isUserInteractionEnabled = true
                     self.scrollView.delegate = self
                     self.scrollView.isScrollEnabled = true
-                    self.promoteButtonTopConstraint.constant = y
-                    y = y + 30
                     self.heightConstraint.constant = y - self.scrollView.frame.size.height
                     self.yFrame = y
                     self.scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: y)
@@ -534,6 +547,17 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         removePopover()
     }
     
+    func promoteApp(){
+        let myWebsite = NSURL(string:"https://itunes.apple.com/us/app/mpool/id1414796786?ls=1&mt=8")
+        guard let url = myWebsite else {
+            print("nothing found")
+            return
+        }
+        let shareItems:Array = [url]
+        let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+    
     func shareView(_ scatter: Any!) {
         let tempScatter = scatter as! ScatterChart
         UIGraphicsBeginImageContext(CGSize(width: tempScatter.frame.size.width, height: 300) )
@@ -544,6 +568,17 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     }
 
     @IBAction func promoteApp(_ sender: Any) {
+        let myWebsite = NSURL(string:"https://itunes.apple.com/us/app/mpool/id1414796786?ls=1&mt=8")
+        guard let url = myWebsite else {
+            print("nothing found")
+            return
+        }
+        let shareItems:Array = [url]
+        let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+    
+    func promoteAPPScatterChart(){
         let myWebsite = NSURL(string:"https://itunes.apple.com/us/app/mpool/id1414796786?ls=1&mt=8")
         guard let url = myWebsite else {
             print("nothing found")

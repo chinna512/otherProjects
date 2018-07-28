@@ -46,6 +46,7 @@
                                                 <rect key="frame" x="142.5" y="524" width="90" height="30"/>
                                                 <state key="normal" title="Promote App"/>
                                                 <connections>
+                                                    <action selector="promotAppAction:" destination="fDb-DQ-3Cv" eventType="touchUpInside" id="3cb-hI-Bw0"/>
                                                     <action selector="promoteApp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jFm-qe-RTB"/>
                                                 </connections>
                                             </button>
@@ -124,12 +125,14 @@
                         <outlet property="imageView" destination="x9r-Qf-y9e" id="1pl-nk-HvQ"/>
                         <outlet property="keywordsLabel" destination="yqG-Ig-E1v" id="4s4-nz-Dnt"/>
                         <outlet property="promoteButtonTopConstraint" destination="4xt-w5-7om" id="CwF-tA-Kdc"/>
+                        <outlet property="promtoAppButton" destination="tWh-fT-16B" id="Dg3-WB-PTS"/>
                         <outlet property="scrollView" destination="xHh-2Q-o0t" id="Vrh-V6-DJf"/>
                         <outlet property="searchBar" destination="U84-VU-C3s" id="ho6-gg-CbN"/>
                         <outlet property="suggestedKeywordsLabel" destination="yqG-Ig-E1v" id="qFB-sA-mMD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="fDb-DQ-3Cv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="140" y="133.5832083958021"/>
         </scene>
