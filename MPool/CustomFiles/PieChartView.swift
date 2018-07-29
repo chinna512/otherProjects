@@ -17,7 +17,7 @@ protocol CustomviewDelegate {
     func share(image:UIImage)
     func searchBarSelectedWithText(searchText:String, andTag index:Int)
     func promoteApp()
-
+    
 }
 class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,CustomDelegate,UIPopoverPresentationControllerDelegate,UISearchBarDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
@@ -82,8 +82,12 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
         let array = NSMutableArray()
         for (index, value) in (model.valuesArray).enumerated(){
             array.add(value)
-            colorsArray.add(generateRandomColor())
             valuesArray.add(model.keysArray.object(at: index))
+            if !model.isGenderView{
+                colorsArray.add(generateRandomColor())
+            }else{
+                colorsArray.add(loadColorsForGender(gender:  model.keysArray.object(at: index) as! String))
+            }
         }
         self.titile.text = model.title
         self.searchString.text = model.searchResultsString
@@ -111,6 +115,16 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
         loadCollectionView()
         self.layoutSubviews()
     }
+    
+    func loadColorsForGender(gender:String) -> UIColor{
+        if gender == "FEMALE"{
+            return UIColor(red: 255/255, green: 192/255, blue: 203/255, alpha: 1.0)
+        }else{
+           return UIColor.blue
+        }
+    }
+    
+    
     
     func generateRandomColor() -> UIColor {
         let hue : CGFloat = CGFloat(arc4random() % 256) / 256 // use 256 to get full range from 0.0 to 1.0

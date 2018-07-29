@@ -53,6 +53,9 @@ class RestAPI: NSURLConnection {
         if index == 100{
             urlString = String(format: "https://www.hiringnow.com/mPoolSearch-portlet/api/secure/jsonws/share/skill-compensation-search/query/%@/level/%@", keyWord,searchValue)
         }
+        if index == 110{
+            urlString =  String(format: "https://www.hiringnow.com/mPoolSearch-portlet/api/secure/jsonws/share/skill-suggester/query/%@", keyWord)
+        }
         let query  = urlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         var request = URLRequest(url:URL(string:query!)!)
         request.setValue("Basic  aW9zYXBwQG1zb3VyY2VvbmUuY29tOlNvdXJjZW9uZUAxMjM=", forHTTPHeaderField: "Authorization")

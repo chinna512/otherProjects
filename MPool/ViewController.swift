@@ -8,9 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,PassTouchesScrollViewDelegate,UIScrollViewDelegate,UIPopoverPresentationControllerDelegate,ScatterDelegate {
+class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,PassTouchesScrollViewDelegate,UIScrollViewDelegate,UIPopoverPresentationControllerDelegate,ScatterDelegate,UITableViewDelegate,UITableViewDataSource {
     
-
     @IBOutlet weak var copyRightLabel: UILabel!
     @IBOutlet weak var scrollView: CustomScrollView!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
@@ -19,6 +18,8 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var keywordsLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var promotAppButton: UIButton!
+    
     
     var yFrame:CGFloat = 0
     var selecetdPieChart:DLPieChart?
@@ -29,10 +30,15 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     var scatterModel:ScatterModel?
     var scatterChart:ScatterChart?
     var isLoaded = false
+    var searchResultsArray:NSArray = NSArray()
+    var isSearchBarClicked:Bool = false
+    var listOfSearches:NSMutableArray = NSMutableArray()
+    var searchTableView:UITableView?
+
     
-    @IBOutlet weak var promotAppButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+ 
     }
     
     override func didReceiveMemoryWarning() {
@@ -96,29 +102,26 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         self.searchBar.endEditing(true)
     }
     
+    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
+        if ((searchBar.text?.count)! > 0) {
+            self.isSearchBarClicked = false
+            getResultsForTheSearchText(text:searchText)
+            removePopover()
+        }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        return true
+    }
+
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        removePopover()
         self.searchBar.endEditing(true)
     }
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        removePopover()
-        if  Reachability()!.isReachable{
-            self.modelArray.removeAllObjects()
-            for subview in contentView.subviews {
-                if subview.isKind(of: PieChartView.self){
-                    subview.removeFromSuperview()
-                    if self.scatterChart != nil{
-                        self.scatterChart?.removeFromSuperview()
-                    }
-                    self.yFrame = self.view.frame.size.height
-                }
-            }
-            self.keywordsLabel.isHidden = true
-            self.loadDataForTheKeyword(keyWord: searchBar.text!)
-        }else{
-            showAlertForNoInternet(message: "No Internet Connection")
-        }
-        self.searchBar.endEditing(true)
+        isSearchBarClicked = true
+        startSearchingResults()
+        removeTableView()
     }
     
     func loadDataForTheKeyword(keyWord:String){
@@ -146,7 +149,8 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                         self.createModelFromTheArray(title: "Level Chart", array: tempArray as! NSArray, showPercenatge: false, displaySearchBar: false, searchBarTitile: "")
                     }
                     if let tempArray = data?["gender"]{
-                        self.createModelFromTheArray(title: "Gender Diversity", array: tempArray as! NSArray, showPercenatge: true, displaySearchBar: false, searchBarTitile: "")
+                      let model = self.createModelFromTheArray(title: "Gender Diversity", array: tempArray as! NSArray, showPercenatge: true, displaySearchBar: false, searchBarTitile: "")
+                        model.isGenderView = true
                     }
                     if let tempArray = data?["organizations"]{
                         self.createModelFromTheArray(title: "Organization Chart", array: tempArray as! NSArray, showPercenatge: true, displaySearchBar: false, searchBarTitile: "")
@@ -219,25 +223,13 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                            if !((self.scatterModel?.skillCompensationListValues.count)!  > 0) {
                             model.showPromotButton = true
                             customView.frame.size.height = customView.frame.size.height + 30
-                          //  customView.backgroundColor = UIColor.orange
                            }else{
                             customView.frame.size.height = customView.frame.size.height + 30
-                           // customView.backgroundColor = UIColor.orange
                             }
                         }
                         (customView).loadCustomPieChart(model: model, withSearchBarDisplay: model.displaySearchBar)
                         self.contentView.addSubview(customView )
                         y = y + customView.frame.size.height + 5
-
-//                        if index != self.modelArray.count - 1{
-//                            y = y + customView.frame.size.height + 5
-//                        }else{
-//                            if (self.scatterModel?.skillCompensationListValues.count)!  > 0{
-//                                y = y + customView.frame.size.height + 20
-//                            }else{
-//                                y = y + 20
-//                            }
-//                        }
                         customView.delegate = self
                     }
                     
@@ -279,7 +271,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         })
     }
     
-    func createModelFromTheArray(title:String,array:NSArray,showPercenatge:Bool,displaySearchBar:Bool,searchBarTitile:String){
+  @discardableResult  func createModelFromTheArray(title:String,array:NSArray,showPercenatge:Bool,displaySearchBar:Bool,searchBarTitile:String) -> PieChartModel {
         let model = PieChartModel()
         model.title = title
         model.showPercentage = showPercenatge
@@ -297,6 +289,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         if model.valuesArray.count  > 0{
             self.modelArray.add(model)
         }
+        return model
     }
     
     func scrollTouchBegan(touches: Set<NSObject>, withEvent event: UIEvent){
@@ -610,8 +603,126 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
         self.present(activityViewController, animated: true, completion: nil)
     }
+    
     @IBAction func startSearching(_ sender: Any) {
+        isSearchBarClicked = true
         startSearchingResults()
+        removeTableView()
+    }
+    
+    func scrollTableViewCustom(){
+        removeTableView()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+      return  searchResultsArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:UITableViewCell = (self.searchTableView!.dequeueReusableCell(withIdentifier: "cellReuseIdentifier") as UITableViewCell?)!
+        cell.textLabel?.text = self.searchResultsArray[indexPath.row] as? String
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.searchBar.text = self.searchResultsArray[indexPath.row] as! String
+        removeTableView()
+    }
+    
+    func getResultsForTheSearchText(text:String){
+        if  Reachability()!.isReachable{
+            //JHProgressHUD.sharedHUD.showInView(view: self.view, withHeader: nil, andFooter: "Loading")
+            RestAPI.getDataForSubSearchToTheKeyWord(keyWord: text, index: 110,  searchValue:"" , callbackHandler:{
+                (error:NSError?,data:NSMutableArray?)  -> Void in
+                DispatchQueue.main.async {
+                    if data != nil{
+                        for str in data!{
+                            if !self.listOfSearches.contains(str){
+                                self.listOfSearches.add(str)
+                            }
+                        }
+                        self.loadTableView();                        self.filterAndReloadDataForTheKeyword(text: self.searchBar.text!)
+                    }else{
+                        if error != nil{
+                            self.showAlertForNoInternet(message: "Some thing went wrong")
+                        }else{
+                            self.showToast(message: "sorry No data found")
+                        }
+                    }
+                }
+            })
+        }else{
+        }
+    }
+    
+    func checkIsDatAvailableAlready(){
+        let predicate = NSPredicate(format: "SELF BEGINSWITH[cd] %@",searchBar.text!)
+        self.searchResultsArray = self.listOfSearches.filtered(using: predicate) as NSArray
+        if searchResultsArray.count > 0{
+            loadTableView()
+        }
+        else{
+            loadTableView()
+            let array = self.searchBar.text?.components(separatedBy: ",")
+            if let array = array{
+                if array.count > 1 {
+                    let formattedString = array.last?.replacingOccurrences(of: " ", with: "")
+                    if formattedString != "" {
+                        getResultsForTheSearchText(text: array.last!)
+                    }
+                }
+                else{
+                    getResultsForTheSearchText(text: array.first!)
+                }
+            }else{
+                getResultsForTheSearchText(text: searchBar.text!)
+            }
+        }
+    }
+    
+    func filterAndReloadDataForTheKeyword(text:String){
+        let array = self.searchBar.text?.components(separatedBy: ",")
+        var tempText = ""
+        if let array = array{
+            if array.count > 1 {
+                tempText  = array.last!
+            }
+            else{
+                tempText  = array.first!
+            }
+        }else{
+            tempText  = searchBar.text!
+            // getResultsForTheSearchText(text: searchBar.text!)
+        }
+        let predicate = NSPredicate(format: "SELF BEGINSWITH[cd] %@",text)
+        self.searchResultsArray = self.listOfSearches.filtered(using: predicate) as NSArray
+        loadTableView()
+    }
+    
+    func loadTableView(){
+        if !self.isSearchBarClicked{
+            if searchTableView == nil{
+                searchTableView = UITableView(frame:CGRect(x: self.searchBar.frame.origin.x, y: self.searchBar.frame.origin.y + 75, width:  self.contentView.frame.size.width - self.searchBar.frame.origin.x, height: self.view.frame.size.height - 178 - 67 ))
+                self.view.addSubview(searchTableView!)
+                self.searchTableView?.register(UITableViewCell.self, forCellReuseIdentifier: "cellReuseIdentifier")
+                self.searchTableView?.isHidden = false
+                self.searchTableView?.delegate = self
+                self.searchTableView?.dataSource = self
+                searchTableView?.tableFooterView = UIView()
+            }
+            else{
+                self.searchTableView?.reloadData()
+            }
+        }else{
+            self.removeTableView()
+        }
+    }
+    
+    func removeTableView(){
+        if self.searchTableView != nil{
+            self.searchTableView?.isHidden = true
+            self.searchTableView = nil
+        }
     }
 }
 
