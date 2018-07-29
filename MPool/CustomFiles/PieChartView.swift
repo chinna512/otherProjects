@@ -46,6 +46,19 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
         return UINib(nibName: "PieChartView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! PieChartView
     }
     
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//        
+//    }
+//    
+//    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+    
+    override var intrinsicContentSize: CGSize {
+        return CGSize(width: 550, height: 550)
+    }
+    
     func customizeSearchBar(){
         self.searchBar.backgroundImage = UIImage()
         self.searchBar.delegate = self
@@ -103,6 +116,8 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
             self.heightConstarint.constant = CGFloat(value * 18)
         }
         piechart.showPercentage = model.showPercentage
+  
+
         piechart.render(inLayer: piechart, dataArray: array, withColors: colorsArray, andWithDisplayValues: valuesArray)
         self.pieChartView.addSubview(piechart)
         if valuesArray.count == 2{
@@ -113,7 +128,7 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
             self.collectionViewLeadingConstraint.constant = 20
         }
         loadCollectionView()
-        self.layoutSubviews()
+       // self.layoutSubviews()
     }
     
     func loadColorsForGender(gender:String) -> UIColor{
@@ -123,8 +138,6 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
            return UIColor.blue
         }
     }
-    
-    
     
     func generateRandomColor() -> UIColor {
         let hue : CGFloat = CGFloat(arc4random() % 256) / 256 // use 256 to get full range from 0.0 to 1.0
@@ -244,9 +257,11 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
         self.delegate?.removeView()
         self.searchBar.endEditing(true)
     }
+    
     @IBAction func promotAppAction(_ sender: Any) {
         self.delegate?.promoteApp()
     }
+    
     @IBAction func customearchButtonAction(_ sender: Any) {
         self.delegate?.removeView()
         self.searchBar.endEditing(true)

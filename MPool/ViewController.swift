@@ -199,11 +199,9 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                     }
                     var y = self.suggestedKeywordsLabel.frame.size.height + self.suggestedKeywordsLabel.frame.origin.y
                     for  (index,model) in (self.modelArray as! [PieChartModel]).enumerated(){
-                        let customView = PieChartView.instanceFromNib()
-                        customView.tag = (index + 1) * 10
-                        customView.frame.size.width = self.view.frame.size.width
+                        var tempHeight:CGFloat = 0.0
                         if model.valuesArray.count >= 15{
-                            customView.frame.size.height = self.view.frame.size.width + 180
+                            tempHeight  = self.view.frame.size.width + 180
                         }
                         else{
                             var value = CGFloat(model.valuesArray.count/3)
@@ -212,21 +210,31 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                             }else{
                                 value = 1
                             }
-                            customView.frame.size.height = self.view.frame.size.width + CGFloat(value * 18) + 90
+                            tempHeight = self.view.frame.size.width + CGFloat(value * 18) + 90
                         }
-                        if model.displaySearchBar{
-                            customView.frame.size.height = customView.frame.size.height + 56
-                        }
-                        customView.backgroundColor = UIColor.clear
-                        customView.frame.origin.y = y
                         if index == self.modelArray.count - 1 {
-                           if !((self.scatterModel?.skillCompensationListValues.count)!  > 0) {
-                            model.showPromotButton = true
-                            customView.frame.size.height = customView.frame.size.height + 30
-                           }else{
-                            customView.frame.size.height = customView.frame.size.height + 30
+                            if !((self.scatterModel?.skillCompensationListValues.count)!  > 0) {
+                                // model.showPromotButton = true
+                                tempHeight = tempHeight + 50
+                                // customView.backgroundColor = UIColor.orange
+                            }else{
+                                //customView.frame.size.height = customView.frame.size.height + 30
+                                // customView.backgroundColor = UIColor.clear
+                                
                             }
                         }
+                        if model.displaySearchBar{
+                            tempHeight = tempHeight + 56
+                        }
+                        //   customView.backgroundColor = UIColor.clear
+                        
+                       // PieChartView.instanceFromNib()
+                        let customView =  PieChartView.instanceFromNib()
+                        customView.tag = (index + 1) * 10
+                        customView.backgroundColor = UIColor.orange
+                        customView.frame.size.width = self.view.frame.size.width
+                        customView.frame.size.height = tempHeight
+                        customView.frame.origin.y = y
                         (customView).loadCustomPieChart(model: model, withSearchBarDisplay: model.displaySearchBar)
                         self.contentView.addSubview(customView )
                         y = y + customView.frame.size.height + 5
@@ -605,6 +613,11 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     }
     
     @IBAction func startSearching(_ sender: Any) {
+        for view in self.contentView.subviews{
+            if [10,20,30,40,50,60,100].contains(view.tag){
+                view.removeFromSuperview()
+            }
+        }
         isSearchBarClicked = true
         startSearchingResults()
         removeTableView()
