@@ -41,9 +41,11 @@ class RestAPI: NSURLConnection {
         var urlString = String(format: "https://www.hiringnow.com/mPoolSearch-portlet/api/secure/jsonws/share/search-mpool/query/%@/", keyWord)
         if index == 50{
             urlString = String(format: "https://www.hiringnow.com/mPoolSearch-portlet/api/secure/jsonws/share/organization-movement-search/query/sap/organization-name/%@/", keyWord)
+
         }
         if index == 60{
-            urlString = String(format: "https://www.hiringnow.com/mPoolSearch-portlet/api/secure/jsonws/share/organization-by-location-search/query/sap/location-name/%@/", keyWord)
+            
+            urlString = String(format: "https://www.hiringnow.com/mPoolSearch-portlet/api/secure/jsonws/share/location-movement-search/query/sap/location-name/%@/", keyWord)
             
         }
         if index == 70{

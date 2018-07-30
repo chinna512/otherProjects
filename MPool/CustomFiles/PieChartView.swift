@@ -45,15 +45,7 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
     class func instanceFromNib() -> PieChartView {
         return UINib(nibName: "PieChartView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! PieChartView
     }
-    
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        
-//    }
-//    
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
+
     
     override var intrinsicContentSize: CGSize {
         return CGSize(width: 550, height: 550)
@@ -87,7 +79,8 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
         var frame = self.pieChartView.frame
         frame.size.height = self.frame.size.width - 60
         frame.size.width =  frame.size.height
-        viewHeight = self.frame.size.height
+        self.frame.size.height = viewHeight!
+        
         frame.origin.y = 0
         let piechart = DLPieChart.init(frame: frame)
         piechart.customDelegate = self
@@ -116,8 +109,6 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
             self.heightConstarint.constant = CGFloat(value * 18)
         }
         piechart.showPercentage = model.showPercentage
-  
-
         piechart.render(inLayer: piechart, dataArray: array, withColors: colorsArray, andWithDisplayValues: valuesArray)
         self.pieChartView.addSubview(piechart)
         if valuesArray.count == 2{
@@ -128,7 +119,11 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
             self.collectionViewLeadingConstraint.constant = 20
         }
         loadCollectionView()
-       // self.layoutSubviews()
+        self.layoutSubviews()
+    }
+    
+    override func layoutSubviews() {
+        self.frame.size.height = viewHeight!
     }
     
     func loadColorsForGender(gender:String) -> UIColor{

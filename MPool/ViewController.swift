@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,PassTouchesScrollViewDelegate,UIScrollViewDelegate,UIPopoverPresentationControllerDelegate,ScatterDelegate,UITableViewDelegate,UITableViewDataSource {
     
+    @IBOutlet weak var totalCount: UILabel!
     @IBOutlet weak var copyRightLabel: UILabel!
     @IBOutlet weak var scrollView: CustomScrollView!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
@@ -55,6 +56,25 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
             self.scrollView.delegatePass = self
 
         }
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
+
+    }
+    
+    @objc func keyboardWillShow(notification:NSNotification){
+        //give room at the bottom of the scroll view, so it doesn't cover up anything the user needs to tap
+        var userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        
+        var contentInset:UIEdgeInsets = self.scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height
+        scrollView.contentInset = contentInset
+    }
+    
+    @objc func keyboardWillHide(notification:NSNotification){
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInset
     }
     
     func addTextToCopyRightLabel(){
@@ -95,7 +115,11 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                 }
             }
             self.keywordsLabel.isHidden = true
-            self.loadDataForTheKeyword(keyWord: searchBar.text!)
+            var text = searchBar?.text
+          text =  text?.trimmingCharacters(in: .whitespaces)
+            if (text?.count)! > 0{
+                self.loadDataForTheKeyword(keyWord: searchBar.text!)
+            }
         }else{
             showAlertForNoInternet(message: "No Internet Connection")
         }
@@ -105,8 +129,8 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
         if ((searchBar.text?.count)! > 0) {
             self.isSearchBarClicked = false
-            getResultsForTheSearchText(text:searchText)
             removePopover()
+            checkIsDatAvailableAlready()
         }
     }
     
@@ -140,6 +164,10 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                         }
                         self.suggestedKeywordsLabel.layoutIfNeeded()
                         self.scrollView.layoutIfNeeded()
+                    }
+                    
+                    if let totalCount = data!["totalCount"]{
+                        self.totalCount.text = String(format: "Total Pool Count : %d", totalCount as! Int)
                     }
                     if let tempArray = data?["locations"]{
                         self.createModelFromTheArray(title: "Location Chart - Top Locations", array: tempArray as! NSArray, showPercenatge: false, displaySearchBar: false, searchBarTitile: "")
@@ -197,7 +225,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                             self.scatterModel?.skillCompensationLevelNamesValues.add(array[1])
                         }
                     }
-                    var y = self.suggestedKeywordsLabel.frame.size.height + self.suggestedKeywordsLabel.frame.origin.y
+                    var y = self.suggestedKeywordsLabel.frame.size.height + self.suggestedKeywordsLabel.frame.origin.y + 30
                     for  (index,model) in (self.modelArray as! [PieChartModel]).enumerated(){
                         var tempHeight:CGFloat = 0.0
                         if model.valuesArray.count >= 15{
@@ -214,26 +242,21 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                         }
                         if index == self.modelArray.count - 1 {
                             if !((self.scatterModel?.skillCompensationListValues.count)!  > 0) {
-                                // model.showPromotButton = true
+                                 model.showPromotButton = true
                                 tempHeight = tempHeight + 50
-                                // customView.backgroundColor = UIColor.orange
                             }else{
-                                //customView.frame.size.height = customView.frame.size.height + 30
-                                // customView.backgroundColor = UIColor.clear
-                                
                             }
                         }
                         if model.displaySearchBar{
                             tempHeight = tempHeight + 56
                         }
-                        //   customView.backgroundColor = UIColor.clear
-                        
-                       // PieChartView.instanceFromNib()
+
                         let customView =  PieChartView.instanceFromNib()
                         customView.tag = (index + 1) * 10
-                        customView.backgroundColor = UIColor.orange
+                        customView.backgroundColor = UIColor.clear
                         customView.frame.size.width = self.view.frame.size.width
-                        customView.frame.size.height = tempHeight
+                        customView.viewHeight = tempHeight
+                    
                         customView.frame.origin.y = y
                         (customView).loadCustomPieChart(model: model, withSearchBarDisplay: model.displaySearchBar)
                         self.contentView.addSubview(customView )
@@ -441,6 +464,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                 DispatchQueue.main.async {
                     if data != nil && (data?.count)! > 0{
                         var title =  ""
+                        
                         if index == 50{
                             title = String(format: "Pool movement from %@ to Other companies", searchText as CVarArg)
                         }
@@ -465,8 +489,9 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                                 }
                             }
                         }
+                        let tempIndex = (index/10) - 1
                         if model.valuesArray.count  > 0{
-                            self.modelArray.replaceObject(at: 4, with: model)
+                            self.modelArray.replaceObject(at: tempIndex, with: model)
                         }
                         let customView = PieChartView.instanceFromNib()
                         customView.tag = (index + 1) * 10
@@ -487,7 +512,19 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                         if model.displaySearchBar{
                             customView.frame.size.height = customView.frame.size.height + 56
                         }
+                        if tempIndex == self.modelArray.count - 1 {
+                            if !((self.scatterModel?.skillCompensationListValues.count)!  > 0) {
+                                model.showPromotButton = true
+                                customView.frame.size.height = customView.frame.size.height + 50
+                            }else{
+                            }
+                        }
+                        if model.displaySearchBar{
+                            customView.frame.size.height = customView.frame.size.height + 56
+                        }
+                        model.searchBarTitile = searchText
                         customView.backgroundColor = UIColor.clear
+                        customView.viewHeight = customView.frame.size.height
                         (customView).loadCustomPieChart(model: model, withSearchBarDisplay: model.displaySearchBar)
                         let subView = self.contentView.viewWithTag(index)
                         customView.frame.origin.y = (subView?.frame.origin.y)!
@@ -684,10 +721,9 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                         getResultsForTheSearchText(text: array.last!)
                     }
                 }
-                else{
-                    getResultsForTheSearchText(text: array.first!)
-                }
-            }else{
+            }
+            let formattedString = searchBar.text!.replacingOccurrences(of: " ", with: "")
+            if formattedString != "" {
                 getResultsForTheSearchText(text: searchBar.text!)
             }
         }
@@ -737,5 +773,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
             self.searchTableView = nil
         }
     }
+    
+    
 }
 

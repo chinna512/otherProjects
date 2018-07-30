@@ -63,16 +63,25 @@
                                                     <action selector="startSearching:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9bf-xd-bD7"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPx-1K-X07">
+                                                <rect key="frame" x="20" y="206" width="335" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Ld1-g5-SDK" secondAttribute="trailing" constant="12" id="5EH-vg-vcj"/>
                                             <constraint firstItem="x9r-Qf-y9e" firstAttribute="top" secondItem="X6c-Sz-FU9" secondAttribute="top" id="62g-vK-lZt"/>
+                                            <constraint firstItem="kPx-1K-X07" firstAttribute="trailing" secondItem="yqG-Ig-E1v" secondAttribute="trailing" id="7zx-xr-IJ1"/>
+                                            <constraint firstItem="kPx-1K-X07" firstAttribute="leading" secondItem="yqG-Ig-E1v" secondAttribute="leading" id="Aos-4d-vYD"/>
                                             <constraint firstAttribute="trailing" secondItem="yqG-Ig-E1v" secondAttribute="trailing" constant="20" id="BUq-ga-Z5K"/>
                                             <constraint firstItem="x9r-Qf-y9e" firstAttribute="centerX" secondItem="X6c-Sz-FU9" secondAttribute="centerX" constant="4" id="G9E-Sq-wog"/>
                                             <constraint firstItem="Ld1-g5-SDK" firstAttribute="leading" secondItem="U84-VU-C3s" secondAttribute="trailing" constant="-19" id="PuV-GW-IcW"/>
                                             <constraint firstItem="yqG-Ig-E1v" firstAttribute="top" secondItem="U84-VU-C3s" secondAttribute="bottom" constant="7" id="V4F-LP-E6N"/>
                                             <constraint firstItem="yqG-Ig-E1v" firstAttribute="leading" secondItem="X6c-Sz-FU9" secondAttribute="leading" constant="20" id="W4a-fi-00G"/>
+                                            <constraint firstItem="kPx-1K-X07" firstAttribute="top" secondItem="yqG-Ig-E1v" secondAttribute="bottom" constant="10.5" id="ewY-hC-8JW"/>
                                             <constraint firstItem="Ld1-g5-SDK" firstAttribute="top" secondItem="U84-VU-C3s" secondAttribute="top" constant="10" id="kEF-eJ-Cb6"/>
                                             <constraint firstItem="U84-VU-C3s" firstAttribute="top" secondItem="x9r-Qf-y9e" secondAttribute="bottom" constant="60" id="p9m-4E-Z9G"/>
                                             <constraint firstItem="tWh-fT-16B" firstAttribute="centerX" secondItem="X6c-Sz-FU9" secondAttribute="centerX" id="vJJ-s6-3wP"/>
@@ -143,6 +152,7 @@
                         <outlet property="scrollView" destination="xHh-2Q-o0t" id="Vrh-V6-DJf"/>
                         <outlet property="searchBar" destination="U84-VU-C3s" id="ho6-gg-CbN"/>
                         <outlet property="suggestedKeywordsLabel" destination="yqG-Ig-E1v" id="qFB-sA-mMD"/>
+                        <outlet property="totalCount" destination="kPx-1K-X07" id="3fB-Ly-cok"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
