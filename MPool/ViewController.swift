@@ -765,8 +765,8 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     func loadTableView(){
         if !self.isSearchBarClicked{
             if searchTableView == nil{
-                searchTableView = UITableView(frame:CGRect(x: self.searchBar.frame.origin.x, y: self.searchBar.frame.origin.y + self.searchBar.frame.size.height + 100, width:  self.contentView.frame.size.width - self.searchBar.frame.origin.x, height: self.view.frame.size.height - 178 - 67 ))
-                self.view.addSubview(searchTableView!)
+                searchTableView = UITableView(frame:CGRect(x: self.searchBar.frame.origin.x, y: self.keywordsLabel.frame.origin.y, width:  self.contentView.frame.size.width - self.searchBar.frame.origin.x, height: self.view.frame.size.height - 178 - 67 ))
+                self.contentView.addSubview(searchTableView!)
                 self.searchTableView?.register(UITableViewCell.self, forCellReuseIdentifier: "cellReuseIdentifier")
                 self.searchTableView?.isHidden = false
                 self.searchTableView?.delegate = self

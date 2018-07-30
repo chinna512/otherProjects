@@ -36,7 +36,6 @@ class RestAPI: NSURLConnection {
         task.resume()
     }
     
-
     class  func getDataForSubSearchToTheKeyWord(keyWord:String, index:Int,searchValue:String,customTag:Int, callbackHandler:((NSError?, NSMutableArray?) -> Void)!){
         
         var urlString = String(format: "https://www.hiringnow.com/mPoolSearch-portlet/api/secure/jsonws/share/search-mpool/query/%@/", keyWord)

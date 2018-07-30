@@ -136,6 +136,7 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
         }else{
             disableMinMaxButton()
         }
+        self.customTag = model.customTag
         self.layoutSubviews()
         
     }
