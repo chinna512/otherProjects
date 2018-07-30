@@ -43,9 +43,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWh-fT-16B">
-                                                <rect key="frame" x="143" y="524" width="90" height="30"/>
+                                                <rect key="frame" x="139" y="524" width="98" height="30"/>
                                                 <color key="backgroundColor" red="0.15686274509803921" green="0.68627450980392157" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <state key="normal" title="Promote App">
+                                                <state key="normal" title=" Promote App ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -151,6 +151,7 @@
                         <outlet property="promotAppButton" destination="tWh-fT-16B" id="3fn-wd-SIc"/>
                         <outlet property="scrollView" destination="xHh-2Q-o0t" id="Vrh-V6-DJf"/>
                         <outlet property="searchBar" destination="U84-VU-C3s" id="ho6-gg-CbN"/>
+                        <outlet property="searchButton" destination="Ld1-g5-SDK" id="EcP-FQ-fj8"/>
                         <outlet property="suggestedKeywordsLabel" destination="yqG-Ig-E1v" id="qFB-sA-mMD"/>
                         <outlet property="totalCount" destination="kPx-1K-X07" id="3fB-Ly-cok"/>
                     </connections>

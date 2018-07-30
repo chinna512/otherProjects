@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Wbk-GA-JxC">
-                    <rect key="frame" x="20" y="505" width="335" height="128"/>
+                    <rect key="frame" x="20" y="475" width="335" height="128"/>
                     <color key="backgroundColor" red="0.86957465277777779" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="128" id="LBq-qL-iSi"/>
@@ -75,9 +75,9 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZ8-zt-yeo">
-                    <rect key="frame" x="142.5" y="660" width="90" height="30"/>
+                    <rect key="frame" x="138.5" y="630" width="98" height="30"/>
                     <color key="backgroundColor" red="0.15686274509803921" green="0.68627450980392157" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <state key="normal" title="Promote App">
+                    <state key="normal" title=" Promote App ">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
@@ -99,7 +99,7 @@
                 <constraint firstItem="f1p-ns-9qW" firstAttribute="trailing" secondItem="UHP-Y6-Jiy" secondAttribute="trailing" id="ShV-df-dZP"/>
                 <constraint firstItem="hdo-v5-uzL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="T7x-GT-9pW"/>
                 <constraint firstItem="RRi-Oz-Kj2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="37" id="UHo-b8-W3G"/>
-                <constraint firstItem="Wbk-GA-JxC" firstAttribute="top" secondItem="Ygh-hU-4lg" secondAttribute="bottom" constant="-20" id="Uds-Tw-M7c"/>
+                <constraint firstItem="Wbk-GA-JxC" firstAttribute="top" secondItem="Ygh-hU-4lg" secondAttribute="bottom" constant="-50" id="Uds-Tw-M7c"/>
                 <constraint firstItem="Wbk-GA-JxC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Uxh-MJ-gh0"/>
                 <constraint firstItem="iG7-Zo-qDq" firstAttribute="leading" secondItem="RRi-Oz-Kj2" secondAttribute="trailing" constant="-19" id="aTv-1K-ZMw"/>
                 <constraint firstItem="UZ8-zt-yeo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="em2-g0-80f"/>

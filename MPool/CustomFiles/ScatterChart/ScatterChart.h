@@ -32,6 +32,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titile;
 @property (weak, nonatomic) IBOutlet UILabel *subTitile;
 - (IBAction)share:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *promoteButton;
 
 +(UIView *)loadInstance;
 - (void)loadScatterData;

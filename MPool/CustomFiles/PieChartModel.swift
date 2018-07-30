@@ -20,4 +20,5 @@ class PieChartModel: NSObject {
     var searchBarTitile = ""
     var showPromotButton: Bool = false
     var isGenderView:Bool = false
+    var customTag = 0
 }

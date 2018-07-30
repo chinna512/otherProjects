@@ -56,9 +56,9 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65b-pZ-Zd9">
-                    <rect key="frame" x="148" y="432" width="90" height="30"/>
+                    <rect key="frame" x="144" y="432" width="98" height="30"/>
                     <color key="backgroundColor" red="0.15686274509803921" green="0.68627450980392157" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <state key="normal" title="Promote App">
+                    <state key="normal" title=" Promote App ">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
@@ -89,6 +89,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="experiencedLable" destination="35K-vh-F10" id="qzk-a9-EKs"/>
+                <outlet property="promoteButton" destination="65b-pZ-Zd9" id="rAy-Mt-Wx7"/>
                 <outlet property="subTitile" destination="frP-ip-WHW" id="UNm-5j-OVg"/>
                 <outlet property="textField" destination="dW2-vT-sJZ" id="mEF-wB-GQ2"/>
                 <outlet property="titile" destination="74C-Nu-Xi6" id="j5q-g8-DgB"/>

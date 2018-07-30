@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,PassTouchesScrollViewDelegate,UIScrollViewDelegate,UIPopoverPresentationControllerDelegate,ScatterDelegate,UITableViewDelegate,UITableViewDataSource {
     
+    @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var totalCount: UILabel!
     @IBOutlet weak var copyRightLabel: UILabel!
     @IBOutlet weak var scrollView: CustomScrollView!
@@ -55,6 +56,9 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
             addTextToCopyRightLabel()
             isLoaded = true
             self.scrollView.delegatePass = self
+            self.promotAppButton.layer.cornerRadius = 5
+            self.searchButton.roundedButton()
+
         }
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -192,7 +196,10 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                             searchBarTitile = movementName as! String
                             titile = String(format: "Pool movement from %@ to Other companies", movementName as! CVarArg)
                         }
-                        self.createModelFromTheArray(title:titile, array: tempArray as! NSArray, showPercenatge: true, displaySearchBar: true, searchBarTitile: searchBarTitile)
+                        let model =
+                            self.createModelFromTheArray(title:titile, array: tempArray as! NSArray, showPercenatge: true, displaySearchBar: true, searchBarTitile: searchBarTitile)
+                        model.customTag = 120
+                        
                     }
                     if let tempArray = data?["locationMovement"]{
                         var titile = ""
@@ -201,7 +208,8 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                             searchBarTitile = movementName as! String
                             titile = String(format: "Pool movement from %@ to Other locations", movementName as! CVarArg)
                         }
-                        self.createModelFromTheArray(title:titile, array: tempArray as! NSArray, showPercenatge: true, displaySearchBar: true, searchBarTitile: searchBarTitile)
+                  let model =      self.createModelFromTheArray(title:titile, array: tempArray as! NSArray, showPercenatge: true, displaySearchBar: true, searchBarTitile: searchBarTitile)
+                         model.customTag = 130 
                     }
                     if let tempArray = data?["organizationByLocation"]{
                         var titile = ""
@@ -210,7 +218,9 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                             searchBarTitile = movementName as! String
                             titile = String(format: "Pool base at %@", movementName as! CVarArg)
                         }
-                        self.createModelFromTheArray(title:titile, array: tempArray as! NSArray, showPercenatge: true, displaySearchBar: true, searchBarTitile: searchBarTitile)
+                   let model =     self.createModelFromTheArray(title:titile, array: tempArray as! NSArray, showPercenatge: true, displaySearchBar: true, searchBarTitile: searchBarTitile)
+                        model.customTag = 140
+
                     }
                     if let scatterDict = data?["skillCompensation"] as? NSDictionary{
                         self.scatterModel = ScatterModel()
@@ -231,7 +241,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                     for  (index,model) in (self.modelArray as! [PieChartModel]).enumerated(){
                         var tempHeight:CGFloat = 0.0
                         if model.valuesArray.count >= 15{
-                            tempHeight  = self.view.frame.size.width + 180
+                            tempHeight  = self.view.frame.size.width + 150
                         }
                         else{
                             var value = CGFloat(model.valuesArray.count/3)
@@ -240,7 +250,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                             }else{
                                 value = 1
                             }
-                            tempHeight = self.view.frame.size.width + CGFloat(value * 18) + 90
+                            tempHeight = self.view.frame.size.width + CGFloat(value * 18) + 60
                         }
                         if index == self.modelArray.count - 1 {
                             if !((self.scatterModel?.skillCompensationListValues.count)!  > 0) {
@@ -383,24 +393,27 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     func showErrorReport(error: String,percentage:String, sender: AnyObject,forTheLocation location:CGPoint) {
         
         let width = getWidth(withConstrainedHeight: 24, text: error)
-        let label = UILabel(frame: CGRect(x: 0, y: 5, width: width + 10, height: 17))
+        let label = UILabel(frame: CGRect(x: 0, y: 5, width: 150, height: 17))
         label.numberOfLines = 1
         label.text = error
         label.font = UIFont.systemFont(ofSize: 10)
         label.textAlignment = .center
-        label.textColor = .white
+        label.textColor = .black
+        label.backgroundColor = UIColor.green
         
         
-        let percentageLabel = UILabel(frame: CGRect(x: 0, y: 20, width:  width + 10, height: 17))
+        let percentageLabel = UILabel(frame: CGRect(x: 0, y: 20, width:   150, height: 17))
         percentageLabel.numberOfLines = 1
         percentageLabel.text = percentage
         percentageLabel.font = UIFont.systemFont(ofSize: 10)
         percentageLabel.textAlignment = .center
-        percentageLabel.textColor = .white
+        percentageLabel.textColor = .black
+        percentageLabel.backgroundColor = UIColor.orange
+
         
         popoverView = UIViewController()
-        popoverView?.view.frame = CGRect(x: location.x, y: location.y, width:  width + 10, height: 40)
-        popoverView?.view.backgroundColor = UIColor.gray
+        popoverView?.view.frame = CGRect(x: location.x, y: location.y, width:150, height: 40)
+        popoverView?.view.backgroundColor = .white
         popoverView?.view.addSubview(label)
         popoverView?.view.addSubview(percentageLabel)
         let tempSender = sender as! UIView;
@@ -409,7 +422,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         popoverView?.preferredContentSize = CGSize(width: width + 10, height: 40)
         let popoverPresentationController = popoverView?.popoverPresentationController
         popoverPresentationController?.sourceView = tempSender
-        popoverPresentationController?.sourceRect = CGRect(x: location.x, y: location.y, width: width + 10, height: 40)
+        popoverPresentationController?.sourceRect = CGRect(x: location.x, y: location.y, width: 150, height: 40)
         popoverPresentationController?.delegate = self
         popoverPresentationController?.passthroughViews = [self.view]
         present(popoverView!, animated: true, completion: nil)
@@ -458,23 +471,22 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         }
     }
     
-    func searchBarSelectedWithText(searchText:String, andTag index:Int){
+    func searchBarSelectedWithText(searchText:String, andTag index:Int,andCustomTag customTag:Int){
         if  Reachability()!.isReachable{
             JHProgressHUD.sharedHUD.showInView(view: self.view, withHeader: nil, andFooter: "Loading")
-            RestAPI.getDataForSubSearchToTheKeyWord(keyWord: searchText,index:index,  searchValue:self.searchBar.text! , callbackHandler:{
+            RestAPI.getDataForSubSearchToTheKeyWord(keyWord: searchText,index:index,  searchValue:self.searchBar.text!, customTag: customTag , callbackHandler:{
                 (error:NSError?,data:NSMutableArray?)  -> Void in
                 DispatchQueue.main.async {
                     if data != nil && (data?.count)! > 0{
                         var title =  ""
-                        
-                        if index == 50{
+                        if customTag == 120{
                             title = String(format: "Pool movement from %@ to Other companies", searchText as CVarArg)
                         }
-                        if index == 60{
+                        if customTag == 130{
                             title = String(format: "Pool movement from %@ to Other locations", searchText as CVarArg)
                             
                         }
-                        if index == 70{
+                        if customTag == 140{
                             title = String(format: "Pool base at %@", searchText as CVarArg)
                         }
                         let model = PieChartModel()
@@ -499,7 +511,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                         customView.tag = (index + 1) * 10
                         customView.frame.size.width = self.view.frame.size.width
                         if model.valuesArray.count >= 15{
-                            customView.frame.size.height = self.view.frame.size.width + 180
+                            customView.frame.size.height = self.view.frame.size.width + 150
                         }
                         else{
                             var value = CGFloat(model.valuesArray.count/3)
@@ -508,7 +520,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                             }else{
                                 value = 1
                             }
-                            customView.frame.size.height = self.view.frame.size.width + CGFloat(value * 18) + 90
+                            customView.frame.size.height = self.view.frame.size.width + CGFloat(value * 18) + 60
                         }
                         customView.delegate = self
                         if model.displaySearchBar{
@@ -684,7 +696,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     func getResultsForTheSearchText(text:String){
         if  Reachability()!.isReachable{
             //JHProgressHUD.sharedHUD.showInView(view: self.view, withHeader: nil, andFooter: "Loading")
-            RestAPI.getDataForSubSearchToTheKeyWord(keyWord: text, index: 110,  searchValue:"" , callbackHandler:{
+            RestAPI.getDataForSubSearchToTheKeyWord(keyWord: text, index: 110,  searchValue:"", customTag: 0, callbackHandler:{
                 (error:NSError?,data:NSMutableArray?)  -> Void in
                 DispatchQueue.main.async {
                     if data != nil{
@@ -753,7 +765,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     func loadTableView(){
         if !self.isSearchBarClicked{
             if searchTableView == nil{
-                searchTableView = UITableView(frame:CGRect(x: self.searchBar.frame.origin.x, y: self.searchBar.frame.origin.y + 75, width:  self.contentView.frame.size.width - self.searchBar.frame.origin.x, height: self.view.frame.size.height - 178 - 67 ))
+                searchTableView = UITableView(frame:CGRect(x: self.searchBar.frame.origin.x, y: self.searchBar.frame.origin.y + self.searchBar.frame.size.height + 100, width:  self.contentView.frame.size.width - self.searchBar.frame.origin.x, height: self.view.frame.size.height - 178 - 67 ))
                 self.view.addSubview(searchTableView!)
                 self.searchTableView?.register(UITableViewCell.self, forCellReuseIdentifier: "cellReuseIdentifier")
                 self.searchTableView?.isHidden = false
@@ -776,6 +788,17 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         }
     }
     
-    
+}
+
+extension UIButton{
+    func roundedButton(){
+        let maskPath1 = UIBezierPath(roundedRect: bounds,
+                                     byRoundingCorners: [.bottomRight , .topRight],
+                                     cornerRadii: CGSize(width: 4, height: 4))
+        let maskLayer1 = CAShapeLayer()
+        maskLayer1.frame = bounds
+        maskLayer1.path = maskPath1.cgPath
+        layer.mask = maskLayer1
+}
 }
 

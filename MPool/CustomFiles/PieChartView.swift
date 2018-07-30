@@ -15,8 +15,9 @@ protocol CustomviewDelegate {
     func pieChart(_ pieChart: DLPieChart!, willSelectSliceAt index: UInt, andWithTheLayer point: CGPoint,customView:PieChartView, andDisplayValue displayValue:String, andPercentage percentage:String)
     func removeView()
     func share(image:UIImage)
-    func searchBarSelectedWithText(searchText:String, andTag index:Int)
+    func searchBarSelectedWithText(searchText:String, andTag index:Int,andCustomTag:Int)
     func promoteApp()
+    
     
 }
 class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,CustomDelegate,UIPopoverPresentationControllerDelegate,UISearchBarDelegate {
@@ -39,6 +40,7 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
     var isTwoRows:Bool = false
     var piechart:UIView?
     var viewHeight:CGFloat?
+    var customTag = 0
     
     @IBOutlet weak var promoteApp: UIButton!
     
@@ -71,6 +73,8 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
             customizeSearchBar()
             searchBar.text = model.searchBarTitile
         }
+        self.promoteApp.layer.cornerRadius = 5
+        self.CutsomSearchButton.roundedButton()
         if model.showPromotButton{
             self.promoteApp.isHidden = false
         }else{
@@ -113,8 +117,8 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
         self.pieChartView.addSubview(piechart)
         if valuesArray.count == 2{
             isTwoRows = true
-            self.collectionViewLeadingConstraint.constant = 70
-            self.collectionViewTrailing.constant = 60
+            self.collectionViewLeadingConstraint.constant = 110
+            self.collectionViewTrailing.constant = 110
         }else{
             self.collectionViewLeadingConstraint.constant = 20
         }
@@ -128,7 +132,7 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
     
     func loadColorsForGender(gender:String) -> UIColor{
         if gender == "FEMALE"{
-            return UIColor(red: 255/255, green: 192/255, blue: 203/255, alpha: 1.0)
+            return UIColor(red: 255/255, green: 105/255, blue: 180/255, alpha: 1.0)
         }else{
            return UIColor.blue
         }
@@ -247,7 +251,7 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
         self.searchBar.endEditing(true)
         let formattedString = searchBar.text?.replacingOccurrences(of: " ", with: "")
         if formattedString != "" {
-        self.delegate?.searchBarSelectedWithText(searchText:searchBar.text!, andTag: self.tag)
+            self.delegate?.searchBarSelectedWithText(searchText:searchBar.text!, andTag: self.tag, andCustomTag: self.customTag)
         }
     }
     
@@ -264,8 +268,9 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
         self.delegate?.removeView()
         let formattedString = searchBar.text?.replacingOccurrences(of: " ", with: "")
         if formattedString != "" {
-            self.delegate?.searchBarSelectedWithText(searchText:searchBar.text!, andTag: self.tag)
+            self.delegate?.searchBarSelectedWithText(searchText:searchBar.text!, andTag: self.tag, andCustomTag: self.customTag)
         }
+        self.searchBar.endEditing(true)
     }
 }
 extension CGFloat {

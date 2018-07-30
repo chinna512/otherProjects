@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MPool/CustomFiles/PieChartView.swift"
-            timestampString = "554615492.811633"
+            timestampString = "554654800.6337841"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "214"
-            endingLineNumber = "214"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
             landmarkName = "pieChart(_:willSelectSliceAt:andWithTheLayer:andDisplayVlaue:andPercentage:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -36,7 +36,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MPool/CustomFiles/DLPieChart.m"
-            timestampString = "554615492.812019"
+            timestampString = "554623846.155141"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "716"
@@ -84,7 +84,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MPool/CustomFiles/DLPieChart.m"
-            timestampString = "554615492.812276"
+            timestampString = "554623846.155193"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "401"
@@ -100,11 +100,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MPool/ViewController.swift"
-            timestampString = "554615492.812484"
+            timestampString = "554654800.635201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
             landmarkName = "loadDataForTheKeyword(keyWord:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -116,11 +116,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MPool/ViewController.swift"
-            timestampString = "554615492.8125499"
+            timestampString = "554654800.635864"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "319"
-            endingLineNumber = "319"
+            startingLineNumber = "323"
+            endingLineNumber = "323"
             landmarkName = "createModelFromTheArray(title:array:showPercenatge:displaySearchBar:searchBarTitile:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -132,7 +132,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MPool/CustomFiles/ScatterChart/ScatterChart.m"
-            timestampString = "554482266.947535"
+            timestampString = "554623846.155385"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
@@ -158,7 +158,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MPool/CustomFiles/DLPieChart.m"
-            timestampString = "554615492.8126301"
+            timestampString = "554623846.155424"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "769"
@@ -174,11 +174,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MPool/ViewController.swift"
-            timestampString = "554615492.81285"
+            timestampString = "554654800.636337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
             landmarkName = "loadDataForTheKeyword(keyWord:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -190,11 +190,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MPool/ViewController.swift"
-            timestampString = "554615492.8129129"
+            timestampString = "554654800.636711"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "240"
-            endingLineNumber = "240"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
             landmarkName = "loadDataForTheKeyword(keyWord:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -206,12 +206,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MPool/ViewController.swift"
-            timestampString = "554615492.812968"
+            timestampString = "554654800.637013"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "685"
-            endingLineNumber = "685"
-            landmarkName = "getResultsForTheSearchText(text:)"
+            startingLineNumber = "691"
+            endingLineNumber = "691"
+            landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -222,11 +222,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MPool/ViewController.swift"
-            timestampString = "554615492.8130209"
+            timestampString = "554654800.637529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "266"
-            endingLineNumber = "266"
+            startingLineNumber = "270"
+            endingLineNumber = "270"
             landmarkName = "loadDataForTheKeyword(keyWord:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -238,7 +238,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MPool/CustomFiles/PieChartView.swift"
-            timestampString = "554615492.8130749"
+            timestampString = "554654800.6402251"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
@@ -254,11 +254,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MPool/ViewController.swift"
-            timestampString = "554615492.8133121"
+            timestampString = "554654800.641387"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "728"
-            endingLineNumber = "728"
+            startingLineNumber = "734"
+            endingLineNumber = "734"
             landmarkName = "checkIsDatAvailableAlready()"
             landmarkType = "7">
          </BreakpointContent>
@@ -270,11 +270,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MPool/ViewController.swift"
-            timestampString = "554615492.813359"
+            timestampString = "554654800.641802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "729"
-            endingLineNumber = "729"
+            startingLineNumber = "735"
+            endingLineNumber = "735"
             landmarkName = "checkIsDatAvailableAlready()"
             landmarkType = "7">
          </BreakpointContent>
@@ -286,12 +286,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MPool/ViewController.swift"
-            timestampString = "554615492.813405"
+            timestampString = "554654800.6421911"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "462"
-            endingLineNumber = "462"
-            landmarkName = "searchBarSelectedWithText(searchText:andTag:)"
+            startingLineNumber = "469"
+            endingLineNumber = "469"
+            landmarkName = "removePopover()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -302,11 +302,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MPool/CustomFiles/RestAPI.swift"
-            timestampString = "554615492.81346"
+            timestampString = "554654800.642722"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "getDataForSubSearchToTheKeyWord(keyWord:index:searchValue:callbackHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -318,11 +318,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MPool/CustomFiles/RestAPI.swift"
-            timestampString = "554615492.813501"
+            timestampString = "554654800.64283"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "getDataForSubSearchToTheKeyWord(keyWord:index:searchValue:callbackHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -334,11 +334,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MPool/ViewController.swift"
-            timestampString = "554615492.813535"
+            timestampString = "554654800.642908"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "317"
-            endingLineNumber = "317"
+            startingLineNumber = "321"
+            endingLineNumber = "321"
             landmarkName = "createModelFromTheArray(title:array:showPercenatge:displaySearchBar:searchBarTitile:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -350,11 +350,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MPool/ViewController.swift"
-            timestampString = "554615492.813567"
+            timestampString = "554654800.643392"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
             landmarkName = "loadDataForTheKeyword(keyWord:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -366,7 +366,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MPool/CustomFiles/DLPieChart.m"
-            timestampString = "554615492.813602"
+            timestampString = "554623846.156629"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "399"
@@ -382,12 +382,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MPool/CustomFiles/DLPieChart.m"
-            timestampString = "554615492.8138"
+            timestampString = "554623846.156672"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "286"
             endingLineNumber = "286"
             landmarkName = "-reloadData"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MPool/ViewController.swift"
+            timestampString = "554654800.646991"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "762"
+            endingLineNumber = "762"
+            landmarkName = "filterAndReloadDataForTheKeyword(text:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MPool/ViewController.swift"
+            timestampString = "554654800.650353"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "763"
+            endingLineNumber = "763"
+            landmarkName = "filterAndReloadDataForTheKeyword(text:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

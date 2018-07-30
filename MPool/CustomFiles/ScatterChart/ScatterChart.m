@@ -97,6 +97,7 @@
 - (void)loadDataForThePickerValue:(NSString*)averageSalary
                         lineIndex:(NSMutableArray*)values
                        pointIndex:(NSMutableArray*)pickerValues andSearchText:(NSString*)searchText{
+    self.promoteButton.layer.cornerRadius = 5;
     self.titile.text = [NSString stringWithFormat:@"Expected salary for (%@)",searchText];
     self.subTitile.text = [NSString stringWithFormat:@"--Avg. expected salary (%@ INR)",averageSalary];
     self.selectedIndex = 0;

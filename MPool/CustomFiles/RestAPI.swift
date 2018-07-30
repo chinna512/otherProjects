@@ -36,19 +36,20 @@ class RestAPI: NSURLConnection {
         task.resume()
     }
     
-    class  func getDataForSubSearchToTheKeyWord(keyWord:String, index:Int,searchValue:String, callbackHandler:((NSError?, NSMutableArray?) -> Void)!){
+
+    class  func getDataForSubSearchToTheKeyWord(keyWord:String, index:Int,searchValue:String,customTag:Int, callbackHandler:((NSError?, NSMutableArray?) -> Void)!){
         
         var urlString = String(format: "https://www.hiringnow.com/mPoolSearch-portlet/api/secure/jsonws/share/search-mpool/query/%@/", keyWord)
-        if index == 50{
+        if customTag == 120{
             urlString = String(format: "https://www.hiringnow.com/mPoolSearch-portlet/api/secure/jsonws/share/organization-movement-search/query/%@/organization-name/%@/",searchValue,keyWord)
 
         }
-        if index == 60{
+        if customTag == 130{
             
             urlString = String(format: "https://www.hiringnow.com/mPoolSearch-portlet/api/secure/jsonws/share/location-movement-search/query/%@/location-name/%@/",searchValue,keyWord)
             
         }
-        if index == 70{
+        if customTag == 140{
             urlString = String(format: "https://www.hiringnow.com/mPoolSearch-portlet/api/secure/jsonws/share/organization-by-location-search/query/%@/location-name/%@/",searchValue,keyWord)
         }
         
