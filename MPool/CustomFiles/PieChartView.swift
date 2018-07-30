@@ -245,7 +245,10 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.delegate?.removeView()
         self.searchBar.endEditing(true)
+        let formattedString = searchBar.text?.replacingOccurrences(of: " ", with: "")
+        if formattedString != "" {
         self.delegate?.searchBarSelectedWithText(searchText:searchBar.text!, andTag: self.tag)
+        }
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
@@ -259,10 +262,11 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
     
     @IBAction func customearchButtonAction(_ sender: Any) {
         self.delegate?.removeView()
-        self.searchBar.endEditing(true)
-        self.delegate?.searchBarSelectedWithText(searchText:searchBar.text!, andTag: self.tag)
+        let formattedString = searchBar.text?.replacingOccurrences(of: " ", with: "")
+        if formattedString != "" {
+            self.delegate?.searchBarSelectedWithText(searchText:searchBar.text!, andTag: self.tag)
+        }
     }
-    
 }
 extension CGFloat {
     static var random: CGFloat {

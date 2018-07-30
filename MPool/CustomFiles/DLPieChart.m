@@ -283,7 +283,7 @@ static CGPathRef CGPathCreateArc(CGPoint center, CGFloat radius, CGFloat startAn
         double values[sliceCount];
         for (int index = 0; index < sliceCount; index++) {
             values[index] = [_dataSource pieChart:self valueForSliceAtIndex:index];
-            sum += values[index];
+era            sum += values[index];
         }
         
         double angles[sliceCount];
@@ -394,6 +394,7 @@ static CGPathRef CGPathCreateArc(CGPoint center, CGFloat radius, CGFloat startAn
                         }
                     }
                 }
+            
             
             layer.value = values[index];
             layer.percentage = (sum)?layer.value/sum:0;
@@ -748,9 +749,9 @@ static CGPathRef CGPathCreateArc(CGPoint center, CGFloat radius, CGFloat startAn
     return self.DLDataArray.count;
 }
 
-- (CGFloat)pieChart:(DLPieChart *)pieChart valueForSliceAtIndex:(NSUInteger)index
+- (double)pieChart:(DLPieChart *)pieChart valueForSliceAtIndex:(NSUInteger)index
 {
-    return [[self.DLDataArray objectAtIndex:index] intValue];
+    return [[self.DLDataArray objectAtIndex:index] doubleValue];
 }
 
 - (UIColor *)pieChart:(DLPieChart *)pieChart colorForSliceAtIndex:(NSUInteger)index

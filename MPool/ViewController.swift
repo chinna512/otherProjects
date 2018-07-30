@@ -51,10 +51,10 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         if !isLoaded{
             configureSearchBar()
             self.keywordsLabel.isHidden = true
+            self.totalCount.isHidden = true
             addTextToCopyRightLabel()
             isLoaded = true
             self.scrollView.delegatePass = self
-
         }
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -115,6 +115,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                 }
             }
             self.keywordsLabel.isHidden = true
+            self.totalCount.isHidden = true
             var text = searchBar?.text
           text =  text?.trimmingCharacters(in: .whitespaces)
             if (text?.count)! > 0{
@@ -161,6 +162,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                             partOne.append(partTwo)
                             self.suggestedKeywordsLabel.attributedText = partOne
                             self.keywordsLabel.isHidden = false
+                            self.totalCount.isHidden = false
                         }
                         self.suggestedKeywordsLabel.layoutIfNeeded()
                         self.scrollView.layoutIfNeeded()
@@ -459,7 +461,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     func searchBarSelectedWithText(searchText:String, andTag index:Int){
         if  Reachability()!.isReachable{
             JHProgressHUD.sharedHUD.showInView(view: self.view, withHeader: nil, andFooter: "Loading")
-            RestAPI.getDataForSubSearchToTheKeyWord(keyWord: searchText,index:index,  searchValue:searchText , callbackHandler:{
+            RestAPI.getDataForSubSearchToTheKeyWord(keyWord: searchText,index:index,  searchValue:self.searchBar.text! , callbackHandler:{
                 (error:NSError?,data:NSMutableArray?)  -> Void in
                 DispatchQueue.main.async {
                     if data != nil && (data?.count)! > 0{
