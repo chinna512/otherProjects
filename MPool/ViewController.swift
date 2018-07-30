@@ -241,7 +241,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                     for  (index,model) in (self.modelArray as! [PieChartModel]).enumerated(){
                         var tempHeight:CGFloat = 0.0
                         if model.valuesArray.count >= 15{
-                            tempHeight  = self.view.frame.size.width + 150
+                            tempHeight  = self.view.frame.size.width + 150 + 20
                         }
                         else{
                             var value = CGFloat(model.valuesArray.count/3)
@@ -511,7 +511,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                         customView.tag = (index + 1) * 10
                         customView.frame.size.width = self.view.frame.size.width
                         if model.valuesArray.count >= 15{
-                            customView.frame.size.height = self.view.frame.size.width + 150
+                            customView.frame.size.height = self.view.frame.size.width + 150 + 20
                         }
                         else{
                             var value = CGFloat(model.valuesArray.count/3)

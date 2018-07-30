@@ -24,16 +24,18 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionViewTrailing: NSLayoutConstraint!
     @IBOutlet weak var collectionViewLeadingConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var CutsomSearchButton: UIButton!
     @IBOutlet weak var searchString: UILabel!
     @IBOutlet weak var titile: UILabel!
     @IBOutlet weak var heightConstarint: NSLayoutConstraint!
     @IBOutlet weak var pieChartView: UIView!
-    
     @IBOutlet weak var titileTopConstarint: NSLayoutConstraint!
     @IBOutlet weak var collectionViewTop: NSLayoutConstraint!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var dataLabel: UILabel!
+    @IBOutlet weak var minButton: UIButton!
+    @IBOutlet weak var maxButton: UIButton!
     var colorsArray = NSMutableArray()
     var valuesArray = NSMutableArray()
     var delegate:CustomviewDelegate?
@@ -41,6 +43,9 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
     var piechart:UIView?
     var viewHeight:CGFloat?
     var customTag = 0
+    var selectedIndex:Int = 0
+    var totalCount = 0
+
     
     @IBOutlet weak var promoteApp: UIButton!
     
@@ -123,7 +128,16 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
             self.collectionViewLeadingConstraint.constant = 20
         }
         loadCollectionView()
+        if self.valuesArray.count > 15{
+            let value = Double(Double(model.valuesArray.count)/15.0)
+            totalCount =  Int(value.rounded(.up))
+            selectedIndex = 1
+            self.dataLabel.text = String(format: "%d/%d", self.selectedIndex,totalCount)
+        }else{
+            disableMinMaxButton()
+        }
         self.layoutSubviews()
+        
     }
     
     override func layoutSubviews() {
@@ -272,6 +286,73 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
         }
         self.searchBar.endEditing(true)
     }
+    
+    @IBAction func minButtonAction(_ sender: Any) {
+        self.selectedIndex = self.selectedIndex - 1
+        minButtonPressed()
+    }
+    
+    @IBAction func maxButtonAction(_ sender: Any) {
+        self.selectedIndex = self.selectedIndex + 1
+        maxButtonPressed()
+    }
+    
+    func minButtonPressed(){
+        self.collectionView.scrollToItem(at:IndexPath(item: ((selectedIndex - 1) * 15), section: 0), at: .top, animated: false)
+        self.dataLabel.text = String(format: "%d/%d", self.selectedIndex,totalCount)
+
+        if selectedIndex == 1{
+            self.minButton.setBackgroundImage(UIImage(imageLiteralResourceName: "down_gr.png"), for: .normal)
+            self.minButton.isUserInteractionEnabled = false
+            
+            self.maxButton.setBackgroundImage(UIImage(imageLiteralResourceName: "up.png"), for: .normal)
+            self.maxButton.isUserInteractionEnabled = true
+            
+        }else{
+            if selectedIndex == self.totalCount{
+                self.minButton.setBackgroundImage(UIImage(imageLiteralResourceName: "down.png"), for: .normal)
+                self.minButton.isUserInteractionEnabled = true
+                
+                self.maxButton.setBackgroundImage(UIImage(imageLiteralResourceName: "up_gr.png"), for: .normal)
+                self.maxButton.isUserInteractionEnabled = false
+            }
+            else{
+                self.minButton.setBackgroundImage(UIImage(imageLiteralResourceName: "down.png"), for: .normal)
+                self.minButton.isUserInteractionEnabled = true
+                
+                self.maxButton.setBackgroundImage(UIImage(imageLiteralResourceName: "up.png"), for: .normal)
+                self.maxButton.isUserInteractionEnabled = false
+            }
+        }
+        
+    }
+    
+    func maxButtonPressed(){
+        self.collectionView.scrollToItem(at:IndexPath(item: ((selectedIndex - 1) * 15), section: 0), at: .top, animated: false)
+
+        self.dataLabel.text = String(format: "%d/%d", self.selectedIndex,totalCount)
+        if selectedIndex == self.totalCount{
+            self.minButton.setBackgroundImage(UIImage(imageLiteralResourceName: "down.png"), for: .normal)
+            self.minButton.isUserInteractionEnabled = true
+            
+            self.maxButton.setBackgroundImage(UIImage(imageLiteralResourceName: "up_gr.png"), for: .normal)
+            self.maxButton.isUserInteractionEnabled = false
+        }
+        else{
+            self.minButton.setBackgroundImage(UIImage(imageLiteralResourceName: "down.png"), for: .normal)
+            self.minButton.isUserInteractionEnabled = true
+            
+            self.maxButton.setBackgroundImage(UIImage(imageLiteralResourceName: "up.png"), for: .normal)
+            self.maxButton.isUserInteractionEnabled = true
+        }
+    }
+    
+    func disableMinMaxButton(){
+        self.minButton.isHidden = true
+        self.maxButton.isHidden = true
+        self.dataLabel.isHidden = true
+    }
+    
 }
 extension CGFloat {
     static var random: CGFloat {
