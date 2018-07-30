@@ -283,7 +283,7 @@ static CGPathRef CGPathCreateArc(CGPoint center, CGFloat radius, CGFloat startAn
         double values[sliceCount];
         for (int index = 0; index < sliceCount; index++) {
             values[index] = [_dataSource pieChart:self valueForSliceAtIndex:index];
-era            sum += values[index];
+            sum += values[index];
         }
         
         double angles[sliceCount];
