@@ -57,10 +57,18 @@
     [self.scatterChart removeFromSuperview];
     [self loadScatterChartForThePickerValues:values];
     self.subTitile.text = [NSString stringWithFormat:@"--Avg. expected salary (%@ INR)",salary];
+    CGPoint startPoint = CGPointMake(0,self.averageSalary);
+    CGPoint endPoint = CGPointMake(self.valueArray.count,self.averageSalary);
+    
+    [self.scatterChart drawLineFromPoint:startPoint ToPoint:endPoint WithLineWith:2 AndWithColor:UIColor.redColor];
+
+
+
 
 }
 
 - (void)loadScatterChartForThePickerValues:(NSMutableArray*)values{
+    self.valueArray = values;
     self.scatterChart = [[PNScatterChart alloc] initWithFrame:CGRectMake(0, 155, 280, 250)];
     
     NSArray *numbers = [values sortedArrayUsingSelector:@selector(compare:)];
@@ -69,6 +77,8 @@
     if (values.count < 5){
         [self.scatterChart setAxisXWithMinimumValue:0 andMaxValue:values.count  toTicks:values.count + 1];
         [self.scatterChart setAxisYWithMinimumValue:0 andMaxValue:max toTicks:5];
+        
+        
     }
     else{
         [self.scatterChart setAxisXWithMinimumValue:0 andMaxValue:values.count toTicks:5];
@@ -93,6 +103,12 @@
     self.scatterChart.chartData = @[data01];
     [self addSubview:self.scatterChart];
     self.scatterChart.delegate = self;
+    CGPoint startPoint = CGPointMake(0,self.averageSalary);
+    
+    CGPoint endPoint = CGPointMake(self.valueArray.count,self.averageSalary);
+    
+    [self.scatterChart drawLineFromPoint:startPoint ToPoint:endPoint WithLineWith:2 AndWithColor:UIColor.redColor];
+
 }
 - (void)loadDataForThePickerValue:(NSString*)averageSalary
                         lineIndex:(NSMutableArray*)values
@@ -100,6 +116,7 @@
     self.promoteButton.layer.cornerRadius = 5;
     self.titile.text = [NSString stringWithFormat:@"Expected salary for (%@)",searchText];
     self.subTitile.text = [NSString stringWithFormat:@"--Avg. expected salary (%@ INR)",averageSalary];
+  
     self.selectedIndex = 0;
     [self loadScatterChartForThePickerValues:values];
     

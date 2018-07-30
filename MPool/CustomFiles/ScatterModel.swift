@@ -13,4 +13,5 @@ class ScatterModel: NSObject {
     var skillCompensationListValues:NSMutableArray =  []
     var skillCompensationLevelNames:NSMutableArray =  []
     var skillCompensationLevelNamesValues:NSMutableArray =  []
+    var averageSalary:Float = 0
 }

@@ -226,10 +226,14 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                         self.scatterModel = ScatterModel()
                         if let average = scatterDict["skillCompensationAverage"] as? String{
                             self.scatterModel?.skillCompensationAverage = average
+
                         }
                         for  array in (scatterDict["skillCompensationList"]  as? [NSArray])!{
                             if  let obj = array[1] as? Int {
                                 self.scatterModel?.skillCompensationListValues.add(obj)
+                            }
+                            if  let obj = array[3] as? Int {
+                                self.scatterModel?.averageSalary = Float(obj)
                             }
                         }
                         for  array in (scatterDict["skillCompensationLevelNames"]  as? [NSArray])!{
@@ -279,6 +283,8 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                     if (self.scatterModel?.skillCompensationListValues.count)!  > 0{
                         let scatter = ScatterChart.loadInstance()
                         self.scatterChart =   scatter as? ScatterChart
+                        
+                        self.scatterChart?.averageSalary = CGFloat((self.scatterModel?.averageSalary)!)
                         self.scatterChart?.loadData(forThePickerValue: self.scatterModel?.skillCompensationAverage, lineIndex: self.scatterModel?.skillCompensationListValues, pointIndex: self.scatterModel?.skillCompensationLevelNamesValues, andSearchText: self.searchBar.text);
                         self.self.scatterChart?.frame.origin.y = y
                         y = y + 462
@@ -590,8 +596,12 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                             self.scatterModel?.skillCompensationListValues.removeAllObjects()
                             for array in (arrays as? [NSArray])!{
                                 self.scatterModel?.skillCompensationListValues.add(array.object(at: 1))
+                                if  let obj = array[3] as? Int {
+                                    self.scatterModel?.averageSalary = Float(obj)
+                                }
                             }
                             if let average = data!["skillCompensationAverage"] as? String{
+   self.scatterChart?.averageSalary = CGFloat((self.scatterModel?.averageSalary)!)
                                 self.scatterChart?.reload(withValues: self.scatterModel?.skillCompensationListValues, andAverageSalary: average)
                             }
                         }

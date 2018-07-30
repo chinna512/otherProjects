@@ -31,6 +31,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *experiencedLable;
 @property (weak, nonatomic) IBOutlet UILabel *titile;
 @property (weak, nonatomic) IBOutlet UILabel *subTitile;
+@property (assign, nonatomic)CGFloat averageSalary;
 - (IBAction)share:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *promoteButton;
 
