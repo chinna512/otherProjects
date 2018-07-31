@@ -66,6 +66,7 @@ class PieChartView: UIView,UICollectionViewDataSource,UICollectionViewDelegateFl
         textField.layer.borderColor = UIColor.lightGray.cgColor
         textField.layer.cornerRadius = 6
         textField.clearButtonMode = .never
+        textField.leftViewMode = .never;
     }
     
     func loadCustomPieChart(model:PieChartModel, withSearchBarDisplay isDisplay:Bool){

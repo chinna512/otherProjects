@@ -98,6 +98,8 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         textField.clearButtonMode = .never
         let placeholderLabel = textField.value(forKey: "placeholderLabel") as? UILabel
         placeholderLabel?.font     = UIFont.systemFont(ofSize: 10.0)
+        textField.leftViewMode = .never;
+
     }
     
     override func viewWillLayoutSubviews() {
@@ -400,16 +402,16 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         
       //  let width = getWidth(withConstrainedHeight: 24, text: error)
         popoverView = POPOverViewController(nibName: "POPOverViewController", bundle: nil)
-        popoverView?.view.frame = CGRect(x: location.x, y: location.y, width:150, height: 40)
+        popoverView?.view.frame = CGRect(x: location.x, y: location.y, width:130, height: 40)
         popoverView?.view.backgroundColor = .white
         popoverView?.loadDataWith(title:error,subTitile:percentage)
         let tempSender = sender as! UIView;
         popoverView?.modalPresentationStyle = UIModalPresentationStyle.popover
         
-        popoverView?.preferredContentSize = CGSize(width:150, height: 40)
+        popoverView?.preferredContentSize = CGSize(width:130, height: 40)
         let popoverPresentationController = popoverView?.popoverPresentationController
         popoverPresentationController?.sourceView = tempSender
-        popoverPresentationController?.sourceRect = CGRect(x: location.x, y: location.y, width: 150, height: 40)
+        popoverPresentationController?.sourceRect = CGRect(x: location.x, y: location.y, width: 130, height: 40)
         popoverPresentationController?.delegate = self
         popoverPresentationController?.passthroughViews = [self.view]
         present(popoverView!, animated: true, completion: nil)
@@ -785,6 +787,11 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         }
     }
     
+    func averagSalary(_ point: CGPoint, andSalary salary: CGFloat) {
+              let formattedInt = String(format: "%f", locale:Locale(identifier:"en_IN"), salary)
+        self.loadPopForthePoint(point: CGPoint(x: point.x - 50, y: point.y - 5), text:"ExpectedSalary", percentage: String(format: "%@ INR", formattedInt))
+
+    }
 }
 
 extension UIButton{

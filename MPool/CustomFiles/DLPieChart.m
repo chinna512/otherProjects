@@ -777,8 +777,11 @@ static CGPathRef CGPathCreateArc(CGPoint center, CGFloat radius, CGFloat startAn
     CALayer *parentLayer = [_pieView layer];
     NSArray *pieLayers = [parentLayer sublayers];
     SliceLayer *layer1 = [pieLayers objectAtIndex:index];
+   // CGPoint tempoint = layer1.center
+    CGPoint point2 = [pieChart convertPoint:self.selectedPoint toView:self];;
+   // CGPoint point = [_pieView convertPoint:self]
     NSString *percentage = [NSString stringWithFormat:@"%0.01f%s", layer1.percentage*100,"%"];
-    [self.customDelegate pieChart:self willSelectSliceAtIndex:index andWithTheLayer:self.selectedPoint andDisplayVlaue:layer1.displayValue andPercentage:percentage];
+    [self.customDelegate pieChart:self willSelectSliceAtIndex:index andWithTheLayer:CGPointMake(point2.x - 35,point2.y) andDisplayVlaue:layer1.displayValue andPercentage:percentage];
 }
 
 - (void)pieChart:(DLPieChart *)pieChart didDeselectSliceAtIndex:(NSUInteger)index{

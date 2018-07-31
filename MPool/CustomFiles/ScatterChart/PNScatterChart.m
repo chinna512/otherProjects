@@ -43,6 +43,7 @@
 @property (nonatomic) CGFloat AxisX_Margin;
 @property (nonatomic) CGFloat AxisY_Margin;
 @property (nonatomic, strong) NSMutableArray *pathPoints;
+@property (nonatomic, strong) UIBezierPath *tapTarget;
 
 
 @property (nonatomic) BOOL isForUpdate;
@@ -425,28 +426,29 @@
 
 - (void) drawLineFromPoint : (CGPoint) startPoint ToPoint : (CGPoint) endPoint WithLineWith : (CGFloat) lineWidth AndWithColor : (UIColor*) color{
     
-    // call the same method on a background thread
+        // call the same method on a background thread
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         if (self.displayAnimated) {
             [NSThread sleepForTimeInterval:2];
         }
-        // calculating start and end point
+            // calculating start and end point
         __block CGFloat startX = [self mappingIsForAxisX:true WithValue:startPoint.x];
         __block CGFloat startY = [self mappingIsForAxisX:false WithValue:startPoint.y];
         __block CGFloat endX = [self mappingIsForAxisX:true WithValue:endPoint.x];
         __block CGFloat endY = [self mappingIsForAxisX:false WithValue:endPoint.y];
-        // update UI on the main thread
+            // update UI on the main thread
         dispatch_async(dispatch_get_main_queue(), ^{
-            // drawing path between two points
+                // drawing path between two points
             UIBezierPath *path = [UIBezierPath bezierPath];
             [path moveToPoint:CGPointMake(startX, startY)];
             [path addLineToPoint:CGPointMake(endX, endY)];
             CAShapeLayer *shapeLayer = [CAShapeLayer layer];
             shapeLayer.path = [path CGPath];
+            self.tapTarget =      [self tapTargetForPath:path];
             shapeLayer.strokeColor = [color CGColor];
             shapeLayer.lineWidth = lineWidth;
             shapeLayer.fillColor = [color CGColor];
-            // adding animation to path
+                // adding animation to path
             [self addStrokeEndAnimationIfNeededToLayer:shapeLayer];
             [self.layer addSublayer:shapeLayer];
         });
@@ -484,7 +486,34 @@
         }
     }
     if (!isClicked){
-        [self.delegate didUnselectPieItem];
+        if ([self containsPoint:touchPoint]){
+          //  [self.delegate userClickedOnLinePoint:touchPoint lineIndex:0];
+        }else{
+            [self.delegate didUnselectPieItem];
+
+        }
     }
+    
 }
+
+- (UIBezierPath *)tapTargetForPath:(UIBezierPath *)path
+{
+    if (path == nil) {
+        return nil;
+    }
+    
+    CGPathRef tapTargetPath = CGPathCreateCopyByStrokingPath(path.CGPath, NULL, fmaxf(35.0f, path.lineWidth), path.lineCapStyle, path.lineJoinStyle, path.miterLimit);
+    if (tapTargetPath == NULL) {
+        return nil;
+    }
+    
+    UIBezierPath *tapTarget = [UIBezierPath bezierPathWithCGPath:tapTargetPath];
+    CGPathRelease(tapTargetPath);
+    return tapTarget;
+}
+- (BOOL)containsPoint:(CGPoint)point
+{    return [self.tapTarget containsPoint:point];
+}
+
+
 @end

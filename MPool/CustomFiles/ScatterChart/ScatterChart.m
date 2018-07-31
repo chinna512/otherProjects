@@ -104,7 +104,7 @@
     
     CGPoint endPoint = CGPointMake(self.valueArray.count,self.averageSalary);
     
-    [self.scatterChart drawLineFromPoint:startPoint ToPoint:endPoint WithLineWith:2 AndWithColor:UIColor.redColor];
+    [self.scatterChart drawLineFromPoint:startPoint ToPoint:endPoint WithLineWith:1 AndWithColor:[[UIColor redColor] colorWithAlphaComponent:0.5f]];
 
 }
 - (void)loadDataForThePickerValue:(NSString*)averageSalary
@@ -132,6 +132,9 @@
     CGFloat height = self.pickerKeyArray.count * 30;
     if(height > self.frame.size.height - 93){
         height = self.frame.size.height - 93;
+    }
+    if (height < 35) {
+        height = height + 20;
     }
     self.pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(self.textField.frame.origin.x, self.textField.frame.origin.y, self.textField.frame.size.width, height)];
     self.pickerView.delegate = self;
@@ -218,7 +221,7 @@
     return 1;
 }
 - (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component{
-    return 30;
+    return 40;
 }
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     return  self.pickerKeyArray.count;
@@ -233,5 +236,11 @@
 - (IBAction)promteAppAction:(id)sender {
     [self.delegate PromoteAPPScatterChart];
 }
+
+- (void)userClickedOnLinePoint:(CGPoint)point lineIndex:(NSInteger)lineIndex{
+    [self.delegate averagSalary:point andSalary:self.averageSalary];
+}
+
+
 
 @end

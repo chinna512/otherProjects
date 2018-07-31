@@ -17,6 +17,7 @@
 - (void)removeScatterPopOver;
 - (void)shareView:(id)scatter;
 - (void)PromoteAPPScatterChart;
+- (void)averagSalary:(CGPoint)point andSalary:(CGFloat)salary;
 
 @end
 
