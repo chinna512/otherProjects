@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dW2-vT-sJZ">
-                    <rect key="frame" x="32" y="75" width="323" height="30"/>
+                    <rect key="frame" x="32" y="75" width="316" height="30"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -65,14 +65,25 @@
                         <action selector="promteAppAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="PeZ-j0-D2K"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downArrow.png" highlightedImage="downArrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="ofk-gO-SrI">
+                    <rect key="frame" x="316" y="75" width="32" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="Kg5-GP-8kM"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="bfD-h8-oZO"/>
+                        <constraint firstAttribute="width" constant="32" id="ypa-mZ-nAq"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="ofk-gO-SrI" firstAttribute="leading" secondItem="vDX-Jy-DM3" secondAttribute="leading" constant="-19" id="2Gz-Jp-YOD"/>
                 <constraint firstItem="74C-Nu-Xi6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="23" id="2pk-66-1TA"/>
                 <constraint firstItem="frP-ip-WHW" firstAttribute="trailing" secondItem="74C-Nu-Xi6" secondAttribute="trailing" constant="-1" id="3qa-c6-v86"/>
                 <constraint firstItem="dW2-vT-sJZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="5sc-cf-h3H"/>
+                <constraint firstItem="ofk-gO-SrI" firstAttribute="top" secondItem="dW2-vT-sJZ" secondAttribute="top" id="D9u-HY-IT3"/>
                 <constraint firstItem="65b-pZ-Zd9" firstAttribute="top" secondItem="35K-vh-F10" secondAttribute="bottom" constant="13" id="OvF-J7-S65"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="vDX-Jy-DM3" secondAttribute="top" id="RKK-do-9eM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ofk-gO-SrI" secondAttribute="trailing" constant="31" id="Tby-dN-NSR"/>
                 <constraint firstItem="frP-ip-WHW" firstAttribute="top" secondItem="74C-Nu-Xi6" secondAttribute="bottom" constant="8" id="Ydi-qy-O9o"/>
                 <constraint firstItem="35K-vh-F10" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="aBF-cY-gOw"/>
                 <constraint firstItem="65b-pZ-Zd9" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" constant="3.5" id="akB-IL-P7g"/>
@@ -82,7 +93,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="35K-vh-F10" secondAttribute="trailing" id="pWv-wR-Zvt"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="74C-Nu-Xi6" secondAttribute="bottom" constant="-31" id="vAj-mj-cdd"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vDX-Jy-DM3" secondAttribute="trailing" constant="24" id="vKh-pk-U1D"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dW2-vT-sJZ" secondAttribute="trailing" constant="24" id="vMJ-mD-eIG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dW2-vT-sJZ" secondAttribute="trailing" constant="31" id="vMJ-mD-eIG"/>
                 <constraint firstItem="dW2-vT-sJZ" firstAttribute="top" secondItem="frP-ip-WHW" secondAttribute="bottom" constant="20" id="vpo-6e-BeW"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -99,5 +110,6 @@
     </objects>
     <resources>
         <image name="Share2.png" width="125" height="166"/>
+        <image name="downArrow.png" width="225" height="225"/>
     </resources>
 </document>

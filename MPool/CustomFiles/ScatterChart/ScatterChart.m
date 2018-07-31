@@ -64,6 +64,7 @@
 }
 
 - (void)loadScatterChartForThePickerValues:(NSMutableArray*)values{
+    
     self.valueArray = values;
     self.scatterChart = [[PNScatterChart alloc] initWithFrame:CGRectMake(0, 155, 280, 250)];
     
@@ -109,6 +110,14 @@
 - (void)loadDataForThePickerValue:(NSString*)averageSalary
                         lineIndex:(NSMutableArray*)values
                        pointIndex:(NSMutableArray*)pickerValues andSearchText:(NSString*)searchText{
+    
+    
+//    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+//    UIImage *image = [UIImage imageNamed:@"downArrow.png"];
+//    imageView.image = image;
+//    self.textField.rightViewMode = UITextFieldViewModeAlways;
+//    self.textField.rightView = imageView;
+    
     self.promoteButton.layer.cornerRadius = 5;
     self.titile.text = [NSString stringWithFormat:@"Expected salary for (%@)",searchText];
     self.subTitile.text = [NSString stringWithFormat:@"--Avg. expected salary (%@ INR)",averageSalary];

@@ -21,6 +21,7 @@
 		E01008A4210F61EF00932C8D /* up_gr.png in Resources */ = {isa = PBXBuildFile; fileRef = E01008A0210F61EF00932C8D /* up_gr.png */; };
 		E01008A7210FF6CF00932C8D /* POPOverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E01008A5210FF6CF00932C8D /* POPOverViewController.xib */; };
 		E01008A8210FF6CF00932C8D /* POPOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01008A6210FF6CF00932C8D /* POPOverViewController.swift */; };
+		E01008AA210FFD9400932C8D /* downArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = E01008A9210FFD9400932C8D /* downArrow.png */; };
 		E021D89920F3081F003AE972 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E021D89820F3081F003AE972 /* AppDelegate.swift */; };
 		E021D89B20F3081F003AE972 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E021D89A20F3081F003AE972 /* ViewController.swift */; };
 		E021D89E20F3081F003AE972 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E021D89C20F3081F003AE972 /* Main.storyboard */; };
@@ -67,6 +68,7 @@
 		E01008A0210F61EF00932C8D /* up_gr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up_gr.png; sourceTree = "<group>"; };
 		E01008A5210FF6CF00932C8D /* POPOverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = POPOverViewController.xib; sourceTree = "<group>"; };
 		E01008A6210FF6CF00932C8D /* POPOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POPOverViewController.swift; sourceTree = "<group>"; };
+		E01008A9210FFD9400932C8D /* downArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downArrow.png; sourceTree = "<group>"; };
 		E021D89520F3081F003AE972 /* MPool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E021D89820F3081F003AE972 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E021D89A20F3081F003AE972 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		E021D89720F3081F003AE972 /* MPool */ = {
 			isa = PBXGroup;
 			children = (
+				E01008A9210FFD9400932C8D /* downArrow.png */,
 				E0CF32D520F5FA7C006C7868 /* CustomFiles */,
 				E021D89820F3081F003AE972 /* AppDelegate.swift */,
 				E021D89A20F3081F003AE972 /* ViewController.swift */,
@@ -254,6 +257,7 @@
 				E021D8A320F30822003AE972 /* LaunchScreen.storyboard in Resources */,
 				E00482FC20F8518A0052DEB5 /* ScatterChart.xib in Resources */,
 				E01008A7210FF6CF00932C8D /* POPOverViewController.xib in Resources */,
+				E01008AA210FFD9400932C8D /* downArrow.png in Resources */,
 				E01008A1210F61EF00932C8D /* down_gr.png in Resources */,
 				E01008A4210F61EF00932C8D /* up_gr.png in Resources */,
 				E0CF32E920F5FA7C006C7868 /* PieChartView.xib in Resources */,

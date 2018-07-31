@@ -241,8 +241,12 @@ static CGPathRef CGPathCreateArc(CGPoint center, CGFloat radius, CGFloat startAn
         NSString *label;
         if(_showPercentage)
             label = [NSString stringWithFormat:@"%0.01f%s", layer.percentage*100,"%"];
-        else
+        else{
+   
             label = (layer.text)?layer.text:[NSString stringWithFormat:@"%0.0f", layer.value];
+            label = (layer.text)?layer.text:[NSString stringWithFormat:@"%0.0f", layer.value];
+            
+        }
         CGSize size = [label sizeWithFont:self.labelFont];
         
         if(M_PI*2*_labelRadius*layer.percentage < MAX(size.width,size.height))
@@ -396,6 +400,14 @@ static CGPathRef CGPathCreateArc(CGPoint center, CGFloat radius, CGFloat startAn
                 }
             
             
+            NSNumberFormatter *numberFormatter = [NSNumberFormatter new];
+            
+            [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle]; // Here you can choose the style
+            
+            [numberFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_IN"]];
+            NSString *formatted = [numberFormatter stringFromNumber:[NSNumber numberWithInteger:values[index]]];
+
+            layer.text = formatted;
             layer.value = values[index];
             layer.percentage = (sum)?layer.value/sum:0;
             layer.displayValue = self.DLDisplayValuesArray[index];
@@ -413,7 +425,7 @@ static CGPathRef CGPathCreateArc(CGPoint center, CGFloat radius, CGFloat startAn
             [layer setFillColor:color.CGColor];
             if([_dataSource respondsToSelector:@selector(pieChart:textForSliceAtIndex:)])
                 {
-                layer.text = [_dataSource pieChart:self textForSliceAtIndex:index];
+                //layer.text = [_dataSource pieChart:self textForSliceAtIndex:index];
                 }
             
             [self updateLabelForLayer:layer value:values[index]];

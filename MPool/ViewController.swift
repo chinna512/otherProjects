@@ -399,30 +399,10 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     func showErrorReport(error: String,percentage:String, sender: AnyObject,forTheLocation location:CGPoint) {
         
       //  let width = getWidth(withConstrainedHeight: 24, text: error)
-//        let label = UILabel(frame: CGRect(x: 0, y: 5, width: 150, height: 17))
-//        label.numberOfLines = 1
-//        label.text = error
-//        label.font = UIFont.systemFont(ofSize: 10)
-//        label.textAlignment = .center
-//        label.textColor = .black
-//        label.backgroundColor = UIColor.green
-//        
-//        
-//        let percentageLabel = UILabel(frame: CGRect(x: 0, y: 20, width:   150, height: 17))
-//        percentageLabel.numberOfLines = 1
-//        percentageLabel.text = percentage
-//        percentageLabel.font = UIFont.systemFont(ofSize: 10)
-//        percentageLabel.textAlignment = .center
-//        percentageLabel.textColor = .black
-//        percentageLabel.backgroundColor = UIColor.orange
-
-        
         popoverView = POPOverViewController(nibName: "POPOverViewController", bundle: nil)
         popoverView?.view.frame = CGRect(x: location.x, y: location.y, width:150, height: 40)
         popoverView?.view.backgroundColor = .white
         popoverView?.loadDataWith(title:error,subTitile:percentage)
-       // popoverView?.view.addSubview(label)
-       // popoverView?.view.addSubview(percentageLabel)
         let tempSender = sender as! UIView;
         popoverView?.modalPresentationStyle = UIModalPresentationStyle.popover
         
@@ -625,7 +605,13 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         removePopover()
         let point = scatterChart.convert(point, to: self.contentView)
         let percentage =  self.scatterModel?.skillCompensationListValues.object(at: Int(index)) as! Int
-        self.loadPopForthePoint(point: CGPoint(x: point.x - 50, y: point.y - 5), text:"ExpectedSalary", percentage: String(format: "%d INR", percentage))
+        
+        let value = percentage
+        
+        // "1,605,436" where Locale == en_US
+        
+        let formattedInt = String(format: "%d", locale:Locale(identifier:"en_IN"), value)
+        self.loadPopForthePoint(point: CGPoint(x: point.x - 50, y: point.y - 5), text:"ExpectedSalary", percentage: String(format: "%@ INR", formattedInt))
     }
     
     func removeScatterPopOver(){
