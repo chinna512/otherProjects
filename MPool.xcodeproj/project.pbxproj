@@ -19,6 +19,8 @@
 		E01008A2210F61EF00932C8D /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = E010089E210F61EF00932C8D /* up.png */; };
 		E01008A3210F61EF00932C8D /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = E010089F210F61EF00932C8D /* down.png */; };
 		E01008A4210F61EF00932C8D /* up_gr.png in Resources */ = {isa = PBXBuildFile; fileRef = E01008A0210F61EF00932C8D /* up_gr.png */; };
+		E01008A7210FF6CF00932C8D /* POPOverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E01008A5210FF6CF00932C8D /* POPOverViewController.xib */; };
+		E01008A8210FF6CF00932C8D /* POPOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01008A6210FF6CF00932C8D /* POPOverViewController.swift */; };
 		E021D89920F3081F003AE972 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E021D89820F3081F003AE972 /* AppDelegate.swift */; };
 		E021D89B20F3081F003AE972 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E021D89A20F3081F003AE972 /* ViewController.swift */; };
 		E021D89E20F3081F003AE972 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E021D89C20F3081F003AE972 /* Main.storyboard */; };
@@ -63,6 +65,8 @@
 		E010089E210F61EF00932C8D /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
 		E010089F210F61EF00932C8D /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
 		E01008A0210F61EF00932C8D /* up_gr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up_gr.png; sourceTree = "<group>"; };
+		E01008A5210FF6CF00932C8D /* POPOverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = POPOverViewController.xib; sourceTree = "<group>"; };
+		E01008A6210FF6CF00932C8D /* POPOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POPOverViewController.swift; sourceTree = "<group>"; };
 		E021D89520F3081F003AE972 /* MPool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E021D89820F3081F003AE972 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E021D89A20F3081F003AE972 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +168,8 @@
 		E0CF32D520F5FA7C006C7868 /* CustomFiles */ = {
 			isa = PBXGroup;
 			children = (
+				E01008A6210FF6CF00932C8D /* POPOverViewController.swift */,
+				E01008A5210FF6CF00932C8D /* POPOverViewController.xib */,
 				E010089C210F61EF00932C8D /* small icon */,
 				E041AC7A210CA83B00E8A91D /* Search.png */,
 				E02799182101C53B00FB0DC6 /* mpool-png - iOS.png */,
@@ -247,6 +253,7 @@
 			files = (
 				E021D8A320F30822003AE972 /* LaunchScreen.storyboard in Resources */,
 				E00482FC20F8518A0052DEB5 /* ScatterChart.xib in Resources */,
+				E01008A7210FF6CF00932C8D /* POPOverViewController.xib in Resources */,
 				E01008A1210F61EF00932C8D /* down_gr.png in Resources */,
 				E01008A4210F61EF00932C8D /* up_gr.png in Resources */,
 				E0CF32E920F5FA7C006C7868 /* PieChartView.xib in Resources */,
@@ -272,6 +279,7 @@
 				E0CF32F620F5FA7C006C7868 /* PieChartView.swift in Sources */,
 				E004830220F8518A0052DEB5 /* ScatterChart.m in Sources */,
 				E0CF32EA20F5FA7C006C7868 /* RestAPI.swift in Sources */,
+				E01008A8210FF6CF00932C8D /* POPOverViewController.swift in Sources */,
 				E004830020F8518A0052DEB5 /* PNScatterChartDataItem.m in Sources */,
 				E021D89B20F3081F003AE972 /* ViewController.swift in Sources */,
 				E00E6E9C20F5FB5E00898C4F /* DLPieChart.m in Sources */,

@@ -61,10 +61,6 @@
     CGPoint endPoint = CGPointMake(self.valueArray.count,self.averageSalary);
     
     [self.scatterChart drawLineFromPoint:startPoint ToPoint:endPoint WithLineWith:2 AndWithColor:UIColor.redColor];
-
-
-
-
 }
 
 - (void)loadScatterChartForThePickerValues:(NSMutableArray*)values{

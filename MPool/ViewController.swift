@@ -28,7 +28,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     var lastselectedViewIndex:Int?
     var lastSelectedSliceIndex:Int?
     var modelArray = NSMutableArray()
-    var popoverView:UIViewController?
+    var popoverView:POPOverViewController?
     var scatterModel:ScatterModel?
     var scatterChart:ScatterChart?
     var isLoaded = false
@@ -398,34 +398,35 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     
     func showErrorReport(error: String,percentage:String, sender: AnyObject,forTheLocation location:CGPoint) {
         
-        let width = getWidth(withConstrainedHeight: 24, text: error)
-        let label = UILabel(frame: CGRect(x: 0, y: 5, width: 150, height: 17))
-        label.numberOfLines = 1
-        label.text = error
-        label.font = UIFont.systemFont(ofSize: 10)
-        label.textAlignment = .center
-        label.textColor = .black
-        label.backgroundColor = UIColor.green
-        
-        
-        let percentageLabel = UILabel(frame: CGRect(x: 0, y: 20, width:   150, height: 17))
-        percentageLabel.numberOfLines = 1
-        percentageLabel.text = percentage
-        percentageLabel.font = UIFont.systemFont(ofSize: 10)
-        percentageLabel.textAlignment = .center
-        percentageLabel.textColor = .black
-        percentageLabel.backgroundColor = UIColor.orange
+      //  let width = getWidth(withConstrainedHeight: 24, text: error)
+//        let label = UILabel(frame: CGRect(x: 0, y: 5, width: 150, height: 17))
+//        label.numberOfLines = 1
+//        label.text = error
+//        label.font = UIFont.systemFont(ofSize: 10)
+//        label.textAlignment = .center
+//        label.textColor = .black
+//        label.backgroundColor = UIColor.green
+//        
+//        
+//        let percentageLabel = UILabel(frame: CGRect(x: 0, y: 20, width:   150, height: 17))
+//        percentageLabel.numberOfLines = 1
+//        percentageLabel.text = percentage
+//        percentageLabel.font = UIFont.systemFont(ofSize: 10)
+//        percentageLabel.textAlignment = .center
+//        percentageLabel.textColor = .black
+//        percentageLabel.backgroundColor = UIColor.orange
 
         
-        popoverView = UIViewController()
+        popoverView = POPOverViewController(nibName: "POPOverViewController", bundle: nil)
         popoverView?.view.frame = CGRect(x: location.x, y: location.y, width:150, height: 40)
         popoverView?.view.backgroundColor = .white
-        popoverView?.view.addSubview(label)
-        popoverView?.view.addSubview(percentageLabel)
+        popoverView?.loadDataWith(title:error,subTitile:percentage)
+       // popoverView?.view.addSubview(label)
+       // popoverView?.view.addSubview(percentageLabel)
         let tempSender = sender as! UIView;
         popoverView?.modalPresentationStyle = UIModalPresentationStyle.popover
         
-        popoverView?.preferredContentSize = CGSize(width: width + 10, height: 40)
+        popoverView?.preferredContentSize = CGSize(width:150, height: 40)
         let popoverPresentationController = popoverView?.popoverPresentationController
         popoverPresentationController?.sourceView = tempSender
         popoverPresentationController?.sourceRect = CGRect(x: location.x, y: location.y, width: 150, height: 40)
