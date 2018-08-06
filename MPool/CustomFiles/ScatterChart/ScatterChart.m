@@ -110,7 +110,7 @@
 - (void)loadDataForThePickerValue:(NSString*)averageSalary
                         lineIndex:(NSMutableArray*)values
                        pointIndex:(NSMutableArray*)pickerValues andSearchText:(NSString*)searchText{
-    
+    [self viewDidLayoutSubviews];
     
 //    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
 //    UIImage *image = [UIImage imageNamed:@"downArrow.png"];
@@ -136,7 +136,7 @@
     if (height < 35) {
         height = height + 20;
     }
-    self.pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(self.textField.frame.origin.x, self.textField.frame.origin.y, self.textField.frame.size.width, height)];
+    self.pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(self.textField.frame.origin.x, self.textField.frame.origin.y, self.viewWidth - 60, height)];
     self.pickerView.delegate = self;
     self.pickerView.dataSource = self;
     self.pickerView.hidden = YES;
@@ -239,6 +239,12 @@
 
 - (void)userClickedOnLinePoint:(CGPoint)point lineIndex:(NSInteger)lineIndex{
     [self.delegate averagSalary:point andSalary:self.averageSalary];
+}
+
+- (void)viewDidLayoutSubviews {
+    CGRect frame = self.frame;
+    frame.size.width =  self.viewWidth;
+    self.frame = frame;
 }
 
 

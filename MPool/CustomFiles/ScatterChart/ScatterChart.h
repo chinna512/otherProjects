@@ -35,6 +35,7 @@
 @property (assign, nonatomic)CGFloat averageSalary;
 - (IBAction)share:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *promoteButton;
+@property (assign,nonatomic) CGFloat viewWidth;
 
 +(UIView *)loadInstance;
 - (void)loadScatterData;

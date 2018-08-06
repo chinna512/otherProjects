@@ -287,6 +287,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                         self.scatterChart =   scatter as? ScatterChart
                         
                         self.scatterChart?.averageSalary = CGFloat((self.scatterModel?.averageSalary)!)
+                        self.scatterChart?.viewWidth = self.view.frame.size.width
                         self.scatterChart?.loadData(forThePickerValue: self.scatterModel?.skillCompensationAverage, lineIndex: self.scatterModel?.skillCompensationListValues, pointIndex: self.scatterModel?.skillCompensationLevelNamesValues, andSearchText: self.searchBar.text);
                         self.self.scatterChart?.frame.origin.y = y
                         y = y + 462
