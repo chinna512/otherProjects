@@ -36,7 +36,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     var isSearchBarClicked:Bool = false
     var listOfSearches:NSMutableArray = NSMutableArray()
     var searchTableView:UITableView?
-
+    var image:UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -178,15 +178,18 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                         self.totalCount.text = String(format: "Total Pool Count : %d", totalCount as! Int)
                     }
                     if let tempArray = data?["locations"]{
-                        self.createModelFromTheArray(title: "Location Chart - Top Locations", array: tempArray as! NSArray, showPercenatge: false, displaySearchBar: false, searchBarTitile: "")
+                         let model =  self.createModelFromTheArray(title: "Location Chart - Top Locations", array: tempArray as! NSArray, showPercenatge: false, displaySearchBar: false, searchBarTitile: "")
+                        model.customTag = 160
+
                         
                     }
                     if let tempArray = data?["experienceRanges"]{
                         self.createModelFromTheArray(title: "Level Chart", array: tempArray as! NSArray, showPercenatge: false, displaySearchBar: false, searchBarTitile: "")
                     }
                     if let tempArray = data?["gender"]{
-                      let model = self.createModelFromTheArray(title: "Gender Diversity", array: tempArray as! NSArray, showPercenatge: true, displaySearchBar: false, searchBarTitile: "")
+                        let model = self.createModelFromTheArray(title: "Gender Diversity", array: tempArray as! NSArray, showPercenatge: true, displaySearchBar: false, searchBarTitile: "")
                         model.isGenderView = true
+                        model.customTag = 150
                     }
                     if let tempArray = data?["organizations"]{
                         self.createModelFromTheArray(title: "Organization Chart", array: tempArray as! NSArray, showPercenatge: true, displaySearchBar: false, searchBarTitile: "")
@@ -210,8 +213,8 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                             searchBarTitile = movementName as! String
                             titile = String(format: "Pool movement from %@ to Other locations", movementName as! CVarArg)
                         }
-                  let model =      self.createModelFromTheArray(title:titile, array: tempArray as! NSArray, showPercenatge: true, displaySearchBar: true, searchBarTitile: searchBarTitile)
-                         model.customTag = 130 
+                        let model =      self.createModelFromTheArray(title:titile, array: tempArray as! NSArray, showPercenatge: true, displaySearchBar: true, searchBarTitile: searchBarTitile)
+                        model.customTag = 130
                     }
                     if let tempArray = data?["organizationByLocation"]{
                         var titile = ""
@@ -220,15 +223,15 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                             searchBarTitile = movementName as! String
                             titile = String(format: "Pool base at %@", movementName as! CVarArg)
                         }
-                   let model =     self.createModelFromTheArray(title:titile, array: tempArray as! NSArray, showPercenatge: true, displaySearchBar: true, searchBarTitile: searchBarTitile)
+                        let model =     self.createModelFromTheArray(title:titile, array: tempArray as! NSArray, showPercenatge: true, displaySearchBar: true, searchBarTitile: searchBarTitile)
                         model.customTag = 140
-
+                        
                     }
                     if let scatterDict = data?["skillCompensation"] as? NSDictionary{
                         self.scatterModel = ScatterModel()
                         if let average = scatterDict["skillCompensationAverage"] as? String{
                             self.scatterModel?.skillCompensationAverage = average
-
+                            
                         }
                         for  array in (scatterDict["skillCompensationList"]  as? [NSArray])!{
                             if  let obj = array[1] as? Int {
@@ -260,7 +263,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                         }
                         if index == self.modelArray.count - 1 {
                             if !((self.scatterModel?.skillCompensationListValues.count)!  > 0) {
-                                 model.showPromotButton = true
+                                model.showPromotButton = true
                                 tempHeight = tempHeight + 50
                             }else{
                             }
@@ -268,9 +271,10 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                         if model.displaySearchBar{
                             tempHeight = tempHeight + 56
                         }
-
+                        
                         let customView =  PieChartView.instanceFromNib()
                         customView.tag = (index + 1) * 10
+                        customView.customTag = model.customTag
                         customView.backgroundColor = UIColor.clear
                         customView.frame.size.width = self.view.frame.size.width
                         customView.viewHeight = tempHeight
@@ -293,7 +297,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                         y = y + 462
                         self.contentView.addSubview(self.scatterChart!)
                         self.scatterChart?.delegate = self
-                        self.scatterChart?.tag = 100
+                        self.scatterChart?.tag = 190
                     }else{
                         y = y + 30
                     }
@@ -313,7 +317,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                     self.scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: y)
                     self.scrollView.layoutSubviews()
                     self.view.layoutSubviews()
-
+                    
                 }else{
                     self.showAlertForNoInternet(message: "Some thing went wrong")
                     
@@ -429,15 +433,46 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     }
     
     func share(image: UIImage) {
-        //        let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities:[CustomActivity()])
-        let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities:nil)
+      //  let myWebsite = NSURL(string:"https://itunes.apple.com/us/app/mpool/id1414796786?ls=1&mt=8")
+          let myWebsite = NSURL(string: "http://www.google.com/")
+
+      
+        guard let url = myWebsite else {
+            print("nothing found")
+            return
+        }
+        self.image = image
+        
+        let text = "iOSDevCenter have best tutorials of swift"
+        let image1 = UIImage(named: "Image")
+        
+        let shareItems:Array = [image, url]
+        //let myWebsite = NSURL(string:"https://iosdevcenters.blogspot.com")
+      //  let shareAll = [text , image , url] as [Any]
+        let activityViewController = UIActivityViewController(activityItems: [self], applicationActivities: nil)
+
         activityViewController.popoverPresentationController?.sourceView = self.view
-        activityViewController.excludedActivityTypes = [UIActivityType.airDrop,.postToWeibo,.addToReadingList,.assignToContact,.copyToPasteboard,.mail,.message,.openInIBooks,.saveToCameraRoll,.print,.postToVimeo,.postToFlickr,.postToTencentWeibo,  UIActivityType(rawValue: "com.apple.reminders.RemindersEditorExtension"),
-                                                        UIActivityType(rawValue: "com.apple.mobilenotes.SharingExtension"),UIActivityType(rawValue: "net.whatsapp.WhatsApp.ShareExtension"), UIActivityType(rawValue: "com.google.GooglePlus.ShareExtension")]
-        
-        
-        
         self.present(activityViewController, animated: true, completion: nil)
+        
+//        let shareItems:Array = [url]
+////        let activityViewController1:UIActivityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
+////        self.present(activityViewController1, animated: true, completion: nil)
+//
+//
+//
+//
+//        //        let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities:[CustomActivity()])
+//
+//        let activityViewController = UIActivityViewController(activityItems: [image, URL.init(string: "https://itunes.apple.com/us/app/mpool/id1414796786?ls=1&mt=8")!], applicationActivities: nil)
+
+      //  let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities:nil)
+    //    activityViewController.popoverPresentationController?.sourceView = self.view
+//      //  activityViewController.excludedActivityTypes = [UIActivityType.airDrop,.postToWeibo,.addToReadingList,.assignToContact,.copyToPasteboard,.mail,.message,.openInIBooks,.saveToCameraRoll,.print,.postToVimeo,.postToFlickr,.postToTencentWeibo,  UIActivityType(rawValue: "com.apple.reminders.RemindersEditorExtension"),
+//                                                        UIActivityType(rawValue: "com.apple.mobilenotes.SharingExtension"),UIActivityType(rawValue: "net.whatsapp.WhatsApp.ShareExtension"), UIActivityType(rawValue: "com.google.GooglePlus.ShareExtension")]
+//        
+        
+        
+        //self.present(activityViewController, animated: true, completion: nil)
     }
     
     func showAlertForNoInternet(message:String){
@@ -499,6 +534,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                         }
                         let customView = PieChartView.instanceFromNib()
                         customView.tag = (index + 1) * 10
+                        customView.customTag = customTag
                         customView.frame.size.width = self.view.frame.size.width
                         if model.valuesArray.count >= 15{
                             customView.frame.size.height = self.view.frame.size.width + 150 + 20
@@ -533,6 +569,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                         let subView = self.contentView.viewWithTag(index)
                         customView.frame.origin.y = (subView?.frame.origin.y)!
                         customView.tag = (subView?.tag)!
+                        customView.customTag = customTag
                         subView?.removeFromSuperview()
                         self.contentView.addSubview(customView)
                     }else{
@@ -572,7 +609,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         if  Reachability()!.isReachable{
             JHProgressHUD.sharedHUD.showInView(view: self.view, withHeader: nil, andFooter: "Loading")
             let searchText = self.scatterModel?.skillCompensationLevelNames.object(at: index)
-            RestAPI.getDataForTheKeyWord(keyWord: (self.searchBar.text)!,index:100, searchValue:searchText as! String, callbackHandler:{
+            RestAPI.getDataForTheKeyWord(keyWord: (self.searchBar.text)!,index:190, searchValue:searchText as! String, callbackHandler:{
                 (error:NSError?,data:NSDictionary?)  -> Void in
                 DispatchQueue.main.async {
                     if data != nil{
@@ -696,7 +733,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     func getResultsForTheSearchText(text:String){
         if  Reachability()!.isReachable{
             //JHProgressHUD.sharedHUD.showInView(view: self.view, withHeader: nil, andFooter: "Loading")
-            RestAPI.getDataForSubSearchToTheKeyWord(keyWord: text, index: 110,  searchValue:"", customTag: 0, callbackHandler:{
+            RestAPI.getDataForSubSearchToTheKeyWord(keyWord: text, index: 600,  searchValue:"", customTag: 0, callbackHandler:{
                 (error:NSError?,data:NSMutableArray?)  -> Void in
                 DispatchQueue.main.async {
                     if data != nil{
@@ -805,5 +842,23 @@ extension UIButton{
         maskLayer1.path = maskPath1.cgPath
         layer.mask = maskLayer1
 }
+}
+
+extension ViewController: UIActivityItemSource {
+    func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
+        return ""
+    }
+
+    func activityViewController(_ activityViewController: UIActivityViewController, itemForActivityType activityType: UIActivityType?) -> Any? {
+        return URL.init(string: "https://itunes.apple.com/us/app/mpool/id1414796786?ls=1&mt=8")!
+    }
+
+    func activityViewController(_ activityViewController: UIActivityViewController, subjectForActivityType activityType: UIActivityType?) -> String {
+        return "ScreenSort for iOS: https://itunes.apple.com/app/id1170886809"
+    }
+
+    func activityViewController(_ activityViewController: UIActivityViewController, thumbnailImageForActivityType activityType: UIActivityType?, suggestedSize size: CGSize) -> UIImage? {
+        return self.image
+    }
 }
 

@@ -12,7 +12,7 @@ class RestAPI: NSURLConnection {
     
     class  func getDataForTheKeyWord(keyWord:String, index:Int,searchValue:String, callbackHandler:((NSError?, NSDictionary?) -> Void)!){
         var urlString = String(format: "https://www.hiringnow.com/mPoolSearch-portlet/api/secure/jsonws/share/search-mpool/query/%@/", keyWord)
-        if index == 100{
+        if index == 190{
            urlString =  String(format: "https://www.hiringnow.com/mPoolSearch-portlet/api/secure/jsonws/share/skill-compensation-search/query/%@/level/%@", keyWord,searchValue)
         }
         let query  = urlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
@@ -37,7 +37,6 @@ class RestAPI: NSURLConnection {
     }
     
     class  func getDataForSubSearchToTheKeyWord(keyWord:String, index:Int,searchValue:String,customTag:Int, callbackHandler:((NSError?, NSMutableArray?) -> Void)!){
-        
         var urlString = String(format: "https://www.hiringnow.com/mPoolSearch-portlet/api/secure/jsonws/share/search-mpool/query/%@/", keyWord)
         if customTag == 120{
             urlString = String(format: "https://www.hiringnow.com/mPoolSearch-portlet/api/secure/jsonws/share/organization-movement-search/query/%@/organization-name/%@/",searchValue,keyWord)
@@ -52,10 +51,10 @@ class RestAPI: NSURLConnection {
             urlString = String(format: "https://www.hiringnow.com/mPoolSearch-portlet/api/secure/jsonws/share/organization-by-location-search/query/%@/location-name/%@/",searchValue,keyWord)
         }
         
-        if index == 100{
+        if index == 190{
             urlString = String(format: "https://www.hiringnow.com/mPoolSearch-portlet/api/secure/jsonws/share/skill-compensation-search/query/%@/level/%@", keyWord,searchValue)
         }
-        if index == 110{
+        if index == 600{
             urlString =  String(format: "https://www.hiringnow.com/mPoolSearch-portlet/api/secure/jsonws/share/skill-suggester/query/%@", keyWord)
         }
         let query  = urlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
