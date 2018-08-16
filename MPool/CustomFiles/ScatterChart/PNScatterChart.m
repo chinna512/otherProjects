@@ -449,11 +449,19 @@
             shapeLayer.lineWidth = lineWidth;
             shapeLayer.fillColor = [color CGColor];
                 // adding animation to path
+            
+            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(startX, startY - 20, endX - startX, 20.0)];
+            label.text = [NSString stringWithFormat:@" average Salary %@ INR",self.avgSalary];
+            [self addSubview:label];
+            label.font = [UIFont systemFontOfSize:6];
+            label.textAlignment = NSTextAlignmentRight;
             [self addStrokeEndAnimationIfNeededToLayer:shapeLayer];
             [self.layer addSublayer:shapeLayer];
         });
     });
 }
+
+
 
 - (void)addStrokeEndAnimationIfNeededToLayer:(CAShapeLayer *)shapeLayer{
     

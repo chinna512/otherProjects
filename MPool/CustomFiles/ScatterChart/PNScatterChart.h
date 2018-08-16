@@ -12,6 +12,7 @@
 #import "PNGenericChart.h"
 #import "PNScatterChartData.h"
 #import "PNScatterChartDataItem.h"
+#import <Foundation/Foundation.h>
 
 @interface PNScatterChart : PNGenericChart
 
@@ -28,6 +29,12 @@
 /** String formatter for float values in x-axis/y-axis labels. If not set, defaults to @"%1.f" */
 @property (nonatomic, strong) NSString *xLabelFormat;
 @property (nonatomic, strong) NSString *yLabelFormat;
+
+@property (nonatomic, strong) UILabel *averageLabel;
+@property (nonatomic, strong) NSString *avgSalary;
+
+
+
 
 /** Default is true. */
 @property (nonatomic) BOOL showLabel;

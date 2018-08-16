@@ -55,15 +55,16 @@
 
 - (void)reloadScatterChartWithValues:(NSMutableArray*)values andAverageSalary:(NSString*)salary{
     [self.scatterChart removeFromSuperview];
-    [self loadScatterChartForThePickerValues:values];
+    [self loadScatterChartForThePickerValues:values andSal:salary];
     self.subTitile.text = [NSString stringWithFormat:@"--Avg. expected salary (%@ INR)",salary];
     CGPoint startPoint = CGPointMake(0,self.averageSalary);
     CGPoint endPoint = CGPointMake(self.valueArray.count,self.averageSalary);
     
     [self.scatterChart drawLineFromPoint:startPoint ToPoint:endPoint WithLineWith:2 AndWithColor:UIColor.redColor];
+    self.scatterChart.avgSalary = salary;
 }
 
-- (void)loadScatterChartForThePickerValues:(NSMutableArray*)values{
+- (void)loadScatterChartForThePickerValues:(NSMutableArray*)values andSal:(NSString*)sal{
     
     self.valueArray = values;
     self.scatterChart = [[PNScatterChart alloc] initWithFrame:CGRectMake(0, 155, 280, 250)];
@@ -100,9 +101,11 @@
     self.scatterChart.chartData = @[data01];
     [self addSubview:self.scatterChart];
     self.scatterChart.delegate = self;
+
     CGPoint startPoint = CGPointMake(0,self.averageSalary);
     
     CGPoint endPoint = CGPointMake(self.valueArray.count,self.averageSalary);
+    self.scatterChart.avgSalary = sal;
     
     [self.scatterChart drawLineFromPoint:startPoint ToPoint:endPoint WithLineWith:1 AndWithColor:[[UIColor redColor] colorWithAlphaComponent:0.5f]];
 
@@ -123,7 +126,7 @@
     self.subTitile.text = [NSString stringWithFormat:@"--Avg. expected salary (%@ INR)",averageSalary];
   
     self.selectedIndex = 0;
-    [self loadScatterChartForThePickerValues:values];
+    [self loadScatterChartForThePickerValues:values andSal:averageSalary];
     
     [[UIPickerView appearance] setBackgroundColor:[UIColor lightGrayColor]];
     self.textField.delegate = self;

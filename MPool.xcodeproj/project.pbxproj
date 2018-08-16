@@ -29,6 +29,7 @@
 		E021D8A320F30822003AE972 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E021D8A120F30822003AE972 /* LaunchScreen.storyboard */; };
 		E02799192101C53B00FB0DC6 /* mpool-png - iOS.png in Resources */ = {isa = PBXBuildFile; fileRef = E02799182101C53B00FB0DC6 /* mpool-png - iOS.png */; };
 		E041AC7B210CA83C00E8A91D /* Search.png in Resources */ = {isa = PBXBuildFile; fileRef = E041AC7A210CA83B00E8A91D /* Search.png */; };
+		E05E2ADB212568B8008BCA0C /* Mail.png in Resources */ = {isa = PBXBuildFile; fileRef = E05E2ADA212568B8008BCA0C /* Mail.png */; };
 		E077DC4620FCF6B2006609A7 /* ScatterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E077DC4520FCF6B2006609A7 /* ScatterModel.swift */; };
 		E0C743D521009CFA00AEEE67 /* Share2.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C743D421009CFA00AEEE67 /* Share2.png */; };
 		E0CF32E920F5FA7C006C7868 /* PieChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0CF32D820F5FA7C006C7868 /* PieChartView.xib */; };
@@ -78,6 +79,7 @@
 		E021D8A420F30822003AE972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E02799182101C53B00FB0DC6 /* mpool-png - iOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mpool-png - iOS.png"; sourceTree = "<group>"; };
 		E041AC7A210CA83B00E8A91D /* Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search.png; sourceTree = "<group>"; };
+		E05E2ADA212568B8008BCA0C /* Mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mail.png; path = MPool/CustomFiles/Mail.png; sourceTree = SOURCE_ROOT; };
 		E077DC4520FCF6B2006609A7 /* ScatterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatterModel.swift; sourceTree = "<group>"; };
 		E0C743D421009CFA00AEEE67 /* Share2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Share2.png; path = ../Share2.png; sourceTree = "<group>"; };
 		E0CF32D820F5FA7C006C7868 /* PieChartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PieChartView.xib; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		E010089C210F61EF00932C8D /* small icon */ = {
 			isa = PBXGroup;
 			children = (
+				E05E2ADA212568B8008BCA0C /* Mail.png */,
 				E010089D210F61EF00932C8D /* down_gr.png */,
 				E010089E210F61EF00932C8D /* up.png */,
 				E010089F210F61EF00932C8D /* down.png */,
@@ -265,6 +268,7 @@
 				E021D8A020F30822003AE972 /* Assets.xcassets in Resources */,
 				E02799192101C53B00FB0DC6 /* mpool-png - iOS.png in Resources */,
 				E01008A2210F61EF00932C8D /* up.png in Resources */,
+				E05E2ADB212568B8008BCA0C /* Mail.png in Resources */,
 				E0C743D521009CFA00AEEE67 /* Share2.png in Resources */,
 				E021D89E20F3081F003AE972 /* Main.storyboard in Resources */,
 				E0CF32F420F5FA7C006C7868 /* CollectionViewCell.xib in Resources */,

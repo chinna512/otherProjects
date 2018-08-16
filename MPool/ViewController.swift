@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Social
+import MessageUI
 
-class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,PassTouchesScrollViewDelegate,UIScrollViewDelegate,UIPopoverPresentationControllerDelegate,ScatterDelegate,UITableViewDelegate,UITableViewDataSource {
+class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,PassTouchesScrollViewDelegate,UIScrollViewDelegate,UIPopoverPresentationControllerDelegate,ScatterDelegate,UITableViewDelegate,UITableViewDataSource,MFMailComposeViewControllerDelegate {
     
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var totalCount: UILabel!
@@ -37,6 +39,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     var listOfSearches:NSMutableArray = NSMutableArray()
     var searchTableView:UITableView?
     var image:UIImage?
+    var searchText:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +69,6 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     }
     
     @objc func keyboardWillShow(notification:NSNotification){
-        //give room at the bottom of the scroll view, so it doesn't cover up anything the user needs to tap
         var userInfo = notification.userInfo!
         var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
         keyboardFrame = self.view.convert(keyboardFrame, from: nil)
@@ -104,7 +106,6 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-       // self.heightConstraint.constant = yFrame
     }
     
     func startSearchingResults(){
@@ -161,6 +162,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
             (error:NSError?,data:NSDictionary?)  -> Void in
             DispatchQueue.main.async {
                 if data != nil{
+                    self.searchText = self.searchBar.text!
                     if let titileString = data?["similarskills"]{
                         let partOne = NSMutableAttributedString(string: "Suggested Keywords :" , attributes: [NSAttributedStringKey.foregroundColor: UIColor.black, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 20)])
                         let partTwo = NSMutableAttributedString(string: titileString as! String, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15)])
@@ -433,26 +435,29 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     }
     
     func share(image: UIImage) {
-      //  let myWebsite = NSURL(string:"https://itunes.apple.com/us/app/mpool/id1414796786?ls=1&mt=8")
-          let myWebsite = NSURL(string: "http://www.google.com/")
-
-      
-        guard let url = myWebsite else {
-            print("nothing found")
-            return
-        }
-        self.image = image
         
-        let text = "iOSDevCenter have best tutorials of swift"
-        let image1 = UIImage(named: "Image")
-        
-        let shareItems:Array = [image, url]
-        //let myWebsite = NSURL(string:"https://iosdevcenters.blogspot.com")
-      //  let shareAll = [text , image , url] as [Any]
-        let activityViewController = UIActivityViewController(activityItems: [self], applicationActivities: nil)
+        shareView(self.scatterChart)
 
-        activityViewController.popoverPresentationController?.sourceView = self.view
-        self.present(activityViewController, animated: true, completion: nil)
+//        let myWebsite = NSURL(string:"https://itunes.apple.com/us/app/mpool/id1414796786?ls=1&mt=8")
+//        guard let url = myWebsite else {
+//            print("nothing found")
+//            return
+//        }
+//        self.image = image
+//
+//        let text = "iOSDevCenter have best tutorials of swift"
+//        let image1 = UIImage(named: "Image")
+//        let shareAll = [text , image , url] as [Any]
+//        let activityViewController = UIActivityViewController(activityItems: shareAll, applicationActivities: nil)
+//
+//        activityViewController.popoverPresentationController?.sourceView = self.view
+//        self.present(activityViewController, animated: true, completion: nil)
+
+        
+        
+        
+        
+        
         
 //        let shareItems:Array = [url]
 ////        let activityViewController1:UIActivityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
@@ -670,12 +675,45 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     }
     
     func shareView(_ scatter: Any!) {
-        let tempScatter = scatter as! ScatterChart
-        UIGraphicsBeginImageContext(CGSize(width: tempScatter.frame.size.width, height: 300) )
-        tempScatter.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let tempScatter = self.contentView
+        UIGraphicsBeginImageContext(CGSize(width: self.contentView.frame.size.width, height: yFrame) )
+        tempScatter?.layer.render(in: UIGraphicsGetCurrentContext()!)
         let image =  UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
-        share(image: image)
+        composeMailImage(image: image)
+    }
+    
+    func composeMailImage(image:UIImage){
+        let emailTitle = String(format: "Market Intelligence for Skills %@ ", searchText)
+        let messageBody = String(format: "Please find market intelligence for Skills %@, \n %@",searchText,"https://itunes.apple.com/us/app/mpool/id1414796786?ls=1&mt=8")
+        let mc: MFMailComposeViewController = MFMailComposeViewController()
+        mc.mailComposeDelegate = self
+        mc.setSubject(emailTitle)
+        mc.setMessageBody(messageBody, isHTML: false)
+        mc.addAttachmentData(UIImageJPEGRepresentation(image, CGFloat(1.0))!, mimeType: "image/jpeg", fileName:  "mPool.jpeg")
+        if MFMailComposeViewController.canSendMail(){
+            self.present(mc, animated: true, completion: nil)
+        }else{
+            let alert = UIAlertController(title: "Mail", message: "Please install Mail App to share", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                switch action.style{
+                case .default:
+                    print("default")
+                    
+                case .cancel:
+                    print("cancel")
+                    
+                case .destructive:
+                    print("destructive")
+                    
+                    
+                }}))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    func mailComposeController(_ controller: MFMailComposeViewController,
+                               didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
 
     @IBAction func promoteApp(_ sender: Any) {
@@ -792,7 +830,6 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
             }
         }else{
             tempText  = searchBar.text!
-            // getResultsForTheSearchText(text: searchBar.text!)
         }
         let predicate = NSPredicate(format: "SELF BEGINSWITH[cd] %@",text)
         self.searchResultsArray = self.listOfSearches.filtered(using: predicate) as NSArray
@@ -830,6 +867,17 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         self.loadPopForthePoint(point: CGPoint(x: point.x - 50, y: point.y - 5), text:"ExpectedSalary", percentage: String(format: "%@ INR", formattedInt))
 
     }
+    
+    func twitter(){
+        let facebookShare = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            if let facebookShare = facebookShare{
+                facebookShare.setInitialText("Nice Tutorials of iOSDevCenters")
+                facebookShare.add(self.image)
+               // facebookShare.add(URL(string: "https://itunes.apple.com/us/app/mpool/id1414796786?ls=1&mt=8"))
+                self.present(facebookShare, animated: true, completion: nil)
+            }
+     
+    }
 }
 
 extension UIButton{
@@ -842,6 +890,8 @@ extension UIButton{
         maskLayer1.path = maskPath1.cgPath
         layer.mask = maskLayer1
 }
+    
+    
 }
 
 extension ViewController: UIActivityItemSource {

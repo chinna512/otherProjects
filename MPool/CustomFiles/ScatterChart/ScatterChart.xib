@@ -45,12 +45,12 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDX-Jy-DM3">
-                    <rect key="frame" x="335" y="0.0" width="20" height="30"/>
+                    <rect key="frame" x="335" y="0.0" width="23" height="22"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="P2e-KE-Pxg"/>
-                        <constraint firstAttribute="width" constant="20" id="sLC-hP-WxY"/>
+                        <constraint firstAttribute="height" constant="22" id="P2e-KE-Pxg"/>
+                        <constraint firstAttribute="width" constant="23" id="sLC-hP-WxY"/>
                     </constraints>
-                    <state key="normal" backgroundImage="Share2.png"/>
+                    <state key="normal" backgroundImage="Mail.png"/>
                     <connections>
                         <action selector="share:" destination="iN0-l3-epB" eventType="touchUpInside" id="DL9-DW-8NP"/>
                     </connections>
@@ -92,7 +92,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="74C-Nu-Xi6" secondAttribute="trailing" constant="49" id="nVy-oj-1jP"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="35K-vh-F10" secondAttribute="trailing" id="pWv-wR-Zvt"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="74C-Nu-Xi6" secondAttribute="bottom" constant="-31" id="vAj-mj-cdd"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vDX-Jy-DM3" secondAttribute="trailing" constant="24" id="vKh-pk-U1D"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vDX-Jy-DM3" secondAttribute="trailing" constant="21" id="vKh-pk-U1D"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dW2-vT-sJZ" secondAttribute="trailing" constant="33" id="vMJ-mD-eIG"/>
                 <constraint firstItem="dW2-vT-sJZ" firstAttribute="top" secondItem="frP-ip-WHW" secondAttribute="bottom" constant="20" id="vpo-6e-BeW"/>
             </constraints>
@@ -109,7 +109,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Share2.png" width="125" height="166"/>
+        <image name="Mail.png" width="225" height="225"/>
         <image name="downArrow.png" width="225" height="225"/>
     </resources>
 </document>
