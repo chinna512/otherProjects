@@ -68,6 +68,11 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
 
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        checkVersion()
+    }
+    
     @objc func keyboardWillShow(notification:NSNotification){
         var userInfo = notification.userInfo!
         var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
@@ -876,7 +881,64 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
                // facebookShare.add(URL(string: "https://itunes.apple.com/us/app/mpool/id1414796786?ls=1&mt=8"))
                 self.present(facebookShare, animated: true, completion: nil)
             }
-     
+    }
+    
+    enum VersionError: Error {
+        case invalidBundleInfo, invalidResponse
+    }
+    
+     @discardableResult func getAppInfo(completion: @escaping (AppInfo?, Error?) -> Void) -> URLSessionDataTask? {
+        guard let identifier = Bundle.main.infoDictionary?["CFBundleIdentifier"] as? String,
+            let url = URL(string: "http://itunes.apple.com/lookup?bundleId=com.Mpool.Sone") else {
+                DispatchQueue.main.async {
+                    completion(nil, VersionError.invalidBundleInfo)
+                }
+                return nil
+        }
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            do {
+                if let error = error { throw error }
+                guard let data = data else { throw VersionError.invalidResponse }
+                let result = try JSONDecoder().decode(LookupResult.self, from: data)
+                guard let info = result.results.first else { throw VersionError.invalidResponse }
+                
+                completion(info, nil)
+            } catch {
+                completion(nil, error)
+            }
+        }
+        task.resume()
+        return task
+    }
+    
+    func checkVersion() {
+        if  Reachability()!.isReachable{
+            let info = Bundle.main.infoDictionary
+            let currentVersion = info?["CFBundleShortVersionString"] as? String
+            _ = getAppInfo { (info, error) in
+                DispatchQueue.main.async {
+                    if let error = error {
+                    } else if info?.version != currentVersion {
+                        let urlStr = "https://itunes.apple.com/us/app/mpool/id1414796786?ls=1&mt=8"
+                        if #available(iOS 10.0, *) {
+                            UIApplication.shared.open(URL(string: urlStr)!, options: [:], completionHandler: nil)
+                            
+                        } else {
+                            UIApplication.shared.openURL(URL(string: urlStr)!)
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    
+    class LookupResult: Decodable {
+        var results: [AppInfo]
+    }
+    
+    class AppInfo: Decodable {
+        var version: String
     }
 }
 
