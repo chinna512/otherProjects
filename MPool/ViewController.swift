@@ -698,24 +698,9 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         mc.addAttachmentData(UIImageJPEGRepresentation(image, CGFloat(1.0))!, mimeType: "image/jpeg", fileName:  "mPool.jpeg")
         if MFMailComposeViewController.canSendMail(){
             self.present(mc, animated: true, completion: nil)
-        }else{
-            let alert = UIAlertController(title: "No Mail Accounts", message: "Please set up a Mail account in order to send mail", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-                switch action.style{
-                case .default:
-                    print("default")
-                    
-                case .cancel:
-                    print("cancel")
-                    
-                case .destructive:
-                    print("destructive")
-                    
-                    
-                }}))
-            self.present(alert, animated: true, completion: nil)
         }
     }
+    
     func mailComposeController(_ controller: MFMailComposeViewController,
                                didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
@@ -888,7 +873,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
     }
     
      @discardableResult func getAppInfo(completion: @escaping (AppInfo?, Error?) -> Void) -> URLSessionDataTask? {
-        guard let identifier = Bundle.main.infoDictionary?["CFBundleIdentifier"] as? String,
+        guard let _ = Bundle.main.infoDictionary?["CFBundleIdentifier"] as? String,
             let url = URL(string: "http://itunes.apple.com/lookup?bundleId=com.Mpool.Sone") else {
                 DispatchQueue.main.async {
                     completion(nil, VersionError.invalidBundleInfo)
@@ -917,7 +902,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
             let currentVersion = info?["CFBundleShortVersionString"] as? String
             _ = getAppInfo { (info, error) in
                 DispatchQueue.main.async {
-                    if let error = error {
+                    if error != nil {
                     } else if info?.version != currentVersion {
                         let urlStr = "https://itunes.apple.com/us/app/mpool/id1414796786?ls=1&mt=8"
                         if #available(iOS 10.0, *) {
@@ -932,11 +917,11 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
             }
         }
     }
-    
+
     class LookupResult: Decodable {
         var results: [AppInfo]
     }
-    
+
     class AppInfo: Decodable {
         var version: String
     }
@@ -951,8 +936,7 @@ extension UIButton{
         maskLayer1.frame = bounds
         maskLayer1.path = maskPath1.cgPath
         layer.mask = maskLayer1
-}
-    
+    }
     
 }
 
@@ -960,15 +944,15 @@ extension ViewController: UIActivityItemSource {
     func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
         return ""
     }
-
+    
     func activityViewController(_ activityViewController: UIActivityViewController, itemForActivityType activityType: UIActivityType?) -> Any? {
         return URL.init(string: "https://itunes.apple.com/us/app/mpool/id1414796786?ls=1&mt=8")!
     }
-
+    
     func activityViewController(_ activityViewController: UIActivityViewController, subjectForActivityType activityType: UIActivityType?) -> String {
         return "ScreenSort for iOS: https://itunes.apple.com/app/id1170886809"
     }
-
+    
     func activityViewController(_ activityViewController: UIActivityViewController, thumbnailImageForActivityType activityType: UIActivityType?, suggestedSize size: CGSize) -> UIImage? {
         return self.image
     }
