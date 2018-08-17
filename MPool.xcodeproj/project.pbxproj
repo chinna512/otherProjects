@@ -31,7 +31,6 @@
 		E041AC7B210CA83C00E8A91D /* Search.png in Resources */ = {isa = PBXBuildFile; fileRef = E041AC7A210CA83B00E8A91D /* Search.png */; };
 		E05E2ADB212568B8008BCA0C /* Mail.png in Resources */ = {isa = PBXBuildFile; fileRef = E05E2ADA212568B8008BCA0C /* Mail.png */; };
 		E077DC4620FCF6B2006609A7 /* ScatterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E077DC4520FCF6B2006609A7 /* ScatterModel.swift */; };
-		E0C743D521009CFA00AEEE67 /* Share2.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C743D421009CFA00AEEE67 /* Share2.png */; };
 		E0CF32E920F5FA7C006C7868 /* PieChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0CF32D820F5FA7C006C7868 /* PieChartView.xib */; };
 		E0CF32EA20F5FA7C006C7868 /* RestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CF32D920F5FA7C006C7868 /* RestAPI.swift */; };
 		E0CF32EB20F5FA7C006C7868 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CF32DA20F5FA7C006C7868 /* CollectionViewCell.swift */; };
@@ -81,7 +80,6 @@
 		E041AC7A210CA83B00E8A91D /* Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search.png; sourceTree = "<group>"; };
 		E05E2ADA212568B8008BCA0C /* Mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mail.png; path = MPool/CustomFiles/Mail.png; sourceTree = SOURCE_ROOT; };
 		E077DC4520FCF6B2006609A7 /* ScatterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatterModel.swift; sourceTree = "<group>"; };
-		E0C743D421009CFA00AEEE67 /* Share2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Share2.png; path = ../Share2.png; sourceTree = "<group>"; };
 		E0CF32D820F5FA7C006C7868 /* PieChartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PieChartView.xib; sourceTree = "<group>"; };
 		E0CF32D920F5FA7C006C7868 /* RestAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestAPI.swift; sourceTree = "<group>"; };
 		E0CF32DA20F5FA7C006C7868 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 		E00482EC20F851760052DEB5 /* ScatterChart */ = {
 			isa = PBXGroup;
 			children = (
-				E0C743D421009CFA00AEEE67 /* Share2.png */,
 				E00482FB20F8518A0052DEB5 /* PNChart.h */,
 				E00482F420F8518A0052DEB5 /* PNChartDelegate.h */,
 				E00482FA20F8518A0052DEB5 /* PNColor.h */,
@@ -269,7 +266,6 @@
 				E02799192101C53B00FB0DC6 /* mpool-png - iOS.png in Resources */,
 				E01008A2210F61EF00932C8D /* up.png in Resources */,
 				E05E2ADB212568B8008BCA0C /* Mail.png in Resources */,
-				E0C743D521009CFA00AEEE67 /* Share2.png in Resources */,
 				E021D89E20F3081F003AE972 /* Main.storyboard in Resources */,
 				E0CF32F420F5FA7C006C7868 /* CollectionViewCell.xib in Resources */,
 				E01008A3210F61EF00932C8D /* down.png in Resources */,
@@ -446,19 +442,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4XT9ZE7FHM;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = Y7VXXPLFZ6;
 				INFOPLIST_FILE = MPool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "chinnababu.2k14-gmail.com";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Mpool.Sone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "432c147d-a5b5-4254-b31d-475de3ecf421";
+				PROVISIONING_PROFILE_SPECIFIER = MPool;
 				SWIFT_OBJC_BRIDGING_HEADER = "MPool/CustomFiles/MPool-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -471,19 +467,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4XT9ZE7FHM;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = Y7VXXPLFZ6;
 				INFOPLIST_FILE = MPool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "chinnababu.2k14-gmail.com";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Mpool.Sone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "432c147d-a5b5-4254-b31d-475de3ecf421";
+				PROVISIONING_PROFILE_SPECIFIER = MPool;
 				SWIFT_OBJC_BRIDGING_HEADER = "MPool/CustomFiles/MPool-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;

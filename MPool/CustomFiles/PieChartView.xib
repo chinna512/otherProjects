@@ -85,10 +85,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbd-k4-w0i">
-                    <rect key="frame" x="302" y="611" width="19" height="17"/>
+                    <rect key="frame" x="302" y="611" width="21" height="19"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="17" id="GYh-Z3-G0G"/>
-                        <constraint firstAttribute="width" constant="19" id="uMo-iC-c1T"/>
+                        <constraint firstAttribute="height" constant="19" id="GYh-Z3-G0G"/>
+                        <constraint firstAttribute="width" constant="21" id="uMo-iC-c1T"/>
                     </constraints>
                     <state key="normal" backgroundImage="down_gr.png"/>
                     <connections>
@@ -106,10 +106,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBs-rf-cQV">
-                    <rect key="frame" x="340" y="609" width="19" height="17"/>
+                    <rect key="frame" x="340" y="609" width="21" height="19"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="19" id="2NI-VL-ECn"/>
-                        <constraint firstAttribute="height" constant="17" id="nNf-Un-kit"/>
+                        <constraint firstAttribute="width" constant="21" id="2NI-VL-ECn"/>
+                        <constraint firstAttribute="height" constant="19" id="nNf-Un-kit"/>
                     </constraints>
                     <state key="normal" backgroundImage="up.png"/>
                     <connections>
@@ -120,11 +120,11 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="hdo-v5-uzL" secondAttribute="trailing" constant="22" id="8CV-uN-TqS"/>
-                <constraint firstAttribute="trailing" secondItem="DBs-rf-cQV" secondAttribute="trailing" constant="16" id="ANw-ar-vBs"/>
+                <constraint firstAttribute="trailing" secondItem="DBs-rf-cQV" secondAttribute="trailing" constant="14" id="ANw-ar-vBs"/>
                 <constraint firstItem="UZ8-zt-yeo" firstAttribute="top" secondItem="Wbk-GA-JxC" secondAttribute="bottom" constant="27" id="D0T-lb-Jn1"/>
                 <constraint firstItem="RRi-Oz-Kj2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="F7A-5j-9qf"/>
                 <constraint firstAttribute="trailing" secondItem="UHP-Y6-Jiy" secondAttribute="trailing" id="GQg-GS-lGc"/>
-                <constraint firstItem="wdK-qw-pJX" firstAttribute="leading" secondItem="lbd-k4-w0i" secondAttribute="trailing" id="Gcr-tW-iKm"/>
+                <constraint firstItem="wdK-qw-pJX" firstAttribute="leading" secondItem="lbd-k4-w0i" secondAttribute="trailing" constant="-2" id="Gcr-tW-iKm"/>
                 <constraint firstItem="f1p-ns-9qW" firstAttribute="top" secondItem="UHP-Y6-Jiy" secondAttribute="bottom" constant="2" id="HcH-cZ-fwm"/>
                 <constraint firstItem="lbd-k4-w0i" firstAttribute="top" secondItem="Wbk-GA-JxC" secondAttribute="bottom" constant="8" id="Hyf-Dx-DFi"/>
                 <constraint firstItem="f1p-ns-9qW" firstAttribute="leading" secondItem="UHP-Y6-Jiy" secondAttribute="leading" id="L6Y-06-EaN"/>

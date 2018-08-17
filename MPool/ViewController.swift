@@ -694,7 +694,7 @@ class ViewController: UIViewController,UISearchBarDelegate,CustomviewDelegate,Pa
         if MFMailComposeViewController.canSendMail(){
             self.present(mc, animated: true, completion: nil)
         }else{
-            let alert = UIAlertController(title: "Mail", message: "Please install Mail App to share", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "No Mail Accounts", message: "Please set up a Mail account in order to send mail", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
                 switch action.style{
                 case .default:
