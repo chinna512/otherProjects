@@ -107,7 +107,7 @@ extension ViewController:UIDropInteractionDelegate{
                                                           action: #selector(self.tapGestureHandler(_:)))
                 self.leftImageView.addSubview(imageView)
                 imageView.addGestureRecognizer(tapGesture)
-                self.leftEyeView.isDrawEnabled = false
+                self.leftEyeView.isDrawEnabled = true
             }
         }
     }
