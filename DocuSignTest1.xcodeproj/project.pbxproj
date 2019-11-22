@@ -1,0 +1,1507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E0E92A7C1EF62B2C00342DD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E92A7B1EF62B2C00342DD1 /* AppDelegate.swift */; };
+		E0E92A7E1EF62B2C00342DD1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E92A7D1EF62B2C00342DD1 /* ViewController.swift */; };
+		E0E92A811EF62B2C00342DD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0E92A7F1EF62B2C00342DD1 /* Main.storyboard */; };
+		E0E92A841EF62B2C00342DD1 /* DocuSignTest1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E0E92A821EF62B2C00342DD1 /* DocuSignTest1.xcdatamodeld */; };
+		E0E92A861EF62B2C00342DD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0E92A851EF62B2C00342DD1 /* Assets.xcassets */; };
+		E0E92A891EF62B2D00342DD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0E92A871EF62B2D00342DD1 /* LaunchScreen.storyboard */; };
+		E0E92C101EF62BAE00342DD1 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92A961EF62BAD00342DD1 /* AFHTTPRequestOperation.m */; };
+		E0E92C111EF62BAE00342DD1 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92A981EF62BAD00342DD1 /* AFHTTPRequestOperationManager.m */; };
+		E0E92C121EF62BAE00342DD1 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92A9A1EF62BAD00342DD1 /* AFHTTPSessionManager.m */; };
+		E0E92C131EF62BAE00342DD1 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92A9D1EF62BAD00342DD1 /* AFNetworkReachabilityManager.m */; };
+		E0E92C141EF62BAE00342DD1 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92A9F1EF62BAD00342DD1 /* AFSecurityPolicy.m */; };
+		E0E92C151EF62BAE00342DD1 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AA11EF62BAD00342DD1 /* AFURLConnectionOperation.m */; };
+		E0E92C161EF62BAE00342DD1 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AA31EF62BAD00342DD1 /* AFURLRequestSerialization.m */; };
+		E0E92C171EF62BAE00342DD1 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AA51EF62BAD00342DD1 /* AFURLResponseSerialization.m */; };
+		E0E92C181EF62BAE00342DD1 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AA71EF62BAD00342DD1 /* AFURLSessionManager.m */; };
+		E0E92C191EF62BAE00342DD1 /* Date.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AAA1EF62BAD00342DD1 /* Date.m */; };
+		E0E92C1A1EF62BAE00342DD1 /* DSAccountInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AAC1EF62BAD00342DD1 /* DSAccountInformation.m */; };
+		E0E92C1B1EF62BAE00342DD1 /* DSAccountsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AAE1EF62BAD00342DD1 /* DSAccountsApi.m */; };
+		E0E92C1C1EF62BAE00342DD1 /* DSAccountSettingsInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AB01EF62BAD00342DD1 /* DSAccountSettingsInformation.m */; };
+		E0E92C1D1EF62BAE00342DD1 /* DSAccountSharedAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AB21EF62BAD00342DD1 /* DSAccountSharedAccess.m */; };
+		E0E92C1E1EF62BAE00342DD1 /* DSAddressInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AB41EF62BAD00342DD1 /* DSAddressInformation.m */; };
+		E0E92C1F1EF62BAE00342DD1 /* DSAddressInformationInput.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AB61EF62BAD00342DD1 /* DSAddressInformationInput.m */; };
+		E0E92C201EF62BAE00342DD1 /* DSAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AB81EF62BAD00342DD1 /* DSAgent.m */; };
+		E0E92C211EF62BAE00342DD1 /* DSApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92ABA1EF62BAD00342DD1 /* DSApiClient.m */; };
+		E0E92C221EF62BAE00342DD1 /* DSApiRequestLog.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92ABC1EF62BAD00342DD1 /* DSApiRequestLog.m */; };
+		E0E92C231EF62BAE00342DD1 /* DSApiRequestLogsResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92ABE1EF62BAD00342DD1 /* DSApiRequestLogsResult.m */; };
+		E0E92C241EF62BAE00342DD1 /* DSApprove.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AC01EF62BAD00342DD1 /* DSApprove.m */; };
+		E0E92C251EF62BAE00342DD1 /* DSAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AC21EF62BAD00342DD1 /* DSAttachment.m */; };
+		E0E92C261EF62BAE00342DD1 /* DSAuthenticationApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AC41EF62BAD00342DD1 /* DSAuthenticationApi.m */; };
+		E0E92C271EF62BAE00342DD1 /* DSAuthenticationStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AC61EF62BAD00342DD1 /* DSAuthenticationStatus.m */; };
+		E0E92C281EF62BAE00342DD1 /* DSBccEmailAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AC81EF62BAD00342DD1 /* DSBccEmailAddress.m */; };
+		E0E92C291EF62BAE00342DD1 /* DSBulkEnvelope.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92ACA1EF62BAD00342DD1 /* DSBulkEnvelope.m */; };
+		E0E92C2A1EF62BAE00342DD1 /* DSBulkEnvelopeStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92ACC1EF62BAD00342DD1 /* DSBulkEnvelopeStatus.m */; };
+		E0E92C2B1EF62BAE00342DD1 /* DSCarbonCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92ACE1EF62BAD00342DD1 /* DSCarbonCopy.m */; };
+		E0E92C2C1EF62BAE00342DD1 /* DSCertifiedDelivery.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AD01EF62BAD00342DD1 /* DSCertifiedDelivery.m */; };
+		E0E92C2D1EF62BAE00342DD1 /* DSCheckbox.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AD21EF62BAD00342DD1 /* DSCheckbox.m */; };
+		E0E92C2E1EF62BAE00342DD1 /* DSCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AD41EF62BAD00342DD1 /* DSCompany.m */; };
+		E0E92C2F1EF62BAE00342DD1 /* DSCompositeTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AD61EF62BAD00342DD1 /* DSCompositeTemplate.m */; };
+		E0E92C301EF62BAE00342DD1 /* DSConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AD81EF62BAD00342DD1 /* DSConfiguration.m */; };
+		E0E92C311EF62BAE00342DD1 /* DSConsoleViewRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92ADA1EF62BAD00342DD1 /* DSConsoleViewRequest.m */; };
+		E0E92C321EF62BAE00342DD1 /* DSCorrectViewRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92ADC1EF62BAD00342DD1 /* DSCorrectViewRequest.m */; };
+		E0E92C331EF62BAE00342DD1 /* DSCustomFields.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92ADE1EF62BAD00342DD1 /* DSCustomFields.m */; };
+		E0E92C341EF62BAE00342DD1 /* DSCustomFieldsEnvelope.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AE01EF62BAD00342DD1 /* DSCustomFieldsEnvelope.m */; };
+		E0E92C351EF62BAE00342DD1 /* DSCustomFieldV2.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AE21EF62BAD00342DD1 /* DSCustomFieldV2.m */; };
+		E0E92C361EF62BAE00342DD1 /* DSCustomTabsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AE41EF62BAD00342DD1 /* DSCustomTabsApi.m */; };
+		E0E92C371EF62BAE00342DD1 /* DSDateSigned.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AE61EF62BAD00342DD1 /* DSDateSigned.m */; };
+		E0E92C381EF62BAE00342DD1 /* DSDecline.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AE81EF62BAD00342DD1 /* DSDecline.m */; };
+		E0E92C391EF62BAE00342DD1 /* DSDiagnosticsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AEA1EF62BAD00342DD1 /* DSDiagnosticsApi.m */; };
+		E0E92C3A1EF62BAE00342DD1 /* DSDiagnosticsSettingsInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AEC1EF62BAD00342DD1 /* DSDiagnosticsSettingsInformation.m */; };
+		E0E92C3B1EF62BAE00342DD1 /* DSDobInformationInput.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AEE1EF62BAD00342DD1 /* DSDobInformationInput.m */; };
+		E0E92C3C1EF62BAE00342DD1 /* DSDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AF01EF62BAD00342DD1 /* DSDocument.m */; };
+		E0E92C3D1EF62BAE00342DD1 /* DSDocumentFieldsInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AF21EF62BAD00342DD1 /* DSDocumentFieldsInformation.m */; };
+		E0E92C3E1EF62BAE00342DD1 /* DSDocumentTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AF41EF62BAD00342DD1 /* DSDocumentTemplate.m */; };
+		E0E92C3F1EF62BAE00342DD1 /* DSDocumentTemplateList.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AF61EF62BAD00342DD1 /* DSDocumentTemplateList.m */; };
+		E0E92C401EF62BAE00342DD1 /* DSEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AF81EF62BAD00342DD1 /* DSEditor.m */; };
+		E0E92C411EF62BAE00342DD1 /* DSEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AFA1EF62BAD00342DD1 /* DSEmail.m */; };
+		E0E92C421EF62BAE00342DD1 /* DSEmailAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AFC1EF62BAD00342DD1 /* DSEmailAddress.m */; };
+		E0E92C431EF62BAE00342DD1 /* DSEmailSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92AFE1EF62BAD00342DD1 /* DSEmailSettings.m */; };
+		E0E92C441EF62BAE00342DD1 /* DSEnvelope.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B001EF62BAD00342DD1 /* DSEnvelope.m */; };
+		E0E92C451EF62BAE00342DD1 /* DSEnvelopeAuditEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B021EF62BAD00342DD1 /* DSEnvelopeAuditEvent.m */; };
+		E0E92C461EF62BAE00342DD1 /* DSEnvelopeAuditEventResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B041EF62BAD00342DD1 /* DSEnvelopeAuditEventResponse.m */; };
+		E0E92C471EF62BAE00342DD1 /* DSEnvelopeDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B061EF62BAD00342DD1 /* DSEnvelopeDefinition.m */; };
+		E0E92C481EF62BAE00342DD1 /* DSEnvelopeDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B081EF62BAD00342DD1 /* DSEnvelopeDocument.m */; };
+		E0E92C491EF62BAE00342DD1 /* DSEnvelopeDocumentsResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B0A1EF62BAD00342DD1 /* DSEnvelopeDocumentsResult.m */; };
+		E0E92C4A1EF62BAE00342DD1 /* DSEnvelopeEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B0C1EF62BAD00342DD1 /* DSEnvelopeEvent.m */; };
+		E0E92C4B1EF62BAE00342DD1 /* DSEnvelopeId.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B0E1EF62BAD00342DD1 /* DSEnvelopeId.m */; };
+		E0E92C4C1EF62BAE00342DD1 /* DSEnvelopeIdsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B101EF62BAD00342DD1 /* DSEnvelopeIdsRequest.m */; };
+		E0E92C4D1EF62BAE00342DD1 /* DSEnvelopesApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B121EF62BAD00342DD1 /* DSEnvelopesApi.m */; };
+		E0E92C4E1EF62BAE00342DD1 /* DSEnvelopesInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B141EF62BAD00342DD1 /* DSEnvelopesInformation.m */; };
+		E0E92C4F1EF62BAE00342DD1 /* DSEnvelopeSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B161EF62BAD00342DD1 /* DSEnvelopeSummary.m */; };
+		E0E92C501EF62BAE00342DD1 /* DSEnvelopeTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B181EF62BAD00342DD1 /* DSEnvelopeTemplate.m */; };
+		E0E92C511EF62BAE00342DD1 /* DSEnvelopeTemplateDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B1A1EF62BAD00342DD1 /* DSEnvelopeTemplateDefinition.m */; };
+		E0E92C521EF62BAE00342DD1 /* DSEnvelopeTemplateResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B1C1EF62BAD00342DD1 /* DSEnvelopeTemplateResult.m */; };
+		E0E92C531EF62BAE00342DD1 /* DSEnvelopeTemplateResults.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B1E1EF62BAD00342DD1 /* DSEnvelopeTemplateResults.m */; };
+		E0E92C541EF62BAE00342DD1 /* DSEnvelopeTransactionStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B201EF62BAD00342DD1 /* DSEnvelopeTransactionStatus.m */; };
+		E0E92C551EF62BAE00342DD1 /* DSEnvelopeUpdateSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B221EF62BAD00342DD1 /* DSEnvelopeUpdateSummary.m */; };
+		E0E92C561EF62BAE00342DD1 /* DSErrorDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B241EF62BAD00342DD1 /* DSErrorDetails.m */; };
+		E0E92C571EF62BAE00342DD1 /* DSEventNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B261EF62BAD00342DD1 /* DSEventNotification.m */; };
+		E0E92C581EF62BAE00342DD1 /* DSEventResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B281EF62BAD00342DD1 /* DSEventResult.m */; };
+		E0E92C591EF62BAE00342DD1 /* DSExpirations.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B2A1EF62BAD00342DD1 /* DSExpirations.m */; };
+		E0E92C5A1EF62BAE00342DD1 /* DSFileType.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B2C1EF62BAD00342DD1 /* DSFileType.m */; };
+		E0E92C5B1EF62BAE00342DD1 /* DSFileTypeList.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B2E1EF62BAD00342DD1 /* DSFileTypeList.m */; };
+		E0E92C5C1EF62BAE00342DD1 /* DSFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B301EF62BAD00342DD1 /* DSFilter.m */; };
+		E0E92C5D1EF62BAE00342DD1 /* DSFirstName.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B321EF62BAD00342DD1 /* DSFirstName.m */; };
+		E0E92C5E1EF62BAE00342DD1 /* DSFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B341EF62BAD00342DD1 /* DSFolder.m */; };
+		E0E92C5F1EF62BAE00342DD1 /* DSFolderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B361EF62BAD00342DD1 /* DSFolderItem.m */; };
+		E0E92C601EF62BAE00342DD1 /* DSFolderItemResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B381EF62BAD00342DD1 /* DSFolderItemResponse.m */; };
+		E0E92C611EF62BAE00342DD1 /* DSFolderItemsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B3A1EF62BAD00342DD1 /* DSFolderItemsResponse.m */; };
+		E0E92C621EF62BAE00342DD1 /* DSFolderItemV2.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B3C1EF62BAD00342DD1 /* DSFolderItemV2.m */; };
+		E0E92C631EF62BAE00342DD1 /* DSFoldersApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B3E1EF62BAD00342DD1 /* DSFoldersApi.m */; };
+		E0E92C641EF62BAE00342DD1 /* DSFoldersRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B401EF62BAD00342DD1 /* DSFoldersRequest.m */; };
+		E0E92C651EF62BAE00342DD1 /* DSFoldersResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B421EF62BAD00342DD1 /* DSFoldersResponse.m */; };
+		E0E92C661EF62BAE00342DD1 /* DSFormulaTab.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B441EF62BAD00342DD1 /* DSFormulaTab.m */; };
+		E0E92C671EF62BAE00342DD1 /* DSFullName.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B461EF62BAD00342DD1 /* DSFullName.m */; };
+		E0E92C681EF62BAE00342DD1 /* DSGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B481EF62BAD00342DD1 /* DSGroup.m */; };
+		E0E92C691EF62BAE00342DD1 /* DSGroupInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B4A1EF62BAD00342DD1 /* DSGroupInformation.m */; };
+		E0E92C6A1EF62BAE00342DD1 /* DSIdCheckInformationInput.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B4C1EF62BAD00342DD1 /* DSIdCheckInformationInput.m */; };
+		E0E92C6B1EF62BAE00342DD1 /* DSInitialHere.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B4E1EF62BAD00342DD1 /* DSInitialHere.m */; };
+		E0E92C6C1EF62BAE00342DD1 /* DSInlineTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B501EF62BAD00342DD1 /* DSInlineTemplate.m */; };
+		E0E92C6D1EF62BAE00342DD1 /* DSInPersonSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B521EF62BAD00342DD1 /* DSInPersonSigner.m */; };
+		E0E92C6E1EF62BAE00342DD1 /* DSIntermediary.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B541EF62BAD00342DD1 /* DSIntermediary.m */; };
+		E0E92C6F1EF62BAE00342DD1 /* DSJSONRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B561EF62BAD00342DD1 /* DSJSONRequestSerializer.m */; };
+		E0E92C701EF62BAE00342DD1 /* DSJSONResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B581EF62BAD00342DD1 /* DSJSONResponseSerializer.m */; };
+		E0E92C711EF62BAE00342DD1 /* DSLastName.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B5A1EF62BAD00342DD1 /* DSLastName.m */; };
+		E0E92C721EF62BAE00342DD1 /* DSList.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B5C1EF62BAD00342DD1 /* DSList.m */; };
+		E0E92C731EF62BAE00342DD1 /* DSListCustomField.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B5E1EF62BAD00342DD1 /* DSListCustomField.m */; };
+		E0E92C741EF62BAE00342DD1 /* DSListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B601EF62BAD00342DD1 /* DSListItem.m */; };
+		E0E92C751EF62BAE00342DD1 /* DSLockInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B621EF62BAD00342DD1 /* DSLockInformation.m */; };
+		E0E92C761EF62BAE00342DD1 /* DSLockRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B641EF62BAD00342DD1 /* DSLockRequest.m */; };
+		E0E92C771EF62BAE00342DD1 /* DSLoginAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B661EF62BAD00342DD1 /* DSLoginAccount.m */; };
+		E0E92C781EF62BAE00342DD1 /* DSLoginInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B681EF62BAD00342DD1 /* DSLoginInformation.m */; };
+		E0E92C791EF62BAE00342DD1 /* DSMatchBox.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B6A1EF62BAD00342DD1 /* DSMatchBox.m */; };
+		E0E92C7A1EF62BAE00342DD1 /* DSMemberSharedItems.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B6C1EF62BAD00342DD1 /* DSMemberSharedItems.m */; };
+		E0E92C7B1EF62BAE00342DD1 /* DSMergeField.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B6E1EF62BAD00342DD1 /* DSMergeField.m */; };
+		E0E92C7C1EF62BAE00342DD1 /* DSNameValue.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B701EF62BAD00342DD1 /* DSNameValue.m */; };
+		E0E92C7D1EF62BAE00342DD1 /* DSNote.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B721EF62BAD00342DD1 /* DSNote.m */; };
+		E0E92C7E1EF62BAE00342DD1 /* DSNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B741EF62BAD00342DD1 /* DSNotification.m */; };
+		E0E92C7F1EF62BAE00342DD1 /* DSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B761EF62BAD00342DD1 /* DSObject.m */; };
+		E0E92C801EF62BAE00342DD1 /* DSOfflineAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B781EF62BAD00342DD1 /* DSOfflineAttributes.m */; };
+		E0E92C811EF62BAE00342DD1 /* DSPageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B7A1EF62BAD00342DD1 /* DSPageRequest.m */; };
+		E0E92C821EF62BAE00342DD1 /* DSQueryParamCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B7C1EF62BAD00342DD1 /* DSQueryParamCollection.m */; };
+		E0E92C831EF62BAE00342DD1 /* DSRadio.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B7E1EF62BAD00342DD1 /* DSRadio.m */; };
+		E0E92C841EF62BAE00342DD1 /* DSRadioGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B801EF62BAD00342DD1 /* DSRadioGroup.m */; };
+		E0E92C851EF62BAE00342DD1 /* DSRecipientEmailNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B821EF62BAD00342DD1 /* DSRecipientEmailNotification.m */; };
+		E0E92C861EF62BAE00342DD1 /* DSRecipientEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B841EF62BAD00342DD1 /* DSRecipientEvent.m */; };
+		E0E92C871EF62BAE00342DD1 /* DSRecipientPhoneAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B861EF62BAD00342DD1 /* DSRecipientPhoneAuthentication.m */; };
+		E0E92C881EF62BAE00342DD1 /* DSRecipients.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B881EF62BAD00342DD1 /* DSRecipients.m */; };
+		E0E92C891EF62BAE00342DD1 /* DSRecipientSAMLAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B8A1EF62BAD00342DD1 /* DSRecipientSAMLAuthentication.m */; };
+		E0E92C8A1EF62BAE00342DD1 /* DSRecipientSignatureInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B8C1EF62BAD00342DD1 /* DSRecipientSignatureInformation.m */; };
+		E0E92C8B1EF62BAE00342DD1 /* DSRecipientSMSAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B8E1EF62BAD00342DD1 /* DSRecipientSMSAuthentication.m */; };
+		E0E92C8C1EF62BAE00342DD1 /* DSRecipientsUpdateSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B901EF62BAD00342DD1 /* DSRecipientsUpdateSummary.m */; };
+		E0E92C8D1EF62BAE00342DD1 /* DSRecipientUpdateResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B921EF62BAD00342DD1 /* DSRecipientUpdateResponse.m */; };
+		E0E92C8E1EF62BAE00342DD1 /* DSRecipientViewRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B941EF62BAD00342DD1 /* DSRecipientViewRequest.m */; };
+		E0E92C8F1EF62BAE00342DD1 /* DSReminders.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B961EF62BAD00342DD1 /* DSReminders.m */; };
+		E0E92C901EF62BAE00342DD1 /* DSResourceInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B981EF62BAD00342DD1 /* DSResourceInformation.m */; };
+		E0E92C911EF62BAE00342DD1 /* DSReturnUrlRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B9A1EF62BAD00342DD1 /* DSReturnUrlRequest.m */; };
+		E0E92C921EF62BAE00342DD1 /* DSSamlAssertionAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B9C1EF62BAD00342DD1 /* DSSamlAssertionAttribute.m */; };
+		E0E92C931EF62BAE00342DD1 /* DSSenderEmailNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92B9E1EF62BAD00342DD1 /* DSSenderEmailNotifications.m */; };
+		E0E92C941EF62BAE00342DD1 /* DSServerTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BA01EF62BAD00342DD1 /* DSServerTemplate.m */; };
+		E0E92C951EF62BAE00342DD1 /* DSServiceInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BA21EF62BAD00342DD1 /* DSServiceInformation.m */; };
+		E0E92C961EF62BAE00342DD1 /* DSServiceVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BA41EF62BAD00342DD1 /* DSServiceVersion.m */; };
+		E0E92C971EF62BAE00342DD1 /* DSSharedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BA61EF62BAD00342DD1 /* DSSharedItem.m */; };
+		E0E92C981EF62BAE00342DD1 /* DSSignatureType.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BA81EF62BAD00342DD1 /* DSSignatureType.m */; };
+		E0E92C991EF62BAE00342DD1 /* DSSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BAA1EF62BAD00342DD1 /* DSSigner.m */; };
+		E0E92C9A1EF62BAE00342DD1 /* DSSignerAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BAC1EF62BAD00342DD1 /* DSSignerAttachment.m */; };
+		E0E92C9B1EF62BAE00342DD1 /* DSSignerEmailNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BAE1EF62BAD00342DD1 /* DSSignerEmailNotifications.m */; };
+		E0E92C9C1EF62BAE00342DD1 /* DSSignHere.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BB01EF62BAD00342DD1 /* DSSignHere.m */; };
+		E0E92C9D1EF62BAE00342DD1 /* DSSocialAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BB21EF62BAD00342DD1 /* DSSocialAuthentication.m */; };
+		E0E92C9E1EF62BAE00342DD1 /* DSSsn.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BB41EF62BAD00342DD1 /* DSSsn.m */; };
+		E0E92C9F1EF62BAE00342DD1 /* DSSsn4InformationInput.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BB61EF62BAE00342DD1 /* DSSsn4InformationInput.m */; };
+		E0E92CA01EF62BAE00342DD1 /* DSSsn9InformationInput.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BB81EF62BAE00342DD1 /* DSSsn9InformationInput.m */; };
+		E0E92CA11EF62BAE00342DD1 /* DSTabMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BBA1EF62BAE00342DD1 /* DSTabMetadata.m */; };
+		E0E92CA21EF62BAE00342DD1 /* DSTabMetadataList.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BBC1EF62BAE00342DD1 /* DSTabMetadataList.m */; };
+		E0E92CA31EF62BAE00342DD1 /* DSTabs.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BBE1EF62BAE00342DD1 /* DSTabs.m */; };
+		E0E92CA41EF62BAE00342DD1 /* DSTemplateCustomFields.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BC01EF62BAE00342DD1 /* DSTemplateCustomFields.m */; };
+		E0E92CA51EF62BAE00342DD1 /* DSTemplateDocumentsResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BC21EF62BAE00342DD1 /* DSTemplateDocumentsResult.m */; };
+		E0E92CA61EF62BAE00342DD1 /* DSTemplateInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BC41EF62BAE00342DD1 /* DSTemplateInformation.m */; };
+		E0E92CA71EF62BAE00342DD1 /* DSTemplateMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BC61EF62BAE00342DD1 /* DSTemplateMatch.m */; };
+		E0E92CA81EF62BAE00342DD1 /* DSTemplateNotificationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BC81EF62BAE00342DD1 /* DSTemplateNotificationRequest.m */; };
+		E0E92CA91EF62BAE00342DD1 /* DSTemplateRecipients.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BCA1EF62BAE00342DD1 /* DSTemplateRecipients.m */; };
+		E0E92CAA1EF62BAE00342DD1 /* DSTemplateRole.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BCC1EF62BAE00342DD1 /* DSTemplateRole.m */; };
+		E0E92CAB1EF62BAE00342DD1 /* DSTemplatesApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BCE1EF62BAE00342DD1 /* DSTemplatesApi.m */; };
+		E0E92CAC1EF62BAE00342DD1 /* DSTemplateSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BD01EF62BAE00342DD1 /* DSTemplateSummary.m */; };
+		E0E92CAD1EF62BAE00342DD1 /* DSTemplateTabs.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BD21EF62BAE00342DD1 /* DSTemplateTabs.m */; };
+		E0E92CAE1EF62BAE00342DD1 /* DSTemplateUpdateSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BD41EF62BAE00342DD1 /* DSTemplateUpdateSummary.m */; };
+		E0E92CAF1EF62BAE00342DD1 /* DSText.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BD61EF62BAE00342DD1 /* DSText.m */; };
+		E0E92CB01EF62BAE00342DD1 /* DSTextCustomField.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BD81EF62BAE00342DD1 /* DSTextCustomField.m */; };
+		E0E92CB11EF62BAE00342DD1 /* DSTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BDA1EF62BAE00342DD1 /* DSTitle.m */; };
+		E0E92CB21EF62BAE00342DD1 /* DSUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BDC1EF62BAE00342DD1 /* DSUserInfo.m */; };
+		E0E92CB31EF62BAE00342DD1 /* DSUsersApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BDE1EF62BAE00342DD1 /* DSUsersApi.m */; };
+		E0E92CB41EF62BAE00342DD1 /* DSUserSettingsInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BE01EF62BAE00342DD1 /* DSUserSettingsInformation.m */; };
+		E0E92CB51EF62BAE00342DD1 /* DSViewLinkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BE21EF62BAE00342DD1 /* DSViewLinkRequest.m */; };
+		E0E92CB61EF62BAE00342DD1 /* DSViewUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BE41EF62BAE00342DD1 /* DSViewUrl.m */; };
+		E0E92CB71EF62BAE00342DD1 /* DSZip.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BE61EF62BAE00342DD1 /* DSZip.m */; };
+		E0E92CB81EF62BAE00342DD1 /* JSONValueTransformer+ISO8601.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BE81EF62BAE00342DD1 /* JSONValueTransformer+ISO8601.m */; };
+		E0E92CB91EF62BAE00342DD1 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BEA1EF62BAE00342DD1 /* MBProgressHUD.m */; };
+		E0E92CBA1EF62BAE00342DD1 /* Number.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92BEC1EF62BAE00342DD1 /* Number.m */; };
+		E0E92D761EF6347000342DD1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0E92D5A1EF6347000342DD1 /* Info.plist */; };
+		E0E92D771EF6347000342DD1 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92D5D1EF6347000342DD1 /* JSONModel.m */; };
+		E0E92D781EF6347000342DD1 /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92D5F1EF6347000342DD1 /* JSONModelClassProperty.m */; };
+		E0E92D791EF6347000342DD1 /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92D611EF6347000342DD1 /* JSONModelError.m */; };
+		E0E92D7A1EF6347000342DD1 /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92D651EF6347000342DD1 /* JSONAPI.m */; };
+		E0E92D7B1EF6347000342DD1 /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92D671EF6347000342DD1 /* JSONHTTPClient.m */; };
+		E0E92D7C1EF6347000342DD1 /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92D691EF6347000342DD1 /* JSONModel+networking.m */; };
+		E0E92D7D1EF6347000342DD1 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92D6C1EF6347000342DD1 /* JSONKeyMapper.m */; };
+		E0E92D7E1EF6347000342DD1 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92D6E1EF6347000342DD1 /* JSONValueTransformer.m */; };
+		E0E92D7F1EF6347000342DD1 /* ISO8601Serialization.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92D731EF6347000342DD1 /* ISO8601Serialization.m */; };
+		E0E92D801EF6347000342DD1 /* NSDate+ISO8601.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92D751EF6347000342DD1 /* NSDate+ISO8601.m */; };
+		E0E92D861EF6364500342DD1 /* TestViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E92D851EF6364500342DD1 /* TestViewController1.m */; };
+		E0E92D881EF63FB600342DD1 /* Test.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E0E92D871EF63FB600342DD1 /* Test.pdf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E0E92A781EF62B2C00342DD1 /* DocuSignTest1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocuSignTest1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0E92A7B1EF62B2C00342DD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E0E92A7D1EF62B2C00342DD1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E0E92A801EF62B2C00342DD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E0E92A831EF62B2C00342DD1 /* DocuSignTest1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DocuSignTest1.xcdatamodel; sourceTree = "<group>"; };
+		E0E92A851EF62B2C00342DD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E0E92A881EF62B2D00342DD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E0E92A8A1EF62B2D00342DD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0E92A901EF62B6800342DD1 /* DocuSignTest1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DocuSignTest1-Bridging-Header.h"; sourceTree = "<group>"; };
+		E0E92A951EF62BAD00342DD1 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		E0E92A961EF62BAD00342DD1 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		E0E92A971EF62BAD00342DD1 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		E0E92A981EF62BAD00342DD1 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		E0E92A991EF62BAD00342DD1 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		E0E92A9A1EF62BAD00342DD1 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		E0E92A9B1EF62BAD00342DD1 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		E0E92A9C1EF62BAD00342DD1 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		E0E92A9D1EF62BAD00342DD1 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		E0E92A9E1EF62BAD00342DD1 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		E0E92A9F1EF62BAD00342DD1 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		E0E92AA01EF62BAD00342DD1 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		E0E92AA11EF62BAD00342DD1 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		E0E92AA21EF62BAD00342DD1 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		E0E92AA31EF62BAD00342DD1 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		E0E92AA41EF62BAD00342DD1 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		E0E92AA51EF62BAD00342DD1 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		E0E92AA61EF62BAD00342DD1 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		E0E92AA71EF62BAD00342DD1 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		E0E92AA91EF62BAD00342DD1 /* Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Date.h; sourceTree = "<group>"; };
+		E0E92AAA1EF62BAD00342DD1 /* Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Date.m; sourceTree = "<group>"; };
+		E0E92AAB1EF62BAD00342DD1 /* DSAccountInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAccountInformation.h; sourceTree = "<group>"; };
+		E0E92AAC1EF62BAD00342DD1 /* DSAccountInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAccountInformation.m; sourceTree = "<group>"; };
+		E0E92AAD1EF62BAD00342DD1 /* DSAccountsApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAccountsApi.h; sourceTree = "<group>"; };
+		E0E92AAE1EF62BAD00342DD1 /* DSAccountsApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAccountsApi.m; sourceTree = "<group>"; };
+		E0E92AAF1EF62BAD00342DD1 /* DSAccountSettingsInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAccountSettingsInformation.h; sourceTree = "<group>"; };
+		E0E92AB01EF62BAD00342DD1 /* DSAccountSettingsInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAccountSettingsInformation.m; sourceTree = "<group>"; };
+		E0E92AB11EF62BAD00342DD1 /* DSAccountSharedAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAccountSharedAccess.h; sourceTree = "<group>"; };
+		E0E92AB21EF62BAD00342DD1 /* DSAccountSharedAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAccountSharedAccess.m; sourceTree = "<group>"; };
+		E0E92AB31EF62BAD00342DD1 /* DSAddressInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAddressInformation.h; sourceTree = "<group>"; };
+		E0E92AB41EF62BAD00342DD1 /* DSAddressInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAddressInformation.m; sourceTree = "<group>"; };
+		E0E92AB51EF62BAD00342DD1 /* DSAddressInformationInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAddressInformationInput.h; sourceTree = "<group>"; };
+		E0E92AB61EF62BAD00342DD1 /* DSAddressInformationInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAddressInformationInput.m; sourceTree = "<group>"; };
+		E0E92AB71EF62BAD00342DD1 /* DSAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAgent.h; sourceTree = "<group>"; };
+		E0E92AB81EF62BAD00342DD1 /* DSAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAgent.m; sourceTree = "<group>"; };
+		E0E92AB91EF62BAD00342DD1 /* DSApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSApiClient.h; sourceTree = "<group>"; };
+		E0E92ABA1EF62BAD00342DD1 /* DSApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSApiClient.m; sourceTree = "<group>"; };
+		E0E92ABB1EF62BAD00342DD1 /* DSApiRequestLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSApiRequestLog.h; sourceTree = "<group>"; };
+		E0E92ABC1EF62BAD00342DD1 /* DSApiRequestLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSApiRequestLog.m; sourceTree = "<group>"; };
+		E0E92ABD1EF62BAD00342DD1 /* DSApiRequestLogsResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSApiRequestLogsResult.h; sourceTree = "<group>"; };
+		E0E92ABE1EF62BAD00342DD1 /* DSApiRequestLogsResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSApiRequestLogsResult.m; sourceTree = "<group>"; };
+		E0E92ABF1EF62BAD00342DD1 /* DSApprove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSApprove.h; sourceTree = "<group>"; };
+		E0E92AC01EF62BAD00342DD1 /* DSApprove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSApprove.m; sourceTree = "<group>"; };
+		E0E92AC11EF62BAD00342DD1 /* DSAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAttachment.h; sourceTree = "<group>"; };
+		E0E92AC21EF62BAD00342DD1 /* DSAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAttachment.m; sourceTree = "<group>"; };
+		E0E92AC31EF62BAD00342DD1 /* DSAuthenticationApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAuthenticationApi.h; sourceTree = "<group>"; };
+		E0E92AC41EF62BAD00342DD1 /* DSAuthenticationApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAuthenticationApi.m; sourceTree = "<group>"; };
+		E0E92AC51EF62BAD00342DD1 /* DSAuthenticationStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAuthenticationStatus.h; sourceTree = "<group>"; };
+		E0E92AC61EF62BAD00342DD1 /* DSAuthenticationStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAuthenticationStatus.m; sourceTree = "<group>"; };
+		E0E92AC71EF62BAD00342DD1 /* DSBccEmailAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSBccEmailAddress.h; sourceTree = "<group>"; };
+		E0E92AC81EF62BAD00342DD1 /* DSBccEmailAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSBccEmailAddress.m; sourceTree = "<group>"; };
+		E0E92AC91EF62BAD00342DD1 /* DSBulkEnvelope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSBulkEnvelope.h; sourceTree = "<group>"; };
+		E0E92ACA1EF62BAD00342DD1 /* DSBulkEnvelope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSBulkEnvelope.m; sourceTree = "<group>"; };
+		E0E92ACB1EF62BAD00342DD1 /* DSBulkEnvelopeStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSBulkEnvelopeStatus.h; sourceTree = "<group>"; };
+		E0E92ACC1EF62BAD00342DD1 /* DSBulkEnvelopeStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSBulkEnvelopeStatus.m; sourceTree = "<group>"; };
+		E0E92ACD1EF62BAD00342DD1 /* DSCarbonCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCarbonCopy.h; sourceTree = "<group>"; };
+		E0E92ACE1EF62BAD00342DD1 /* DSCarbonCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCarbonCopy.m; sourceTree = "<group>"; };
+		E0E92ACF1EF62BAD00342DD1 /* DSCertifiedDelivery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCertifiedDelivery.h; sourceTree = "<group>"; };
+		E0E92AD01EF62BAD00342DD1 /* DSCertifiedDelivery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCertifiedDelivery.m; sourceTree = "<group>"; };
+		E0E92AD11EF62BAD00342DD1 /* DSCheckbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCheckbox.h; sourceTree = "<group>"; };
+		E0E92AD21EF62BAD00342DD1 /* DSCheckbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCheckbox.m; sourceTree = "<group>"; };
+		E0E92AD31EF62BAD00342DD1 /* DSCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCompany.h; sourceTree = "<group>"; };
+		E0E92AD41EF62BAD00342DD1 /* DSCompany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCompany.m; sourceTree = "<group>"; };
+		E0E92AD51EF62BAD00342DD1 /* DSCompositeTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCompositeTemplate.h; sourceTree = "<group>"; };
+		E0E92AD61EF62BAD00342DD1 /* DSCompositeTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCompositeTemplate.m; sourceTree = "<group>"; };
+		E0E92AD71EF62BAD00342DD1 /* DSConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSConfiguration.h; sourceTree = "<group>"; };
+		E0E92AD81EF62BAD00342DD1 /* DSConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSConfiguration.m; sourceTree = "<group>"; };
+		E0E92AD91EF62BAD00342DD1 /* DSConsoleViewRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSConsoleViewRequest.h; sourceTree = "<group>"; };
+		E0E92ADA1EF62BAD00342DD1 /* DSConsoleViewRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSConsoleViewRequest.m; sourceTree = "<group>"; };
+		E0E92ADB1EF62BAD00342DD1 /* DSCorrectViewRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCorrectViewRequest.h; sourceTree = "<group>"; };
+		E0E92ADC1EF62BAD00342DD1 /* DSCorrectViewRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCorrectViewRequest.m; sourceTree = "<group>"; };
+		E0E92ADD1EF62BAD00342DD1 /* DSCustomFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCustomFields.h; sourceTree = "<group>"; };
+		E0E92ADE1EF62BAD00342DD1 /* DSCustomFields.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCustomFields.m; sourceTree = "<group>"; };
+		E0E92ADF1EF62BAD00342DD1 /* DSCustomFieldsEnvelope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCustomFieldsEnvelope.h; sourceTree = "<group>"; };
+		E0E92AE01EF62BAD00342DD1 /* DSCustomFieldsEnvelope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCustomFieldsEnvelope.m; sourceTree = "<group>"; };
+		E0E92AE11EF62BAD00342DD1 /* DSCustomFieldV2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCustomFieldV2.h; sourceTree = "<group>"; };
+		E0E92AE21EF62BAD00342DD1 /* DSCustomFieldV2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCustomFieldV2.m; sourceTree = "<group>"; };
+		E0E92AE31EF62BAD00342DD1 /* DSCustomTabsApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCustomTabsApi.h; sourceTree = "<group>"; };
+		E0E92AE41EF62BAD00342DD1 /* DSCustomTabsApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCustomTabsApi.m; sourceTree = "<group>"; };
+		E0E92AE51EF62BAD00342DD1 /* DSDateSigned.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDateSigned.h; sourceTree = "<group>"; };
+		E0E92AE61EF62BAD00342DD1 /* DSDateSigned.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDateSigned.m; sourceTree = "<group>"; };
+		E0E92AE71EF62BAD00342DD1 /* DSDecline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDecline.h; sourceTree = "<group>"; };
+		E0E92AE81EF62BAD00342DD1 /* DSDecline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDecline.m; sourceTree = "<group>"; };
+		E0E92AE91EF62BAD00342DD1 /* DSDiagnosticsApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDiagnosticsApi.h; sourceTree = "<group>"; };
+		E0E92AEA1EF62BAD00342DD1 /* DSDiagnosticsApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDiagnosticsApi.m; sourceTree = "<group>"; };
+		E0E92AEB1EF62BAD00342DD1 /* DSDiagnosticsSettingsInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDiagnosticsSettingsInformation.h; sourceTree = "<group>"; };
+		E0E92AEC1EF62BAD00342DD1 /* DSDiagnosticsSettingsInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDiagnosticsSettingsInformation.m; sourceTree = "<group>"; };
+		E0E92AED1EF62BAD00342DD1 /* DSDobInformationInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDobInformationInput.h; sourceTree = "<group>"; };
+		E0E92AEE1EF62BAD00342DD1 /* DSDobInformationInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDobInformationInput.m; sourceTree = "<group>"; };
+		E0E92AEF1EF62BAD00342DD1 /* DSDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDocument.h; sourceTree = "<group>"; };
+		E0E92AF01EF62BAD00342DD1 /* DSDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDocument.m; sourceTree = "<group>"; };
+		E0E92AF11EF62BAD00342DD1 /* DSDocumentFieldsInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDocumentFieldsInformation.h; sourceTree = "<group>"; };
+		E0E92AF21EF62BAD00342DD1 /* DSDocumentFieldsInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDocumentFieldsInformation.m; sourceTree = "<group>"; };
+		E0E92AF31EF62BAD00342DD1 /* DSDocumentTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDocumentTemplate.h; sourceTree = "<group>"; };
+		E0E92AF41EF62BAD00342DD1 /* DSDocumentTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDocumentTemplate.m; sourceTree = "<group>"; };
+		E0E92AF51EF62BAD00342DD1 /* DSDocumentTemplateList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDocumentTemplateList.h; sourceTree = "<group>"; };
+		E0E92AF61EF62BAD00342DD1 /* DSDocumentTemplateList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDocumentTemplateList.m; sourceTree = "<group>"; };
+		E0E92AF71EF62BAD00342DD1 /* DSEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEditor.h; sourceTree = "<group>"; };
+		E0E92AF81EF62BAD00342DD1 /* DSEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEditor.m; sourceTree = "<group>"; };
+		E0E92AF91EF62BAD00342DD1 /* DSEmail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEmail.h; sourceTree = "<group>"; };
+		E0E92AFA1EF62BAD00342DD1 /* DSEmail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEmail.m; sourceTree = "<group>"; };
+		E0E92AFB1EF62BAD00342DD1 /* DSEmailAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEmailAddress.h; sourceTree = "<group>"; };
+		E0E92AFC1EF62BAD00342DD1 /* DSEmailAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEmailAddress.m; sourceTree = "<group>"; };
+		E0E92AFD1EF62BAD00342DD1 /* DSEmailSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEmailSettings.h; sourceTree = "<group>"; };
+		E0E92AFE1EF62BAD00342DD1 /* DSEmailSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEmailSettings.m; sourceTree = "<group>"; };
+		E0E92AFF1EF62BAD00342DD1 /* DSEnvelope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEnvelope.h; sourceTree = "<group>"; };
+		E0E92B001EF62BAD00342DD1 /* DSEnvelope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEnvelope.m; sourceTree = "<group>"; };
+		E0E92B011EF62BAD00342DD1 /* DSEnvelopeAuditEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEnvelopeAuditEvent.h; sourceTree = "<group>"; };
+		E0E92B021EF62BAD00342DD1 /* DSEnvelopeAuditEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEnvelopeAuditEvent.m; sourceTree = "<group>"; };
+		E0E92B031EF62BAD00342DD1 /* DSEnvelopeAuditEventResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEnvelopeAuditEventResponse.h; sourceTree = "<group>"; };
+		E0E92B041EF62BAD00342DD1 /* DSEnvelopeAuditEventResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEnvelopeAuditEventResponse.m; sourceTree = "<group>"; };
+		E0E92B051EF62BAD00342DD1 /* DSEnvelopeDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEnvelopeDefinition.h; sourceTree = "<group>"; };
+		E0E92B061EF62BAD00342DD1 /* DSEnvelopeDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEnvelopeDefinition.m; sourceTree = "<group>"; };
+		E0E92B071EF62BAD00342DD1 /* DSEnvelopeDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEnvelopeDocument.h; sourceTree = "<group>"; };
+		E0E92B081EF62BAD00342DD1 /* DSEnvelopeDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEnvelopeDocument.m; sourceTree = "<group>"; };
+		E0E92B091EF62BAD00342DD1 /* DSEnvelopeDocumentsResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEnvelopeDocumentsResult.h; sourceTree = "<group>"; };
+		E0E92B0A1EF62BAD00342DD1 /* DSEnvelopeDocumentsResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEnvelopeDocumentsResult.m; sourceTree = "<group>"; };
+		E0E92B0B1EF62BAD00342DD1 /* DSEnvelopeEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEnvelopeEvent.h; sourceTree = "<group>"; };
+		E0E92B0C1EF62BAD00342DD1 /* DSEnvelopeEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEnvelopeEvent.m; sourceTree = "<group>"; };
+		E0E92B0D1EF62BAD00342DD1 /* DSEnvelopeId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEnvelopeId.h; sourceTree = "<group>"; };
+		E0E92B0E1EF62BAD00342DD1 /* DSEnvelopeId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEnvelopeId.m; sourceTree = "<group>"; };
+		E0E92B0F1EF62BAD00342DD1 /* DSEnvelopeIdsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEnvelopeIdsRequest.h; sourceTree = "<group>"; };
+		E0E92B101EF62BAD00342DD1 /* DSEnvelopeIdsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEnvelopeIdsRequest.m; sourceTree = "<group>"; };
+		E0E92B111EF62BAD00342DD1 /* DSEnvelopesApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEnvelopesApi.h; sourceTree = "<group>"; };
+		E0E92B121EF62BAD00342DD1 /* DSEnvelopesApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEnvelopesApi.m; sourceTree = "<group>"; };
+		E0E92B131EF62BAD00342DD1 /* DSEnvelopesInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEnvelopesInformation.h; sourceTree = "<group>"; };
+		E0E92B141EF62BAD00342DD1 /* DSEnvelopesInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEnvelopesInformation.m; sourceTree = "<group>"; };
+		E0E92B151EF62BAD00342DD1 /* DSEnvelopeSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEnvelopeSummary.h; sourceTree = "<group>"; };
+		E0E92B161EF62BAD00342DD1 /* DSEnvelopeSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEnvelopeSummary.m; sourceTree = "<group>"; };
+		E0E92B171EF62BAD00342DD1 /* DSEnvelopeTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEnvelopeTemplate.h; sourceTree = "<group>"; };
+		E0E92B181EF62BAD00342DD1 /* DSEnvelopeTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEnvelopeTemplate.m; sourceTree = "<group>"; };
+		E0E92B191EF62BAD00342DD1 /* DSEnvelopeTemplateDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEnvelopeTemplateDefinition.h; sourceTree = "<group>"; };
+		E0E92B1A1EF62BAD00342DD1 /* DSEnvelopeTemplateDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEnvelopeTemplateDefinition.m; sourceTree = "<group>"; };
+		E0E92B1B1EF62BAD00342DD1 /* DSEnvelopeTemplateResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEnvelopeTemplateResult.h; sourceTree = "<group>"; };
+		E0E92B1C1EF62BAD00342DD1 /* DSEnvelopeTemplateResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEnvelopeTemplateResult.m; sourceTree = "<group>"; };
+		E0E92B1D1EF62BAD00342DD1 /* DSEnvelopeTemplateResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEnvelopeTemplateResults.h; sourceTree = "<group>"; };
+		E0E92B1E1EF62BAD00342DD1 /* DSEnvelopeTemplateResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEnvelopeTemplateResults.m; sourceTree = "<group>"; };
+		E0E92B1F1EF62BAD00342DD1 /* DSEnvelopeTransactionStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEnvelopeTransactionStatus.h; sourceTree = "<group>"; };
+		E0E92B201EF62BAD00342DD1 /* DSEnvelopeTransactionStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEnvelopeTransactionStatus.m; sourceTree = "<group>"; };
+		E0E92B211EF62BAD00342DD1 /* DSEnvelopeUpdateSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEnvelopeUpdateSummary.h; sourceTree = "<group>"; };
+		E0E92B221EF62BAD00342DD1 /* DSEnvelopeUpdateSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEnvelopeUpdateSummary.m; sourceTree = "<group>"; };
+		E0E92B231EF62BAD00342DD1 /* DSErrorDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSErrorDetails.h; sourceTree = "<group>"; };
+		E0E92B241EF62BAD00342DD1 /* DSErrorDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSErrorDetails.m; sourceTree = "<group>"; };
+		E0E92B251EF62BAD00342DD1 /* DSEventNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEventNotification.h; sourceTree = "<group>"; };
+		E0E92B261EF62BAD00342DD1 /* DSEventNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEventNotification.m; sourceTree = "<group>"; };
+		E0E92B271EF62BAD00342DD1 /* DSEventResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEventResult.h; sourceTree = "<group>"; };
+		E0E92B281EF62BAD00342DD1 /* DSEventResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEventResult.m; sourceTree = "<group>"; };
+		E0E92B291EF62BAD00342DD1 /* DSExpirations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSExpirations.h; sourceTree = "<group>"; };
+		E0E92B2A1EF62BAD00342DD1 /* DSExpirations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSExpirations.m; sourceTree = "<group>"; };
+		E0E92B2B1EF62BAD00342DD1 /* DSFileType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFileType.h; sourceTree = "<group>"; };
+		E0E92B2C1EF62BAD00342DD1 /* DSFileType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFileType.m; sourceTree = "<group>"; };
+		E0E92B2D1EF62BAD00342DD1 /* DSFileTypeList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFileTypeList.h; sourceTree = "<group>"; };
+		E0E92B2E1EF62BAD00342DD1 /* DSFileTypeList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFileTypeList.m; sourceTree = "<group>"; };
+		E0E92B2F1EF62BAD00342DD1 /* DSFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFilter.h; sourceTree = "<group>"; };
+		E0E92B301EF62BAD00342DD1 /* DSFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFilter.m; sourceTree = "<group>"; };
+		E0E92B311EF62BAD00342DD1 /* DSFirstName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFirstName.h; sourceTree = "<group>"; };
+		E0E92B321EF62BAD00342DD1 /* DSFirstName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFirstName.m; sourceTree = "<group>"; };
+		E0E92B331EF62BAD00342DD1 /* DSFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFolder.h; sourceTree = "<group>"; };
+		E0E92B341EF62BAD00342DD1 /* DSFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFolder.m; sourceTree = "<group>"; };
+		E0E92B351EF62BAD00342DD1 /* DSFolderItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFolderItem.h; sourceTree = "<group>"; };
+		E0E92B361EF62BAD00342DD1 /* DSFolderItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFolderItem.m; sourceTree = "<group>"; };
+		E0E92B371EF62BAD00342DD1 /* DSFolderItemResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFolderItemResponse.h; sourceTree = "<group>"; };
+		E0E92B381EF62BAD00342DD1 /* DSFolderItemResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFolderItemResponse.m; sourceTree = "<group>"; };
+		E0E92B391EF62BAD00342DD1 /* DSFolderItemsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFolderItemsResponse.h; sourceTree = "<group>"; };
+		E0E92B3A1EF62BAD00342DD1 /* DSFolderItemsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFolderItemsResponse.m; sourceTree = "<group>"; };
+		E0E92B3B1EF62BAD00342DD1 /* DSFolderItemV2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFolderItemV2.h; sourceTree = "<group>"; };
+		E0E92B3C1EF62BAD00342DD1 /* DSFolderItemV2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFolderItemV2.m; sourceTree = "<group>"; };
+		E0E92B3D1EF62BAD00342DD1 /* DSFoldersApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFoldersApi.h; sourceTree = "<group>"; };
+		E0E92B3E1EF62BAD00342DD1 /* DSFoldersApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFoldersApi.m; sourceTree = "<group>"; };
+		E0E92B3F1EF62BAD00342DD1 /* DSFoldersRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFoldersRequest.h; sourceTree = "<group>"; };
+		E0E92B401EF62BAD00342DD1 /* DSFoldersRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFoldersRequest.m; sourceTree = "<group>"; };
+		E0E92B411EF62BAD00342DD1 /* DSFoldersResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFoldersResponse.h; sourceTree = "<group>"; };
+		E0E92B421EF62BAD00342DD1 /* DSFoldersResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFoldersResponse.m; sourceTree = "<group>"; };
+		E0E92B431EF62BAD00342DD1 /* DSFormulaTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFormulaTab.h; sourceTree = "<group>"; };
+		E0E92B441EF62BAD00342DD1 /* DSFormulaTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFormulaTab.m; sourceTree = "<group>"; };
+		E0E92B451EF62BAD00342DD1 /* DSFullName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFullName.h; sourceTree = "<group>"; };
+		E0E92B461EF62BAD00342DD1 /* DSFullName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFullName.m; sourceTree = "<group>"; };
+		E0E92B471EF62BAD00342DD1 /* DSGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGroup.h; sourceTree = "<group>"; };
+		E0E92B481EF62BAD00342DD1 /* DSGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSGroup.m; sourceTree = "<group>"; };
+		E0E92B491EF62BAD00342DD1 /* DSGroupInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGroupInformation.h; sourceTree = "<group>"; };
+		E0E92B4A1EF62BAD00342DD1 /* DSGroupInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSGroupInformation.m; sourceTree = "<group>"; };
+		E0E92B4B1EF62BAD00342DD1 /* DSIdCheckInformationInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSIdCheckInformationInput.h; sourceTree = "<group>"; };
+		E0E92B4C1EF62BAD00342DD1 /* DSIdCheckInformationInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSIdCheckInformationInput.m; sourceTree = "<group>"; };
+		E0E92B4D1EF62BAD00342DD1 /* DSInitialHere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSInitialHere.h; sourceTree = "<group>"; };
+		E0E92B4E1EF62BAD00342DD1 /* DSInitialHere.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSInitialHere.m; sourceTree = "<group>"; };
+		E0E92B4F1EF62BAD00342DD1 /* DSInlineTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSInlineTemplate.h; sourceTree = "<group>"; };
+		E0E92B501EF62BAD00342DD1 /* DSInlineTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSInlineTemplate.m; sourceTree = "<group>"; };
+		E0E92B511EF62BAD00342DD1 /* DSInPersonSigner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSInPersonSigner.h; sourceTree = "<group>"; };
+		E0E92B521EF62BAD00342DD1 /* DSInPersonSigner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSInPersonSigner.m; sourceTree = "<group>"; };
+		E0E92B531EF62BAD00342DD1 /* DSIntermediary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSIntermediary.h; sourceTree = "<group>"; };
+		E0E92B541EF62BAD00342DD1 /* DSIntermediary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSIntermediary.m; sourceTree = "<group>"; };
+		E0E92B551EF62BAD00342DD1 /* DSJSONRequestSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSJSONRequestSerializer.h; sourceTree = "<group>"; };
+		E0E92B561EF62BAD00342DD1 /* DSJSONRequestSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSJSONRequestSerializer.m; sourceTree = "<group>"; };
+		E0E92B571EF62BAD00342DD1 /* DSJSONResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSJSONResponseSerializer.h; sourceTree = "<group>"; };
+		E0E92B581EF62BAD00342DD1 /* DSJSONResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSJSONResponseSerializer.m; sourceTree = "<group>"; };
+		E0E92B591EF62BAD00342DD1 /* DSLastName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSLastName.h; sourceTree = "<group>"; };
+		E0E92B5A1EF62BAD00342DD1 /* DSLastName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSLastName.m; sourceTree = "<group>"; };
+		E0E92B5B1EF62BAD00342DD1 /* DSList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSList.h; sourceTree = "<group>"; };
+		E0E92B5C1EF62BAD00342DD1 /* DSList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSList.m; sourceTree = "<group>"; };
+		E0E92B5D1EF62BAD00342DD1 /* DSListCustomField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSListCustomField.h; sourceTree = "<group>"; };
+		E0E92B5E1EF62BAD00342DD1 /* DSListCustomField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSListCustomField.m; sourceTree = "<group>"; };
+		E0E92B5F1EF62BAD00342DD1 /* DSListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSListItem.h; sourceTree = "<group>"; };
+		E0E92B601EF62BAD00342DD1 /* DSListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSListItem.m; sourceTree = "<group>"; };
+		E0E92B611EF62BAD00342DD1 /* DSLockInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSLockInformation.h; sourceTree = "<group>"; };
+		E0E92B621EF62BAD00342DD1 /* DSLockInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSLockInformation.m; sourceTree = "<group>"; };
+		E0E92B631EF62BAD00342DD1 /* DSLockRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSLockRequest.h; sourceTree = "<group>"; };
+		E0E92B641EF62BAD00342DD1 /* DSLockRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSLockRequest.m; sourceTree = "<group>"; };
+		E0E92B651EF62BAD00342DD1 /* DSLoginAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSLoginAccount.h; sourceTree = "<group>"; };
+		E0E92B661EF62BAD00342DD1 /* DSLoginAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSLoginAccount.m; sourceTree = "<group>"; };
+		E0E92B671EF62BAD00342DD1 /* DSLoginInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSLoginInformation.h; sourceTree = "<group>"; };
+		E0E92B681EF62BAD00342DD1 /* DSLoginInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSLoginInformation.m; sourceTree = "<group>"; };
+		E0E92B691EF62BAD00342DD1 /* DSMatchBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSMatchBox.h; sourceTree = "<group>"; };
+		E0E92B6A1EF62BAD00342DD1 /* DSMatchBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSMatchBox.m; sourceTree = "<group>"; };
+		E0E92B6B1EF62BAD00342DD1 /* DSMemberSharedItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSMemberSharedItems.h; sourceTree = "<group>"; };
+		E0E92B6C1EF62BAD00342DD1 /* DSMemberSharedItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSMemberSharedItems.m; sourceTree = "<group>"; };
+		E0E92B6D1EF62BAD00342DD1 /* DSMergeField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSMergeField.h; sourceTree = "<group>"; };
+		E0E92B6E1EF62BAD00342DD1 /* DSMergeField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSMergeField.m; sourceTree = "<group>"; };
+		E0E92B6F1EF62BAD00342DD1 /* DSNameValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSNameValue.h; sourceTree = "<group>"; };
+		E0E92B701EF62BAD00342DD1 /* DSNameValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSNameValue.m; sourceTree = "<group>"; };
+		E0E92B711EF62BAD00342DD1 /* DSNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSNote.h; sourceTree = "<group>"; };
+		E0E92B721EF62BAD00342DD1 /* DSNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSNote.m; sourceTree = "<group>"; };
+		E0E92B731EF62BAD00342DD1 /* DSNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSNotification.h; sourceTree = "<group>"; };
+		E0E92B741EF62BAD00342DD1 /* DSNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSNotification.m; sourceTree = "<group>"; };
+		E0E92B751EF62BAD00342DD1 /* DSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSObject.h; sourceTree = "<group>"; };
+		E0E92B761EF62BAD00342DD1 /* DSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSObject.m; sourceTree = "<group>"; };
+		E0E92B771EF62BAD00342DD1 /* DSOfflineAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSOfflineAttributes.h; sourceTree = "<group>"; };
+		E0E92B781EF62BAD00342DD1 /* DSOfflineAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSOfflineAttributes.m; sourceTree = "<group>"; };
+		E0E92B791EF62BAD00342DD1 /* DSPageRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPageRequest.h; sourceTree = "<group>"; };
+		E0E92B7A1EF62BAD00342DD1 /* DSPageRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPageRequest.m; sourceTree = "<group>"; };
+		E0E92B7B1EF62BAD00342DD1 /* DSQueryParamCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSQueryParamCollection.h; sourceTree = "<group>"; };
+		E0E92B7C1EF62BAD00342DD1 /* DSQueryParamCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSQueryParamCollection.m; sourceTree = "<group>"; };
+		E0E92B7D1EF62BAD00342DD1 /* DSRadio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRadio.h; sourceTree = "<group>"; };
+		E0E92B7E1EF62BAD00342DD1 /* DSRadio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRadio.m; sourceTree = "<group>"; };
+		E0E92B7F1EF62BAD00342DD1 /* DSRadioGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRadioGroup.h; sourceTree = "<group>"; };
+		E0E92B801EF62BAD00342DD1 /* DSRadioGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRadioGroup.m; sourceTree = "<group>"; };
+		E0E92B811EF62BAD00342DD1 /* DSRecipientEmailNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRecipientEmailNotification.h; sourceTree = "<group>"; };
+		E0E92B821EF62BAD00342DD1 /* DSRecipientEmailNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRecipientEmailNotification.m; sourceTree = "<group>"; };
+		E0E92B831EF62BAD00342DD1 /* DSRecipientEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRecipientEvent.h; sourceTree = "<group>"; };
+		E0E92B841EF62BAD00342DD1 /* DSRecipientEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRecipientEvent.m; sourceTree = "<group>"; };
+		E0E92B851EF62BAD00342DD1 /* DSRecipientPhoneAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRecipientPhoneAuthentication.h; sourceTree = "<group>"; };
+		E0E92B861EF62BAD00342DD1 /* DSRecipientPhoneAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRecipientPhoneAuthentication.m; sourceTree = "<group>"; };
+		E0E92B871EF62BAD00342DD1 /* DSRecipients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRecipients.h; sourceTree = "<group>"; };
+		E0E92B881EF62BAD00342DD1 /* DSRecipients.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRecipients.m; sourceTree = "<group>"; };
+		E0E92B891EF62BAD00342DD1 /* DSRecipientSAMLAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRecipientSAMLAuthentication.h; sourceTree = "<group>"; };
+		E0E92B8A1EF62BAD00342DD1 /* DSRecipientSAMLAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRecipientSAMLAuthentication.m; sourceTree = "<group>"; };
+		E0E92B8B1EF62BAD00342DD1 /* DSRecipientSignatureInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRecipientSignatureInformation.h; sourceTree = "<group>"; };
+		E0E92B8C1EF62BAD00342DD1 /* DSRecipientSignatureInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRecipientSignatureInformation.m; sourceTree = "<group>"; };
+		E0E92B8D1EF62BAD00342DD1 /* DSRecipientSMSAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRecipientSMSAuthentication.h; sourceTree = "<group>"; };
+		E0E92B8E1EF62BAD00342DD1 /* DSRecipientSMSAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRecipientSMSAuthentication.m; sourceTree = "<group>"; };
+		E0E92B8F1EF62BAD00342DD1 /* DSRecipientsUpdateSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRecipientsUpdateSummary.h; sourceTree = "<group>"; };
+		E0E92B901EF62BAD00342DD1 /* DSRecipientsUpdateSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRecipientsUpdateSummary.m; sourceTree = "<group>"; };
+		E0E92B911EF62BAD00342DD1 /* DSRecipientUpdateResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRecipientUpdateResponse.h; sourceTree = "<group>"; };
+		E0E92B921EF62BAD00342DD1 /* DSRecipientUpdateResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRecipientUpdateResponse.m; sourceTree = "<group>"; };
+		E0E92B931EF62BAD00342DD1 /* DSRecipientViewRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRecipientViewRequest.h; sourceTree = "<group>"; };
+		E0E92B941EF62BAD00342DD1 /* DSRecipientViewRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRecipientViewRequest.m; sourceTree = "<group>"; };
+		E0E92B951EF62BAD00342DD1 /* DSReminders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSReminders.h; sourceTree = "<group>"; };
+		E0E92B961EF62BAD00342DD1 /* DSReminders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSReminders.m; sourceTree = "<group>"; };
+		E0E92B971EF62BAD00342DD1 /* DSResourceInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSResourceInformation.h; sourceTree = "<group>"; };
+		E0E92B981EF62BAD00342DD1 /* DSResourceInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSResourceInformation.m; sourceTree = "<group>"; };
+		E0E92B991EF62BAD00342DD1 /* DSReturnUrlRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSReturnUrlRequest.h; sourceTree = "<group>"; };
+		E0E92B9A1EF62BAD00342DD1 /* DSReturnUrlRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSReturnUrlRequest.m; sourceTree = "<group>"; };
+		E0E92B9B1EF62BAD00342DD1 /* DSSamlAssertionAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSamlAssertionAttribute.h; sourceTree = "<group>"; };
+		E0E92B9C1EF62BAD00342DD1 /* DSSamlAssertionAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSamlAssertionAttribute.m; sourceTree = "<group>"; };
+		E0E92B9D1EF62BAD00342DD1 /* DSSenderEmailNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSenderEmailNotifications.h; sourceTree = "<group>"; };
+		E0E92B9E1EF62BAD00342DD1 /* DSSenderEmailNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSenderEmailNotifications.m; sourceTree = "<group>"; };
+		E0E92B9F1EF62BAD00342DD1 /* DSServerTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSServerTemplate.h; sourceTree = "<group>"; };
+		E0E92BA01EF62BAD00342DD1 /* DSServerTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSServerTemplate.m; sourceTree = "<group>"; };
+		E0E92BA11EF62BAD00342DD1 /* DSServiceInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSServiceInformation.h; sourceTree = "<group>"; };
+		E0E92BA21EF62BAD00342DD1 /* DSServiceInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSServiceInformation.m; sourceTree = "<group>"; };
+		E0E92BA31EF62BAD00342DD1 /* DSServiceVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSServiceVersion.h; sourceTree = "<group>"; };
+		E0E92BA41EF62BAD00342DD1 /* DSServiceVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSServiceVersion.m; sourceTree = "<group>"; };
+		E0E92BA51EF62BAD00342DD1 /* DSSharedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSharedItem.h; sourceTree = "<group>"; };
+		E0E92BA61EF62BAD00342DD1 /* DSSharedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSharedItem.m; sourceTree = "<group>"; };
+		E0E92BA71EF62BAD00342DD1 /* DSSignatureType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSignatureType.h; sourceTree = "<group>"; };
+		E0E92BA81EF62BAD00342DD1 /* DSSignatureType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSignatureType.m; sourceTree = "<group>"; };
+		E0E92BA91EF62BAD00342DD1 /* DSSigner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSigner.h; sourceTree = "<group>"; };
+		E0E92BAA1EF62BAD00342DD1 /* DSSigner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSigner.m; sourceTree = "<group>"; };
+		E0E92BAB1EF62BAD00342DD1 /* DSSignerAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSignerAttachment.h; sourceTree = "<group>"; };
+		E0E92BAC1EF62BAD00342DD1 /* DSSignerAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSignerAttachment.m; sourceTree = "<group>"; };
+		E0E92BAD1EF62BAD00342DD1 /* DSSignerEmailNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSignerEmailNotifications.h; sourceTree = "<group>"; };
+		E0E92BAE1EF62BAD00342DD1 /* DSSignerEmailNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSignerEmailNotifications.m; sourceTree = "<group>"; };
+		E0E92BAF1EF62BAD00342DD1 /* DSSignHere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSignHere.h; sourceTree = "<group>"; };
+		E0E92BB01EF62BAD00342DD1 /* DSSignHere.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSignHere.m; sourceTree = "<group>"; };
+		E0E92BB11EF62BAD00342DD1 /* DSSocialAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSocialAuthentication.h; sourceTree = "<group>"; };
+		E0E92BB21EF62BAD00342DD1 /* DSSocialAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSocialAuthentication.m; sourceTree = "<group>"; };
+		E0E92BB31EF62BAD00342DD1 /* DSSsn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSsn.h; sourceTree = "<group>"; };
+		E0E92BB41EF62BAD00342DD1 /* DSSsn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSsn.m; sourceTree = "<group>"; };
+		E0E92BB51EF62BAD00342DD1 /* DSSsn4InformationInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSsn4InformationInput.h; sourceTree = "<group>"; };
+		E0E92BB61EF62BAE00342DD1 /* DSSsn4InformationInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSsn4InformationInput.m; sourceTree = "<group>"; };
+		E0E92BB71EF62BAE00342DD1 /* DSSsn9InformationInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSsn9InformationInput.h; sourceTree = "<group>"; };
+		E0E92BB81EF62BAE00342DD1 /* DSSsn9InformationInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSsn9InformationInput.m; sourceTree = "<group>"; };
+		E0E92BB91EF62BAE00342DD1 /* DSTabMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTabMetadata.h; sourceTree = "<group>"; };
+		E0E92BBA1EF62BAE00342DD1 /* DSTabMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTabMetadata.m; sourceTree = "<group>"; };
+		E0E92BBB1EF62BAE00342DD1 /* DSTabMetadataList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTabMetadataList.h; sourceTree = "<group>"; };
+		E0E92BBC1EF62BAE00342DD1 /* DSTabMetadataList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTabMetadataList.m; sourceTree = "<group>"; };
+		E0E92BBD1EF62BAE00342DD1 /* DSTabs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTabs.h; sourceTree = "<group>"; };
+		E0E92BBE1EF62BAE00342DD1 /* DSTabs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTabs.m; sourceTree = "<group>"; };
+		E0E92BBF1EF62BAE00342DD1 /* DSTemplateCustomFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTemplateCustomFields.h; sourceTree = "<group>"; };
+		E0E92BC01EF62BAE00342DD1 /* DSTemplateCustomFields.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTemplateCustomFields.m; sourceTree = "<group>"; };
+		E0E92BC11EF62BAE00342DD1 /* DSTemplateDocumentsResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTemplateDocumentsResult.h; sourceTree = "<group>"; };
+		E0E92BC21EF62BAE00342DD1 /* DSTemplateDocumentsResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTemplateDocumentsResult.m; sourceTree = "<group>"; };
+		E0E92BC31EF62BAE00342DD1 /* DSTemplateInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTemplateInformation.h; sourceTree = "<group>"; };
+		E0E92BC41EF62BAE00342DD1 /* DSTemplateInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTemplateInformation.m; sourceTree = "<group>"; };
+		E0E92BC51EF62BAE00342DD1 /* DSTemplateMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTemplateMatch.h; sourceTree = "<group>"; };
+		E0E92BC61EF62BAE00342DD1 /* DSTemplateMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTemplateMatch.m; sourceTree = "<group>"; };
+		E0E92BC71EF62BAE00342DD1 /* DSTemplateNotificationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTemplateNotificationRequest.h; sourceTree = "<group>"; };
+		E0E92BC81EF62BAE00342DD1 /* DSTemplateNotificationRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTemplateNotificationRequest.m; sourceTree = "<group>"; };
+		E0E92BC91EF62BAE00342DD1 /* DSTemplateRecipients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTemplateRecipients.h; sourceTree = "<group>"; };
+		E0E92BCA1EF62BAE00342DD1 /* DSTemplateRecipients.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTemplateRecipients.m; sourceTree = "<group>"; };
+		E0E92BCB1EF62BAE00342DD1 /* DSTemplateRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTemplateRole.h; sourceTree = "<group>"; };
+		E0E92BCC1EF62BAE00342DD1 /* DSTemplateRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTemplateRole.m; sourceTree = "<group>"; };
+		E0E92BCD1EF62BAE00342DD1 /* DSTemplatesApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTemplatesApi.h; sourceTree = "<group>"; };
+		E0E92BCE1EF62BAE00342DD1 /* DSTemplatesApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTemplatesApi.m; sourceTree = "<group>"; };
+		E0E92BCF1EF62BAE00342DD1 /* DSTemplateSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTemplateSummary.h; sourceTree = "<group>"; };
+		E0E92BD01EF62BAE00342DD1 /* DSTemplateSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTemplateSummary.m; sourceTree = "<group>"; };
+		E0E92BD11EF62BAE00342DD1 /* DSTemplateTabs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTemplateTabs.h; sourceTree = "<group>"; };
+		E0E92BD21EF62BAE00342DD1 /* DSTemplateTabs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTemplateTabs.m; sourceTree = "<group>"; };
+		E0E92BD31EF62BAE00342DD1 /* DSTemplateUpdateSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTemplateUpdateSummary.h; sourceTree = "<group>"; };
+		E0E92BD41EF62BAE00342DD1 /* DSTemplateUpdateSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTemplateUpdateSummary.m; sourceTree = "<group>"; };
+		E0E92BD51EF62BAE00342DD1 /* DSText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSText.h; sourceTree = "<group>"; };
+		E0E92BD61EF62BAE00342DD1 /* DSText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSText.m; sourceTree = "<group>"; };
+		E0E92BD71EF62BAE00342DD1 /* DSTextCustomField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTextCustomField.h; sourceTree = "<group>"; };
+		E0E92BD81EF62BAE00342DD1 /* DSTextCustomField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTextCustomField.m; sourceTree = "<group>"; };
+		E0E92BD91EF62BAE00342DD1 /* DSTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTitle.h; sourceTree = "<group>"; };
+		E0E92BDA1EF62BAE00342DD1 /* DSTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTitle.m; sourceTree = "<group>"; };
+		E0E92BDB1EF62BAE00342DD1 /* DSUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSUserInfo.h; sourceTree = "<group>"; };
+		E0E92BDC1EF62BAE00342DD1 /* DSUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUserInfo.m; sourceTree = "<group>"; };
+		E0E92BDD1EF62BAE00342DD1 /* DSUsersApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSUsersApi.h; sourceTree = "<group>"; };
+		E0E92BDE1EF62BAE00342DD1 /* DSUsersApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUsersApi.m; sourceTree = "<group>"; };
+		E0E92BDF1EF62BAE00342DD1 /* DSUserSettingsInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSUserSettingsInformation.h; sourceTree = "<group>"; };
+		E0E92BE01EF62BAE00342DD1 /* DSUserSettingsInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUserSettingsInformation.m; sourceTree = "<group>"; };
+		E0E92BE11EF62BAE00342DD1 /* DSViewLinkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSViewLinkRequest.h; sourceTree = "<group>"; };
+		E0E92BE21EF62BAE00342DD1 /* DSViewLinkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSViewLinkRequest.m; sourceTree = "<group>"; };
+		E0E92BE31EF62BAE00342DD1 /* DSViewUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSViewUrl.h; sourceTree = "<group>"; };
+		E0E92BE41EF62BAE00342DD1 /* DSViewUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSViewUrl.m; sourceTree = "<group>"; };
+		E0E92BE51EF62BAE00342DD1 /* DSZip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSZip.h; sourceTree = "<group>"; };
+		E0E92BE61EF62BAE00342DD1 /* DSZip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSZip.m; sourceTree = "<group>"; };
+		E0E92BE71EF62BAE00342DD1 /* JSONValueTransformer+ISO8601.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONValueTransformer+ISO8601.h"; sourceTree = "<group>"; };
+		E0E92BE81EF62BAE00342DD1 /* JSONValueTransformer+ISO8601.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONValueTransformer+ISO8601.m"; sourceTree = "<group>"; };
+		E0E92BE91EF62BAE00342DD1 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		E0E92BEA1EF62BAE00342DD1 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		E0E92BEB1EF62BAE00342DD1 /* Number.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Number.h; sourceTree = "<group>"; };
+		E0E92BEC1EF62BAE00342DD1 /* Number.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Number.m; sourceTree = "<group>"; };
+		E0E92BED1EF62BAE00342DD1 /* ISO8601.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISO8601.h; sourceTree = "<group>"; };
+		E0E92D5A1EF6347000342DD1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0E92D5C1EF6347000342DD1 /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
+		E0E92D5D1EF6347000342DD1 /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
+		E0E92D5E1EF6347000342DD1 /* JSONModelClassProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelClassProperty.h; sourceTree = "<group>"; };
+		E0E92D5F1EF6347000342DD1 /* JSONModelClassProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelClassProperty.m; sourceTree = "<group>"; };
+		E0E92D601EF6347000342DD1 /* JSONModelError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelError.h; sourceTree = "<group>"; };
+		E0E92D611EF6347000342DD1 /* JSONModelError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelError.m; sourceTree = "<group>"; };
+		E0E92D621EF6347000342DD1 /* JSONModelLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelLib.h; sourceTree = "<group>"; };
+		E0E92D641EF6347000342DD1 /* JSONAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONAPI.h; sourceTree = "<group>"; };
+		E0E92D651EF6347000342DD1 /* JSONAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONAPI.m; sourceTree = "<group>"; };
+		E0E92D661EF6347000342DD1 /* JSONHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHTTPClient.h; sourceTree = "<group>"; };
+		E0E92D671EF6347000342DD1 /* JSONHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONHTTPClient.m; sourceTree = "<group>"; };
+		E0E92D681EF6347000342DD1 /* JSONModel+networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONModel+networking.h"; sourceTree = "<group>"; };
+		E0E92D691EF6347000342DD1 /* JSONModel+networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONModel+networking.m"; sourceTree = "<group>"; };
+		E0E92D6B1EF6347000342DD1 /* JSONKeyMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKeyMapper.h; sourceTree = "<group>"; };
+		E0E92D6C1EF6347000342DD1 /* JSONKeyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKeyMapper.m; sourceTree = "<group>"; };
+		E0E92D6D1EF6347000342DD1 /* JSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONValueTransformer.h; sourceTree = "<group>"; };
+		E0E92D6E1EF6347000342DD1 /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
+		E0E92D6F1EF6347000342DD1 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		E0E92D711EF6347000342DD1 /* ISO8601.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISO8601.h; sourceTree = "<group>"; };
+		E0E92D721EF6347000342DD1 /* ISO8601Serialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISO8601Serialization.h; sourceTree = "<group>"; };
+		E0E92D731EF6347000342DD1 /* ISO8601Serialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISO8601Serialization.m; sourceTree = "<group>"; };
+		E0E92D741EF6347000342DD1 /* NSDate+ISO8601.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ISO8601.h"; sourceTree = "<group>"; };
+		E0E92D751EF6347000342DD1 /* NSDate+ISO8601.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ISO8601.m"; sourceTree = "<group>"; };
+		E0E92D841EF6364500342DD1 /* TestViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController1.h; sourceTree = "<group>"; };
+		E0E92D851EF6364500342DD1 /* TestViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController1.m; sourceTree = "<group>"; };
+		E0E92D871EF63FB600342DD1 /* Test.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Test.pdf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E0E92A751EF62B2C00342DD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E0E92A6F1EF62B2C00342DD1 = {
+			isa = PBXGroup;
+			children = (
+				E0E92A7A1EF62B2C00342DD1 /* DocuSignTest1 */,
+				E0E92A791EF62B2C00342DD1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E0E92A791EF62B2C00342DD1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E0E92A781EF62B2C00342DD1 /* DocuSignTest1.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E0E92A7A1EF62B2C00342DD1 /* DocuSignTest1 */ = {
+			isa = PBXGroup;
+			children = (
+				E0E92D841EF6364500342DD1 /* TestViewController1.h */,
+				E0E92D851EF6364500342DD1 /* TestViewController1.m */,
+				E0E92D871EF63FB600342DD1 /* Test.pdf */,
+				E0E92D591EF6346F00342DD1 /* JSONModel */,
+				E0E92A941EF62BAD00342DD1 /* AFNetworking */,
+				E0E92AA81EF62BAD00342DD1 /* DocuSignESign */,
+				E0E92BED1EF62BAE00342DD1 /* ISO8601.h */,
+				E0E92A7B1EF62B2C00342DD1 /* AppDelegate.swift */,
+				E0E92A7D1EF62B2C00342DD1 /* ViewController.swift */,
+				E0E92A7F1EF62B2C00342DD1 /* Main.storyboard */,
+				E0E92A851EF62B2C00342DD1 /* Assets.xcassets */,
+				E0E92A871EF62B2D00342DD1 /* LaunchScreen.storyboard */,
+				E0E92A8A1EF62B2D00342DD1 /* Info.plist */,
+				E0E92A821EF62B2C00342DD1 /* DocuSignTest1.xcdatamodeld */,
+				E0E92A901EF62B6800342DD1 /* DocuSignTest1-Bridging-Header.h */,
+			);
+			path = DocuSignTest1;
+			sourceTree = "<group>";
+		};
+		E0E92A941EF62BAD00342DD1 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				E0E92A951EF62BAD00342DD1 /* AFHTTPRequestOperation.h */,
+				E0E92A961EF62BAD00342DD1 /* AFHTTPRequestOperation.m */,
+				E0E92A971EF62BAD00342DD1 /* AFHTTPRequestOperationManager.h */,
+				E0E92A981EF62BAD00342DD1 /* AFHTTPRequestOperationManager.m */,
+				E0E92A991EF62BAD00342DD1 /* AFHTTPSessionManager.h */,
+				E0E92A9A1EF62BAD00342DD1 /* AFHTTPSessionManager.m */,
+				E0E92A9B1EF62BAD00342DD1 /* AFNetworking.h */,
+				E0E92A9C1EF62BAD00342DD1 /* AFNetworkReachabilityManager.h */,
+				E0E92A9D1EF62BAD00342DD1 /* AFNetworkReachabilityManager.m */,
+				E0E92A9E1EF62BAD00342DD1 /* AFSecurityPolicy.h */,
+				E0E92A9F1EF62BAD00342DD1 /* AFSecurityPolicy.m */,
+				E0E92AA01EF62BAD00342DD1 /* AFURLConnectionOperation.h */,
+				E0E92AA11EF62BAD00342DD1 /* AFURLConnectionOperation.m */,
+				E0E92AA21EF62BAD00342DD1 /* AFURLRequestSerialization.h */,
+				E0E92AA31EF62BAD00342DD1 /* AFURLRequestSerialization.m */,
+				E0E92AA41EF62BAD00342DD1 /* AFURLResponseSerialization.h */,
+				E0E92AA51EF62BAD00342DD1 /* AFURLResponseSerialization.m */,
+				E0E92AA61EF62BAD00342DD1 /* AFURLSessionManager.h */,
+				E0E92AA71EF62BAD00342DD1 /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		E0E92AA81EF62BAD00342DD1 /* DocuSignESign */ = {
+			isa = PBXGroup;
+			children = (
+				E0E92AA91EF62BAD00342DD1 /* Date.h */,
+				E0E92AAA1EF62BAD00342DD1 /* Date.m */,
+				E0E92AAB1EF62BAD00342DD1 /* DSAccountInformation.h */,
+				E0E92AAC1EF62BAD00342DD1 /* DSAccountInformation.m */,
+				E0E92AAD1EF62BAD00342DD1 /* DSAccountsApi.h */,
+				E0E92AAE1EF62BAD00342DD1 /* DSAccountsApi.m */,
+				E0E92AAF1EF62BAD00342DD1 /* DSAccountSettingsInformation.h */,
+				E0E92AB01EF62BAD00342DD1 /* DSAccountSettingsInformation.m */,
+				E0E92AB11EF62BAD00342DD1 /* DSAccountSharedAccess.h */,
+				E0E92AB21EF62BAD00342DD1 /* DSAccountSharedAccess.m */,
+				E0E92AB31EF62BAD00342DD1 /* DSAddressInformation.h */,
+				E0E92AB41EF62BAD00342DD1 /* DSAddressInformation.m */,
+				E0E92AB51EF62BAD00342DD1 /* DSAddressInformationInput.h */,
+				E0E92AB61EF62BAD00342DD1 /* DSAddressInformationInput.m */,
+				E0E92AB71EF62BAD00342DD1 /* DSAgent.h */,
+				E0E92AB81EF62BAD00342DD1 /* DSAgent.m */,
+				E0E92AB91EF62BAD00342DD1 /* DSApiClient.h */,
+				E0E92ABA1EF62BAD00342DD1 /* DSApiClient.m */,
+				E0E92ABB1EF62BAD00342DD1 /* DSApiRequestLog.h */,
+				E0E92ABC1EF62BAD00342DD1 /* DSApiRequestLog.m */,
+				E0E92ABD1EF62BAD00342DD1 /* DSApiRequestLogsResult.h */,
+				E0E92ABE1EF62BAD00342DD1 /* DSApiRequestLogsResult.m */,
+				E0E92ABF1EF62BAD00342DD1 /* DSApprove.h */,
+				E0E92AC01EF62BAD00342DD1 /* DSApprove.m */,
+				E0E92AC11EF62BAD00342DD1 /* DSAttachment.h */,
+				E0E92AC21EF62BAD00342DD1 /* DSAttachment.m */,
+				E0E92AC31EF62BAD00342DD1 /* DSAuthenticationApi.h */,
+				E0E92AC41EF62BAD00342DD1 /* DSAuthenticationApi.m */,
+				E0E92AC51EF62BAD00342DD1 /* DSAuthenticationStatus.h */,
+				E0E92AC61EF62BAD00342DD1 /* DSAuthenticationStatus.m */,
+				E0E92AC71EF62BAD00342DD1 /* DSBccEmailAddress.h */,
+				E0E92AC81EF62BAD00342DD1 /* DSBccEmailAddress.m */,
+				E0E92AC91EF62BAD00342DD1 /* DSBulkEnvelope.h */,
+				E0E92ACA1EF62BAD00342DD1 /* DSBulkEnvelope.m */,
+				E0E92ACB1EF62BAD00342DD1 /* DSBulkEnvelopeStatus.h */,
+				E0E92ACC1EF62BAD00342DD1 /* DSBulkEnvelopeStatus.m */,
+				E0E92ACD1EF62BAD00342DD1 /* DSCarbonCopy.h */,
+				E0E92ACE1EF62BAD00342DD1 /* DSCarbonCopy.m */,
+				E0E92ACF1EF62BAD00342DD1 /* DSCertifiedDelivery.h */,
+				E0E92AD01EF62BAD00342DD1 /* DSCertifiedDelivery.m */,
+				E0E92AD11EF62BAD00342DD1 /* DSCheckbox.h */,
+				E0E92AD21EF62BAD00342DD1 /* DSCheckbox.m */,
+				E0E92AD31EF62BAD00342DD1 /* DSCompany.h */,
+				E0E92AD41EF62BAD00342DD1 /* DSCompany.m */,
+				E0E92AD51EF62BAD00342DD1 /* DSCompositeTemplate.h */,
+				E0E92AD61EF62BAD00342DD1 /* DSCompositeTemplate.m */,
+				E0E92AD71EF62BAD00342DD1 /* DSConfiguration.h */,
+				E0E92AD81EF62BAD00342DD1 /* DSConfiguration.m */,
+				E0E92AD91EF62BAD00342DD1 /* DSConsoleViewRequest.h */,
+				E0E92ADA1EF62BAD00342DD1 /* DSConsoleViewRequest.m */,
+				E0E92ADB1EF62BAD00342DD1 /* DSCorrectViewRequest.h */,
+				E0E92ADC1EF62BAD00342DD1 /* DSCorrectViewRequest.m */,
+				E0E92ADD1EF62BAD00342DD1 /* DSCustomFields.h */,
+				E0E92ADE1EF62BAD00342DD1 /* DSCustomFields.m */,
+				E0E92ADF1EF62BAD00342DD1 /* DSCustomFieldsEnvelope.h */,
+				E0E92AE01EF62BAD00342DD1 /* DSCustomFieldsEnvelope.m */,
+				E0E92AE11EF62BAD00342DD1 /* DSCustomFieldV2.h */,
+				E0E92AE21EF62BAD00342DD1 /* DSCustomFieldV2.m */,
+				E0E92AE31EF62BAD00342DD1 /* DSCustomTabsApi.h */,
+				E0E92AE41EF62BAD00342DD1 /* DSCustomTabsApi.m */,
+				E0E92AE51EF62BAD00342DD1 /* DSDateSigned.h */,
+				E0E92AE61EF62BAD00342DD1 /* DSDateSigned.m */,
+				E0E92AE71EF62BAD00342DD1 /* DSDecline.h */,
+				E0E92AE81EF62BAD00342DD1 /* DSDecline.m */,
+				E0E92AE91EF62BAD00342DD1 /* DSDiagnosticsApi.h */,
+				E0E92AEA1EF62BAD00342DD1 /* DSDiagnosticsApi.m */,
+				E0E92AEB1EF62BAD00342DD1 /* DSDiagnosticsSettingsInformation.h */,
+				E0E92AEC1EF62BAD00342DD1 /* DSDiagnosticsSettingsInformation.m */,
+				E0E92AED1EF62BAD00342DD1 /* DSDobInformationInput.h */,
+				E0E92AEE1EF62BAD00342DD1 /* DSDobInformationInput.m */,
+				E0E92AEF1EF62BAD00342DD1 /* DSDocument.h */,
+				E0E92AF01EF62BAD00342DD1 /* DSDocument.m */,
+				E0E92AF11EF62BAD00342DD1 /* DSDocumentFieldsInformation.h */,
+				E0E92AF21EF62BAD00342DD1 /* DSDocumentFieldsInformation.m */,
+				E0E92AF31EF62BAD00342DD1 /* DSDocumentTemplate.h */,
+				E0E92AF41EF62BAD00342DD1 /* DSDocumentTemplate.m */,
+				E0E92AF51EF62BAD00342DD1 /* DSDocumentTemplateList.h */,
+				E0E92AF61EF62BAD00342DD1 /* DSDocumentTemplateList.m */,
+				E0E92AF71EF62BAD00342DD1 /* DSEditor.h */,
+				E0E92AF81EF62BAD00342DD1 /* DSEditor.m */,
+				E0E92AF91EF62BAD00342DD1 /* DSEmail.h */,
+				E0E92AFA1EF62BAD00342DD1 /* DSEmail.m */,
+				E0E92AFB1EF62BAD00342DD1 /* DSEmailAddress.h */,
+				E0E92AFC1EF62BAD00342DD1 /* DSEmailAddress.m */,
+				E0E92AFD1EF62BAD00342DD1 /* DSEmailSettings.h */,
+				E0E92AFE1EF62BAD00342DD1 /* DSEmailSettings.m */,
+				E0E92AFF1EF62BAD00342DD1 /* DSEnvelope.h */,
+				E0E92B001EF62BAD00342DD1 /* DSEnvelope.m */,
+				E0E92B011EF62BAD00342DD1 /* DSEnvelopeAuditEvent.h */,
+				E0E92B021EF62BAD00342DD1 /* DSEnvelopeAuditEvent.m */,
+				E0E92B031EF62BAD00342DD1 /* DSEnvelopeAuditEventResponse.h */,
+				E0E92B041EF62BAD00342DD1 /* DSEnvelopeAuditEventResponse.m */,
+				E0E92B051EF62BAD00342DD1 /* DSEnvelopeDefinition.h */,
+				E0E92B061EF62BAD00342DD1 /* DSEnvelopeDefinition.m */,
+				E0E92B071EF62BAD00342DD1 /* DSEnvelopeDocument.h */,
+				E0E92B081EF62BAD00342DD1 /* DSEnvelopeDocument.m */,
+				E0E92B091EF62BAD00342DD1 /* DSEnvelopeDocumentsResult.h */,
+				E0E92B0A1EF62BAD00342DD1 /* DSEnvelopeDocumentsResult.m */,
+				E0E92B0B1EF62BAD00342DD1 /* DSEnvelopeEvent.h */,
+				E0E92B0C1EF62BAD00342DD1 /* DSEnvelopeEvent.m */,
+				E0E92B0D1EF62BAD00342DD1 /* DSEnvelopeId.h */,
+				E0E92B0E1EF62BAD00342DD1 /* DSEnvelopeId.m */,
+				E0E92B0F1EF62BAD00342DD1 /* DSEnvelopeIdsRequest.h */,
+				E0E92B101EF62BAD00342DD1 /* DSEnvelopeIdsRequest.m */,
+				E0E92B111EF62BAD00342DD1 /* DSEnvelopesApi.h */,
+				E0E92B121EF62BAD00342DD1 /* DSEnvelopesApi.m */,
+				E0E92B131EF62BAD00342DD1 /* DSEnvelopesInformation.h */,
+				E0E92B141EF62BAD00342DD1 /* DSEnvelopesInformation.m */,
+				E0E92B151EF62BAD00342DD1 /* DSEnvelopeSummary.h */,
+				E0E92B161EF62BAD00342DD1 /* DSEnvelopeSummary.m */,
+				E0E92B171EF62BAD00342DD1 /* DSEnvelopeTemplate.h */,
+				E0E92B181EF62BAD00342DD1 /* DSEnvelopeTemplate.m */,
+				E0E92B191EF62BAD00342DD1 /* DSEnvelopeTemplateDefinition.h */,
+				E0E92B1A1EF62BAD00342DD1 /* DSEnvelopeTemplateDefinition.m */,
+				E0E92B1B1EF62BAD00342DD1 /* DSEnvelopeTemplateResult.h */,
+				E0E92B1C1EF62BAD00342DD1 /* DSEnvelopeTemplateResult.m */,
+				E0E92B1D1EF62BAD00342DD1 /* DSEnvelopeTemplateResults.h */,
+				E0E92B1E1EF62BAD00342DD1 /* DSEnvelopeTemplateResults.m */,
+				E0E92B1F1EF62BAD00342DD1 /* DSEnvelopeTransactionStatus.h */,
+				E0E92B201EF62BAD00342DD1 /* DSEnvelopeTransactionStatus.m */,
+				E0E92B211EF62BAD00342DD1 /* DSEnvelopeUpdateSummary.h */,
+				E0E92B221EF62BAD00342DD1 /* DSEnvelopeUpdateSummary.m */,
+				E0E92B231EF62BAD00342DD1 /* DSErrorDetails.h */,
+				E0E92B241EF62BAD00342DD1 /* DSErrorDetails.m */,
+				E0E92B251EF62BAD00342DD1 /* DSEventNotification.h */,
+				E0E92B261EF62BAD00342DD1 /* DSEventNotification.m */,
+				E0E92B271EF62BAD00342DD1 /* DSEventResult.h */,
+				E0E92B281EF62BAD00342DD1 /* DSEventResult.m */,
+				E0E92B291EF62BAD00342DD1 /* DSExpirations.h */,
+				E0E92B2A1EF62BAD00342DD1 /* DSExpirations.m */,
+				E0E92B2B1EF62BAD00342DD1 /* DSFileType.h */,
+				E0E92B2C1EF62BAD00342DD1 /* DSFileType.m */,
+				E0E92B2D1EF62BAD00342DD1 /* DSFileTypeList.h */,
+				E0E92B2E1EF62BAD00342DD1 /* DSFileTypeList.m */,
+				E0E92B2F1EF62BAD00342DD1 /* DSFilter.h */,
+				E0E92B301EF62BAD00342DD1 /* DSFilter.m */,
+				E0E92B311EF62BAD00342DD1 /* DSFirstName.h */,
+				E0E92B321EF62BAD00342DD1 /* DSFirstName.m */,
+				E0E92B331EF62BAD00342DD1 /* DSFolder.h */,
+				E0E92B341EF62BAD00342DD1 /* DSFolder.m */,
+				E0E92B351EF62BAD00342DD1 /* DSFolderItem.h */,
+				E0E92B361EF62BAD00342DD1 /* DSFolderItem.m */,
+				E0E92B371EF62BAD00342DD1 /* DSFolderItemResponse.h */,
+				E0E92B381EF62BAD00342DD1 /* DSFolderItemResponse.m */,
+				E0E92B391EF62BAD00342DD1 /* DSFolderItemsResponse.h */,
+				E0E92B3A1EF62BAD00342DD1 /* DSFolderItemsResponse.m */,
+				E0E92B3B1EF62BAD00342DD1 /* DSFolderItemV2.h */,
+				E0E92B3C1EF62BAD00342DD1 /* DSFolderItemV2.m */,
+				E0E92B3D1EF62BAD00342DD1 /* DSFoldersApi.h */,
+				E0E92B3E1EF62BAD00342DD1 /* DSFoldersApi.m */,
+				E0E92B3F1EF62BAD00342DD1 /* DSFoldersRequest.h */,
+				E0E92B401EF62BAD00342DD1 /* DSFoldersRequest.m */,
+				E0E92B411EF62BAD00342DD1 /* DSFoldersResponse.h */,
+				E0E92B421EF62BAD00342DD1 /* DSFoldersResponse.m */,
+				E0E92B431EF62BAD00342DD1 /* DSFormulaTab.h */,
+				E0E92B441EF62BAD00342DD1 /* DSFormulaTab.m */,
+				E0E92B451EF62BAD00342DD1 /* DSFullName.h */,
+				E0E92B461EF62BAD00342DD1 /* DSFullName.m */,
+				E0E92B471EF62BAD00342DD1 /* DSGroup.h */,
+				E0E92B481EF62BAD00342DD1 /* DSGroup.m */,
+				E0E92B491EF62BAD00342DD1 /* DSGroupInformation.h */,
+				E0E92B4A1EF62BAD00342DD1 /* DSGroupInformation.m */,
+				E0E92B4B1EF62BAD00342DD1 /* DSIdCheckInformationInput.h */,
+				E0E92B4C1EF62BAD00342DD1 /* DSIdCheckInformationInput.m */,
+				E0E92B4D1EF62BAD00342DD1 /* DSInitialHere.h */,
+				E0E92B4E1EF62BAD00342DD1 /* DSInitialHere.m */,
+				E0E92B4F1EF62BAD00342DD1 /* DSInlineTemplate.h */,
+				E0E92B501EF62BAD00342DD1 /* DSInlineTemplate.m */,
+				E0E92B511EF62BAD00342DD1 /* DSInPersonSigner.h */,
+				E0E92B521EF62BAD00342DD1 /* DSInPersonSigner.m */,
+				E0E92B531EF62BAD00342DD1 /* DSIntermediary.h */,
+				E0E92B541EF62BAD00342DD1 /* DSIntermediary.m */,
+				E0E92B551EF62BAD00342DD1 /* DSJSONRequestSerializer.h */,
+				E0E92B561EF62BAD00342DD1 /* DSJSONRequestSerializer.m */,
+				E0E92B571EF62BAD00342DD1 /* DSJSONResponseSerializer.h */,
+				E0E92B581EF62BAD00342DD1 /* DSJSONResponseSerializer.m */,
+				E0E92B591EF62BAD00342DD1 /* DSLastName.h */,
+				E0E92B5A1EF62BAD00342DD1 /* DSLastName.m */,
+				E0E92B5B1EF62BAD00342DD1 /* DSList.h */,
+				E0E92B5C1EF62BAD00342DD1 /* DSList.m */,
+				E0E92B5D1EF62BAD00342DD1 /* DSListCustomField.h */,
+				E0E92B5E1EF62BAD00342DD1 /* DSListCustomField.m */,
+				E0E92B5F1EF62BAD00342DD1 /* DSListItem.h */,
+				E0E92B601EF62BAD00342DD1 /* DSListItem.m */,
+				E0E92B611EF62BAD00342DD1 /* DSLockInformation.h */,
+				E0E92B621EF62BAD00342DD1 /* DSLockInformation.m */,
+				E0E92B631EF62BAD00342DD1 /* DSLockRequest.h */,
+				E0E92B641EF62BAD00342DD1 /* DSLockRequest.m */,
+				E0E92B651EF62BAD00342DD1 /* DSLoginAccount.h */,
+				E0E92B661EF62BAD00342DD1 /* DSLoginAccount.m */,
+				E0E92B671EF62BAD00342DD1 /* DSLoginInformation.h */,
+				E0E92B681EF62BAD00342DD1 /* DSLoginInformation.m */,
+				E0E92B691EF62BAD00342DD1 /* DSMatchBox.h */,
+				E0E92B6A1EF62BAD00342DD1 /* DSMatchBox.m */,
+				E0E92B6B1EF62BAD00342DD1 /* DSMemberSharedItems.h */,
+				E0E92B6C1EF62BAD00342DD1 /* DSMemberSharedItems.m */,
+				E0E92B6D1EF62BAD00342DD1 /* DSMergeField.h */,
+				E0E92B6E1EF62BAD00342DD1 /* DSMergeField.m */,
+				E0E92B6F1EF62BAD00342DD1 /* DSNameValue.h */,
+				E0E92B701EF62BAD00342DD1 /* DSNameValue.m */,
+				E0E92B711EF62BAD00342DD1 /* DSNote.h */,
+				E0E92B721EF62BAD00342DD1 /* DSNote.m */,
+				E0E92B731EF62BAD00342DD1 /* DSNotification.h */,
+				E0E92B741EF62BAD00342DD1 /* DSNotification.m */,
+				E0E92B751EF62BAD00342DD1 /* DSObject.h */,
+				E0E92B761EF62BAD00342DD1 /* DSObject.m */,
+				E0E92B771EF62BAD00342DD1 /* DSOfflineAttributes.h */,
+				E0E92B781EF62BAD00342DD1 /* DSOfflineAttributes.m */,
+				E0E92B791EF62BAD00342DD1 /* DSPageRequest.h */,
+				E0E92B7A1EF62BAD00342DD1 /* DSPageRequest.m */,
+				E0E92B7B1EF62BAD00342DD1 /* DSQueryParamCollection.h */,
+				E0E92B7C1EF62BAD00342DD1 /* DSQueryParamCollection.m */,
+				E0E92B7D1EF62BAD00342DD1 /* DSRadio.h */,
+				E0E92B7E1EF62BAD00342DD1 /* DSRadio.m */,
+				E0E92B7F1EF62BAD00342DD1 /* DSRadioGroup.h */,
+				E0E92B801EF62BAD00342DD1 /* DSRadioGroup.m */,
+				E0E92B811EF62BAD00342DD1 /* DSRecipientEmailNotification.h */,
+				E0E92B821EF62BAD00342DD1 /* DSRecipientEmailNotification.m */,
+				E0E92B831EF62BAD00342DD1 /* DSRecipientEvent.h */,
+				E0E92B841EF62BAD00342DD1 /* DSRecipientEvent.m */,
+				E0E92B851EF62BAD00342DD1 /* DSRecipientPhoneAuthentication.h */,
+				E0E92B861EF62BAD00342DD1 /* DSRecipientPhoneAuthentication.m */,
+				E0E92B871EF62BAD00342DD1 /* DSRecipients.h */,
+				E0E92B881EF62BAD00342DD1 /* DSRecipients.m */,
+				E0E92B891EF62BAD00342DD1 /* DSRecipientSAMLAuthentication.h */,
+				E0E92B8A1EF62BAD00342DD1 /* DSRecipientSAMLAuthentication.m */,
+				E0E92B8B1EF62BAD00342DD1 /* DSRecipientSignatureInformation.h */,
+				E0E92B8C1EF62BAD00342DD1 /* DSRecipientSignatureInformation.m */,
+				E0E92B8D1EF62BAD00342DD1 /* DSRecipientSMSAuthentication.h */,
+				E0E92B8E1EF62BAD00342DD1 /* DSRecipientSMSAuthentication.m */,
+				E0E92B8F1EF62BAD00342DD1 /* DSRecipientsUpdateSummary.h */,
+				E0E92B901EF62BAD00342DD1 /* DSRecipientsUpdateSummary.m */,
+				E0E92B911EF62BAD00342DD1 /* DSRecipientUpdateResponse.h */,
+				E0E92B921EF62BAD00342DD1 /* DSRecipientUpdateResponse.m */,
+				E0E92B931EF62BAD00342DD1 /* DSRecipientViewRequest.h */,
+				E0E92B941EF62BAD00342DD1 /* DSRecipientViewRequest.m */,
+				E0E92B951EF62BAD00342DD1 /* DSReminders.h */,
+				E0E92B961EF62BAD00342DD1 /* DSReminders.m */,
+				E0E92B971EF62BAD00342DD1 /* DSResourceInformation.h */,
+				E0E92B981EF62BAD00342DD1 /* DSResourceInformation.m */,
+				E0E92B991EF62BAD00342DD1 /* DSReturnUrlRequest.h */,
+				E0E92B9A1EF62BAD00342DD1 /* DSReturnUrlRequest.m */,
+				E0E92B9B1EF62BAD00342DD1 /* DSSamlAssertionAttribute.h */,
+				E0E92B9C1EF62BAD00342DD1 /* DSSamlAssertionAttribute.m */,
+				E0E92B9D1EF62BAD00342DD1 /* DSSenderEmailNotifications.h */,
+				E0E92B9E1EF62BAD00342DD1 /* DSSenderEmailNotifications.m */,
+				E0E92B9F1EF62BAD00342DD1 /* DSServerTemplate.h */,
+				E0E92BA01EF62BAD00342DD1 /* DSServerTemplate.m */,
+				E0E92BA11EF62BAD00342DD1 /* DSServiceInformation.h */,
+				E0E92BA21EF62BAD00342DD1 /* DSServiceInformation.m */,
+				E0E92BA31EF62BAD00342DD1 /* DSServiceVersion.h */,
+				E0E92BA41EF62BAD00342DD1 /* DSServiceVersion.m */,
+				E0E92BA51EF62BAD00342DD1 /* DSSharedItem.h */,
+				E0E92BA61EF62BAD00342DD1 /* DSSharedItem.m */,
+				E0E92BA71EF62BAD00342DD1 /* DSSignatureType.h */,
+				E0E92BA81EF62BAD00342DD1 /* DSSignatureType.m */,
+				E0E92BA91EF62BAD00342DD1 /* DSSigner.h */,
+				E0E92BAA1EF62BAD00342DD1 /* DSSigner.m */,
+				E0E92BAB1EF62BAD00342DD1 /* DSSignerAttachment.h */,
+				E0E92BAC1EF62BAD00342DD1 /* DSSignerAttachment.m */,
+				E0E92BAD1EF62BAD00342DD1 /* DSSignerEmailNotifications.h */,
+				E0E92BAE1EF62BAD00342DD1 /* DSSignerEmailNotifications.m */,
+				E0E92BAF1EF62BAD00342DD1 /* DSSignHere.h */,
+				E0E92BB01EF62BAD00342DD1 /* DSSignHere.m */,
+				E0E92BB11EF62BAD00342DD1 /* DSSocialAuthentication.h */,
+				E0E92BB21EF62BAD00342DD1 /* DSSocialAuthentication.m */,
+				E0E92BB31EF62BAD00342DD1 /* DSSsn.h */,
+				E0E92BB41EF62BAD00342DD1 /* DSSsn.m */,
+				E0E92BB51EF62BAD00342DD1 /* DSSsn4InformationInput.h */,
+				E0E92BB61EF62BAE00342DD1 /* DSSsn4InformationInput.m */,
+				E0E92BB71EF62BAE00342DD1 /* DSSsn9InformationInput.h */,
+				E0E92BB81EF62BAE00342DD1 /* DSSsn9InformationInput.m */,
+				E0E92BB91EF62BAE00342DD1 /* DSTabMetadata.h */,
+				E0E92BBA1EF62BAE00342DD1 /* DSTabMetadata.m */,
+				E0E92BBB1EF62BAE00342DD1 /* DSTabMetadataList.h */,
+				E0E92BBC1EF62BAE00342DD1 /* DSTabMetadataList.m */,
+				E0E92BBD1EF62BAE00342DD1 /* DSTabs.h */,
+				E0E92BBE1EF62BAE00342DD1 /* DSTabs.m */,
+				E0E92BBF1EF62BAE00342DD1 /* DSTemplateCustomFields.h */,
+				E0E92BC01EF62BAE00342DD1 /* DSTemplateCustomFields.m */,
+				E0E92BC11EF62BAE00342DD1 /* DSTemplateDocumentsResult.h */,
+				E0E92BC21EF62BAE00342DD1 /* DSTemplateDocumentsResult.m */,
+				E0E92BC31EF62BAE00342DD1 /* DSTemplateInformation.h */,
+				E0E92BC41EF62BAE00342DD1 /* DSTemplateInformation.m */,
+				E0E92BC51EF62BAE00342DD1 /* DSTemplateMatch.h */,
+				E0E92BC61EF62BAE00342DD1 /* DSTemplateMatch.m */,
+				E0E92BC71EF62BAE00342DD1 /* DSTemplateNotificationRequest.h */,
+				E0E92BC81EF62BAE00342DD1 /* DSTemplateNotificationRequest.m */,
+				E0E92BC91EF62BAE00342DD1 /* DSTemplateRecipients.h */,
+				E0E92BCA1EF62BAE00342DD1 /* DSTemplateRecipients.m */,
+				E0E92BCB1EF62BAE00342DD1 /* DSTemplateRole.h */,
+				E0E92BCC1EF62BAE00342DD1 /* DSTemplateRole.m */,
+				E0E92BCD1EF62BAE00342DD1 /* DSTemplatesApi.h */,
+				E0E92BCE1EF62BAE00342DD1 /* DSTemplatesApi.m */,
+				E0E92BCF1EF62BAE00342DD1 /* DSTemplateSummary.h */,
+				E0E92BD01EF62BAE00342DD1 /* DSTemplateSummary.m */,
+				E0E92BD11EF62BAE00342DD1 /* DSTemplateTabs.h */,
+				E0E92BD21EF62BAE00342DD1 /* DSTemplateTabs.m */,
+				E0E92BD31EF62BAE00342DD1 /* DSTemplateUpdateSummary.h */,
+				E0E92BD41EF62BAE00342DD1 /* DSTemplateUpdateSummary.m */,
+				E0E92BD51EF62BAE00342DD1 /* DSText.h */,
+				E0E92BD61EF62BAE00342DD1 /* DSText.m */,
+				E0E92BD71EF62BAE00342DD1 /* DSTextCustomField.h */,
+				E0E92BD81EF62BAE00342DD1 /* DSTextCustomField.m */,
+				E0E92BD91EF62BAE00342DD1 /* DSTitle.h */,
+				E0E92BDA1EF62BAE00342DD1 /* DSTitle.m */,
+				E0E92BDB1EF62BAE00342DD1 /* DSUserInfo.h */,
+				E0E92BDC1EF62BAE00342DD1 /* DSUserInfo.m */,
+				E0E92BDD1EF62BAE00342DD1 /* DSUsersApi.h */,
+				E0E92BDE1EF62BAE00342DD1 /* DSUsersApi.m */,
+				E0E92BDF1EF62BAE00342DD1 /* DSUserSettingsInformation.h */,
+				E0E92BE01EF62BAE00342DD1 /* DSUserSettingsInformation.m */,
+				E0E92BE11EF62BAE00342DD1 /* DSViewLinkRequest.h */,
+				E0E92BE21EF62BAE00342DD1 /* DSViewLinkRequest.m */,
+				E0E92BE31EF62BAE00342DD1 /* DSViewUrl.h */,
+				E0E92BE41EF62BAE00342DD1 /* DSViewUrl.m */,
+				E0E92BE51EF62BAE00342DD1 /* DSZip.h */,
+				E0E92BE61EF62BAE00342DD1 /* DSZip.m */,
+				E0E92BE71EF62BAE00342DD1 /* JSONValueTransformer+ISO8601.h */,
+				E0E92BE81EF62BAE00342DD1 /* JSONValueTransformer+ISO8601.m */,
+				E0E92BE91EF62BAE00342DD1 /* MBProgressHUD.h */,
+				E0E92BEA1EF62BAE00342DD1 /* MBProgressHUD.m */,
+				E0E92BEB1EF62BAE00342DD1 /* Number.h */,
+				E0E92BEC1EF62BAE00342DD1 /* Number.m */,
+			);
+			path = DocuSignESign;
+			sourceTree = "<group>";
+		};
+		E0E92D591EF6346F00342DD1 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				E0E92D5A1EF6347000342DD1 /* Info.plist */,
+				E0E92D5B1EF6347000342DD1 /* JSONModel */,
+				E0E92D621EF6347000342DD1 /* JSONModelLib.h */,
+				E0E92D631EF6347000342DD1 /* JSONModelNetworking */,
+				E0E92D6A1EF6347000342DD1 /* JSONModelTransformations */,
+				E0E92D6F1EF6347000342DD1 /* module.modulemap */,
+				E0E92D701EF6347000342DD1 /* Sources */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		E0E92D5B1EF6347000342DD1 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				E0E92D5C1EF6347000342DD1 /* JSONModel.h */,
+				E0E92D5D1EF6347000342DD1 /* JSONModel.m */,
+				E0E92D5E1EF6347000342DD1 /* JSONModelClassProperty.h */,
+				E0E92D5F1EF6347000342DD1 /* JSONModelClassProperty.m */,
+				E0E92D601EF6347000342DD1 /* JSONModelError.h */,
+				E0E92D611EF6347000342DD1 /* JSONModelError.m */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		E0E92D631EF6347000342DD1 /* JSONModelNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				E0E92D641EF6347000342DD1 /* JSONAPI.h */,
+				E0E92D651EF6347000342DD1 /* JSONAPI.m */,
+				E0E92D661EF6347000342DD1 /* JSONHTTPClient.h */,
+				E0E92D671EF6347000342DD1 /* JSONHTTPClient.m */,
+				E0E92D681EF6347000342DD1 /* JSONModel+networking.h */,
+				E0E92D691EF6347000342DD1 /* JSONModel+networking.m */,
+			);
+			path = JSONModelNetworking;
+			sourceTree = "<group>";
+		};
+		E0E92D6A1EF6347000342DD1 /* JSONModelTransformations */ = {
+			isa = PBXGroup;
+			children = (
+				E0E92D6B1EF6347000342DD1 /* JSONKeyMapper.h */,
+				E0E92D6C1EF6347000342DD1 /* JSONKeyMapper.m */,
+				E0E92D6D1EF6347000342DD1 /* JSONValueTransformer.h */,
+				E0E92D6E1EF6347000342DD1 /* JSONValueTransformer.m */,
+			);
+			path = JSONModelTransformations;
+			sourceTree = "<group>";
+		};
+		E0E92D701EF6347000342DD1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E0E92D711EF6347000342DD1 /* ISO8601.h */,
+				E0E92D721EF6347000342DD1 /* ISO8601Serialization.h */,
+				E0E92D731EF6347000342DD1 /* ISO8601Serialization.m */,
+				E0E92D741EF6347000342DD1 /* NSDate+ISO8601.h */,
+				E0E92D751EF6347000342DD1 /* NSDate+ISO8601.m */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E0E92A771EF62B2C00342DD1 /* DocuSignTest1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0E92A8D1EF62B2D00342DD1 /* Build configuration list for PBXNativeTarget "DocuSignTest1" */;
+			buildPhases = (
+				E0E92A741EF62B2C00342DD1 /* Sources */,
+				E0E92A751EF62B2C00342DD1 /* Frameworks */,
+				E0E92A761EF62B2C00342DD1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DocuSignTest1;
+			productName = DocuSignTest1;
+			productReference = E0E92A781EF62B2C00342DD1 /* DocuSignTest1.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E0E92A701EF62B2C00342DD1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "chinnababu kamanuri";
+				TargetAttributes = {
+					E0E92A771EF62B2C00342DD1 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 4XT9ZE7FHM;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = E0E92A731EF62B2C00342DD1 /* Build configuration list for PBXProject "DocuSignTest1" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E0E92A6F1EF62B2C00342DD1;
+			productRefGroup = E0E92A791EF62B2C00342DD1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E0E92A771EF62B2C00342DD1 /* DocuSignTest1 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E0E92A761EF62B2C00342DD1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0E92D881EF63FB600342DD1 /* Test.pdf in Resources */,
+				E0E92D761EF6347000342DD1 /* Info.plist in Resources */,
+				E0E92A891EF62B2D00342DD1 /* LaunchScreen.storyboard in Resources */,
+				E0E92A861EF62B2C00342DD1 /* Assets.xcassets in Resources */,
+				E0E92A811EF62B2C00342DD1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E0E92A741EF62B2C00342DD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0E92CB71EF62BAE00342DD1 /* DSZip.m in Sources */,
+				E0E92A841EF62B2C00342DD1 /* DocuSignTest1.xcdatamodeld in Sources */,
+				E0E92C1F1EF62BAE00342DD1 /* DSAddressInformationInput.m in Sources */,
+				E0E92C191EF62BAE00342DD1 /* Date.m in Sources */,
+				E0E92C961EF62BAE00342DD1 /* DSServiceVersion.m in Sources */,
+				E0E92C7F1EF62BAE00342DD1 /* DSObject.m in Sources */,
+				E0E92C411EF62BAE00342DD1 /* DSEmail.m in Sources */,
+				E0E92C7B1EF62BAE00342DD1 /* DSMergeField.m in Sources */,
+				E0E92C821EF62BAE00342DD1 /* DSQueryParamCollection.m in Sources */,
+				E0E92C641EF62BAE00342DD1 /* DSFoldersRequest.m in Sources */,
+				E0E92C1A1EF62BAE00342DD1 /* DSAccountInformation.m in Sources */,
+				E0E92C3B1EF62BAE00342DD1 /* DSDobInformationInput.m in Sources */,
+				E0E92C3F1EF62BAE00342DD1 /* DSDocumentTemplateList.m in Sources */,
+				E0E92C6F1EF62BAE00342DD1 /* DSJSONRequestSerializer.m in Sources */,
+				E0E92C141EF62BAE00342DD1 /* AFSecurityPolicy.m in Sources */,
+				E0E92CA51EF62BAE00342DD1 /* DSTemplateDocumentsResult.m in Sources */,
+				E0E92A7E1EF62B2C00342DD1 /* ViewController.swift in Sources */,
+				E0E92C6E1EF62BAE00342DD1 /* DSIntermediary.m in Sources */,
+				E0E92C111EF62BAE00342DD1 /* AFHTTPRequestOperationManager.m in Sources */,
+				E0E92C841EF62BAE00342DD1 /* DSRadioGroup.m in Sources */,
+				E0E92C341EF62BAE00342DD1 /* DSCustomFieldsEnvelope.m in Sources */,
+				E0E92C3C1EF62BAE00342DD1 /* DSDocument.m in Sources */,
+				E0E92CA21EF62BAE00342DD1 /* DSTabMetadataList.m in Sources */,
+				E0E92C831EF62BAE00342DD1 /* DSRadio.m in Sources */,
+				E0E92C601EF62BAE00342DD1 /* DSFolderItemResponse.m in Sources */,
+				E0E92C791EF62BAE00342DD1 /* DSMatchBox.m in Sources */,
+				E0E92C541EF62BAE00342DD1 /* DSEnvelopeTransactionStatus.m in Sources */,
+				E0E92CB31EF62BAE00342DD1 /* DSUsersApi.m in Sources */,
+				E0E92C6B1EF62BAE00342DD1 /* DSInitialHere.m in Sources */,
+				E0E92C431EF62BAE00342DD1 /* DSEmailSettings.m in Sources */,
+				E0E92CA61EF62BAE00342DD1 /* DSTemplateInformation.m in Sources */,
+				E0E92CAC1EF62BAE00342DD1 /* DSTemplateSummary.m in Sources */,
+				E0E92C4F1EF62BAE00342DD1 /* DSEnvelopeSummary.m in Sources */,
+				E0E92C7C1EF62BAE00342DD1 /* DSNameValue.m in Sources */,
+				E0E92C4D1EF62BAE00342DD1 /* DSEnvelopesApi.m in Sources */,
+				E0E92C281EF62BAE00342DD1 /* DSBccEmailAddress.m in Sources */,
+				E0E92C951EF62BAE00342DD1 /* DSServiceInformation.m in Sources */,
+				E0E92CB91EF62BAE00342DD1 /* MBProgressHUD.m in Sources */,
+				E0E92C611EF62BAE00342DD1 /* DSFolderItemsResponse.m in Sources */,
+				E0E92C9C1EF62BAE00342DD1 /* DSSignHere.m in Sources */,
+				E0E92D861EF6364500342DD1 /* TestViewController1.m in Sources */,
+				E0E92C911EF62BAE00342DD1 /* DSReturnUrlRequest.m in Sources */,
+				E0E92C151EF62BAE00342DD1 /* AFURLConnectionOperation.m in Sources */,
+				E0E92C971EF62BAE00342DD1 /* DSSharedItem.m in Sources */,
+				E0E92C101EF62BAE00342DD1 /* AFHTTPRequestOperation.m in Sources */,
+				E0E92C721EF62BAE00342DD1 /* DSList.m in Sources */,
+				E0E92C5E1EF62BAE00342DD1 /* DSFolder.m in Sources */,
+				E0E92C881EF62BAE00342DD1 /* DSRecipients.m in Sources */,
+				E0E92C231EF62BAE00342DD1 /* DSApiRequestLogsResult.m in Sources */,
+				E0E92C401EF62BAE00342DD1 /* DSEditor.m in Sources */,
+				E0E92C1E1EF62BAE00342DD1 /* DSAddressInformation.m in Sources */,
+				E0E92C8B1EF62BAE00342DD1 /* DSRecipientSMSAuthentication.m in Sources */,
+				E0E92C9F1EF62BAE00342DD1 /* DSSsn4InformationInput.m in Sources */,
+				E0E92C631EF62BAE00342DD1 /* DSFoldersApi.m in Sources */,
+				E0E92C931EF62BAE00342DD1 /* DSSenderEmailNotifications.m in Sources */,
+				E0E92C241EF62BAE00342DD1 /* DSApprove.m in Sources */,
+				E0E92C731EF62BAE00342DD1 /* DSListCustomField.m in Sources */,
+				E0E92C381EF62BAE00342DD1 /* DSDecline.m in Sources */,
+				E0E92CB61EF62BAE00342DD1 /* DSViewUrl.m in Sources */,
+				E0E92C941EF62BAE00342DD1 /* DSServerTemplate.m in Sources */,
+				E0E92C701EF62BAE00342DD1 /* DSJSONResponseSerializer.m in Sources */,
+				E0E92C7D1EF62BAE00342DD1 /* DSNote.m in Sources */,
+				E0E92A7C1EF62B2C00342DD1 /* AppDelegate.swift in Sources */,
+				E0E92D7A1EF6347000342DD1 /* JSONAPI.m in Sources */,
+				E0E92C671EF62BAE00342DD1 /* DSFullName.m in Sources */,
+				E0E92CA11EF62BAE00342DD1 /* DSTabMetadata.m in Sources */,
+				E0E92C3A1EF62BAE00342DD1 /* DSDiagnosticsSettingsInformation.m in Sources */,
+				E0E92C451EF62BAE00342DD1 /* DSEnvelopeAuditEvent.m in Sources */,
+				E0E92D7C1EF6347000342DD1 /* JSONModel+networking.m in Sources */,
+				E0E92C321EF62BAE00342DD1 /* DSCorrectViewRequest.m in Sources */,
+				E0E92CA31EF62BAE00342DD1 /* DSTabs.m in Sources */,
+				E0E92CAD1EF62BAE00342DD1 /* DSTemplateTabs.m in Sources */,
+				E0E92D791EF6347000342DD1 /* JSONModelError.m in Sources */,
+				E0E92C2F1EF62BAE00342DD1 /* DSCompositeTemplate.m in Sources */,
+				E0E92C8E1EF62BAE00342DD1 /* DSRecipientViewRequest.m in Sources */,
+				E0E92C991EF62BAE00342DD1 /* DSSigner.m in Sources */,
+				E0E92CB51EF62BAE00342DD1 /* DSViewLinkRequest.m in Sources */,
+				E0E92C9E1EF62BAE00342DD1 /* DSSsn.m in Sources */,
+				E0E92C6D1EF62BAE00342DD1 /* DSInPersonSigner.m in Sources */,
+				E0E92C441EF62BAE00342DD1 /* DSEnvelope.m in Sources */,
+				E0E92D801EF6347000342DD1 /* NSDate+ISO8601.m in Sources */,
+				E0E92C161EF62BAE00342DD1 /* AFURLRequestSerialization.m in Sources */,
+				E0E92C301EF62BAE00342DD1 /* DSConfiguration.m in Sources */,
+				E0E92CA01EF62BAE00342DD1 /* DSSsn9InformationInput.m in Sources */,
+				E0E92C741EF62BAE00342DD1 /* DSListItem.m in Sources */,
+				E0E92C5B1EF62BAE00342DD1 /* DSFileTypeList.m in Sources */,
+				E0E92C761EF62BAE00342DD1 /* DSLockRequest.m in Sources */,
+				E0E92CAB1EF62BAE00342DD1 /* DSTemplatesApi.m in Sources */,
+				E0E92C811EF62BAE00342DD1 /* DSPageRequest.m in Sources */,
+				E0E92CB01EF62BAE00342DD1 /* DSTextCustomField.m in Sources */,
+				E0E92C221EF62BAE00342DD1 /* DSApiRequestLog.m in Sources */,
+				E0E92C621EF62BAE00342DD1 /* DSFolderItemV2.m in Sources */,
+				E0E92C801EF62BAE00342DD1 /* DSOfflineAttributes.m in Sources */,
+				E0E92C2B1EF62BAE00342DD1 /* DSCarbonCopy.m in Sources */,
+				E0E92C511EF62BAE00342DD1 /* DSEnvelopeTemplateDefinition.m in Sources */,
+				E0E92C471EF62BAE00342DD1 /* DSEnvelopeDefinition.m in Sources */,
+				E0E92C571EF62BAE00342DD1 /* DSEventNotification.m in Sources */,
+				E0E92D7E1EF6347000342DD1 /* JSONValueTransformer.m in Sources */,
+				E0E92C421EF62BAE00342DD1 /* DSEmailAddress.m in Sources */,
+				E0E92C3D1EF62BAE00342DD1 /* DSDocumentFieldsInformation.m in Sources */,
+				E0E92C121EF62BAE00342DD1 /* AFHTTPSessionManager.m in Sources */,
+				E0E92C861EF62BAE00342DD1 /* DSRecipientEvent.m in Sources */,
+				E0E92C5A1EF62BAE00342DD1 /* DSFileType.m in Sources */,
+				E0E92CAF1EF62BAE00342DD1 /* DSText.m in Sources */,
+				E0E92C8F1EF62BAE00342DD1 /* DSReminders.m in Sources */,
+				E0E92C5F1EF62BAE00342DD1 /* DSFolderItem.m in Sources */,
+				E0E92CAE1EF62BAE00342DD1 /* DSTemplateUpdateSummary.m in Sources */,
+				E0E92C651EF62BAE00342DD1 /* DSFoldersResponse.m in Sources */,
+				E0E92C4A1EF62BAE00342DD1 /* DSEnvelopeEvent.m in Sources */,
+				E0E92C1B1EF62BAE00342DD1 /* DSAccountsApi.m in Sources */,
+				E0E92CA81EF62BAE00342DD1 /* DSTemplateNotificationRequest.m in Sources */,
+				E0E92CAA1EF62BAE00342DD1 /* DSTemplateRole.m in Sources */,
+				E0E92C2D1EF62BAE00342DD1 /* DSCheckbox.m in Sources */,
+				E0E92C461EF62BAE00342DD1 /* DSEnvelopeAuditEventResponse.m in Sources */,
+				E0E92C2E1EF62BAE00342DD1 /* DSCompany.m in Sources */,
+				E0E92D7D1EF6347000342DD1 /* JSONKeyMapper.m in Sources */,
+				E0E92CBA1EF62BAE00342DD1 /* Number.m in Sources */,
+				E0E92C8C1EF62BAE00342DD1 /* DSRecipientsUpdateSummary.m in Sources */,
+				E0E92C1C1EF62BAE00342DD1 /* DSAccountSettingsInformation.m in Sources */,
+				E0E92C7E1EF62BAE00342DD1 /* DSNotification.m in Sources */,
+				E0E92C871EF62BAE00342DD1 /* DSRecipientPhoneAuthentication.m in Sources */,
+				E0E92C901EF62BAE00342DD1 /* DSResourceInformation.m in Sources */,
+				E0E92C271EF62BAE00342DD1 /* DSAuthenticationStatus.m in Sources */,
+				E0E92C481EF62BAE00342DD1 /* DSEnvelopeDocument.m in Sources */,
+				E0E92C4B1EF62BAE00342DD1 /* DSEnvelopeId.m in Sources */,
+				E0E92C561EF62BAE00342DD1 /* DSErrorDetails.m in Sources */,
+				E0E92D771EF6347000342DD1 /* JSONModel.m in Sources */,
+				E0E92C9D1EF62BAE00342DD1 /* DSSocialAuthentication.m in Sources */,
+				E0E92C3E1EF62BAE00342DD1 /* DSDocumentTemplate.m in Sources */,
+				E0E92CB11EF62BAE00342DD1 /* DSTitle.m in Sources */,
+				E0E92C751EF62BAE00342DD1 /* DSLockInformation.m in Sources */,
+				E0E92C5C1EF62BAE00342DD1 /* DSFilter.m in Sources */,
+				E0E92CA41EF62BAE00342DD1 /* DSTemplateCustomFields.m in Sources */,
+				E0E92C261EF62BAE00342DD1 /* DSAuthenticationApi.m in Sources */,
+				E0E92C4E1EF62BAE00342DD1 /* DSEnvelopesInformation.m in Sources */,
+				E0E92D7F1EF6347000342DD1 /* ISO8601Serialization.m in Sources */,
+				E0E92CA71EF62BAE00342DD1 /* DSTemplateMatch.m in Sources */,
+				E0E92C131EF62BAE00342DD1 /* AFNetworkReachabilityManager.m in Sources */,
+				E0E92C771EF62BAE00342DD1 /* DSLoginAccount.m in Sources */,
+				E0E92CB41EF62BAE00342DD1 /* DSUserSettingsInformation.m in Sources */,
+				E0E92C681EF62BAE00342DD1 /* DSGroup.m in Sources */,
+				E0E92C331EF62BAE00342DD1 /* DSCustomFields.m in Sources */,
+				E0E92C171EF62BAE00342DD1 /* AFURLResponseSerialization.m in Sources */,
+				E0E92D7B1EF6347000342DD1 /* JSONHTTPClient.m in Sources */,
+				E0E92C391EF62BAE00342DD1 /* DSDiagnosticsApi.m in Sources */,
+				E0E92C851EF62BAE00342DD1 /* DSRecipientEmailNotification.m in Sources */,
+				E0E92CB21EF62BAE00342DD1 /* DSUserInfo.m in Sources */,
+				E0E92C781EF62BAE00342DD1 /* DSLoginInformation.m in Sources */,
+				E0E92C661EF62BAE00342DD1 /* DSFormulaTab.m in Sources */,
+				E0E92C181EF62BAE00342DD1 /* AFURLSessionManager.m in Sources */,
+				E0E92C351EF62BAE00342DD1 /* DSCustomFieldV2.m in Sources */,
+				E0E92C981EF62BAE00342DD1 /* DSSignatureType.m in Sources */,
+				E0E92C591EF62BAE00342DD1 /* DSExpirations.m in Sources */,
+				E0E92C711EF62BAE00342DD1 /* DSLastName.m in Sources */,
+				E0E92C8A1EF62BAE00342DD1 /* DSRecipientSignatureInformation.m in Sources */,
+				E0E92C581EF62BAE00342DD1 /* DSEventResult.m in Sources */,
+				E0E92C521EF62BAE00342DD1 /* DSEnvelopeTemplateResult.m in Sources */,
+				E0E92C531EF62BAE00342DD1 /* DSEnvelopeTemplateResults.m in Sources */,
+				E0E92CA91EF62BAE00342DD1 /* DSTemplateRecipients.m in Sources */,
+				E0E92C311EF62BAE00342DD1 /* DSConsoleViewRequest.m in Sources */,
+				E0E92C9B1EF62BAE00342DD1 /* DSSignerEmailNotifications.m in Sources */,
+				E0E92C291EF62BAE00342DD1 /* DSBulkEnvelope.m in Sources */,
+				E0E92C251EF62BAE00342DD1 /* DSAttachment.m in Sources */,
+				E0E92CB81EF62BAE00342DD1 /* JSONValueTransformer+ISO8601.m in Sources */,
+				E0E92C551EF62BAE00342DD1 /* DSEnvelopeUpdateSummary.m in Sources */,
+				E0E92C361EF62BAE00342DD1 /* DSCustomTabsApi.m in Sources */,
+				E0E92C491EF62BAE00342DD1 /* DSEnvelopeDocumentsResult.m in Sources */,
+				E0E92C501EF62BAE00342DD1 /* DSEnvelopeTemplate.m in Sources */,
+				E0E92C921EF62BAE00342DD1 /* DSSamlAssertionAttribute.m in Sources */,
+				E0E92C6C1EF62BAE00342DD1 /* DSInlineTemplate.m in Sources */,
+				E0E92C891EF62BAE00342DD1 /* DSRecipientSAMLAuthentication.m in Sources */,
+				E0E92C2C1EF62BAE00342DD1 /* DSCertifiedDelivery.m in Sources */,
+				E0E92C4C1EF62BAE00342DD1 /* DSEnvelopeIdsRequest.m in Sources */,
+				E0E92C7A1EF62BAE00342DD1 /* DSMemberSharedItems.m in Sources */,
+				E0E92C201EF62BAE00342DD1 /* DSAgent.m in Sources */,
+				E0E92C8D1EF62BAE00342DD1 /* DSRecipientUpdateResponse.m in Sources */,
+				E0E92C371EF62BAE00342DD1 /* DSDateSigned.m in Sources */,
+				E0E92C211EF62BAE00342DD1 /* DSApiClient.m in Sources */,
+				E0E92D781EF6347000342DD1 /* JSONModelClassProperty.m in Sources */,
+				E0E92C6A1EF62BAE00342DD1 /* DSIdCheckInformationInput.m in Sources */,
+				E0E92C1D1EF62BAE00342DD1 /* DSAccountSharedAccess.m in Sources */,
+				E0E92C691EF62BAE00342DD1 /* DSGroupInformation.m in Sources */,
+				E0E92C5D1EF62BAE00342DD1 /* DSFirstName.m in Sources */,
+				E0E92C9A1EF62BAE00342DD1 /* DSSignerAttachment.m in Sources */,
+				E0E92C2A1EF62BAE00342DD1 /* DSBulkEnvelopeStatus.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E0E92A7F1EF62B2C00342DD1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0E92A801EF62B2C00342DD1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E0E92A871EF62B2D00342DD1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0E92A881EF62B2D00342DD1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E0E92A8B1EF62B2D00342DD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = mh_execute;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E0E92A8C1EF62B2D00342DD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = mh_execute;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E0E92A8E1EF62B2D00342DD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 4XT9ZE7FHM;
+				ENABLE_BITCODE = YES;
+				INFOPLIST_FILE = DocuSignTest1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "chinnababu.2k14-gmail.com";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DocuSignTest1/DocuSignTest1-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E0E92A8F1EF62B2D00342DD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 4XT9ZE7FHM;
+				ENABLE_BITCODE = YES;
+				INFOPLIST_FILE = DocuSignTest1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "chinnababu.2k14-gmail.com";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DocuSignTest1/DocuSignTest1-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E0E92A731EF62B2C00342DD1 /* Build configuration list for PBXProject "DocuSignTest1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0E92A8B1EF62B2D00342DD1 /* Debug */,
+				E0E92A8C1EF62B2D00342DD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0E92A8D1EF62B2D00342DD1 /* Build configuration list for PBXNativeTarget "DocuSignTest1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0E92A8E1EF62B2D00342DD1 /* Debug */,
+				E0E92A8F1EF62B2D00342DD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E0E92A821EF62B2C00342DD1 /* DocuSignTest1.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E0E92A831EF62B2C00342DD1 /* DocuSignTest1.xcdatamodel */,
+			);
+			currentVersion = E0E92A831EF62B2C00342DD1 /* DocuSignTest1.xcdatamodel */;
+			path = DocuSignTest1.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E0E92A701EF62B2C00342DD1 /* Project object */;
+}
