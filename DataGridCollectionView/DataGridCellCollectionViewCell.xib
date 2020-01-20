@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ContentCellIdentifier" id="gTV-IL-0wX" customClass="DataGridCellCollectionViewCell" customModule="DataGridCollectionView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="217" height="121"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="217" height="121"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kat-lT-Csh">
+                        <rect key="frame" x="50" y="44" width="167" height="77"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqT-Sz-D1y">
+                        <rect key="frame" x="10" y="70" width="25" height="25"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="BTI-VF-GkD"/>
+                            <constraint firstAttribute="width" constant="25" id="lPO-06-wwb"/>
+                        </constraints>
+                        <connections>
+                            <action selector="editButtonAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="cDJ-oJ-L0Q"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vqT-Sz-D1y" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="10" id="4Sc-nl-AgB"/>
+                <constraint firstItem="kat-lT-Csh" firstAttribute="leading" secondItem="vqT-Sz-D1y" secondAttribute="trailing" constant="15" id="4cq-Ad-tKe"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="kat-lT-Csh" secondAttribute="trailing" id="KZC-gi-bhj"/>
+                <constraint firstItem="vqT-Sz-D1y" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="UcB-wQ-XZT"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="kat-lT-Csh" secondAttribute="bottom" id="Ufi-kU-Efg"/>
+                <constraint firstItem="kat-lT-Csh" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="aDf-5W-jeY"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="217" height="121"/>
+            <connections>
+                <outlet property="editButton" destination="vqT-Sz-D1y" id="PrU-yb-gwV"/>
+                <outlet property="leadingConstraint" destination="lPO-06-wwb" id="7Pv-pw-6EC"/>
+                <outlet property="textLabel" destination="kat-lT-Csh" id="WDf-sJ-6H7"/>
+            </connections>
+            <point key="canvasLocation" x="-207.97101449275365" y="51.897321428571423"/>
+        </collectionViewCell>
+    </objects>
+</document>

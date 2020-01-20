@@ -16,6 +16,11 @@
 		57318CDF23D5B06B00E0C938 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57318CDD23D5B06B00E0C938 /* LaunchScreen.storyboard */; };
 		57318CEA23D5B06C00E0C938 /* DataGridCollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57318CE923D5B06C00E0C938 /* DataGridCollectionViewTests.swift */; };
 		57318CF523D5B06C00E0C938 /* DataGridCollectionViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57318CF423D5B06C00E0C938 /* DataGridCollectionViewUITests.swift */; };
+		57318D0423D5B0B200E0C938 /* DataGridCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57318D0223D5B0B200E0C938 /* DataGridCollectionViewController.swift */; };
+		57318D0523D5B0B200E0C938 /* DataGridCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57318D0323D5B0B200E0C938 /* DataGridCollectionViewController.xib */; };
+		57318D0723D5B16500E0C938 /* CustomCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57318D0623D5B16500E0C938 /* CustomCollectionViewLayout.swift */; };
+		57318D0A23D5C35300E0C938 /* DataGridCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57318D0823D5C35300E0C938 /* DataGridCellCollectionViewCell.swift */; };
+		57318D0B23D5C35400E0C938 /* DataGridCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57318D0923D5C35300E0C938 /* DataGridCellCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		57318CF023D5B06C00E0C938 /* DataGridCollectionViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataGridCollectionViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57318CF423D5B06C00E0C938 /* DataGridCollectionViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGridCollectionViewUITests.swift; sourceTree = "<group>"; };
 		57318CF623D5B06C00E0C938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57318D0223D5B0B200E0C938 /* DataGridCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGridCollectionViewController.swift; sourceTree = "<group>"; };
+		57318D0323D5B0B200E0C938 /* DataGridCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataGridCollectionViewController.xib; sourceTree = "<group>"; };
+		57318D0623D5B16500E0C938 /* CustomCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayout.swift; sourceTree = "<group>"; };
+		57318D0823D5C35300E0C938 /* DataGridCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGridCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		57318D0923D5C35300E0C938 /* DataGridCellCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataGridCellCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +114,11 @@
 				57318CCF23D5B06800E0C938 /* AppDelegate.swift */,
 				57318CD123D5B06800E0C938 /* SceneDelegate.swift */,
 				57318CD323D5B06800E0C938 /* ViewController.swift */,
+				57318D0223D5B0B200E0C938 /* DataGridCollectionViewController.swift */,
+				57318D0323D5B0B200E0C938 /* DataGridCollectionViewController.xib */,
+				57318D0823D5C35300E0C938 /* DataGridCellCollectionViewCell.swift */,
+				57318D0923D5C35300E0C938 /* DataGridCellCollectionViewCell.xib */,
+				57318D0623D5B16500E0C938 /* CustomCollectionViewLayout.swift */,
 				57318CD523D5B06800E0C938 /* Main.storyboard */,
 				57318CDB23D5B06B00E0C938 /* Assets.xcassets */,
 				57318CDD23D5B06B00E0C938 /* LaunchScreen.storyboard */,
@@ -235,9 +250,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57318D0523D5B0B200E0C938 /* DataGridCollectionViewController.xib in Resources */,
 				57318CDF23D5B06B00E0C938 /* LaunchScreen.storyboard in Resources */,
 				57318CDC23D5B06B00E0C938 /* Assets.xcassets in Resources */,
 				57318CD723D5B06800E0C938 /* Main.storyboard in Resources */,
+				57318D0B23D5C35400E0C938 /* DataGridCellCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +281,10 @@
 			files = (
 				57318CD423D5B06800E0C938 /* ViewController.swift in Sources */,
 				57318CD023D5B06800E0C938 /* AppDelegate.swift in Sources */,
+				57318D0A23D5C35300E0C938 /* DataGridCellCollectionViewCell.swift in Sources */,
 				57318CDA23D5B06800E0C938 /* DataGridCollectionView.xcdatamodeld in Sources */,
+				57318D0423D5B0B200E0C938 /* DataGridCollectionViewController.swift in Sources */,
+				57318D0723D5B16500E0C938 /* CustomCollectionViewLayout.swift in Sources */,
 				57318CD223D5B06800E0C938 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,14 +458,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = TGP6CVRF7T;
 				INFOPLIST_FILE = DataGridCollectionView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nnn.DataGridCollectionView;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zinier.ios-development";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.zinier.ios-development";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -455,14 +478,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = TGP6CVRF7T;
 				INFOPLIST_FILE = DataGridCollectionView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nnn.DataGridCollectionView;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zinier.ios-development";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.zinier.ios-development";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

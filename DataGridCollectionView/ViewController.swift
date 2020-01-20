@@ -15,6 +15,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func showDataGrid(_ sender: Any) {
+        let vc = DataGridCollectionViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
