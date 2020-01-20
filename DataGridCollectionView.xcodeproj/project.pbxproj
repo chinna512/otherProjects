@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		57318CD023D5B06800E0C938 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57318CCF23D5B06800E0C938 /* AppDelegate.swift */; };
+		57318CD223D5B06800E0C938 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57318CD123D5B06800E0C938 /* SceneDelegate.swift */; };
+		57318CD423D5B06800E0C938 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57318CD323D5B06800E0C938 /* ViewController.swift */; };
+		57318CD723D5B06800E0C938 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57318CD523D5B06800E0C938 /* Main.storyboard */; };
+		57318CDA23D5B06800E0C938 /* DataGridCollectionView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57318CD823D5B06800E0C938 /* DataGridCollectionView.xcdatamodeld */; };
+		57318CDC23D5B06B00E0C938 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57318CDB23D5B06B00E0C938 /* Assets.xcassets */; };
+		57318CDF23D5B06B00E0C938 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57318CDD23D5B06B00E0C938 /* LaunchScreen.storyboard */; };
+		57318CEA23D5B06C00E0C938 /* DataGridCollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57318CE923D5B06C00E0C938 /* DataGridCollectionViewTests.swift */; };
+		57318CF523D5B06C00E0C938 /* DataGridCollectionViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57318CF423D5B06C00E0C938 /* DataGridCollectionViewUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		57318CE623D5B06C00E0C938 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57318CC423D5B06800E0C938 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57318CCB23D5B06800E0C938;
+			remoteInfo = DataGridCollectionView;
+		};
+		57318CF123D5B06C00E0C938 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57318CC423D5B06800E0C938 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57318CCB23D5B06800E0C938;
+			remoteInfo = DataGridCollectionView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		57318CCC23D5B06800E0C938 /* DataGridCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataGridCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57318CCF23D5B06800E0C938 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		57318CD123D5B06800E0C938 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		57318CD323D5B06800E0C938 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		57318CD623D5B06800E0C938 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		57318CD923D5B06800E0C938 /* DataGridCollectionView.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataGridCollectionView.xcdatamodel; sourceTree = "<group>"; };
+		57318CDB23D5B06B00E0C938 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		57318CDE23D5B06B00E0C938 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		57318CE023D5B06B00E0C938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57318CE523D5B06C00E0C938 /* DataGridCollectionViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataGridCollectionViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57318CE923D5B06C00E0C938 /* DataGridCollectionViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGridCollectionViewTests.swift; sourceTree = "<group>"; };
+		57318CEB23D5B06C00E0C938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57318CF023D5B06C00E0C938 /* DataGridCollectionViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataGridCollectionViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57318CF423D5B06C00E0C938 /* DataGridCollectionViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGridCollectionViewUITests.swift; sourceTree = "<group>"; };
+		57318CF623D5B06C00E0C938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		57318CC923D5B06800E0C938 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57318CE223D5B06C00E0C938 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57318CED23D5B06C00E0C938 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		57318CC323D5B06800E0C938 = {
+			isa = PBXGroup;
+			children = (
+				57318CCE23D5B06800E0C938 /* DataGridCollectionView */,
+				57318CE823D5B06C00E0C938 /* DataGridCollectionViewTests */,
+				57318CF323D5B06C00E0C938 /* DataGridCollectionViewUITests */,
+				57318CCD23D5B06800E0C938 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		57318CCD23D5B06800E0C938 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				57318CCC23D5B06800E0C938 /* DataGridCollectionView.app */,
+				57318CE523D5B06C00E0C938 /* DataGridCollectionViewTests.xctest */,
+				57318CF023D5B06C00E0C938 /* DataGridCollectionViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		57318CCE23D5B06800E0C938 /* DataGridCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				57318CCF23D5B06800E0C938 /* AppDelegate.swift */,
+				57318CD123D5B06800E0C938 /* SceneDelegate.swift */,
+				57318CD323D5B06800E0C938 /* ViewController.swift */,
+				57318CD523D5B06800E0C938 /* Main.storyboard */,
+				57318CDB23D5B06B00E0C938 /* Assets.xcassets */,
+				57318CDD23D5B06B00E0C938 /* LaunchScreen.storyboard */,
+				57318CE023D5B06B00E0C938 /* Info.plist */,
+				57318CD823D5B06800E0C938 /* DataGridCollectionView.xcdatamodeld */,
+			);
+			path = DataGridCollectionView;
+			sourceTree = "<group>";
+		};
+		57318CE823D5B06C00E0C938 /* DataGridCollectionViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				57318CE923D5B06C00E0C938 /* DataGridCollectionViewTests.swift */,
+				57318CEB23D5B06C00E0C938 /* Info.plist */,
+			);
+			path = DataGridCollectionViewTests;
+			sourceTree = "<group>";
+		};
+		57318CF323D5B06C00E0C938 /* DataGridCollectionViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				57318CF423D5B06C00E0C938 /* DataGridCollectionViewUITests.swift */,
+				57318CF623D5B06C00E0C938 /* Info.plist */,
+			);
+			path = DataGridCollectionViewUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		57318CCB23D5B06800E0C938 /* DataGridCollectionView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57318CF923D5B06C00E0C938 /* Build configuration list for PBXNativeTarget "DataGridCollectionView" */;
+			buildPhases = (
+				57318CC823D5B06800E0C938 /* Sources */,
+				57318CC923D5B06800E0C938 /* Frameworks */,
+				57318CCA23D5B06800E0C938 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DataGridCollectionView;
+			productName = DataGridCollectionView;
+			productReference = 57318CCC23D5B06800E0C938 /* DataGridCollectionView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		57318CE423D5B06C00E0C938 /* DataGridCollectionViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57318CFC23D5B06C00E0C938 /* Build configuration list for PBXNativeTarget "DataGridCollectionViewTests" */;
+			buildPhases = (
+				57318CE123D5B06C00E0C938 /* Sources */,
+				57318CE223D5B06C00E0C938 /* Frameworks */,
+				57318CE323D5B06C00E0C938 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57318CE723D5B06C00E0C938 /* PBXTargetDependency */,
+			);
+			name = DataGridCollectionViewTests;
+			productName = DataGridCollectionViewTests;
+			productReference = 57318CE523D5B06C00E0C938 /* DataGridCollectionViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		57318CEF23D5B06C00E0C938 /* DataGridCollectionViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57318CFF23D5B06C00E0C938 /* Build configuration list for PBXNativeTarget "DataGridCollectionViewUITests" */;
+			buildPhases = (
+				57318CEC23D5B06C00E0C938 /* Sources */,
+				57318CED23D5B06C00E0C938 /* Frameworks */,
+				57318CEE23D5B06C00E0C938 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57318CF223D5B06C00E0C938 /* PBXTargetDependency */,
+			);
+			name = DataGridCollectionViewUITests;
+			productName = DataGridCollectionViewUITests;
+			productReference = 57318CF023D5B06C00E0C938 /* DataGridCollectionViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		57318CC423D5B06800E0C938 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = chinnababu;
+				TargetAttributes = {
+					57318CCB23D5B06800E0C938 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					57318CE423D5B06C00E0C938 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 57318CCB23D5B06800E0C938;
+					};
+					57318CEF23D5B06C00E0C938 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 57318CCB23D5B06800E0C938;
+					};
+				};
+			};
+			buildConfigurationList = 57318CC723D5B06800E0C938 /* Build configuration list for PBXProject "DataGridCollectionView" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 57318CC323D5B06800E0C938;
+			productRefGroup = 57318CCD23D5B06800E0C938 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				57318CCB23D5B06800E0C938 /* DataGridCollectionView */,
+				57318CE423D5B06C00E0C938 /* DataGridCollectionViewTests */,
+				57318CEF23D5B06C00E0C938 /* DataGridCollectionViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		57318CCA23D5B06800E0C938 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57318CDF23D5B06B00E0C938 /* LaunchScreen.storyboard in Resources */,
+				57318CDC23D5B06B00E0C938 /* Assets.xcassets in Resources */,
+				57318CD723D5B06800E0C938 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57318CE323D5B06C00E0C938 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57318CEE23D5B06C00E0C938 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		57318CC823D5B06800E0C938 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57318CD423D5B06800E0C938 /* ViewController.swift in Sources */,
+				57318CD023D5B06800E0C938 /* AppDelegate.swift in Sources */,
+				57318CDA23D5B06800E0C938 /* DataGridCollectionView.xcdatamodeld in Sources */,
+				57318CD223D5B06800E0C938 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57318CE123D5B06C00E0C938 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57318CEA23D5B06C00E0C938 /* DataGridCollectionViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57318CEC23D5B06C00E0C938 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57318CF523D5B06C00E0C938 /* DataGridCollectionViewUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		57318CE723D5B06C00E0C938 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57318CCB23D5B06800E0C938 /* DataGridCollectionView */;
+			targetProxy = 57318CE623D5B06C00E0C938 /* PBXContainerItemProxy */;
+		};
+		57318CF223D5B06C00E0C938 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57318CCB23D5B06800E0C938 /* DataGridCollectionView */;
+			targetProxy = 57318CF123D5B06C00E0C938 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		57318CD523D5B06800E0C938 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57318CD623D5B06800E0C938 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		57318CDD23D5B06B00E0C938 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57318CDE23D5B06B00E0C938 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		57318CF723D5B06C00E0C938 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		57318CF823D5B06C00E0C938 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		57318CFA23D5B06C00E0C938 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DataGridCollectionView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nnn.DataGridCollectionView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		57318CFB23D5B06C00E0C938 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DataGridCollectionView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nnn.DataGridCollectionView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		57318CFD23D5B06C00E0C938 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DataGridCollectionViewTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nnn.DataGridCollectionViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DataGridCollectionView.app/DataGridCollectionView";
+			};
+			name = Debug;
+		};
+		57318CFE23D5B06C00E0C938 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DataGridCollectionViewTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nnn.DataGridCollectionViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DataGridCollectionView.app/DataGridCollectionView";
+			};
+			name = Release;
+		};
+		57318D0023D5B06C00E0C938 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DataGridCollectionViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nnn.DataGridCollectionViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DataGridCollectionView;
+			};
+			name = Debug;
+		};
+		57318D0123D5B06C00E0C938 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DataGridCollectionViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nnn.DataGridCollectionViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DataGridCollectionView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		57318CC723D5B06800E0C938 /* Build configuration list for PBXProject "DataGridCollectionView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57318CF723D5B06C00E0C938 /* Debug */,
+				57318CF823D5B06C00E0C938 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57318CF923D5B06C00E0C938 /* Build configuration list for PBXNativeTarget "DataGridCollectionView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57318CFA23D5B06C00E0C938 /* Debug */,
+				57318CFB23D5B06C00E0C938 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57318CFC23D5B06C00E0C938 /* Build configuration list for PBXNativeTarget "DataGridCollectionViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57318CFD23D5B06C00E0C938 /* Debug */,
+				57318CFE23D5B06C00E0C938 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57318CFF23D5B06C00E0C938 /* Build configuration list for PBXNativeTarget "DataGridCollectionViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57318D0023D5B06C00E0C938 /* Debug */,
+				57318D0123D5B06C00E0C938 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		57318CD823D5B06800E0C938 /* DataGridCollectionView.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				57318CD923D5B06800E0C938 /* DataGridCollectionView.xcdatamodel */,
+			);
+			currentVersion = 57318CD923D5B06800E0C938 /* DataGridCollectionView.xcdatamodel */;
+			path = DataGridCollectionView.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 57318CC423D5B06800E0C938 /* Project object */;
+}
