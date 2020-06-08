@@ -16,6 +16,15 @@
 		B43E32CA248CC11B009860E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43E32C8248CC11B009860E0 /* LaunchScreen.storyboard */; };
 		B43E32D5248CC11B009860E0 /* MahiCreationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E32D4248CC11B009860E0 /* MahiCreationsTests.swift */; };
 		B43E32E0248CC11B009860E0 /* MahiCreationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E32DF248CC11B009860E0 /* MahiCreationsUITests.swift */; };
+		B4B218FE248CCC2F0093E590 /* OTTListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B218FC248CCC2F0093E590 /* OTTListCell.swift */; };
+		B4B218FF248CCC2F0093E590 /* OTTListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B218FD248CCC2F0093E590 /* OTTListCell.xib */; };
+		B4B21906248CCF000093E590 /* NSManagedObjectContext+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B21903248CCF000093E590 /* NSManagedObjectContext+Helper.swift */; };
+		B4B21907248CCF000093E590 /* NSManagedObject+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B21904248CCF000093E590 /* NSManagedObject+Helper.swift */; };
+		B4B21908248CCF000093E590 /* AppCoredata.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B21905248CCF000093E590 /* AppCoredata.swift */; };
+		B4B2190B248CD1390093E590 /* AddDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B21909248CD1390093E590 /* AddDetailsViewController.swift */; };
+		B4B2190C248CD1390093E590 /* AddDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B2190A248CD1390093E590 /* AddDetailsViewController.xib */; };
+		B4B21913248CDB4A0093E590 /* OTTDetails+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B21911248CDB4A0093E590 /* OTTDetails+CoreDataClass.swift */; };
+		B4B21914248CDB4A0093E590 /* OTTDetails+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B21912248CDB4A0093E590 /* OTTDetails+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +60,15 @@
 		B43E32DB248CC11B009860E0 /* MahiCreationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MahiCreationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43E32DF248CC11B009860E0 /* MahiCreationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MahiCreationsUITests.swift; sourceTree = "<group>"; };
 		B43E32E1248CC11B009860E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4B218FC248CCC2F0093E590 /* OTTListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTTListCell.swift; sourceTree = "<group>"; };
+		B4B218FD248CCC2F0093E590 /* OTTListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTTListCell.xib; sourceTree = "<group>"; };
+		B4B21903248CCF000093E590 /* NSManagedObjectContext+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Helper.swift"; sourceTree = "<group>"; };
+		B4B21904248CCF000093E590 /* NSManagedObject+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Helper.swift"; sourceTree = "<group>"; };
+		B4B21905248CCF000093E590 /* AppCoredata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoredata.swift; sourceTree = "<group>"; };
+		B4B21909248CD1390093E590 /* AddDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailsViewController.swift; sourceTree = "<group>"; };
+		B4B2190A248CD1390093E590 /* AddDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDetailsViewController.xib; sourceTree = "<group>"; };
+		B4B21911248CDB4A0093E590 /* OTTDetails+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OTTDetails+CoreDataClass.swift"; path = "MahiCreations/CoreData/OTTDetails+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B4B21912248CDB4A0093E590 /* OTTDetails+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OTTDetails+CoreDataProperties.swift"; path = "MahiCreations/CoreData/OTTDetails+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +99,8 @@
 		B43E32AE248CC11A009860E0 = {
 			isa = PBXGroup;
 			children = (
+				B4B21911248CDB4A0093E590 /* OTTDetails+CoreDataClass.swift */,
+				B4B21912248CDB4A0093E590 /* OTTDetails+CoreDataProperties.swift */,
 				B43E32B9248CC11A009860E0 /* MahiCreations */,
 				B43E32D3248CC11B009860E0 /* MahiCreationsTests */,
 				B43E32DE248CC11B009860E0 /* MahiCreationsUITests */,
@@ -101,10 +121,15 @@
 		B43E32B9248CC11A009860E0 /* MahiCreations */ = {
 			isa = PBXGroup;
 			children = (
+				B4B21902248CCED20093E590 /* CoreData */,
 				B43E32BA248CC11A009860E0 /* AppDelegate.swift */,
 				B43E32BC248CC11A009860E0 /* SceneDelegate.swift */,
 				B43E32BE248CC11A009860E0 /* ViewController.swift */,
+				B4B21909248CD1390093E590 /* AddDetailsViewController.swift */,
+				B4B2190A248CD1390093E590 /* AddDetailsViewController.xib */,
 				B43E32C0248CC11A009860E0 /* Main.storyboard */,
+				B4B218FC248CCC2F0093E590 /* OTTListCell.swift */,
+				B4B218FD248CCC2F0093E590 /* OTTListCell.xib */,
 				B43E32C6248CC11B009860E0 /* Assets.xcassets */,
 				B43E32C8248CC11B009860E0 /* LaunchScreen.storyboard */,
 				B43E32CB248CC11B009860E0 /* Info.plist */,
@@ -129,6 +154,16 @@
 				B43E32E1248CC11B009860E0 /* Info.plist */,
 			);
 			path = MahiCreationsUITests;
+			sourceTree = "<group>";
+		};
+		B4B21902248CCED20093E590 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B4B21905248CCF000093E590 /* AppCoredata.swift */,
+				B4B21904248CCF000093E590 /* NSManagedObject+Helper.swift */,
+				B4B21903248CCF000093E590 /* NSManagedObjectContext+Helper.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +273,8 @@
 				B43E32CA248CC11B009860E0 /* LaunchScreen.storyboard in Resources */,
 				B43E32C7248CC11B009860E0 /* Assets.xcassets in Resources */,
 				B43E32C2248CC11A009860E0 /* Main.storyboard in Resources */,
+				B4B218FF248CCC2F0093E590 /* OTTListCell.xib in Resources */,
+				B4B2190C248CD1390093E590 /* AddDetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,10 +299,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4B21908248CCF000093E590 /* AppCoredata.swift in Sources */,
 				B43E32BF248CC11A009860E0 /* ViewController.swift in Sources */,
 				B43E32C5248CC11A009860E0 /* MahiCreations.xcdatamodeld in Sources */,
+				B4B2190B248CD1390093E590 /* AddDetailsViewController.swift in Sources */,
+				B4B21907248CCF000093E590 /* NSManagedObject+Helper.swift in Sources */,
+				B4B21914248CDB4A0093E590 /* OTTDetails+CoreDataProperties.swift in Sources */,
+				B4B218FE248CCC2F0093E590 /* OTTListCell.swift in Sources */,
+				B4B21913248CDB4A0093E590 /* OTTDetails+CoreDataClass.swift in Sources */,
 				B43E32BB248CC11A009860E0 /* AppDelegate.swift in Sources */,
 				B43E32BD248CC11A009860E0 /* SceneDelegate.swift in Sources */,
+				B4B21906248CCF000093E590 /* NSManagedObjectContext+Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -424,7 +468,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
